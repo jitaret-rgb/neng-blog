@@ -29,13 +29,9 @@ type = 'page'
 
 ### Telegram
 
-สแกน QR Code เพื่อเพิ่มเพื่อน:
-
-![Telegram QR Code](about-images/telegram-qr.jpg)
-
 **Username:** [@Majinman](https://t.me/Majinman)
 
-หรือคลิกที่ลิงก์: **https://t.me/Majinman**
+คลิกเพื่อแชท: **https://t.me/Majinman**
 
 ---
 

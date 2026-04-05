@@ -98,7 +98,7 @@ openclaw init
 5. Copy Token ที่ได้รับ
 6. ใส่ Token ใน config ของ OpenClaw
 
-![Telegram Bot](telegram-logo.png)
+![Telegram Bot](telegram-bot.jpg)
 
 ---
 
