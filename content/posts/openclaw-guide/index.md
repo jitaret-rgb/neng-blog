@@ -98,7 +98,7 @@ openclaw init
 5. Copy Token ที่ได้รับ
 6. ใส่ Token ใน config ของ OpenClaw
 
-![Telegram Bot](/neng-blog/posts/openclaw-guide/telegram-logo.png)
+![Telegram Bot](telegram-logo.png)
 
 ---
 
@@ -414,5 +414,5 @@ _Community Development Officer_
 _Department of Community Development, Ministry of Interior_
 
 _สร้างด้วยความช่วยเหลือจาก Mick — AI Assistant_  
-_![GitHub Logo](/neng-blog/posts/openclaw-guide/github-logo.png)_  
+_![GitHub Logo](github-logo.png)_  
 _2026-04-05_
