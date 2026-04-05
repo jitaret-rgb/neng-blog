@@ -24,4 +24,18 @@ type = 'page'
 
 ---
 
-ติดต่อผมได้ทาง Telegram ครับ! 🤖
+## 📬 ติดต่อผม
+
+### Telegram
+
+สแกน QR Code เพื่อเพิ่มเพื่อน:
+
+![Telegram QR Code](images/telegram-qr.jpg)
+
+**Username:** [@Majinman](https://t.me/Majinman)
+
+หรือคลิกที่ลิงก์: **https://t.me/Majinman**
+
+---
+
+ขอบคุณที่ติดตามครับ! 🙏
