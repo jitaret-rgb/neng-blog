@@ -30,7 +30,7 @@ type = 'page'
 
 สแกน QR Code เพื่อเพิ่มเพื่อน:
 
-![Telegram QR Code](/neng-blog/images/telegram-qr.jpg)
+![Telegram QR Code](/neng-blog/about-images/telegram-qr.jpg)
 
 **Username:** [@Majinman](https://t.me/Majinman)
 
