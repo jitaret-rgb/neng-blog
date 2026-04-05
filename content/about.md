@@ -14,8 +14,9 @@ type = 'page'
 - กรมการพัฒนาชุมชน กระทรวงมหาดไทย
 
 ### 🎯 เป้าหมาย
-1. เป็น TikTok Affiliate
+1. เป็น Content Creator
 2. พัฒนาตัวเองอย่างต่อเนื่อง
+3. เป็น Full-stack Developer
 
 ### 💻 ทักษะ
 - ภาษา Python
