@@ -1,0 +1,30 @@
+baseURL = 'https://neng.blog/'
+languageCode = 'th-th'
+title = 'บล็อกของเหน่ง'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "auto"
+  ShowShareButtons = true
+  ShowReadingTime = true
+  ShowToc = true
+  comments = false
+  
+[params.homeInfoParams]
+  Title = "ยินดีต้อนรับสู่บล็อกของเหน่ง 👋"
+  Content = "สวัสดีครับ ผมเหน่ง ยินดีต้อนรับสู่บล็อกส่วนตัวของผม"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 3
