@@ -1,19 +1,49 @@
-baseURL = 'https://neng.blog/'
+baseURL = 'https://jitaret-rgb.github.io/neng-blog/'
 languageCode = 'th-th'
 title = 'บล็อกของเหน่ง'
-theme = 'PaperMod'
+theme = 'hugo-theme-stack'
 
 [params]
+  subtitle = "แชร์เรื่องราวเกี่ยวกับงาน เทคโนโลยี และชีวิตประจำวัน"
+  description = "บล็อกส่วนตัวของเหน่ง"
+  keywords = ["blog", "neng", "thai", "technology", "lifestyle"]
   defaultTheme = "auto"
-  ShowShareButtons = true
-  ShowReadingTime = true
-  ShowToc = true
-  comments = false
+  mainSections = ["posts"]
   
-[params.homeInfoParams]
-  Title = "ยินดีต้อนรับสู่บล็อกของเหน่ง 👋"
-  Content = "สวัสดีครับ ผมเหน่ง ยินดีต้อนรับสู่บล็อกส่วนตัวของผม"
+  [params.sidebar]
+    emoji = "🤖"
+    subtitle = "Community Development Officer"
+    
+  [params.article]
+    math = false
+    toc = true
+    readingTime = true
+    [params.article.license]
+      enabled = true
+      default = "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">CC BY-NC 4.0</a>"
+    
+  [params.comments]
+    enabled = false
+    
+  [params.cards]
+    limit = 10
+    
+  [params.footer]
+    since = 2026
+    customText = ""
+    
+  [params.dateFormat]
+    single = "2 January 2006"
+    list = "2 January 2006"
+    
+  [params.smartimage]
+    enabled = true
 
+[params.author]
+  name = "เหน่ง"
+  email = "jitaret@gmail.com"
+
+# Menu
 [[menu.main]]
   name = "Home"
   url = "/"
@@ -25,6 +55,40 @@ theme = 'PaperMod'
   weight = 2
 
 [[menu.main]]
+  name = "Categories"
+  url = "/categories/"
+  weight = 3
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 4
+
+[[menu.main]]
   name = "About"
   url = "/about/"
-  weight = 3
+  weight = 5
+
+# Social icons
+[[params.social]]
+  name = "GitHub"
+  url = "https://github.com/jitaret-rgb"
+  icon = "github"
+  
+[[params.social]]
+  name = "Telegram"
+  url = "https://t.me/Majinman"
+  icon = "telegram"
+
+# Markup
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = false
+    
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

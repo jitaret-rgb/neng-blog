@@ -15,6 +15,14 @@ tags = ['introduction', 'personal']
 
 ## 🎯 เกี่ยวกับบล็อกนี้
 
-บล็อกนี้สร้างด้วย [Hugo](https://gohugo.io/) และใช้ธีม [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
+บล็อกนี้สร้างด้วย [Hugo](https://gohugo.io/) และใช้ธีม [Stack](https://github.com/CaiJimmy/hugo-theme-stack)
+
+### 📸 ฟีเจอร์ของบล็อก:
+
+- 🖼️ แสดงรูปภาพปกบทความ
+- 📁 จัดหมวดหมู่และแท็ก
+- 📱 Responsive (มือถือ/แท็บเล็ต/คอมพิวเตอร์)
+- 🌙 Dark/Light mode อัตโนมัติ
+- 🔍 ค้นหาบทความ
 
 ขอบคุณที่ติดตามครับ! 🙏
