@@ -100,6 +100,8 @@ openclaw init
 
 ![Telegram Bot](telegram-logo.png)
 
+![Telegram QR Code](telegram-qr.jpg)
+
 ---
 
 ## 💡 ปัญหาที่เจอระหว่างทำบล็อก (เรื่องจริง!)
