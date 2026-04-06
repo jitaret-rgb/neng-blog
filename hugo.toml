@@ -51,6 +51,9 @@ theme = 'hugo-theme-stack'
 
 # Widgets
 [[params.widgets.homepage]]
+  type = "search"
+
+[[params.widgets.homepage]]
   type = "categories"
   [params.widgets.homepage.params]
     limit = 10
