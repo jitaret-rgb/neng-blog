@@ -71,71 +71,83 @@ theme = 'hugo-theme-stack'
   name = "Home"
   url = "/"
   weight = 1
+  [menu.main.params]
+    icon = "home"
 
 [[menu.main]]
   name = "Posts"
   url = "/posts/"
   weight = 2
+  [menu.main.params]
+    icon = "article"
 
 [[menu.main]]
   name = "Categories"
   url = "/categories/"
   weight = 3
+  [menu.main.params]
+    icon = "category-2"
 
 [[menu.main]]
   name = "Tags"
   url = "/tags/"
   weight = 4
+  [menu.main.params]
+    icon = "tag"
 
 [[menu.main]]
   name = "About"
   url = "/about/"
   weight = 5
+  [menu.main.params]
+    icon = "user"
 
 # Social icons
 [[params.social]]
   name = "GitHub"
   url = "https://github.com/jitaret-rgb"
-  icon = "brand-github"
+  [params.social.params]
+    icon = "brand-github"
   
 [[params.social]]
   name = "Telegram"
   url = "https://t.me/Majinman"
-  icon = "brand-telegram"
+  [params.social.params]
+    icon = "brand-telegram"
 
 [[params.social]]
   name = "Twitter"
   url = "https://twitter.com/"
-  icon = "brand-twitter"
   [params.social.params]
+    icon = "brand-twitter"
     newTab = true
 
 [[params.social]]
   name = "Facebook"
   url = "https://facebook.com/"
-  icon = "brand-facebook"
   [params.social.params]
+    icon = "brand-facebook"
     newTab = true
 
 [[params.social]]
   name = "Instagram"
   url = "https://instagram.com/"
-  icon = "brand-instagram"
   [params.social.params]
+    icon = "brand-instagram"
     newTab = true
 
 [[params.social]]
   name = "LinkedIn"
   url = "https://linkedin.com/"
-  icon = "brand-linkedin"
   [params.social.params]
+    icon = "brand-linkedin"
     newTab = true
 
 [[params.social]]
   name = "YouTube"
   url = "https://youtube.com/"
-  icon = "brand-youtube"
   [params.social.params]
+    icon = "brand-youtube"
     newTab = true
 
 # Markup
