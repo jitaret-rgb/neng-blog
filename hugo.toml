@@ -17,7 +17,7 @@ theme = 'hugo-theme-stack'
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">"""
   
   [params.sidebar]
-    subtitle = "Code & Community"
+    subtitle = "Bridging Technology and Community Development"
     avatar = "img/profile.jpg"
     
   [params.article]
