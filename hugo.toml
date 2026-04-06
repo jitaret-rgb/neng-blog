@@ -1,11 +1,11 @@
 baseURL = 'https://jitaret-rgb.github.io/neng-blog/'
 languageCode = 'th-th'
-title = 'บล็อกของเหน่ง'
+title = 'Code & Community'
 theme = 'hugo-theme-stack'
 
 [params]
-  subtitle = "แชร์เรื่องราวเกี่ยวกับงาน เทคโนโลยี และชีวิตประจำวัน"
-  description = "บล็อกส่วนตัวของเหน่ง"
+  subtitle = "Bridging Technology and Community Development"
+  description = "A blog about technology, community development, and life by Nueng"
   keywords = ["blog", "neng", "thai", "technology", "lifestyle"]
   defaultTheme = "auto"
   mainSections = ["posts"]
@@ -17,7 +17,7 @@ theme = 'hugo-theme-stack'
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">"""
   
   [params.sidebar]
-    subtitle = "Community Development Officer"
+    subtitle = "Code & Community"
     avatar = "img/profile.jpg"
     
   [params.article]
