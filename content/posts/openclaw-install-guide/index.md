@@ -349,8 +349,8 @@ openclaw gateway start
 
 **LLM:** Qwen 3, Qwen 2.5 (72B), Qwen-Max
 
-**ราคา:** ✅ **ฟรี 1,000,000 tokens/เดือน** (Qwen 2.5)  
-**Qwen 3:** 💰 $0.0005-0.002 / 1K tokens  
+**ราคา:** ✅ **ฟรี 1,000,000 tokens/เดือน** (Qwen 2.5) [^1]  
+**Qwen 3:** 💰 $0.0005-0.002 / 1K tokens [^1]  
 **(ประมาณ 500-1,000 บทความ/เดือน)**
 
 **จุดเด่น:**
@@ -387,7 +387,8 @@ providers:
 
 **LLM:** Llama 3.1 (405B), Llama 3.3 (70B), Mixtral 8x22B
 
-**ราคา:** ✅ ฟรี (Rate limited: ~100 requests/day)
+**ราคา:** ✅ ฟรี (Rate limited)  
+**Paid:** $0.05-$0.79 / 1M tokens [^2]
 
 **จุดเด่น:**
 - 🚀 **เร็วที่สุด** (500+ tokens/วินาที)
@@ -413,7 +414,7 @@ providers:
 
 **LLM:** Gemini 2.5 Pro, Gemini 2.0 Flash
 
-**ราคา:** ✅ ฟรี 60 requests/นาที (Gemini 2.0 Flash)
+**ราคา:** ✅ ฟรี 60 requests/นาที [^3]
 
 **จุดเด่น:**
 - 🔗 ผสานกับ Google services
@@ -437,7 +438,8 @@ providers:
 
 **LLM:** GPT-4.1, GPT-4o, o3-mini
 
-**ราคา:** ❌ $0.002-0.015 / 1K tokens (GPT-4.1)
+**ราคา:** ❌ $0.002-0.008 / 1K tokens [^4]  
+(GPT-4.1: $2/$8 ต่อ 1M tokens)
 
 **จุดเด่น:**
 - 🧠 **ฉลาดที่สุด**
@@ -466,7 +468,7 @@ providers:
 
 **LLM:** Claude 3.7 Sonnet, Claude 3.5 Opus
 
-**ราคา:** ❌ $0.003-0.015 / 1K tokens (Claude 3.7)
+**ราคา:** ❌ $0.003-0.015 / 1K tokens [^5]
 
 **จุดเด่น:**
 - 📝 **เขียนบทความธรรมชาติ**
@@ -773,3 +775,21 @@ _Community Development Officer (นักวิชาการพัฒนาช
 _Community Development Department, Ministry of Interior (กรมการพัฒนาชุมชน กระทรวงมหาดไทย)_
 
 _อัพเดทล่าสุด: 2026-04-06_
+
+---
+
+## 📚 อ้างอิง
+
+[^1]: **Bailian (Alibaba Cloud)** — [阿里云百炼模型价格](https://help.aliyun.com/zh/model-studio/model-pricing), [Qwen API Pricing 2026](https://pricepertoken.com/pricing-page/provider/qwen)
+
+[^2]: **Groq** — [Groq Pricing](https://groq.com/pricing), [Groq API Pricing 2026](https://apicents.com/provider/groq), [Groq Free Tier Limits](https://www.grizzlypeaksoftware.com/articles/p/groq-api-free-tier-limits-in-2026-what-you-actually-get-uwysd6mb)
+
+[^3]: **Google** — [Google AI Studio Pricing](https://aistudio.google.com/pricing)
+
+[^4]: **OpenAI** — [OpenAI API Pricing](https://openai.com/api/pricing/), [GPT-4.1 Pricing 2026](https://langcopilot.com/llm-pricing/openai/gpt-4.1)
+
+[^5]: **Anthropic** — [Anthropic Console](https://console.anthropic.com/)
+
+[^6]: **Ollama** — [Ollama Official Site](https://ollama.com/)
+
+**หมายเหตุ:** ราคาอาจมีการเปลี่ยนแปลง — ตรวจสอบกับผู้ให้บริการก่อนใช้งานจริง
