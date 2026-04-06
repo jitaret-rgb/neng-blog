@@ -107,16 +107,65 @@ theme = 'hugo-theme-stack'
   url = "/search/"
   weight = 7
 
+[[menu.main]]
+  name = "Bookmarks"
+  url = "/bookmarks/"
+  weight = 8
+  [menu.main.params]
+    icon = "bookmark"
+
+[[menu.main]]
+  name = "Favorites"
+  url = "/favorites/"
+  weight = 9
+  [menu.main.params]
+    icon = "heart"
+
 # Social icons
 [[params.social]]
   name = "GitHub"
   url = "https://github.com/jitaret-rgb"
-  icon = "github"
+  icon = "brand-github"
   
 [[params.social]]
   name = "Telegram"
   url = "https://t.me/Majinman"
-  icon = "telegram"
+  icon = "brand-telegram"
+
+[[params.social]]
+  name = "Twitter"
+  url = "https://twitter.com/"
+  icon = "brand-twitter"
+  [params.social.params]
+    newTab = true
+
+[[params.social]]
+  name = "Facebook"
+  url = "https://facebook.com/"
+  icon = "brand-facebook"
+  [params.social.params]
+    newTab = true
+
+[[params.social]]
+  name = "Instagram"
+  url = "https://instagram.com/"
+  icon = "brand-instagram"
+  [params.social.params]
+    newTab = true
+
+[[params.social]]
+  name = "LinkedIn"
+  url = "https://linkedin.com/"
+  icon = "brand-linkedin"
+  [params.social.params]
+    newTab = true
+
+[[params.social]]
+  name = "YouTube"
+  url = "https://youtube.com/"
+  icon = "brand-youtube"
+  [params.social.params]
+    newTab = true
 
 # Markup
 [markup]
