@@ -49,6 +49,28 @@ theme = 'hugo-theme-stack'
   name = "เหน่ง"
   email = "jitaret@gmail.com"
 
+# Widgets
+[[params.widgets.homepage]]
+  type = "search"
+
+[[params.widgets.homepage]]
+  type = "archives"
+  [params.widgets.homepage.params]
+    limit = 10
+
+[[params.widgets.homepage]]
+  type = "categories"
+  [params.widgets.homepage.params]
+    limit = 10
+
+[[params.widgets.homepage]]
+  type = "tag-cloud"
+  [params.widgets.homepage.params]
+    limit = 10
+
+[[params.widgets.page]]
+  type = "toc"
+
 # Menu
 [[menu.main]]
   name = "Home"
@@ -74,6 +96,16 @@ theme = 'hugo-theme-stack'
   name = "About"
   url = "/about/"
   weight = 5
+
+[[menu.main]]
+  name = "Archives"
+  url = "/archives/"
+  weight = 6
+
+[[menu.main]]
+  name = "Search"
+  url = "/search/"
+  weight = 7
 
 # Social icons
 [[params.social]]
