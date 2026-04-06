@@ -102,52 +102,66 @@ theme = 'hugo-theme-stack'
   [menu.main.params]
     icon = "user"
 
-# Social icons
-[[params.social]]
+# Social Menu (แสดงเหนือ Dark Mode)
+[[menu.social]]
+  identifier = "github"
   name = "GitHub"
   url = "https://github.com/jitaret-rgb"
-  [params.social.params]
+  weight = 1
+  [menu.social.params]
     icon = "brand-github"
-  
-[[params.social]]
+
+[[menu.social]]
+  identifier = "telegram"
   name = "Telegram"
   url = "https://t.me/Majinman"
-  [params.social.params]
+  weight = 2
+  [menu.social.params]
     icon = "brand-telegram"
 
-[[params.social]]
-  name = "Twitter"
-  url = "https://twitter.com/"
-  [params.social.params]
-    icon = "brand-twitter"
-    newTab = true
-
-[[params.social]]
+[[menu.social]]
+  identifier = "facebook"
   name = "Facebook"
   url = "https://www.facebook.com/jittaret.phromnanra/"
-  [params.social.params]
+  weight = 3
+  [menu.social.params]
     icon = "brand-facebook"
     newTab = true
 
-[[params.social]]
+[[menu.social]]
+  identifier = "youtube"
+  name = "YouTube"
+  url = "https://www.youtube.com/@jittaretpromnara5716"
+  weight = 4
+  [menu.social.params]
+    icon = "brand-youtube"
+    newTab = true
+
+[[menu.social]]
+  identifier = "twitter"
+  name = "Twitter"
+  url = "https://twitter.com/"
+  weight = 5
+  [menu.social.params]
+    icon = "brand-twitter"
+    newTab = true
+
+[[menu.social]]
+  identifier = "instagram"
   name = "Instagram"
   url = "https://instagram.com/"
-  [params.social.params]
+  weight = 6
+  [menu.social.params]
     icon = "brand-instagram"
     newTab = true
 
-[[params.social]]
+[[menu.social]]
+  identifier = "linkedin"
   name = "LinkedIn"
   url = "https://linkedin.com/"
-  [params.social.params]
+  weight = 7
+  [menu.social.params]
     icon = "brand-linkedin"
-    newTab = true
-
-[[params.social]]
-  name = "YouTube"
-  url = "https://www.youtube.com/@jittaretpromnara5716"
-  [params.social.params]
-    icon = "brand-youtube"
     newTab = true
 
 # Markup
