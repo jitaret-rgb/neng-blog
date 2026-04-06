@@ -404,6 +404,11 @@ openclaw gateway start
 **(ประมาณ 500-1,000 บทความ/เดือน)**
 
 **จุดเด่น:**
+- 🇹🇭 ภาษาไทยดีเยี่ยม
+- 📄 Context 256K tokens
+- 💰 คุ้มค่าสุดสำหรับใช้งานหนัก
+
+**จุดเด่น:**
 - 🏆 **ราคาถูกที่สุด** (ฟรี quota เยอะ)
 - 🇹🇭 **ภาษาไทยดีเยี่ยม**
 - ⚡ ใช้งานง่าย
@@ -437,8 +442,13 @@ providers:
 
 **LLM:** Llama 3.1 (405B), Llama 3.3 (70B), Mixtral 8x22B
 
-**ราคา:** ✅ ฟรี (Rate limited)  
+**ราคา:** ✅ ฟรี (~100 requests/day) [^2]  
 **Paid:** $0.05-$0.79 / 1M tokens [^2]
+
+**จุดเด่น:**
+- ⚡ เร็วที่สุด (500+ tokens/วินาที)
+- 🆓 ฟรี tier เพียงพอสำหรับทดสอบ
+- 🔓 Open-source models
 
 **จุดเด่น:**
 - 🚀 **เร็วที่สุด** (500+ tokens/วินาที)
@@ -464,7 +474,13 @@ providers:
 
 **LLM:** Gemini 2.5 Pro, Gemini 2.0 Flash
 
-**ราคา:** ✅ ฟรี 60 requests/นาที [^3]
+**ราคา:** ✅ ฟรี 60 requests/นาที (Gemini 2.0 Flash) [^3]  
+**Gemini 3 Pro:** 💰 $1.25/$10 / 1M tokens [^3]
+
+**จุดเด่น:**
+- 📚 Context 1M+ tokens (Gemini 3 Pro)
+- 🔗 ผสานกับ Google services
+- 🇹🇭 รองรับภาษาไทยดี
 
 **จุดเด่น:**
 - 🔗 ผสานกับ Google services
@@ -488,8 +504,14 @@ providers:
 
 **LLM:** GPT-4.1, GPT-4o, o3-mini
 
-**ราคา:** ❌ $0.002-0.008 / 1K tokens [^4]  
-(GPT-4.1: $2/$8 ต่อ 1M tokens)
+**ราคา:** ❌ $0.002-0.015 / 1K tokens [^4]  
+**GPT-4.1:** $2/$8 / 1M tokens [^4]  
+**GPT-4o-mini:** $0.15/$0.60 / 1M tokens (ถูกสุด!) [^4]
+
+**จุดเด่น:**
+- 🧠 ฉลาดที่สุด
+- 🛠️ ทำงานหลากหลาย
+- 📚 เอกสารครบ
 
 **จุดเด่น:**
 - 🧠 **ฉลาดที่สุด**
@@ -518,7 +540,14 @@ providers:
 
 **LLM:** Claude 3.7 Sonnet, Claude 3.5 Opus
 
-**ราคา:** ❌ $0.003-0.015 / 1K tokens [^5]
+**ราคา:** ❌ $0.003-0.015 / 1K tokens [^5]  
+**Claude Sonnet 4.6:** $3/$15 / 1M tokens (คุ้มค่าสุด!) [^5]  
+**Claude Opus 4.6:** $15/$75 / 1M tokens (คุณภาพสูงสุด) [^5]
+
+**จุดเด่น:**
+- 📝 เขียนบทความธรรมชาติ
+- 🧩 Tool calling ดีที่สุด
+- 🔒 ปลอดภัย
 
 **จุดเด่น:**
 - 📝 **เขียนบทความธรรมชาติ**
@@ -573,65 +602,95 @@ ollama:
 
 **ข้อจำกัด:** ต้องมี RAM 8GB+ และ CPU แรงหน่อย
 
+**จุดเด่น:**
+- 💻 รันบนเครื่องตัวเอง
+- 🔒 ไม่ต้องส่งข้อมูลออก
+- ∞ ไม่จำกัด usage
+- 💰 ฟรี 100%
+
 ---
 
 ## 📊 ตารางสรุป
 
-| # | Provider | LLM | ฟรี/เสียเงิน | เหมาะกับ |
-|---|----------|-----|-------------|----------|
-| 1 | **Bailian** 🇨🇳 | Qwen 3, Qwen 2.5 | ✅ ฟรี 1M tokens | **คุ้มค่าสุด** |
-| 2 | **Groq** 🇺🇸 | Llama 3.3, Mixtral | ✅ ฟรี (100/day) | เร็วสุด |
-| 3 | **Google** 🇺🇸 | Gemini 2.5 | ✅ ฟรี 60/min | ใช้งานทั่วไป |
-| 4 | **OpenAI** 🇺🇸 | GPT-4.1, o3-mini | ❌ $0.002-0.015 | งานคุณภาพสูง |
-| 5 | **Anthropic** 🇺🇸 | Claude 3.7 | ❌ $0.003-0.015 | เขียนบทความ |
-| 6 | **Ollama** 🏠 | Llama 3.1 (70B) | ✅ ฟรี 100% | ส่วนตัว/Local |
+| # | Provider | LLM | ราคา (ต่อ 1M tokens) | เหมาะกับ |
+|---|----------|-----|---------------------|----------|
+| 1 | **Bailian** 🇨🇳 | Qwen 2.5 | ✅ ฟรี 1M tokens/เดือน | **คุ้มค่าสุด** |
+| 2 | **Groq** 🇺🇸 | Llama 3.3 | ✅ ฟรี (~100/day) | เร็วสุด ⚡ |
+| 3 | **Google** 🇺🇸 | Gemini 3 Flash | $0.075/$0.30 | เร็ว/ประหยัด |
+| 4 | **Google** 🇺🇸 | Gemini 3 Pro | $1.25/$10 | วิเคราะห์เอกสาร 📚 |
+| 5 | **OpenAI** 🇺🇸 | GPT-4o-mini | $0.15/$0.60 | ถูกสุด 💰 |
+| 6 | **OpenAI** 🇺🇸 | GPT-4.1 | $2/$8 | งานคุณภาพ |
+| 7 | **Anthropic** 🇺🇸 | Claude Sonnet 4.6 | $3/$15 | **แนะนำ!** ⭐ |
+| 8 | **Anthropic** 🇺🇸 | Claude Opus 4.6 | $15/$75 | คุณภาพสูงสุด 👑 |
+| 9 | **Ollama** 🏠 | Llama 3.3 70B | ✅ ฟรี 100% | ส่วนตัว/Local 🔒 |
 
 ---
 
 ## 💡 คำแนะนำการเลือก
 
-### สำหรับมือใหม่:
+### 🎯 สำหรับมือใหม่:
 
 ```
-🎯 เริ่มที่: Bailian (ฟรี 1M tokens)
-💰 งบจำกัด: Bailian + Groq (ฟรีทั้งคู่)
-⚡ ต้องการความเร็ว: Groq (เร็วที่สุด)
+🎯 เริ่มที่: Bailian Qwen 2.5 (ฟรี 1M tokens)
+💰 งบจำกัด: GPT-4o-mini ($0.15/1M)
+⚡ ต้องการความเร็ว: Groq (500+ tokens/วินาที)
+⭐ คุ้มค่าสุด: Claude Sonnet 4.6 ($3/1M)
 ```
 
-### สำหรับใช้งานจริง:
+### 💼 สำหรับใช้งานจริง:
 
 ```
-📝 เขียนบทความ: Claude 3.5
-💼 งานสำคัญ: GPT-4o
-🔒 ข้อมูลลับ: Ollama (Local)
-🧪 ทดลองโมเดล: Hugging Face
+📝 เขียนบทความ: Claude Sonnet 4.6 ($3/$15)
+💻 เขียนโค้ด: Claude Opus 4.6 ($15/$75)
+📚 วิเคราะห์เอกสาร: Gemini 3 Pro ($1.25/$10)
+🔒 ข้อมูลลับ: Ollama (Local, ฟรี)
+⚡ งานเร็ว: Gemini 3 Flash ($0.075/$0.30)
 ```
 
-### สำหรับประหยัด:
+### 💰 สำหรับประหยัด:
 
 ```
-✅ ฟรี 100%: Ollama + Groq
-✅ ฟรี quota เยอะ: Bailian (1M tokens)
-✅ ทดลอง: Google (60 requests/min)
+✅ ฟรี 100%: Ollama (Local)
+✅ ฟรี quota: Bailian (1M tokens/เดือน)
+✅ ถูกสุด: GPT-4o-mini ($0.15/$0.60)
+✅ คุ้มค่า: Claude Sonnet 4.6 ($3/$15)
+✅ เร็ว/ถูก: Gemini 3 Flash ($0.075/$0.30)
 ```
 
 ---
 
-## 🇨🇳 ทำไม Bailian (Alibaba) ถึงคุ้มค่า?
+## 💰 เปรียบเทียบราคา (2026)
 
-| Provider | ฟรี quota | ราคาเกิน quota | ภาษาไทย |
-|----------|-----------|---------------|---------|
-| **Bailian** | 1,000,000 tokens/เดือน | $0.002-0.004 / 1K | ⭐⭐⭐⭐⭐ |
-| Google | 60 requests/นาที | $0.00025-0.001 | ⭐⭐⭐⭐ |
-| Groq | จำกัด/วัน | ยังไม่ประกาศ | ⭐⭐⭐ |
-| OpenAI | ❌ ไม่มี | $0.01-0.03 | ⭐⭐⭐⭐ |
+### ถูกสุด → แพงสุด:
 
-**สรุป:** Bailian ให้ฟรีเยอะที่สุด + ภาษาไทยดี + ราคาถูกมาก! 💰
+| อันดับ | Model | ราคา Input/Output | ต่อเดือน* |
+|--------|-------|------------------|-----------|
+| 🥇 | **Ollama (Local)** | ฟรี | ฟรี |
+| 🥈 | **Bailian Qwen 2.5** | ฟรี 1M tokens | ฟรี |
+| 🥉 | **GPT-4o-mini** | $0.15/$0.60 | ~$3-10 |
+| 4 | **Gemini 3 Flash** | $0.075/$0.30 | ~$5-15 |
+| 5 | **Claude Sonnet 4.6** | $3/$15 | ~$30-100 |
+| 6 | **Gemini 3 Pro** | $1.25/$10 | ~$50-150 |
+| 7 | **Claude Opus 4.6** | $15/$75 | ~$150-500 |
 
-**1,000,000 tokens = อะไร?**
-- บทความ 1,000 คำ → ~1,500 tokens
-- **ใช้ได้:** ~666 บทความ/เดือน!
-- **เฉลี่ย:** ~22 บทความ/วัน!
+\* ประมาณการสำหรับใช้งานทั่วไป (10-50 บทความ/เดือน)
+
+### สรุป:
+
+```
+💰 งบจำกัด:
+   → Bailian Qwen 2.5 (ฟรี 1M tokens)
+   → GPT-4o-mini ($0.15/1M)
+
+⭐ คุ้มค่าสุด:
+   → Claude Sonnet 4.6 ($3/$15)
+
+👑 คุณภาพสูงสุด:
+   → Claude Opus 4.6 ($15/$75)
+
+🔒 ส่วนตัว:
+   → Ollama (Local, ฟรี)
+```
 
 ---
 
@@ -877,12 +936,12 @@ _อัพเดทล่าสุด: 2026-04-06_
 
 [^2]: **Groq** — [Groq Pricing](https://groq.com/pricing), [Groq API Pricing 2026](https://apicents.com/provider/groq), [Groq Free Tier Limits](https://www.grizzlypeaksoftware.com/articles/p/groq-api-free-tier-limits-in-2026-what-you-actually-get-uwysd6mb)
 
-[^3]: **Google** — [Google AI Studio Pricing](https://aistudio.google.com/pricing)
+[^3]: **Google** — [Google AI Studio Pricing](https://aistudio.google.com/pricing), [Gemini Models 2026](https://haimaker.ai/blog/gemini-3-flash-preview-openclaw)
 
-[^4]: **OpenAI** — [OpenAI API Pricing](https://openai.com/api/pricing/), [GPT-4.1 Pricing 2026](https://langcopilot.com/llm-pricing/openai/gpt-4.1)
+[^4]: **OpenAI** — [OpenAI API Pricing](https://openai.com/api/pricing/), [GPT-4.1 Pricing 2026](https://langcopilot.com/llm-pricing/openai/gpt-4.1), [Best Models for OpenClaw](https://haimaker.ai/blog/best-models-for-clawdbot/)
 
-[^5]: **Anthropic** — [Anthropic Console](https://console.anthropic.com/)
+[^5]: **Anthropic** — [Anthropic Console](https://console.anthropic.com/), [Best Models for OpenClaw 2026](https://haimaker.ai/blog/best-models-for-clawdbot/)
 
-[^6]: **Ollama** — [Ollama Official Site](https://ollama.com/)
+[^6]: **Ollama** — [Ollama Official Site](https://ollama.com/), [Local Models Guide](https://haimaker.ai/blog/best-local-models-for-openclaw)
 
 **หมายเหตุ:** ราคาอาจมีการเปลี่ยนแปลง — ตรวจสอบกับผู้ให้บริการก่อนใช้งานจริง
