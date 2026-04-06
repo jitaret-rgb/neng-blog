@@ -107,7 +107,7 @@ OpenClaw ทำงานบน **Node.js** — ไม่ต้องกังว
 4. **กด Next** → Next → Next → Finish
 5. **เสร็จ!**
 
-![ติดตั้ง Node.js บน Windows](nodejs-windows.png)
+![ติดตั้ง Node.js](https://nodejs.org/static/images/logo.svg)
 
 #### สำหรับ macOS:
 
@@ -159,7 +159,7 @@ npm install -g openclaw
 
 รอ 1-2 นาที... เสร็จแล้ว!
 
-![ติดตั้ง OpenClaw](install-openclaw.png)
+
 
 ---
 
@@ -190,7 +190,7 @@ OpenClaw 2026.x.x
 
 พิมพ์ในช่องค้นหา: `@BotFather`
 
-![ค้นหา BotFather](botfather-search.png)
+
 
 #### 3. เริ่มแชท
 
@@ -378,7 +378,7 @@ providers:
 ถ้าใช้ GPT-4o กับงานเดียวกัน → เสียเงิน ~$10-30/เดือน  
 แต่ Qwen 2.5 → **ฟรี!** (ประหยัด ~300-1,000 บาท/เดือน)
 
-![Bailian Console](bailian-console.png)
+
 
 ---
 
@@ -404,7 +404,7 @@ providers:
 
 **ข้อจำกัด:** ฟรีจำกัด/วัน (แต่พอใช้สำหรับทดสอบ)
 
-![Groq Console](groq-console.png)
+
 
 ---
 
@@ -428,7 +428,7 @@ providers:
 
 🔒 **ความปลอดภัย:** เก็บ Key เป็นความลับ!
 
-![Google AI Studio](google-ai.png)
+
 
 ---
 
@@ -457,7 +457,7 @@ providers:
 - บทความ 1,000 คำ → ~$0.03-0.05 (~1-2 บาท)
 - คุ้มค่าสำหรับงานสำคัญ!
 
-![OpenAI Platform](openai-platform.png)
+
 
 ---
 
@@ -483,7 +483,7 @@ providers:
 
 **ข้อดี:** ถูกกว่า GPT-4 แต่เขียนบทความดีกว่า!
 
-![Anthropic Console](anthropic-console.png)
+
 
 ---
 
@@ -516,7 +516,7 @@ ollama:
   model: llama3
 ```
 
-![Ollama Local](ollama-local.png)
+
 
 **ข้อจำกัด:** ต้องมี RAM 8GB+ และ CPU แรงหน่อย
 
