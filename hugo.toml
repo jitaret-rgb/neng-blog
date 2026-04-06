@@ -10,9 +10,15 @@ theme = 'hugo-theme-stack'
   defaultTheme = "auto"
   mainSections = ["posts"]
   
+  # Custom Font - Noto Sans Thai
+  [[params.headCustomHTML]]
+    html = """<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">"""
+  
   [params.sidebar]
-    emoji = "🤖"
     subtitle = "Community Development Officer"
+    avatarURL = "images/profile.jpg"
     
   [params.article]
     math = false
