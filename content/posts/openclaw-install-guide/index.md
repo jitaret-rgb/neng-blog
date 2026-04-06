@@ -107,7 +107,7 @@ OpenClaw ทำงานบน **Node.js** — ไม่ต้องกังว
 4. **กด Next** → Next → Next → Finish
 5. **เสร็จ!**
 
-![ติดตั้ง Node.js](https://nodejs.org/static/images/logo.svg)
+![Node.js Logo](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain.svg)
 
 #### สำหรับ macOS:
 
@@ -206,6 +206,8 @@ BotFather จะถาม:
 **2. Username:** ต้องลงท้ายด้วย `bot` (เช่น `MickAssistantBot`)
 
 ![สร้าง Bot ใหม่](botfather-newbot.png)
+
+![แชทครั้งแรก](first-chat.png)
 
 #### 5. Copy Token
 
@@ -313,7 +315,7 @@ openclaw gateway start
 3. **กด Start**
 4. **พิมพ์:** "สวัสดี" หรือ "ช่วยแนะนำตัวหน่อย"
 
-![แชทครั้งแรก](first-chat.png)
+
 
 **ถ้า Bot ตอบ = เสร็จสมบูรณ์!** 🎉
 
