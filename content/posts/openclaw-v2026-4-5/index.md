@@ -20,7 +20,7 @@ description = 'สรุปฟีเจอร์ใหม่ OpenClaw v2026.4.5:
 
 ### **1. 🎬 Video Generation**
 
-**新增:** Agent สามารถสร้างวิดีโอได้แล้ว!
+**✅ ใหม่:** Agent สามารถสร้างวิดีโอได้แล้ว!
 
 **วิธีใช้:**
 ```python
@@ -37,7 +37,7 @@ description = 'สรุปฟีเจอร์ใหม่ OpenClaw v2026.4.5:
 
 ### **2. 🎵 Music Generation**
 
-**新增:** Agent สามารถสร้างเพลง/เสียงได้แล้ว!
+**✅ ใหม่:** Agent สามารถสร้างเพลง/เสียงได้แล้ว!
 
 **วิธีใช้:**
 ```python
@@ -56,7 +56,7 @@ description = 'สรุปฟีเจอร์ใหม่ OpenClaw v2026.4.5:
 
 ### **3. 🎨 ComfyUI Integration**
 
-**新增:** Bundled Comfy workflow media plugin!
+**✅ ใหม่:** Bundled Comfy workflow media plugin!
 
 **ฟีเจอร์:**
 - Image generation
@@ -84,7 +84,7 @@ description = 'สรุปฟีเจอร์ใหม่ OpenClaw v2026.4.5:
 
 ### **5. 🛏️ Amazon Bedrock Updates**
 
-**新增:**
+**✅ ใหม่:**
 - Bundled Mantle support
 - Inference-profile discovery
 - Automatic request-region injection
@@ -124,7 +124,7 @@ description = 'สรุปฟีเจอร์ใหม่ OpenClaw v2026.4.5:
 
 ### **7. 🔧 Plugins Improvements**
 
-**新增:**
+**✅ ใหม่:**
 - Plugin-config TUI prompts
 - Guided onboarding/setup flows
 - `openclaw plugins install --force`
@@ -139,7 +139,7 @@ openclaw plugins install --force <plugin-name>
 
 ### **8. 🎯 ClawHub Integration**
 
-**新增:** Search, detail, and install flows ใน Skills panel!
+**✅ ใหม่:** Search, detail, and install flows ใน Skills panel!
 
 **วิธีใช้:**
 1. เปิด Control UI
@@ -151,7 +151,7 @@ openclaw plugins install --force <plugin-name>
 
 ### **9. 📱 iOS Exec Approvals**
 
-**新增:** Generic APNs approval notifications
+**✅ ใหม่:** Generic APNs approval notifications
 
 **ฟีเจอร์:**
 - Open in-app exec approval modal
@@ -162,7 +162,7 @@ openclaw plugins install --force <plugin-name>
 
 ### **10. 💬 Matrix Exec Approvals**
 
-**新增:** Matrix-native exec approval prompts
+**✅ ใหม่:** Matrix-native exec approval prompts
 
 **ฟีเจอร์:**
 - Account-scoped approvers
@@ -173,7 +173,7 @@ openclaw plugins install --force <plugin-name>
 
 ### **11. 📊 Context Visibility**
 
-**新增:** Configurable contextVisibility per channel
+**✅ ใหม่:** Configurable contextVisibility per channel
 
 **Options:**
 - `all` - ทั้งหมด
@@ -189,7 +189,7 @@ openclaw plugins install --force <plugin-name>
 
 ### **12. ⚙️ Request Overrides**
 
-**新增:** Shared model and media request transport overrides
+**✅ ใหม่:** Shared model and media request transport overrides
 
 **รองรับ:**
 - OpenAI-compatible
