@@ -1,0 +1,8 @@
+{{- $avatarURL := .Site.Params.sidebar.avatarURL | default "" -}}
+{{- if $avatarURL -}}
+<div class="sidebar-avatar">
+  <a href="{{ .Site.BaseURL }}">
+    <img alt="Avatar" src="{{ $avatarURL }}" />
+  </a>
+</div>
+{{- end -}}

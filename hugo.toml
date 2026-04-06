@@ -18,7 +18,6 @@ theme = 'hugo-theme-stack'
   
   [params.sidebar]
     subtitle = "Community Development Officer"
-    avatarURL = "profile.jpg"
     
   [params.article]
     math = false
