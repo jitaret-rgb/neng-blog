@@ -107,7 +107,7 @@ OpenClaw ทำงานบน **Node.js** — ไม่ต้องกังว
 4. **กด Next** → Next → Next → Finish
 5. **เสร็จ!**
 
-![Node.js Logo](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain.svg)
+
 
 #### สำหรับ macOS:
 
@@ -205,9 +205,7 @@ BotFather จะถาม:
 **1. ชื่อ Bot:** พิมพ์อะไรก็ได้ (เช่น `Mick AI`)  
 **2. Username:** ต้องลงท้ายด้วย `bot` (เช่น `MickAssistantBot`)
 
-![สร้าง Bot ใหม่](botfather-newbot.png)
 
-![แชทครั้งแรก](first-chat.png)
 
 #### 5. Copy Token
 
@@ -290,7 +288,7 @@ telegram:
 
 ⚠️ **คำเตือน:** อย่าใช้ Token ตัวอย่างนี้ — ใช้ Token ของคุณเองจาก BotFather!
 
-![ตั้งค่า config](config-file.png)
+
 
 #### 4. เริ่มใช้งาน
 
@@ -349,10 +347,11 @@ openclaw gateway start
 
 ### 1. Bailian (Alibaba Cloud) 🇨🇳 — คุ้มค่าสุด! 💰
 
-**LLM:** Qwen 2.5, Qwen Max
+**LLM:** Qwen 3, Qwen 2.5 (72B), Qwen-Max
 
-**ราคา:** ✅ **ฟรี 1,000,000 tokens/เดือน**  
-**(ประมาณ 500-1,000 บทความ)**
+**ราคา:** ✅ **ฟรี 1,000,000 tokens/เดือน** (Qwen 2.5)  
+**Qwen 3:** 💰 $0.0005-0.002 / 1K tokens  
+**(ประมาณ 500-1,000 บทความ/เดือน)**
 
 **จุดเด่น:**
 - 🏆 **ราคาถูกที่สุด** (ฟรี quota เยอะ)
@@ -386,9 +385,9 @@ providers:
 
 ### 2. Groq 🇺🇸 — เร็วสุด! ⚡
 
-**LLM:** Llama 3, Mixtral, Gemma
+**LLM:** Llama 3.1 (405B), Llama 3.3 (70B), Mixtral 8x22B
 
-**ราคา:** ✅ ฟรี (จำกัด)
+**ราคา:** ✅ ฟรี (Rate limited: ~100 requests/day)
 
 **จุดเด่น:**
 - 🚀 **เร็วที่สุด** (500+ tokens/วินาที)
@@ -412,9 +411,9 @@ providers:
 
 ### 3. Google 🇺🇸 — ใช้งานทั่วไป 🎯
 
-**LLM:** Gemini Pro, Gemini 2.0
+**LLM:** Gemini 2.5 Pro, Gemini 2.0 Flash
 
-**ราคา:** ✅ ฟรี 60 requests/นาที
+**ราคา:** ✅ ฟรี 60 requests/นาที (Gemini 2.0 Flash)
 
 **จุดเด่น:**
 - 🔗 ผสานกับ Google services
@@ -436,9 +435,9 @@ providers:
 
 ### 4. OpenAI 🇺🇸 — คุณภาพสูงสุด 👑
 
-**LLM:** GPT-4o, GPT-4 Turbo
+**LLM:** GPT-4.1, GPT-4o, o3-mini
 
-**ราคา:** ❌ $0.01-0.03 / 1K tokens
+**ราคา:** ❌ $0.002-0.015 / 1K tokens (GPT-4.1)
 
 **จุดเด่น:**
 - 🧠 **ฉลาดที่สุด**
@@ -465,9 +464,9 @@ providers:
 
 ### 5. Anthropic 🇺🇸 — เขียนบทความ ✍️
 
-**LLM:** Claude 3.5 Sonnet, Claude 3 Opus
+**LLM:** Claude 3.7 Sonnet, Claude 3.5 Opus
 
-**ราคา:** ❌ $0.003-0.015 / 1K tokens
+**ราคา:** ❌ $0.003-0.015 / 1K tokens (Claude 3.7)
 
 **จุดเด่น:**
 - 📝 **เขียนบทความธรรมชาติ**
@@ -491,7 +490,7 @@ providers:
 
 ### 6. Ollama 🏠 — Local/ส่วนตัว 🔒
 
-**LLM:** Llama 3, Mistral, Gemma
+**LLM:** Llama 3.1 (70B), Mistral Large, Gemma 2
 
 **ราคา:** ✅ ฟรี 100%
 
@@ -528,12 +527,12 @@ ollama:
 
 | # | Provider | LLM | ฟรี/เสียเงิน | เหมาะกับ |
 |---|----------|-----|-------------|----------|
-| 1 | **Bailian** 🇨🇳 | Qwen 2.5 | ✅ ฟรี 1M tokens | **คุ้มค่าสุด** |
-| 2 | **Groq** 🇺🇸 | Llama 3 | ✅ ฟรี (จำกัด) | เร็วสุด |
-| 3 | **Google** 🇺🇸 | Gemini | ✅ ฟรี 60/min | ใช้งานทั่วไป |
-| 4 | **OpenAI** 🇺🇸 | GPT-4o | ❌ $0.01-0.03 | งานคุณภาพสูง |
-| 5 | **Anthropic** 🇺🇸 | Claude 3.5 | ❌ $0.003-0.015 | เขียนบทความ |
-| 6 | **Ollama** 🏠 | Llama 3 | ✅ ฟรี 100% | ส่วนตัว/Local |
+| 1 | **Bailian** 🇨🇳 | Qwen 3, Qwen 2.5 | ✅ ฟรี 1M tokens | **คุ้มค่าสุด** |
+| 2 | **Groq** 🇺🇸 | Llama 3.3, Mixtral | ✅ ฟรี (100/day) | เร็วสุด |
+| 3 | **Google** 🇺🇸 | Gemini 2.5 | ✅ ฟรี 60/min | ใช้งานทั่วไป |
+| 4 | **OpenAI** 🇺🇸 | GPT-4.1, o3-mini | ❌ $0.002-0.015 | งานคุณภาพสูง |
+| 5 | **Anthropic** 🇺🇸 | Claude 3.7 | ❌ $0.003-0.015 | เขียนบทความ |
+| 6 | **Ollama** 🏠 | Llama 3.1 (70B) | ✅ ฟรี 100% | ส่วนตัว/Local |
 
 ---
 
