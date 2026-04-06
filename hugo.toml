@@ -49,23 +49,11 @@ theme = 'hugo-theme-stack'
   name = "เหน่ง"
   email = "jitaret@gmail.com"
 
-# Analytics (เลือก 1 อย่าง)
-# [params.analytics]
-#   provider = "google"
-#   [params.analytics.google]
-#     siteID = "G-XXXXXXXXXX"  # ใส่ Google Analytics ID
-
-# หรือใช้ Plausible (Privacy-focused)
-# [params.analytics]
-#   provider = "plausible"
-#   [params.analytics.plausible]
-#     domain = "yourdomain.com"
-
-# หรือใช้ Fathom (Privacy-focused)
-# [params.analytics]
-#   provider = "fathom"
-#   [params.analytics.fathom]
-#     siteID = "XXXXXXXX"
+# Google Analytics
+[params.analytics]
+  provider = "google"
+  [params.analytics.google]
+    siteID = "G-Q59XSCDQZR"
 
 # Widgets
 [[params.widgets.homepage]]
