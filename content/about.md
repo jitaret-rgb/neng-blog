@@ -12,7 +12,7 @@ type = 'page'
 ### 💼 การงาน
 - นักวิชาการพัฒนาชุมชน
 - กรมการพัฒนาชุมชน (Community Development Department)
-- กระทรวงมหาดไทย
+- กระทรวงมหาดไทย (Ministry of Interior)
 
 ### 🎯 เป้าหมาย
 1. เป็น Content Creator
