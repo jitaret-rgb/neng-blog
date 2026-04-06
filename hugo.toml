@@ -51,9 +51,6 @@ theme = 'hugo-theme-stack'
 
 # Widgets
 [[params.widgets.homepage]]
-  type = "search"
-
-[[params.widgets.homepage]]
   type = "archives"
   [params.widgets.homepage.params]
     limit = 10
@@ -101,25 +98,6 @@ theme = 'hugo-theme-stack'
   name = "Archives"
   url = "/archives/"
   weight = 6
-
-[[menu.main]]
-  name = "Search"
-  url = "/search/"
-  weight = 7
-
-[[menu.main]]
-  name = "Bookmarks"
-  url = "/bookmarks/"
-  weight = 8
-  [menu.main.params]
-    icon = "bookmark"
-
-[[menu.main]]
-  name = "Favorites"
-  url = "/favorites/"
-  weight = 9
-  [menu.main.params]
-    icon = "heart"
 
 # Social icons
 [[params.social]]
