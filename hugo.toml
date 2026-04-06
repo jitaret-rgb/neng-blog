@@ -51,11 +51,6 @@ theme = 'hugo-theme-stack'
 
 # Widgets
 [[params.widgets.homepage]]
-  type = "archives"
-  [params.widgets.homepage.params]
-    limit = 10
-
-[[params.widgets.homepage]]
   type = "categories"
   [params.widgets.homepage.params]
     limit = 10
@@ -93,11 +88,6 @@ theme = 'hugo-theme-stack'
   name = "About"
   url = "/about/"
   weight = 5
-
-[[menu.main]]
-  name = "Archives"
-  url = "/archives/"
-  weight = 6
 
 # Social icons
 [[params.social]]
