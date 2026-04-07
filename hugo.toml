@@ -29,7 +29,23 @@ theme = 'hugo-theme-stack'
       default = "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">CC BY-NC 4.0</a>"
     
   [params.comments]
-    enabled = false
+    enabled = true
+    provider = "giscus"
+
+  [params.comments.giscus]
+    repo = "jitaret-rgb/neng-blog"
+    repoID = ""  # เหน่งใส่จาก giscus.app
+    category = "Announcements"
+    categoryID = ""  # เหน่งใส่จาก giscus.app
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lightTheme = "preferred_color_scheme"
+    darkTheme = "preferred_color_scheme"
+    lang = "th"
+    loading = "lazy"
     
   [params.cards]
     limit = 10
