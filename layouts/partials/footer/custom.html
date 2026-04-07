@@ -1,9 +1,15 @@
-{{- /* Copy Code Button Script */ -}}
+{{- /* Copy Code Button Script - Single Button Only */ -}}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const codeBlocks = document.querySelectorAll('.article-content div.highlight');
   
   codeBlocks.forEach(function(block) {
+    // Check if button already exists
+    const existingButton = block.querySelector('.copy-code-button');
+    if (existingButton) {
+      return; // Skip if button already exists
+    }
+    
     const button = document.createElement('button');
     button.className = 'copy-code-button';
     button.textContent = 'Copy';
