@@ -143,7 +143,22 @@ theme = 'hugo-theme-stack'
     icon = "brand-youtube"
     newTab = true
 
+# Widgets (Sidebar ขวา)
+[[params.widgets.homepage]]
+  type = "search"
 
+[[params.widgets.homepage]]
+  type = "categories"
+  [params.widgets.homepage.params]
+    limit = 10
+
+[[params.widgets.homepage]]
+  type = "tag-cloud"
+  [params.widgets.homepage.params]
+    limit = 10
+
+[[params.widgets.page]]
+  type = "toc"
 
 # Markup
 [markup]
