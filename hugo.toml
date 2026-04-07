@@ -49,6 +49,14 @@ theme = 'hugo-theme-stack'
   name = "เหน่ง"
   email = "jitaret@gmail.com"
 
+# Open Graph (ogp.me standard)
+[params.opengraph]
+  enabled = true
+  image = "images/default-cover.jpg"
+  locale = "th_TH"
+  [params.opengraph.twitter]
+    site = "Majinman"
+
 # Google Analytics
 [params.analytics]
   provider = "google"

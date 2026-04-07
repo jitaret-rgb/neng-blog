@@ -2,6 +2,7 @@
 title = 'AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน'
 date = 2026-04-07T18:00:00+07:00
 draft = false
+author = "เหน่ง"
 tags = ['ai-engineering', 'community-development', 'ai-planning', 'beginner-guide']
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'
