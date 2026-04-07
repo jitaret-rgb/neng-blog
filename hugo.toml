@@ -34,9 +34,9 @@ theme = 'hugo-theme-stack'
 
   [params.comments.giscus]
     repo = "jitaret-rgb/neng-blog"
-    repoID = ""  # เหน่งใส่จาก giscus.app
+    repoID = "R_kgDOR6Wt7Q"
     category = "Announcements"
-    categoryID = ""  # เหน่งใส่จาก giscus.app
+    categoryID = "DIC_kwDOR6Wt7c4C6TwS"
     mapping = "pathname"
     strict = "0"
     reactionsEnabled = "1"
@@ -44,7 +44,7 @@ theme = 'hugo-theme-stack'
     inputPosition = "bottom"
     lightTheme = "preferred_color_scheme"
     darkTheme = "preferred_color_scheme"
-    lang = "th"
+    lang = "en"
     loading = "lazy"
     
   [params.cards]
