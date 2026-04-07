@@ -313,15 +313,6 @@ openclaw gateway restart
 
 ---
 
-## 💬 **แสดงความคิดเห็น:**
-
-เหน่งคิดว่าฟีเจอร์ไหนน่าสนใจที่สุด?
-
-1. 🎬 Video Generation
-2. 🎵 Music Generation
-3. 🌍 Multilingual UI
-4. 🔧 ComfyUI Integration
-5. อื่นๆ
 
 ---
 
