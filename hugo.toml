@@ -28,6 +28,14 @@ theme = 'hugo-theme-stack'
       enabled = true
       default = "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">CC BY-NC 4.0</a>"
     
+
+# Cookie Consent (GDPR)
+[cookies]
+  enabled = true
+  showSettings = true
+  [cookies.categories]
+    analytics = true
+    functional = true
   [params.comments]
     enabled = true
     provider = "giscus"
