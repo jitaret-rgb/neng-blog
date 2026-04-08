@@ -16,6 +16,7 @@
 | 2026-04-08 | เพิ่ม `giscus.app` เข้า CSP (script-src, frame-src, connect-src) | ไม่งั้น Giscus จะถูกบล็อก |
 | 2026-04-08 | เปลี่ยน Giscus theme เป็น `noborder_dark` | ต้องการให้สีเข้ากับ blog โดยไม่มีขอบ |
 | 2026-04-08 | Giscus สลับ theme ตาม Stack Theme | light → noborder_light, dark → noborder_dark |
+| 2026-04-08 | ลบ Custom Homepage (กลับไปแสดง list บทความ) | ลบ `content/_index.md` เพื่อแสดง list posts ตาม default |
 | 2026-04-08 | ป้องกัน `.kimi/` ไม่ให้ขึ้น GitHub/GitHub Pages | เพิ่ม `.gitignore` + `ignoreFiles` ใน hugo.toml |
 
 ## Technical Details
@@ -71,4 +72,6 @@
 - เปลี่ยน Giscus theme เป็น `noborder_dark` ทั้ง light และ dark mode
 - อัปเดต template `giscus.html` ให้ใช้ built-in theme แทน custom CSS
 - ปรับ Giscus ให้สลับ theme ตาม Stack Theme: light → noborder_light, dark → noborder_dark
+- เพิ่ม MutationObserver แก้ bug Giscus กลับเป็น light หลังกด Refresh
 - ป้องกัน `.kimi/memory.md` ไม่ให้ขึ้น GitHub (`.gitignore`) และ GitHub Pages (`ignoreFiles`)
+- ทดลองสร้าง/ลบ Custom Homepage (`content/_index.md`) → กลับไปใช้ list posts ตาม default

@@ -27,11 +27,9 @@
         const darkTheme = '{{- $darkTheme -}}';
         
         function getCurrentTheme() {
-            // ตรวจสอบจาก data-scheme ที่ตั้งค่าไว้ใน HTML (โดย Stack Theme)
             const scheme = document.documentElement.dataset.scheme;
             if (scheme === "dark") return darkTheme;
             if (scheme === "light") return lightTheme;
-            // Auto mode: เช็ค system preference
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 return darkTheme;
             }
@@ -43,13 +41,7 @@
             if (giscus && giscus.contentWindow) {
                 try {
                     giscus.contentWindow.postMessage(
-                        {
-                            giscus: {
-                                setConfig: {
-                                    theme: theme,
-                                },
-                            },
-                        },
+                        { giscus: { setConfig: { theme: theme } } },
                         "https://giscus.app"
                     );
                 } catch (err) {
@@ -58,41 +50,58 @@
             }
         }
         
-        // อัปเดต theme ตอน giscus พร้อมใช้งาน
+        // ส่ง theme ที่ถูกต้องไปให้ giscus
+        function updateGiscusTheme() {
+            setGiscusTheme(getCurrentTheme());
+        }
+        
+        // Message handler - เมื่อ giscus พร้อมใช้งาน
         const messageHandler = (e) => {
             if (e.origin !== "https://giscus.app") return;
             if (!(typeof e.data === 'object' && e.data.giscus)) return;
             
             const giscusData = e.data.giscus;
-            // เมื่อ giscus พร้อม (มี discussion หรือ error กลับมา)
+            // เมื่อ giscus ready หรือมี error
             if (giscusData.discussion || giscusData.error) {
-                setGiscusTheme(getCurrentTheme());
+                updateGiscusTheme();
             }
         };
-        
         window.addEventListener("message", messageHandler);
         
         // ฟังก์ชันอัปเดต theme เมื่อ Stack Theme เปลี่ยน
-        function updateTheme() {
-            setGiscusTheme(getCurrentTheme());
-        }
+        window.addEventListener("onColorSchemeChange", updateGiscusTheme);
         
-        // รอฟัง event onColorSchemeChange จาก Stack theme
-        window.addEventListener("onColorSchemeChange", updateTheme);
-
         // ตรวจสอบการเปลี่ยนแปลง localStorage (กรณีเปิดหลาย tab)
         window.addEventListener("storage", function(e) {
             if (e.key === "StackColorScheme") {
-                updateTheme();
+                updateGiscusTheme();
             }
         });
         
-        // ตรวจสอบ theme เมื่อโหลดหน้าเสร็จ (DOM ready)
+        // MutationObserver: Detect เมื่อ iframe ถูกสร้างใหม่ (หลังกด Refresh ใน Giscus)
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeName === 'IFRAME' && node.classList.contains('giscus-frame')) {
+                        // Iframe ถูกสร้าง/แทนที่ใหม่ รอให้โหลดเสร็จแล้วส่ง theme
+                        node.addEventListener('load', function() {
+                            // รออีกนิดให้ giscus พร้อม
+                            setTimeout(updateGiscusTheme, 100);
+                        });
+                    }
+                });
+            });
+        });
+        
+        // เริ่ม observe ตั้งแต่ DOM ready
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', updateTheme);
+            document.addEventListener('DOMContentLoaded', function() {
+                observer.observe(document.body, { childList: true, subtree: true });
+                updateGiscusTheme();
+            });
         } else {
-            // DOM โหลดแล้ว รอ iframe สักครู่
-            setTimeout(updateTheme, 100);
+            observer.observe(document.body, { childList: true, subtree: true });
+            updateGiscusTheme();
         }
     })();
 </script>
