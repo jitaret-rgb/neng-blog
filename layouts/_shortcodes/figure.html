@@ -1,0 +1,58 @@
+{{- /*
+  Shortcode: figure
+  Usage: {{< figure src="image.jpg" alt="description" width="600" >}}
+  Features: แปลงรูปภาพเป็น WebP อัตโนมัติ พร้อม fallback
+*/ -}}
+
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $caption := .Get "caption" -}}
+{{- $width := .Get "width" -}}
+{{- $height := .Get "height" -}}
+{{- $class := .Get "class" | default "figure" -}}
+{{- $link := .Get "link" -}}
+{{- $target := .Get "target" -}}
+{{- $rel := .Get "rel" -}}
+{{- $formats := .Get "formats" | default (slice "webp" "original") -}}
+
+{{- $resource := .Page.Resources.Get $src -}}
+{{- if not $resource -}}
+  {{- $resource = resources.Get $src -}}
+{{- end -}}
+
+<figure class="{{ $class }}">
+  {{- if $link }}<a href="{{ $link }}"{{ with $target }} target="{{ . }}"{{ end }}{{ with $rel }} rel="{{ . }}"{{ end }}>{{ end -}}
+  
+  {{- if and $resource (reflect.IsImageResourceProcessable $resource) -}}
+    {{/* สร้างรูป WebP */}}
+    {{- $webpImage := $resource.Resize (printf "%dx webp" (or $width $resource.Width)) -}}
+    {{- $originalImage := $resource -}}
+    {{- if $width -}}
+      {{- $originalImage = $resource.Resize (printf "%dx" $width) -}}
+    {{- end -}}
+    
+    <picture>
+      <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
+      <source srcset="{{ $originalImage.RelPermalink }}" type="image/{{ $resource.MediaType.SubType }}">
+      <img src="{{ $originalImage.RelPermalink }}" 
+           alt="{{ $alt }}" 
+           {{ with $width }}width="{{ . }}"{{ end }}
+           {{ with $height }}height="{{ . }}"{{ end }}
+           loading="lazy"
+           decoding="async">
+    </picture>
+  {{- else -}}
+    {{/* ใช้รูปต้นฉบับถ้าไม่สามารถ process ได้ */}}
+    <img src="{{ $src }}" alt="{{ $alt }}"
+         {{ with $width }}width="{{ . }}"{{ end }}
+         {{ with $height }}height="{{ . }}"{{ end }}
+         loading="lazy"
+         decoding="async">
+  {{- end -}}
+  
+  {{- if $link }}</a>{{ end -}}
+  
+  {{- with $caption -}}
+    <figcaption>{{ . | markdownify }}</figcaption>
+  {{- end -}}
+</figure>

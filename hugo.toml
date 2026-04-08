@@ -73,6 +73,17 @@ ignoreFiles = ['\.kimi/.*']
   [params.smartimage]
     enabled = true
 
+  # Image Processing (Hugo Stack Theme)
+  [params.imageProcessing]
+    autoOrient = true        # หมุนรูปตาม EXIF data อัตโนมัติ
+    
+    [params.imageProcessing.thumbnail]
+      enabled = true         # เปิดใช้งาน thumbnail สำหรับ tile/compact layouts
+      
+    [params.imageProcessing.content]
+      enabled = true         # เปิดใช้งาน responsive images ในเนื้อหา
+      widths = [400, 800, 1200, 1600]  # ขนาดที่จะสร้างสำหรับ srcset
+
 [params.author]
   name = "เหน่ง"
   email = "jitaret@gmail.com"
@@ -179,6 +190,20 @@ ignoreFiles = ['\.kimi/.*']
     newTab = true
 
 
+
+# Image Processing Configuration
+[imaging]
+  quality = 85
+  resampleFilter = "lanczos"
+  hint = "photo"
+  anchor = "smart"
+  bgColor = "#ffffff"
+  
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    excludeFields = ""
+    includeFields = ""
 
 # Markup
 [markup]

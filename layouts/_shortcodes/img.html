@@ -1,0 +1,49 @@
+{{- /*
+  Shortcode: img
+  Usage: {{< img src="image.jpg" alt="description" width="600" >}}
+  Features: แปลงรูปภาพเป็น WebP อัตโนมัติ พร้อม srcset หลายขนาด
+*/ -}}
+
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $width := .Get "width" | default 800 -}}
+{{- $class := .Get "class" -}}
+{{- $loading := .Get "loading" | default "lazy" -}}
+
+{{- $resource := .Page.Resources.Get $src -}}
+{{- if not $resource -}}
+  {{- $resource = resources.Get $src -}}
+{{- end -}}
+
+{{- if and $resource (reflect.IsImageResourceProcessable $resource) -}}
+  {{/* สร้างรูปหลายขนาดในรูปแบบ WebP */}}
+  {{- $sizes := slice 400 800 1200 1600 -}}
+  {{- $srcset := slice -}}
+  
+  {{- range $sizes -}}
+    {{- if le . $resource.Width -}}
+      {{- $resized := $resource.Resize (printf "%dx webp" .) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) -}}
+    {{- end -}}
+  {{- end -}}
+  
+  {{- $defaultImage := $resource.Resize (printf "%dx webp" $width) -}}
+  {{- $originalImage := $resource -}}
+  
+  <picture>
+    <source srcset="{{ delimit $srcset ", " }}" type="image/webp" sizes="(max-width: 800px) 100vw, 800px">
+    <source srcset="{{ $originalImage.RelPermalink }}" type="image/{{ $resource.MediaType.SubType }}">
+    <img src="{{ $defaultImage.RelPermalink }}" 
+         alt="{{ $alt }}"
+         {{ with $class }}class="{{ . }}"{{ end }}
+         width="{{ math.Min $width $resource.Width }}"
+         height="{{ mul (math.Min $width $resource.Width) $resource.Height | div $resource.Width }}"
+         loading="{{ $loading }}"
+         decoding="async">
+  </picture>
+{{- else -}}
+  <img src="{{ $src }}" alt="{{ $alt }}"
+       {{ with $class }}class="{{ . }}"{{ end }}
+       {{ with $width }}width="{{ . }}"{{ end }}
+       loading="{{ $loading }}">
+{{- end -}}
