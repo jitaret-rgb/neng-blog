@@ -5,65 +5,77 @@ draft = false
 type = 'page'
 +++
 
-## 👤 เกี่ยวกับเหน่ง
+# 👤 เกี่ยวกับเรา
 
-สวัสดีครับ! ผมเหน่ง
-
-### 💼 การงาน
-- **ตำแหน่ง:** นักวิชาการพัฒนาชุมชน
-- **สังกัด:** กรมการพัฒนาชุมชน (Community Development Department)
-- **กระทรวง:** กระทรวงมหาดไทย (Ministry of Interior)
-- **ประเภท:** ข้าราชการพลเรือน
-
-### 🎓 การศึกษา
-- **ปริญญาตรี:** รัฐประศาสนศาสตรบัณฑิต (บริหารบุคคล)
-- **คณะ:** คณะวิทยาการจัดการ (Faculty of Management Sciences)
-- **มหาวิทยาลัย:** มหาวิทยาลัยสงขลานครินทร์ (Prince of Songkla University)
-- **Bachelor of Public Administration (Human Resource Management)**
-
-### 🎯 เป้าหมาย
-1. เป็น Content Creator
-2. พัฒนาตัวเองอย่างต่อเนื่อง
-3. เป็น Full-stack Developer
-
-### 💻 ทักษะ
-- ภาษา Python
-- สนใจเรื่องเทคโนโลยีและ automation
-- Hugo Static Site Generator
-- AI Engineering
+**สวัสดีครับ! ผมเหน่ง** 🙏
 
 ---
 
-## 📬 ติดต่อผม
+## 💼 การงาน
 
-### Telegram
+| หัวข้อ | รายละเอียด |
+|--------|-----------|
+| **ตำแหน่ง** | นักวิชาการพัฒนาชุมชน |
+| **สังกัด** | กรมการพัฒนาชุมชน (Community Development Department) |
+| **กระทรวง** | กระทรวงมหาดไทย (Ministry of Interior) |
+| **ประเภท** | ข้าราชการพลเรือน |
 
-**Username:** [@Majinman](https://t.me/Majinman)
+---
 
-คลิกเพื่อแชท: **https://t.me/Majinman**
+## 🎓 การศึกษา
 
-### Email
+| ระดับ | สาขา | สถาบัน |
+|-------|------|--------|
+| **ปริญญาตรี** | รัฐประศาสนศาสตรบัณฑิต (บริหารบุคคล) | คณะวิทยาการจัดการ<br>มหาวิทยาลัยสงขลานครินทร์ |
+| **Degree** | Bachelor of Public Administration (HRM) | Faculty of Management Sciences<br>Prince of Songkla University |
 
-**Email:** [jitaret@gmail.com](mailto:jitaret@gmail.com)
+---
 
-### Social Media
+## 🎯 เป้าหมาย
 
-| Platform | ลิงก์ |
-|----------|------|
-| **GitHub** | [github.com/jitaret-rgb](https://github.com/jitaret-rgb) |
-| **Facebook** | [facebook.com/jittaret.phromnanra](https://www.facebook.com/jittaret.phromnanra/) |
-| **YouTube** | [YouTube @jittaretpromnara5716](https://www.youtube.com/@jittaretpromnara5716) |
+1. 🎬 เป็น Content Creator
+2. 📈 พัฒนาตัวเองอย่างต่อเนื่อง
+3. 💻 เป็น Full-stack Developer
+
+---
+
+## 💻 ทักษะ
+
+- 🐍 **Programming:** Python
+- 🤖 **Technology:** AI, Automation
+- 🌐 **Web:** Hugo Static Site Generator
+- 🧠 **AI:** AI Engineering, Prompt Engineering
 
 ---
 
 ## 💡 ปรัชญาการทำงาน
 
-> **"Tech-Enabled, Humanity-Anchored"**
-> 
-> เทคโนโลยีเป็นเครื่องมือ
-> คนเป็นศูนย์กลาง
-> ประชาชนเป็นที่หมาย
+> ### **"Tech-Enabled, Humanity-Anchored"**
+>
+> **เทคโนโลยีเป็นเครื่องมือ**<br>
+> **คนเป็นศูนย์กลาง**<br>
+> **ประชาชนเป็นที่หมาย**
 
 ---
 
-ขอบคุณที่ติดตามครับ! 🙏
+## 📬 ติดต่อผม
+
+### ช่องทางติดต่อ
+
+| ช่องทาง | ลิงก์ |
+|--------|------|
+| 📧 **Email** | [jitaret@gmail.com](mailto:jitaret@gmail.com) |
+| ✈️ **Telegram** | [@Majinman](https://t.me/Majinman) |
+| 🐙 **GitHub** | [github.com/jitaret-rgb](https://github.com/jitaret-rgb) |
+| 📘 **Facebook** | [facebook.com/jittaret.phromnanra](https://www.facebook.com/jittaret.phromnanra/) |
+| 📺 **YouTube** | [@jittaretpromnara5716](https://www.youtube.com/@jittaretpromnara5716) |
+
+---
+
+## 🙏 ขอบคุณที่ติดตามครับ!
+
+---
+
+_**Code & Community**_  
+_โดย เหน่ง — นักวิชาการพัฒนาชุมชน_  
+_กรมการพัฒนาชุมชน กระทรวงมหาดไทย_
