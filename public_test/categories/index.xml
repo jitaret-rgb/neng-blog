@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Code &amp; Community</title>
+        <link>https://jitaret-rgb.github.io/neng-blog/categories/</link>
+        <description>Recent content in Categories on Code &amp; Community</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>th-th</language>
+        <managingEditor>jitaret@gmail.com (เหน่ง)</managingEditor>
+        <webMaster>jitaret@gmail.com (เหน่ง)</webMaster>
+        <lastBuildDate>Wed, 08 Apr 2026 17:00:00 +0700</lastBuildDate><atom:link href="https://jitaret-rgb.github.io/neng-blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>AI</title>
+            <link>https://jitaret-rgb.github.io/neng-blog/categories/ai/</link>
+            <pubDate>Wed, 08 Apr 2026 17:00:00 +0700</pubDate><author>jitaret@gmail.com (เหน่ง)</author>
+            <guid>https://jitaret-rgb.github.io/neng-blog/categories/ai/</guid>
+            <description></description>
+        </item><item>
+            <title>Community Development</title>
+            <link>https://jitaret-rgb.github.io/neng-blog/categories/community-development/</link>
+            <pubDate>Wed, 08 Apr 2026 17:00:00 +0700</pubDate><author>jitaret@gmail.com (เหน่ง)</author>
+            <guid>https://jitaret-rgb.github.io/neng-blog/categories/community-development/</guid>
+            <description></description>
+        </item><item>
+            <title>Tutorial</title>
+            <link>https://jitaret-rgb.github.io/neng-blog/categories/tutorial/</link>
+            <pubDate>Wed, 08 Apr 2026 17:00:00 +0700</pubDate><author>jitaret@gmail.com (เหน่ง)</author>
+            <guid>https://jitaret-rgb.github.io/neng-blog/categories/tutorial/</guid>
+            <description></description>
+        </item><item>
+            <title>News</title>
+            <link>https://jitaret-rgb.github.io/neng-blog/categories/news/</link>
+            <pubDate>Mon, 06 Apr 2026 23:00:00 +0700</pubDate><author>jitaret@gmail.com (เหน่ง)</author>
+            <guid>https://jitaret-rgb.github.io/neng-blog/categories/news/</guid>
+            <description></description>
+        </item><item>
+            <title>OpenClaw</title>
+            <link>https://jitaret-rgb.github.io/neng-blog/categories/openclaw/</link>
+            <pubDate>Mon, 06 Apr 2026 23:00:00 +0700</pubDate><author>jitaret@gmail.com (เหน่ง)</author>
+            <guid>https://jitaret-rgb.github.io/neng-blog/categories/openclaw/</guid>
+            <description></description>
+        </item><item>
+            <title>Documentation</title>
+            <link>https://jitaret-rgb.github.io/neng-blog/categories/documentation/</link>
+            <pubDate>Mon, 06 Apr 2026 19:00:00 +0700</pubDate><author>jitaret@gmail.com (เหน่ง)</author>
+            <guid>https://jitaret-rgb.github.io/neng-blog/categories/documentation/</guid>
+            <description></description>
+        </item><item>
+            <title>Technology</title>
+            <link>https://jitaret-rgb.github.io/neng-blog/categories/technology/</link>
+            <pubDate>Mon, 06 Apr 2026 08:20:00 +0700</pubDate><author>jitaret@gmail.com (เหน่ง)</author>
+            <guid>https://jitaret-rgb.github.io/neng-blog/categories/technology/</guid>
+            <description></description>
+        </item></channel>
+</rss>

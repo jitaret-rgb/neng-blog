@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="th-th" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="จากที่ต้องใช้เวลา 6 ชั่วโมงสร้างบล็อก เหลือแค่ 1 ชั่วโมง ด้วย OpenClaw AI Assistant">
+<title>เปิดโลก AI Assistant ด้วย OpenClaw จากนักพัฒนาชุมชน</title>
+
+
+<link rel="canonical" href="https://jitaret-rgb.github.io/neng-blog/posts/openclaw-guide/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/neng-blog/scss/style.min.25744ac613673dd4c96f567145e0588400eccfe27d0a884ed9e7cd91f9b9cdb0.css"><meta property='og:title' content="เปิดโลก AI Assistant ด้วย OpenClaw จากนักพัฒนาชุมชน">
+<meta property='og:description' content="จากที่ต้องใช้เวลา 6 ชั่วโมงสร้างบล็อก เหลือแค่ 1 ชั่วโมง ด้วย OpenClaw AI Assistant">
+<meta property='og:url' content='https://jitaret-rgb.github.io/neng-blog/posts/openclaw-guide/'>
+<meta property='og:site_name' content='Code &amp; Community'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='openclaw' /><meta property='article:tag' content='ai' /><meta property='article:tag' content='automation' /><meta property='article:tag' content='productivity' /><meta property='article:published_time' content='2026-04-05T22:45:00&#43;07:00'/><meta property='article:modified_time' content='2026-04-05T22:45:00&#43;07:00'/><meta property='og:image' content='https://jitaret-rgb.github.io/neng-blog/' />
+<meta name="twitter:site" content="@Majinman">
+    <meta name="twitter:creator" content="@Majinman"><meta name="twitter:title" content="เปิดโลก AI Assistant ด้วย OpenClaw จากนักพัฒนาชุมชน">
+<meta name="twitter:description" content="จากที่ต้องใช้เวลา 6 ชั่วโมงสร้างบล็อก เหลือแค่ 1 ชั่วโมง ด้วย OpenClaw AI Assistant"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jitaret-rgb.github.io/neng-blog/' />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q59XSCDQZR"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-Q59XSCDQZR');
+        }
+      </script>
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+
+<meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://giscus.app; 
+               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+               font-src 'self' https://fonts.gstatic.com; 
+               img-src 'self' https://images.unsplash.com https://cdn.jsdelivr.net data: blob:; 
+               frame-src https://giscus.app;
+               connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net https://giscus.app;">
+
+
+<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/neng-blog/">
+                    <img src="/neng-blog/img/profile_hu_de2cac54e10d7047.jpg" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+                    <span class="emoji">💻</span>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/neng-blog/">Code &amp; Community</a></h1>
+            <h2 class="site-description">Bridging Technology and Community Development</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/jitaret-rgb'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/Majinman'
+                        
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.facebook.com/jittaret.phromnanra/'
+                        target="_blank"
+                        title="Facebook"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.youtube.com/@jittaretpromnara5716'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/neng-blog/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/neng-blog/posts/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-article" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+  <path d="M7 8h10" />
+  <path d="M7 12h10" />
+  <path d="M7 16h10" />
+</svg>
+
+
+
+                
+                <span>Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/neng-blog/categories/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M14 4h6v6h-6z" />
+  <path d="M4 14h6v6h-6z" />
+  <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+  <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+</svg>
+
+
+
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/neng-blog/tags/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+  <path d="M3 6v5.172a2 2 0 0 0 .586 1.414l7.71 7.71a2.41 2.41 0 0 0 3.408 0l5.592 -5.592a2.41 2.41 0 0 0 0 -3.408l-7.71 -7.71a2 2 0 0 0 -1.414 -.586h-5.172a3 3 0 0 0 -3 3z" />
+</svg>
+  
+
+
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/neng-blog/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li><a href="#-บทนำ--เรองจรงจากนกพฒนาชมชน">👋 บทนำ — เรื่องจริงจากนักพัฒนาชุมชน</a></li>
+    <li><a href="#-จดเรมตน-อยากไดบลอกสวนตว">🎯 จุดเริ่มต้น: อยากได้บล็อกส่วนตัว</a></li>
+    <li><a href="#-openclaw-คออะไร">🤖 OpenClaw คืออะไร?</a></li>
+    <li><a href="#-ตดตง-openclaw-ใน-10-นาท">📦 ติดตั้ง OpenClaw ใน 10 นาที</a>
+      <ul>
+        <li><a href="#ขอกำหนดระบบ">ข้อกำหนดระบบ</a></li>
+        <li><a href="#ขนตอนตดตง">ขั้นตอนติดตั้ง</a></li>
+        <li><a href="#ตงคา-telegram-bot">ตั้งค่า Telegram Bot</a></li>
+      </ul>
+    </li>
+    <li><a href="#-ปญหาทเจอระหวางทำบลอก-เรองจรง">💡 ปัญหาที่เจอระหว่างทำบล็อก (เรื่องจริง!)</a>
+      <ul>
+        <li><a href="#ปญหาท-1-เลอกธมไมถก">ปัญหาที่ 1: เลือกธีมไม่ถูก</a></li>
+        <li><a href="#ปญหาท-2-github-pages-404">ปัญหาที่ 2: GitHub Pages 404</a></li>
+        <li><a href="#ปญหาท-3-รปไมขน">ปัญหาที่ 3: รูปไม่ขึ้น</a></li>
+        <li><a href="#ปญหาท-4-theme-ไมเขากน">ปัญหาที่ 4: Theme ไม่เข้ากัน</a></li>
+        <li><a href="#สรปเวลา">สรุปเวลา</a></li>
+      </ul>
+    </li>
+    <li><a href="#-ตวอยางการใชงานจรง">🔍 ตัวอย่างการใช้งานจริง</a>
+      <ul>
+        <li><a href="#1-คนหาไฟลในเครอง">1. ค้นหาไฟล์ในเครื่อง</a></li>
+        <li><a href="#2-จดการอเมล">2. จัดการอีเมล</a></li>
+        <li><a href="#3-คนหาขอมล">3. ค้นหาข้อมูล</a></li>
+        <li><a href="#4-เขยนบทความ">4. เขียนบทความ</a></li>
+      </ul>
+    </li>
+    <li><a href="#-เรมตนใชงาน-openclaw">🚀 เริ่มต้นใช้งาน OpenClaw</a>
+      <ul>
+        <li><a href="#คำสงแรกทควรลอง">คำสั่งแรกที่ควรลอง</a></li>
+        <li><a href="#คำสงทใชบอย">คำสั่งที่ใช้บ่อย</a></li>
+        <li><a href="#ขอควรระวง">ข้อควรระวัง</a></li>
+      </ul>
+    </li>
+    <li><a href="#-สรป--ทำไมตองม-openclaw">💬 สรุป — ทำไมต้องมี OpenClaw?</a>
+      <ul>
+        <li><a href="#3-เหตผลหลก">3 เหตุผลหลัก:</a></li>
+        <li><a href="#เรองจรงจากผม">เรื่องจริงจากผม:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-พรอมเรมตนหรอยง">🎯 พร้อมเริ่มต้นหรือยัง?</a>
+      <ul>
+        <li><a href="#ลองตดตง-openclaw-ดครบ">ลองติดตั้ง OpenClaw ดูครับ!</a></li>
+        <li><a href="#-เรยนรเพมเตม">📚 เรียนรู้เพิ่มเติม:</a></li>
+        <li><a href="#-มคำถาม">💬 มีคำถาม?</a></li>
+      </ul>
+    </li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+    <div class="article-image">
+        <a href="/neng-blog/posts/openclaw-guide/">
+            
+
+<img alt="Featured image of post เปิดโลก AI Assistant ด้วย OpenClaw จากนักพัฒนาชุมชน" height="630" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" src="/neng-blog/posts/openclaw-guide/cover_hu_15763d65174f806a.jpg" srcset="/neng-blog/posts/openclaw-guide/cover_hu_28bd8aa8213d7a7b.webp 400w, /neng-blog/posts/openclaw-guide/cover_hu_a2edde57bf3e28c1.webp 800w, /neng-blog/posts/openclaw-guide/cover_hu_15763d65174f806a.jpg 1200w" width="1200">
+
+        </a>
+    </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/neng-blog/categories/tutorial/" style="background-color: hsl(135, 60%, 84%); color: hsl(135, 60%, 15%);">
+                Tutorial
+            </a>
+        
+            
+            
+            
+            <a href="/neng-blog/categories/technology/" style="background-color: hsl(31, 60%, 84%); color: hsl(31, 60%, 15%);">
+                Technology
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/neng-blog/posts/openclaw-guide/">เปิดโลก AI Assistant ด้วย OpenClaw จากนักพัฒนาชุมชน</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            จากที่ต้องใช้เวลา 6 ชั่วโมงสร้างบล็อก เหลือแค่ 1 ชั่วโมง ด้วย OpenClaw AI Assistant
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2026-04-05T22:45:00&#43;07:00'>Apr 05, 2026</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        4 minutes read
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>Table of contents</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#-บทนำ--เรองจรงจากนกพฒนาชมชน">👋 บทนำ — เรื่องจริงจากนักพัฒนาชุมชน</a></li>
+    <li><a href="#-จดเรมตน-อยากไดบลอกสวนตว">🎯 จุดเริ่มต้น: อยากได้บล็อกส่วนตัว</a></li>
+    <li><a href="#-openclaw-คออะไร">🤖 OpenClaw คืออะไร?</a></li>
+    <li><a href="#-ตดตง-openclaw-ใน-10-นาท">📦 ติดตั้ง OpenClaw ใน 10 นาที</a>
+      <ul>
+        <li><a href="#ขอกำหนดระบบ">ข้อกำหนดระบบ</a></li>
+        <li><a href="#ขนตอนตดตง">ขั้นตอนติดตั้ง</a></li>
+        <li><a href="#ตงคา-telegram-bot">ตั้งค่า Telegram Bot</a></li>
+      </ul>
+    </li>
+    <li><a href="#-ปญหาทเจอระหวางทำบลอก-เรองจรง">💡 ปัญหาที่เจอระหว่างทำบล็อก (เรื่องจริง!)</a>
+      <ul>
+        <li><a href="#ปญหาท-1-เลอกธมไมถก">ปัญหาที่ 1: เลือกธีมไม่ถูก</a></li>
+        <li><a href="#ปญหาท-2-github-pages-404">ปัญหาที่ 2: GitHub Pages 404</a></li>
+        <li><a href="#ปญหาท-3-รปไมขน">ปัญหาที่ 3: รูปไม่ขึ้น</a></li>
+        <li><a href="#ปญหาท-4-theme-ไมเขากน">ปัญหาที่ 4: Theme ไม่เข้ากัน</a></li>
+        <li><a href="#สรปเวลา">สรุปเวลา</a></li>
+      </ul>
+    </li>
+    <li><a href="#-ตวอยางการใชงานจรง">🔍 ตัวอย่างการใช้งานจริง</a>
+      <ul>
+        <li><a href="#1-คนหาไฟลในเครอง">1. ค้นหาไฟล์ในเครื่อง</a></li>
+        <li><a href="#2-จดการอเมล">2. จัดการอีเมล</a></li>
+        <li><a href="#3-คนหาขอมล">3. ค้นหาข้อมูล</a></li>
+        <li><a href="#4-เขยนบทความ">4. เขียนบทความ</a></li>
+      </ul>
+    </li>
+    <li><a href="#-เรมตนใชงาน-openclaw">🚀 เริ่มต้นใช้งาน OpenClaw</a>
+      <ul>
+        <li><a href="#คำสงแรกทควรลอง">คำสั่งแรกที่ควรลอง</a></li>
+        <li><a href="#คำสงทใชบอย">คำสั่งที่ใช้บ่อย</a></li>
+        <li><a href="#ขอควรระวง">ข้อควรระวัง</a></li>
+      </ul>
+    </li>
+    <li><a href="#-สรป--ทำไมตองม-openclaw">💬 สรุป — ทำไมต้องมี OpenClaw?</a>
+      <ul>
+        <li><a href="#3-เหตผลหลก">3 เหตุผลหลัก:</a></li>
+        <li><a href="#เรองจรงจากผม">เรื่องจริงจากผม:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-พรอมเรมตนหรอยง">🎯 พร้อมเริ่มต้นหรือยัง?</a>
+      <ul>
+        <li><a href="#ลองตดตง-openclaw-ดครบ">ลองติดตั้ง OpenClaw ดูครับ!</a></li>
+        <li><a href="#-เรยนรเพมเตม">📚 เรียนรู้เพิ่มเติม:</a></li>
+        <li><a href="#-มคำถาม">💬 มีคำถาม?</a></li>
+      </ul>
+    </li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <h2 id="-บทนำ--เรองจรงจากนกพฒนาชมชน"><a href="#-%e0%b8%9a%e0%b8%97%e0%b8%99%e0%b8%b3--%e0%b9%80%e0%b8%a3%e0%b8%ad%e0%b8%87%e0%b8%88%e0%b8%a3%e0%b8%87%e0%b8%88%e0%b8%b2%e0%b8%81%e0%b8%99%e0%b8%81%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99" class="header-anchor"></a>👋 บทนำ — เรื่องจริงจากนักพัฒนาชุมชน
+</h2><p>สวัสดีครับ! ผมเหน่ง — นักวิชาการพัฒนาชุมชน กรมการพัฒนาชุมชน (Community Development Department) กระทรวงมหาดไทย</p>
+<p>วันนี้ผมจะมาแชร์ประสบการณ์ที่เปลี่ยนวิธีทำงานของผมไปตลอดกาล&hellip;</p>
+<hr>
+<h2 id="-จดเรมตน-อยากไดบลอกสวนตว"><a href="#-%e0%b8%88%e0%b8%94%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b8%95%e0%b8%99-%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%81%e0%b9%84%e0%b8%94%e0%b8%9a%e0%b8%a5%e0%b8%ad%e0%b8%81%e0%b8%aa%e0%b8%a7%e0%b8%99%e0%b8%95%e0%b8%a7" class="header-anchor"></a>🎯 จุดเริ่มต้น: อยากได้บล็อกส่วนตัว
+</h2><p>เมื่อ 2-3 ชั่วโมงก่อน ผมอยากได้เว็บบล็อกส่วนตัวเพื่อแชร์เรื่องราวเกี่ยวกับ:</p>
+<ul>
+<li>งานพัฒนาชุมชน</li>
+<li>เทคโนโลยีที่สนใจ</li>
+<li>ชีวิตประจำวัน</li>
+</ul>
+<p><strong>ถ้าทำเอง ผมต้อง:</strong></p>
+<ol>
+<li>หาข้อมูลว่าใช้เครื่องมือไหนดี (Hugo, WordPress, Ghost?)</li>
+<li>เลือกธีมที่ชอบ (มีเป็นพันธีม!)</li>
+<li>ติดตั้งและตั้งค่า</li>
+<li>แก้ปัญหาที่เจอ (404, รูปไม่ขึ้น, theme ไม่ทำงาน)</li>
+<li>Deploy ขึ้น GitHub Pages</li>
+<li>เขียนคู่มือใช้งาน</li>
+</ol>
+<p><strong>เวลาโดยประมาณ:</strong> 4-6 ชั่วโมง 😰</p>
+<p><strong>แต่ความจริงคือ:</strong> ผมใช้เวลาแค่ <strong>1 ชั่วโมง</strong> เพราะมี <strong>Mick</strong> — AI Assistant ที่สร้างด้วย OpenClaw!</p>
+<hr>
+<h2 id="-openclaw-คออะไร"><a href="#-openclaw-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3" class="header-anchor"></a>🤖 OpenClaw คืออะไร?
+</h2><p><strong>OpenClaw</strong> คือแพลตฟอร์มสำหรับสร้าง AI Assistant ส่วนตัว ที่:</p>
+<ul>
+<li>✅ ควบคุมด้วยข้อความธรรมชาติ (คุยเหมือนคน)</li>
+<li>✅ เข้าถึงไฟล์ในเครื่องได้ (อ่าน/เขียน/แก้ไข)</li>
+<li>✅ ค้นหาเว็บได้</li>
+<li>✅ ทำงานอัตโนมัติแทนคุณ</li>
+<li>✅ จำสิ่งที่คุยกัน (Memory System)</li>
+</ul>
+<p><strong>Mick</strong> คือ AI Assistant ที่ผมสร้างด้วย OpenClaw — ไม่ใช่ chatbot ทั่วไป แต่เป็น &ldquo;เพื่อนคู่คิด&rdquo; ที่ช่วยทำงานจริง!</p>
+<hr>
+<h2 id="-ตดตง-openclaw-ใน-10-นาท"><a href="#-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-openclaw-%e0%b9%83%e0%b8%99-10-%e0%b8%99%e0%b8%b2%e0%b8%97" class="header-anchor"></a>📦 ติดตั้ง OpenClaw ใน 10 นาที
+</h2><h3 id="ขอกำหนดระบบ"><a href="#%e0%b8%82%e0%b8%ad%e0%b8%81%e0%b8%b3%e0%b8%ab%e0%b8%99%e0%b8%94%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%9a" class="header-anchor"></a>ข้อกำหนดระบบ
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">✅ RAM 4GB+ (แนะนำ 8GB)
+</span></span><span class="line"><span class="ln">2</span><span class="cl">✅ CPU 2 core+
+</span></span><span class="line"><span class="ln">3</span><span class="cl">✅ Node.js 18+
+</span></span><span class="line"><span class="ln">4</span><span class="cl">✅ Linux/macOS/Windows
+</span></span></code></pre></div><h3 id="ขนตอนตดตง"><a href="#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87" class="header-anchor"></a>ขั้นตอนติดตั้ง
+</h3><p><strong>1. ติดตั้ง Node.js</strong> (ถ้ายังไม่มี)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Linux</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">curl -fsSL https://deb.nodesource.com/setup_20.x <span class="p">|</span> sudo -E bash -
+</span></span><span class="line"><span class="ln">3</span><span class="cl">sudo apt-get install -y nodejs
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="c1"># macOS</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">brew install node
+</span></span><span class="line"><span class="ln">7</span><span class="cl">
+</span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="c1"># Windows</span>
+</span></span><span class="line"><span class="ln">9</span><span class="cl"><span class="c1"># ดาวน์โหลดจาก https://nodejs.org/</span>
+</span></span></code></pre></div><p><strong>2. ติดตั้ง OpenClaw</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">sudo npm install -g openclaw
+</span></span></code></pre></div><p><strong>3. เริ่มต้นใช้งาน</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">openclaw init
+</span></span></code></pre></div><h3 id="ตงคา-telegram-bot"><a href="#%e0%b8%95%e0%b8%87%e0%b8%84%e0%b8%b2-telegram-bot" class="header-anchor"></a>ตั้งค่า Telegram Bot
+</h3><ol>
+<li>เปิด Telegram → ค้นหา <strong>@BotFather</strong></li>
+<li>ส่งคำสั่ง: <code>/newbot</code></li>
+<li>ตั้งชื่อ Bot: <code>Mick Bot</code></li>
+<li>ตั้ง Username: <code>MickAssistantBot</code></li>
+<li>Copy Token ที่ได้รับ</li>
+<li>ใส่ Token ใน config ของ OpenClaw</li>
+</ol>
+<p>
+
+<img alt="Telegram Bot" class="gallery-image" data-flex-basis="240px" data-flex-grow="100" height="300" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/neng-blog/posts/openclaw-guide/telegram-bot_hu_54cd5f503bb8cb78.jpg" width="300">
+</p>
+<hr>
+<h2 id="-ปญหาทเจอระหวางทำบลอก-เรองจรง"><a href="#-%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2%e0%b8%97%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%a3%e0%b8%b0%e0%b8%ab%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b8%97%e0%b8%b3%e0%b8%9a%e0%b8%a5%e0%b8%ad%e0%b8%81-%e0%b9%80%e0%b8%a3%e0%b8%ad%e0%b8%87%e0%b8%88%e0%b8%a3%e0%b8%87" class="header-anchor"></a>💡 ปัญหาที่เจอระหว่างทำบล็อก (เรื่องจริง!)
+</h2><h3 id="ปญหาท-1-เลอกธมไมถก"><a href="#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2%e0%b8%97-1-%e0%b9%80%e0%b8%a5%e0%b8%ad%e0%b8%81%e0%b8%98%e0%b8%a1%e0%b9%84%e0%b8%a1%e0%b8%96%e0%b8%81" class="header-anchor"></a>ปัญหาที่ 1: เลือกธีมไม่ถูก
+</h3><p><strong>สิ่งที่เกิดขึ้น:</strong></p>
+<ul>
+<li>ธีมมีเป็นพันธีม (PaperMod, Stack, Hugo Blox, ฯลฯ)</li>
+<li>แต่ละธีมมีฟีเจอร์ต่างกัน</li>
+<li>ไม่รู้ว่าธีมไหนเหมาะกับความต้องการ</li>
+</ul>
+<p><strong>มิกช่วยยังไง:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">เหน่ง: &#34;มิก อยากได้ธีมที่ลงรูปได้ จัดหมวดหมู่ได้&#34;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">มิก: &#34;แนะนำ Hugo Stack ครับ มีฟีเจอร์ครบ Responsive ด้วย&#34;
+</span></span><span class="line"><span class="ln">3</span><span class="cl">เหน่ง: &#34;โอเค ใช้ตัวนั้น&#34;
+</span></span></code></pre></div><p>→ <strong>ประหยัดเวลา:</strong> 30-45 นาที</p>
+<hr>
+<h3 id="ปญหาท-2-github-pages-404"><a href="#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2%e0%b8%97-2-github-pages-404" class="header-anchor"></a>ปัญหาที่ 2: GitHub Pages 404
+</h3><p><strong>สิ่งที่เกิดขึ้น:</strong></p>
+<ul>
+<li>Push โค้ดขึ้น GitHub แล้ว</li>
+<li>แต่เว็บขึ้น 404</li>
+<li>ไม่รู้ว่าผิดตรงไหน</li>
+</ul>
+<p><strong>มิกช่วยยังไง:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">เหน่ง: &#34;มิก เว็บขึ้น 404 อะ&#34;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">มิก: &#34;เดี๋ยวเช็คให้ครับ... อ๋อ! GitHub ยังไม่ build ไฟล์ใหม่&#34;
+</span></span><span class="line"><span class="ln">3</span><span class="cl">มิก: &#34;ต้องสร้าง GitHub Actions ให้ build อัตโนมัติ เดี๋ยวทำให้&#34;
+</span></span></code></pre></div><p>→ มิกสร้าง workflow file ให้ → <strong>ปัญหาแก้ใน 5 นาที</strong></p>
+<hr>
+<h3 id="ปญหาท-3-รปไมขน"><a href="#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2%e0%b8%97-3-%e0%b8%a3%e0%b8%9b%e0%b9%84%e0%b8%a1%e0%b8%82%e0%b8%99" class="header-anchor"></a>ปัญหาที่ 3: รูปไม่ขึ้น
+</h3><p><strong>สิ่งที่เกิดขึ้น:</strong></p>
+<ul>
+<li>Upload QR Code แล้ว</li>
+<li>แต่รูปไม่แสดง</li>
+<li>ลองแก้ path หลายรอบก็ไม่หาย</li>
+</ul>
+<p><strong>มิกช่วยยังไง:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">เหน่ง: &#34;มิก รูปไม่ขึ้นอะ&#34;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">มิก: &#34;เช็คแล้วครับ Hugo ไม่ได้ copy รูปจาก assets/ ไป public/&#34;
+</span></span><span class="line"><span class="ln">3</span><span class="cl">มิก: &#34;ต้องย้ายไป content/ แทน เดี๋ยวแก้ให้&#34;
+</span></span></code></pre></div><p>→ มิกย้ายไฟล์ + แก้ path → <strong>เสร็จใน 2 นาที</strong></p>
+<hr>
+<h3 id="ปญหาท-4-theme-ไมเขากน"><a href="#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2%e0%b8%97-4-theme-%e0%b9%84%e0%b8%a1%e0%b9%80%e0%b8%82%e0%b8%b2%e0%b8%81%e0%b8%99" class="header-anchor"></a>ปัญหาที่ 4: Theme ไม่เข้ากัน
+</h3><p><strong>สิ่งที่เกิดขึ้น:</strong></p>
+<ul>
+<li>เปลี่ยนจาก PaperMod เป็น Stack</li>
+<li>Hugo version เก่าเกินไป</li>
+<li>Build ไม่ผ่าน</li>
+</ul>
+<p><strong>มิกช่วยยังไง:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">มิก: &#34;Stack ต้องการ Hugo 0.157.0 ขึ้นไปครับ&#34;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">มิก: &#34;เดี๋ยวอัพเดต Hugo ให้&#34;
+</span></span></code></pre></div><p>→ มิกดาวน์โหลด + ติดตั้ง version ใหม่ → <strong>เสร็จใน 3 นาที</strong></p>
+<hr>
+<h3 id="สรปเวลา"><a href="#%e0%b8%aa%e0%b8%a3%e0%b8%9b%e0%b9%80%e0%b8%a7%e0%b8%a5%e0%b8%b2" class="header-anchor"></a>สรุปเวลา
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>งาน</th>
+          <th>ทำเอง</th>
+          <th>มีมิก</th>
+          <th>ประหยัด</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>เลือกธีม</td>
+          <td>30-45 นาที</td>
+          <td>2 นาที</td>
+          <td>95%</td>
+      </tr>
+      <tr>
+          <td>แก้ 404</td>
+          <td>1-2 ชั่วโมง</td>
+          <td>5 นาที</td>
+          <td>95%</td>
+      </tr>
+      <tr>
+          <td>แก้รูปไม่ขึ้น</td>
+          <td>30 นาที</td>
+          <td>2 นาที</td>
+          <td>93%</td>
+      </tr>
+      <tr>
+          <td>อัพเดต Hugo</td>
+          <td>15 นาที</td>
+          <td>3 นาที</td>
+          <td>80%</td>
+      </tr>
+      <tr>
+          <td><strong>รวม</strong></td>
+          <td><strong>4-6 ชั่วโมง</strong></td>
+          <td><strong>1 ชั่วโมง</strong></td>
+          <td><strong>80%</strong></td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h2 id="-ตวอยางการใชงานจรง"><a href="#-%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%88%e0%b8%a3%e0%b8%87" class="header-anchor"></a>🔍 ตัวอย่างการใช้งานจริง
+</h2><h3 id="1-คนหาไฟลในเครอง"><a href="#1-%e0%b8%84%e0%b8%99%e0%b8%ab%e0%b8%b2%e0%b9%84%e0%b8%9f%e0%b8%a5%e0%b9%83%e0%b8%99%e0%b9%80%e0%b8%84%e0%b8%a3%e0%b8%ad%e0%b8%87" class="header-anchor"></a>1. ค้นหาไฟล์ในเครื่อง
+</h3><p><strong>สถานการณ์:</strong> ผมจำได้ว่าเคยเก็บ PDF แผน 5 ปี ไว้ แต่ลืมว่าไว้ที่ไหน</p>
+<p><strong>แบบเดิม:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">1. เปิด File Explorer
+</span></span><span class="line"><span class="ln">2</span><span class="cl">2. ค้นหา &#34;แผน 5 ปี&#34;
+</span></span><span class="line"><span class="ln">3</span><span class="cl">3. รอค้นหา (บางที 5-10 นาที)
+</span></span><span class="line"><span class="ln">4</span><span class="cl">4. เปิดทีละไฟล์ดู
+</span></span></code></pre></div><p><strong>ใช้ OpenClaw:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">เหน่ง: &#34;มิก ช่วยหาไฟล์ PDF แผน 5 ปีให้หน่อย&#34;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">มิก: [ค้นหาในเครื่อง]
+</span></span><span class="line"><span class="ln">3</span><span class="cl">มิก: &#34;เจอครับ: /home/nenglab/Documents/แผนปฏิบัติราชการระยะ 5 ปี.pdf&#34;
+</span></span></code></pre></div><p>→ <strong>จาก 10 นาที → 10 วินาที!</strong></p>
+<hr>
+<h3 id="2-จดการอเมล"><a href="#2-%e0%b8%88%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b9%80%e0%b8%a1%e0%b8%a5" class="header-anchor"></a>2. จัดการอีเมล
+</h3><p><strong>สถานการณ์:</strong> อยากเช็คอีเมลด่วน แต่ขี้เกียจเปิดเว็บ</p>
+<p><strong>แบบเดิม:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">1. เปิดเบราว์เซอร์
+</span></span><span class="line"><span class="ln">2</span><span class="cl">2. เข้า Gmail
+</span></span><span class="line"><span class="ln">3</span><span class="cl">3. Login
+</span></span><span class="line"><span class="ln">4</span><span class="cl">4. อ่านอีเมล
+</span></span><span class="line"><span class="ln">5</span><span class="cl">5. ตอบ (ถ้าจำเป็น)
+</span></span></code></pre></div><p><strong>ใช้ OpenClaw:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">เหน่ง: &#34;มิก มีอีเมลด่วนไหม&#34;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">มิก: [เช็คอีเมลผ่าน IMAP]
+</span></span><span class="line"><span class="ln">3</span><span class="cl">มิก: &#34;มี 2 ฉบับครับ:
+</span></span><span class="line"><span class="ln">4</span><span class="cl">      1. จาก HR - เรื่องประชุมพรุ่งนี้
+</span></span><span class="line"><span class="ln">5</span><span class="cl">      2. จาก TikTok - ยืนยันบัญชี&#34;
+</span></span><span class="line"><span class="ln">6</span><span class="cl">เหน่ง: &#34;ตอบ HR ว่าเข้าร่วมครับ&#34;
+</span></span><span class="line"><span class="ln">7</span><span class="cl">มิก: &#34;ส่งแล้วครับ!&#34;
+</span></span></code></pre></div><p>→ <strong>จาก 5 นาที → 30 วินาที!</strong></p>
+<hr>
+<h3 id="3-คนหาขอมล"><a href="#3-%e0%b8%84%e0%b8%99%e0%b8%ab%e0%b8%b2%e0%b8%82%e0%b8%ad%e0%b8%a1%e0%b8%a5" class="header-anchor"></a>3. ค้นหาข้อมูล
+</h3><p><strong>สถานการณ์:</strong> อยากรู้ราคาทองวันนี้</p>
+<p><strong>แบบเดิม:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">1. เปิดเบราว์เซอร์
+</span></span><span class="line"><span class="ln">2</span><span class="cl">2. ค้นหา &#34;ราคาทองวันนี้&#34;
+</span></span><span class="line"><span class="ln">3</span><span class="cl">3. เปิดเว็บนั้นเว็บนี้
+</span></span><span class="line"><span class="ln">4</span><span class="cl">4. เปรียบเทียบราคา
+</span></span></code></pre></div><p><strong>ใช้ OpenClaw:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">เหน่ง: &#34;มิก ราคาทองวันนี้เท่าไหร่&#34;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">มิก: [web_search]
+</span></span><span class="line"><span class="ln">3</span><span class="cl">มิก: &#34;ทองไทยวันนี้ 82,500 บาทครับ (ปกติ ~82,000)&#34;
+</span></span></code></pre></div><p>→ <strong>จาก 3 นาที → 10 วินาที!</strong></p>
+<hr>
+<h3 id="4-เขยนบทความ"><a href="#4-%e0%b9%80%e0%b8%82%e0%b8%a2%e0%b8%99%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1" class="header-anchor"></a>4. เขียนบทความ
+</h3><p><strong>สถานการณ์:</strong> อยากเขียนบทความแต่เริ่มไม่ถูก</p>
+<p><strong>แบบเดิม:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">1. เปิด Google Docs
+</span></span><span class="line"><span class="ln">2</span><span class="cl">2. นั่งคิดหัวข้อ
+</span></span><span class="line"><span class="ln">3</span><span class="cl">3. เขียน draft
+</span></span><span class="line"><span class="ln">4</span><span class="cl">4. แก้ไข
+</span></span><span class="line"><span class="ln">5</span><span class="cl">5. ตรวจสอบ
+</span></span><span class="line"><span class="ln">6</span><span class="cl">เวลา: 2-3 ชั่วโมง
+</span></span></code></pre></div><p><strong>ใช้ OpenClaw:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">เหน่ง: &#34;มิก เขียนบทความเกี่ยวกับ OpenClaw ให้หน่อย&#34;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">มิก: [ค้นหาข้อมูล + เขียน]
+</span></span><span class="line"><span class="ln">3</span><span class="cl">มิก: &#34;เขียนเสร็จครับ! อยากให้แก้ตรงไหนบอกได้เลย&#34;
+</span></span></code></pre></div><p>→ <strong>จาก 3 ชั่วโมง → 30 นาที!</strong></p>
+<hr>
+<h2 id="-เรมตนใชงาน-openclaw"><a href="#-%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b8%95%e0%b8%99%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99-openclaw" class="header-anchor"></a>🚀 เริ่มต้นใช้งาน OpenClaw
+</h2><h3 id="คำสงแรกทควรลอง"><a href="#%e0%b8%84%e0%b8%b3%e0%b8%aa%e0%b8%87%e0%b9%81%e0%b8%a3%e0%b8%81%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%a3%e0%b8%a5%e0%b8%ad%e0%b8%87" class="header-anchor"></a>คำสั่งแรกที่ควรลอง
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">&#34;มิก ช่วยแนะนำตัวหน่อย&#34;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">&#34;มิก มีอะไรทำได้บ้าง&#34;
+</span></span><span class="line"><span class="ln">3</span><span class="cl">&#34;มิก ช่วยค้นหาเรื่อง...&#34;
+</span></span></code></pre></div><h3 id="คำสงทใชบอย"><a href="#%e0%b8%84%e0%b8%b3%e0%b8%aa%e0%b8%87%e0%b8%97%e0%b9%83%e0%b8%8a%e0%b8%9a%e0%b8%ad%e0%b8%a2" class="header-anchor"></a>คำสั่งที่ใช้บ่อย
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">&#34;เขียนบทความเกี่ยวกับ...&#34;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">&#34;ค้นหาข้อมูล...&#34;
+</span></span><span class="line"><span class="ln">3</span><span class="cl">&#34;ช่วยจัดระเบียบไฟล์...&#34;
+</span></span><span class="line"><span class="ln">4</span><span class="cl">&#34;ตั้งค่า...&#34;
+</span></span><span class="line"><span class="ln">5</span><span class="cl">&#34;แจ้งเตือนฉันเรื่อง...&#34;
+</span></span></code></pre></div><h3 id="ขอควรระวง"><a href="#%e0%b8%82%e0%b8%ad%e0%b8%84%e0%b8%a7%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%a7%e0%b8%87" class="header-anchor"></a>ข้อควรระวัง
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">❌ อย่าสั่งลบไฟล์สำคัญ
+</span></span><span class="line"><span class="ln">2</span><span class="cl">❌ อย่าให้ข้อมูลลับเกินไป
+</span></span><span class="line"><span class="ln">3</span><span class="cl">✅ ตรวจสอบก่อนรันคำสั่งเสี่ยง
+</span></span><span class="line"><span class="ln">4</span><span class="cl">✅ ถามมิกก่อนถ้าไม่แน่ใจ
+</span></span></code></pre></div><hr>
+<h2 id="-สรป--ทำไมตองม-openclaw"><a href="#-%e0%b8%aa%e0%b8%a3%e0%b8%9b--%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a1-openclaw" class="header-anchor"></a>💬 สรุป — ทำไมต้องมี OpenClaw?
+</h2><h3 id="3-เหตผลหลก"><a href="#3-%e0%b9%80%e0%b8%ab%e0%b8%95%e0%b8%9c%e0%b8%a5%e0%b8%ab%e0%b8%a5%e0%b8%81" class="header-anchor"></a>3 เหตุผลหลัก:
+</h3><p><strong>1. ประหยัดเวลา</strong></p>
+<ul>
+<li>ทำงานแทนคุณได้ 70-80%</li>
+<li>เอาเวลาไปทำอย่างอื่นที่สำคัญกว่า</li>
+</ul>
+<p><strong>2. ลดความซับซ้อน</strong></p>
+<ul>
+<li>ไม่ต้องเรียนรู้ทุกอย่าง</li>
+<li>สั่งด้วยภาษาธรรมชาติ</li>
+</ul>
+<p><strong>3. มีเพื่อนคู่คิด</strong></p>
+<ul>
+<li>ไม่ใช่แค่ tool</li>
+<li>จำสิ่งที่คุยกัน</li>
+<li>เข้าใจบริบท</li>
+</ul>
+<hr>
+<h3 id="เรองจรงจากผม"><a href="#%e0%b9%80%e0%b8%a3%e0%b8%ad%e0%b8%87%e0%b8%88%e0%b8%a3%e0%b8%87%e0%b8%88%e0%b8%b2%e0%b8%81%e0%b8%9c%e0%b8%a1" class="header-anchor"></a>เรื่องจริงจากผม:
+</h3>
+    <blockquote>
+        <p>&ldquo;จากที่ต้องใช้เวลา 6 ชั่วโมงในการสร้างบล็อก
+กับมิกเสร็จใน 1 ชั่วโมง
+แถมมิกยังแก้ปัญหาให้ด้วย
+ถ้าทำเองคงยังติด 404 อยู่!&rdquo;</p>
+<p>— เหน่ง, นักพัฒนาชุมชน</p>
+
+    </blockquote>
+<hr>
+<h2 id="-พรอมเรมตนหรอยง"><a href="#-%e0%b8%9e%e0%b8%a3%e0%b8%ad%e0%b8%a1%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b8%95%e0%b8%99%e0%b8%ab%e0%b8%a3%e0%b8%ad%e0%b8%a2%e0%b8%87" class="header-anchor"></a>🎯 พร้อมเริ่มต้นหรือยัง?
+</h2><h3 id="ลองตดตง-openclaw-ดครบ"><a href="#%e0%b8%a5%e0%b8%ad%e0%b8%87%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-openclaw-%e0%b8%94%e0%b8%84%e0%b8%a3%e0%b8%9a" class="header-anchor"></a>ลองติดตั้ง OpenClaw ดูครับ!
+</h3><p><strong>1. ติดตั้ง:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">npm install -g openclaw
+</span></span></code></pre></div><p><strong>2. สร้าง Bot:</strong></p>
+<ul>
+<li>เปิด Telegram → @BotFather</li>
+<li>ส่ง: <code>/newbot</code></li>
+<li>Copy Token</li>
+</ul>
+<p><strong>3. เริ่มคุย:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">&#34;มิก ช่วยแนะนำตัวหน่อย&#34;
+</span></span></code></pre></div><p><strong>4. ลองสั่งงานแรก:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">&#34;มิก มีอะไรทำได้บ้าง&#34;
+</span></span></code></pre></div><hr>
+<h3 id="-เรยนรเพมเตม"><a href="#-%e0%b9%80%e0%b8%a3%e0%b8%a2%e0%b8%99%e0%b8%a3%e0%b9%80%e0%b8%9e%e0%b8%a1%e0%b9%80%e0%b8%95%e0%b8%a1" class="header-anchor"></a>📚 เรียนรู้เพิ่มเติม:
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>แหล่ง</th>
+          <th>ลิงก์</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Documentation</strong></td>
+          <td><a class="link" href="https://docs.openclaw.ai"  target="_blank" rel="noopener"
+    >https://docs.openclaw.ai</a></td>
+      </tr>
+      <tr>
+          <td><strong>Discord Community</strong></td>
+          <td><a class="link" href="https://discord.gg/clawd"  target="_blank" rel="noopener"
+    >https://discord.gg/clawd</a></td>
+      </tr>
+      <tr>
+          <td><strong>GitHub</strong></td>
+          <td><a class="link" href="https://github.com/openclaw/openclaw"  target="_blank" rel="noopener"
+    >https://github.com/openclaw/openclaw</a></td>
+      </tr>
+      <tr>
+          <td><strong>Skill Hub</strong></td>
+          <td><a class="link" href="https://clawhub.ai"  target="_blank" rel="noopener"
+    >https://clawhub.ai</a></td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="-มคำถาม"><a href="#-%e0%b8%a1%e0%b8%84%e0%b8%b3%e0%b8%96%e0%b8%b2%e0%b8%a1" class="header-anchor"></a>💬 มีคำถาม?
+</h3><p>ถ้าติดตรงไหน หรืออยากได้ความช่วยเหลือ:</p>
+<ul>
+<li>ถาม Mick ได้เลย (ถ้าติดตั้งแล้ว)</li>
+<li>เข้า Discord Community</li>
+<li>อ่าน Documentation</li>
+</ul>
+<hr>
+<p><strong>สุดท้ายนี้&hellip;</strong></p>
+<p>เทคโนโลยีมีไว้เพื่อทำให้ชีวิตง่ายขึ้น ไม่ใช่ทำให้ซับซ้อนขึ้น</p>
+<p>OpenClaw ไม่ใช่แค่ tool — แต่เป็น <strong>ผู้ช่วยส่วนตัว</strong> ที่ช่วยคุณทำงานซ้ำ ๆ เพื่อให้คุณมีเวลาไปทำสิ่งที่สำคัญจริง ๆ</p>
+<p>สำหรับผม สิ่งสำคัญคือ <strong>งานพัฒนาชุมชน</strong> และ <strong>การแบ่งปันความรู้</strong></p>
+<p>OpenClaw ช่วยผมมีเวลาทำสิ่งเหล่านั้นมากขึ้น</p>
+<p>แล้วคุณล่ะ? พร้อมหรือยังที่จะมี AI Assistant ส่วนตัว? 🚀</p>
+<hr>
+<p><em>บทความโดย เหน่ง (Nueng)</em><br>
+<em>Community Development Officer (นักวิชาการพัฒนาชุมชน)</em><br>
+<em>Community Development Department, Ministry of Interior (กรมการพัฒนาชุมชน กระทรวงมหาดไทย)</em></p>
+<p><em>สร้างด้วยความช่วยเหลือจาก Mick — AI Assistant</em><br>
+<em>
+
+<img alt="GitHub Logo" class="gallery-image" data-flex-basis="240px" data-flex-grow="100" height="560" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" src="/neng-blog/posts/openclaw-guide/github-logo_hu_f11cae4074366f96.png" srcset="/neng-blog/posts/openclaw-guide/github-logo_hu_c4c9c2a11a7aa14d.webp 400w, /neng-blog/posts/openclaw-guide/github-logo_hu_f11cae4074366f96.png 560w" width="560">
+</em><br>
+<em>2026-04-05</em></p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/neng-blog/tags/openclaw/">Openclaw</a>
+        
+            <a href="/neng-blog/tags/ai/">Ai</a>
+        
+            <a href="/neng-blog/tags/automation/">Automation</a>
+        
+            <a href="/neng-blog/tags/productivity/">Productivity</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright inline-meta">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+        <div class="giscus-container" role="region" aria-label="Comments section">
+<script
+    src="https://giscus.app/client.js"
+    data-repo="jitaret-rgb/neng-blog"
+    data-repo-id="R_kgDOR6Wt7Q"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOR6Wt7c4C6TwS"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="noborder_dark"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+</script>
+</div>
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2026 Code &amp; Community
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/neng-blog\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/neng-blog/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const codeBlocks = document.querySelectorAll('.article-content div.highlight');
+  
+  codeBlocks.forEach(function(block) {
+    
+    const existingButton = block.querySelector('.copy-code-button');
+    if (existingButton) {
+      return; 
+    }
+    
+    const button = document.createElement('button');
+    button.className = 'copy-code-button';
+    button.textContent = 'Copy';
+    button.setAttribute('aria-label', 'Copy code');
+    
+    button.addEventListener('click', function() {
+      const code = block.querySelector('code');
+      if (code) {
+        navigator.clipboard.writeText(code.textContent).then(function() {
+          button.textContent = 'Copied!';
+          button.style.background = 'var(--accent-color)';
+          button.style.color = '#fff';
+          setTimeout(function() {
+            button.textContent = 'Copy';
+            button.style.background = '';
+            button.style.color = '';
+          }, 2000);
+        });
+      }
+    });
+    
+    block.appendChild(button);
+  });
+});
+</script>
+
+
+    </body>
+</html>

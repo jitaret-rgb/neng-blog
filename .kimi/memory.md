@@ -20,7 +20,7 @@
 | 2026-04-08 | ตั้งค่า default theme เป็น "dark" + เพิ่ม `[params.colorScheme]` | เปลี่ยนจาก "auto" → บังคับ dark mode แต่ยังสลับได้ |
 | 2026-04-08 | ปรับสี Stack Theme + Giscus | บล็อกสลับ Light/Dark ได้ตามปกติ, Giscus ค้างที่ `noborder_dark` ตลอด |
 | 2026-04-08 | ป้องกัน `.kimi/` ไม่ให้ขึ้น GitHub/GitHub Pages | เพิ่ม `.gitignore` + `ignoreFiles` ใน hugo.toml |
-| 2026-04-08 | Mermaid diagram ใช้ `darkTheme = "default"` | เปลี่ยนจาก `"dark"` เป็น `"default"` ให้สอดคล้อง |
+| 2026-04-08 | Mermaid diagram ใช้ `darkTheme = "dark"`, `lightTheme = "default"` | สลับธีมตามโหมด: light=default, dark=dark |
 | 2026-04-08 | Giscus ใช้ theme คงที่ `noborder_dark` | ลบโค้ดสลับ theme, เพิ่ม `theme = "noborder_dark"` ใน config |
 
 ## Technical Details
@@ -59,6 +59,21 @@
   - `frame-src` → `https://giscus.app` (สำหรับ iframe)
   - `connect-src` → `https://giscus.app`
 
+### Mermaid Diagram Setup
+- **Config** (`hugo.toml`):
+  ```toml
+  [params.colorScheme]
+    toggle = true        # แสดงปุ่มสลับ theme
+    default = "dark"     # เริ่มต้นเป็น dark mode
+
+  [params.article.mermaid]
+    look = "classic"
+    lightTheme = "default"   # ธีมสำหรับ light mode
+    darkTheme = "dark"       # ธีมสำหรับ dark mode
+    securityLevel = "strict"
+  ```
+- **ธีมที่ใช้ได้**: `default`, `neutral`, `dark`, `forest`, `base`
+
 ## Common Issues & Fixes
 
 1. **Giscus ไม่แสดง**: ตรวจสอบ CSP ว่าอนุญาติ `giscus.app` หรือไม่
@@ -81,7 +96,11 @@
 - ทดลองสร้าง/ลบ Custom Homepage (`content/_index.md`) → กลับไปใช้ list posts ตาม default
 
 ### 2026-04-08 (ช่วงเย็น)
-- เปลี่ยน Mermaid `darkTheme` จาก `"dark"` เป็น `"default"`
+- ตั้งค่า Mermaid: `lightTheme = "default"`, `darkTheme = "dark"` (สลับธีมตามโหมด)
 - ตั้งค่า Giscus ให้ใช้ theme คงที่ (`noborder_dark`) ไม่สลับตาม Light/Dark mode
 - อัปเดต `giscus.html` ลบโค้ด JavaScript สลับ theme, เหลือแค่ `data-theme` ค่าเดียว
 - เพิ่ม `theme = "noborder_dark"` ใน `[params.comments.giscus]` เพื่อให้ตั้งค่าง่ายขึ้น
+
+### 2026-04-08 (ช่วงค่ำ)
+- ตั้งค่า Mermaid ให้สอดคล้อง: light mode = default theme, dark mode = dark theme
+- บล็อกเริ่มต้นเป็น dark mode (`default = "dark"`) แต่สามารถสลับ theme ได้
