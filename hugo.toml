@@ -29,13 +29,9 @@ theme = 'hugo-theme-stack'
       default = "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">CC BY-NC 4.0</a>"
     
 
-# Cookie Consent (GDPR)
+# Cookie Consent (GDPR) - ปิดชั่วคราวเพื่อทดสอบ Giscus
 [cookies]
-  enabled = true
-  showSettings = true
-  [cookies.categories]
-    analytics = true
-    functional = true
+  enabled = false
   [params.comments]
     enabled = true
     provider = "giscus"
