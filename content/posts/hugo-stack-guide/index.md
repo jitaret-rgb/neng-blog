@@ -122,8 +122,8 @@ assets/
 ```toml
 [params.article.mermaid]
   look = "classic"         # classic หรือ handDrawn
-  lightTheme = "default"
-  darkTheme = "neutral"
+  lightTheme = "default"   # ธีมสำหรับ light mode
+  darkTheme = "dark"       # ธีมสำหรับ dark mode (สลับธีมอัตโนมัติ)
   securityLevel = "strict"
 ```
 
