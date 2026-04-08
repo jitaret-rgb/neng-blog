@@ -17,6 +17,7 @@
 | 2026-04-08 | เปลี่ยน Giscus theme เป็น `noborder_dark` | ต้องการให้สีเข้ากับ blog โดยไม่มีขอบ |
 | 2026-04-08 | Giscus สลับ theme ตาม Stack Theme | light → noborder_light, dark → noborder_dark |
 | 2026-04-08 | ลบ Custom Homepage (กลับไปแสดง list บทความ) | ลบ `content/_index.md` เพื่อแสดง list posts ตาม default |
+| 2026-04-08 | ตั้งค่า default theme เป็น "dark" + เพิ่ม `[params.colorScheme]` | เปลี่ยนจาก "auto" → บังคับ dark mode แต่ยังสลับได้ |
 | 2026-04-08 | ป้องกัน `.kimi/` ไม่ให้ขึ้น GitHub/GitHub Pages | เพิ่ม `.gitignore` + `ignoreFiles` ใน hugo.toml |
 
 ## Technical Details

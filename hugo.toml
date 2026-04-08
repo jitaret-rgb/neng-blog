@@ -10,7 +10,7 @@ ignoreFiles = ['\.kimi/.*']
   subtitle = "Bridging Technology and Community Development"
   description = "A blog about technology, community development, and life by Nueng"
   keywords = ["blog", "neng", "thai", "technology", "lifestyle"]
-  defaultTheme = "auto"
+  defaultTheme = "dark"
   mainSections = ["posts"]
   
   # Custom Font - Noto Sans Thai
@@ -30,7 +30,11 @@ ignoreFiles = ['\.kimi/.*']
     [params.article.license]
       enabled = true
       default = "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">CC BY-NC 4.0</a>"
-    
+  
+  # Color Scheme (Dark/Light Mode)
+  [params.colorScheme]
+    toggle = true        # แสดงปุ่มสลับ theme
+    default = "dark"     # ค่าเริ่มต้น: light | dark | auto
 
 # Cookie Consent (GDPR) - ปิดชั่วคราวเพื่อทดสอบ Giscus
 [cookies]
