@@ -79,10 +79,9 @@ theme = 'hugo-theme-stack'
     site = "Majinman"
 
 # Google Analytics
-[params.analytics]
-  provider = "google"
-  [params.analytics.google]
-    siteID = "G-Q59XSCDQZR"
+[services]
+  [services.googleAnalytics]
+    ID = "G-Q59XSCDQZR"
 
 # Widgets
 [[params.widgets.homepage]]
