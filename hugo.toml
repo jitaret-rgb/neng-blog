@@ -32,11 +32,12 @@ theme = 'hugo-theme-stack'
 # Cookie Consent (GDPR) - ปิดชั่วคราวเพื่อทดสอบ Giscus
 [cookies]
   enabled = false
-  [params.comments]
-    enabled = true
-    provider = "giscus"
 
-  [params.comments.giscus]
+[params.comments]
+  enabled = true
+  provider = "giscus"
+
+[params.comments.giscus]
     repo = "jitaret-rgb/neng-blog"
     repoID = "R_kgDOR6Wt7Q"
     category = "Announcements"
