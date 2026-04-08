@@ -1,6 +1,5 @@
 {{- with .Site.Params.comments.giscus -}}
-{{- $lightTheme := .lightTheme | default "noborder_light" -}}
-{{- $darkTheme := .darkTheme | default "noborder_dark" -}}
+{{- $theme := .darkTheme | default "noborder_dark" -}}
 
 <div class="giscus-container" role="region" aria-label="Comments section">
 <script
@@ -14,7 +13,7 @@
     data-reactions-enabled="{{- .reactionsEnabled -}}"
     data-emit-metadata="{{- .emitMetadata -}}"
     data-input-position="{{- .inputPosition -}}"
-    data-theme="{{- $lightTheme -}}"
+    data-theme="{{- $theme -}}"
     data-lang="{{- .lang -}}"
     data-loading="lazy"
     crossorigin="anonymous"
@@ -23,25 +22,14 @@
 </div>
 <script>
     (function () {
-        const lightTheme = '{{- $lightTheme -}}';
-        const darkTheme = '{{- $darkTheme -}}';
+        const theme = '{{- $theme -}}';
         
-        function getCurrentTheme() {
-            const scheme = document.documentElement.dataset.scheme;
-            if (scheme === "dark") return darkTheme;
-            if (scheme === "light") return lightTheme;
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                return darkTheme;
-            }
-            return lightTheme;
-        }
-        
-        function setGiscusTheme(theme) {
+        function setGiscusTheme(newTheme) {
             const giscus = document.querySelector("iframe.giscus-frame");
             if (giscus && giscus.contentWindow) {
                 try {
                     giscus.contentWindow.postMessage(
-                        { giscus: { setConfig: { theme: theme } } },
+                        { giscus: { setConfig: { theme: newTheme } } },
                         "https://giscus.app"
                     );
                 } catch (err) {
@@ -50,58 +38,28 @@
             }
         }
         
-        // ส่ง theme ที่ถูกต้องไปให้ giscus
-        function updateGiscusTheme() {
-            setGiscusTheme(getCurrentTheme());
-        }
-        
-        // Message handler - เมื่อ giscus พร้อมใช้งาน
+        // อัปเดต theme ตอน giscus พร้อมใช้งาน
         const messageHandler = (e) => {
             if (e.origin !== "https://giscus.app") return;
             if (!(typeof e.data === 'object' && e.data.giscus)) return;
             
             const giscusData = e.data.giscus;
-            // เมื่อ giscus ready หรือมี error
             if (giscusData.discussion || giscusData.error) {
-                updateGiscusTheme();
+                setGiscusTheme(theme);
             }
         };
+        
         window.addEventListener("message", messageHandler);
         
-        // ฟังก์ชันอัปเดต theme เมื่อ Stack Theme เปลี่ยน
-        window.addEventListener("onColorSchemeChange", updateGiscusTheme);
-        
-        // ตรวจสอบการเปลี่ยนแปลง localStorage (กรณีเปิดหลาย tab)
-        window.addEventListener("storage", function(e) {
-            if (e.key === "StackColorScheme") {
-                updateGiscusTheme();
-            }
-        });
-        
-        // MutationObserver: Detect เมื่อ iframe ถูกสร้างใหม่ (หลังกด Refresh ใน Giscus)
-        const observer = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
-                mutation.addedNodes.forEach(function(node) {
-                    if (node.nodeName === 'IFRAME' && node.classList.contains('giscus-frame')) {
-                        // Iframe ถูกสร้าง/แทนที่ใหม่ รอให้โหลดเสร็จแล้วส่ง theme
-                        node.addEventListener('load', function() {
-                            // รออีกนิดให้ giscus พร้อม
-                            setTimeout(updateGiscusTheme, 100);
-                        });
-                    }
-                });
-            });
-        });
-        
-        // เริ่ม observe ตั้งแต่ DOM ready
+        // ตรวจสอบ theme เมื่อโหลดหน้าเสร็จ (DOM ready)
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', function() {
-                observer.observe(document.body, { childList: true, subtree: true });
-                updateGiscusTheme();
+                setGiscusTheme(theme);
             });
         } else {
-            observer.observe(document.body, { childList: true, subtree: true });
-            updateGiscusTheme();
+            setTimeout(function() {
+                setGiscusTheme(theme);
+            }, 100);
         }
     })();
 </script>
