@@ -18,7 +18,7 @@
 | 2026-04-08 | Giscus ใช้ `noborder_dark` ทั้ง 2 โหมด | แก้ `hugo.toml` + `giscus.html` ให้ใช้ dark theme ตลอด |
 | 2026-04-08 | ลบ Custom Homepage (กลับไปแสดง list บทความ) | ลบ `content/_index.md` เพื่อแสดง list posts ตาม default |
 | 2026-04-08 | ตั้งค่า default theme เป็น "dark" + เพิ่ม `[params.colorScheme]` | เปลี่ยนจาก "auto" → บังคับ dark mode แต่ยังสลับได้ |
-| 2026-04-08 | ปรับสี Stack Theme ให้เข้ากับ Giscus ทั้ง 2 โหมด | `custom.scss` - ทั้ง light และ dark mode ใช้สี `noborder_dark` เหมือนกัน |
+| 2026-04-08 | ปรับสี Stack Theme + Giscus | บล็อกสลับ Light/Dark ได้ตามปกติ, Giscus ค้างที่ `noborder_dark` ตลอด |
 | 2026-04-08 | ป้องกัน `.kimi/` ไม่ให้ขึ้น GitHub/GitHub Pages | เพิ่ม `.gitignore` + `ignoreFiles` ใน hugo.toml |
 
 ## Technical Details
@@ -38,7 +38,7 @@
     category = "Announcements"
     categoryID = "DIC_kwDOR6Wt7c4C6TwS"
     mapping = "pathname"
-    lightTheme = "noborder_light"
+    lightTheme = "noborder_dark"
     darkTheme = "noborder_dark"
   ```
 
@@ -73,7 +73,7 @@
 ### 2026-04-08 (ช่วงบ่าย)
 - เปลี่ยน Giscus theme เป็น `noborder_dark` ทั้ง light และ dark mode
 - อัปเดต template `giscus.html` ให้ใช้ built-in theme แทน custom CSS
-- ปรับ Giscus ให้สลับ theme ตาม Stack Theme: light → noborder_light, dark → noborder_dark
-- เพิ่ม MutationObserver แก้ bug Giscus กลับเป็น light หลังกด Refresh
+- ปรับสี Stack Theme ใน `custom.scss` - บล็อกสลับ Light/Dark ได้, Giscus ค้างที่ `noborder_dark`
+- ตั้งค่า default theme เป็น "dark" + เพิ่ม `[params.colorScheme]` ให้สลับ theme ได้
 - ป้องกัน `.kimi/memory.md` ไม่ให้ขึ้น GitHub (`.gitignore`) และ GitHub Pages (`ignoreFiles`)
 - ทดลองสร้าง/ลบ Custom Homepage (`content/_index.md`) → กลับไปใช้ list posts ตาม default
