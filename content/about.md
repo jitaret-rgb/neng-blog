@@ -58,9 +58,11 @@ type = 'page'
 
 ## 💡 ปรัชญาการทำงาน
 
-> "Strong grassroots economy, sustainable strong communities"
+> **"Tech-Enabled, Humanity-Anchored"**
 > 
-> เศรษฐกิจฐานรากมั่นคง ชุมชนเข้มแข็งอย่างยั่งยืน
+> เทคโนโลยีเป็นเครื่องมือ
+> คนเป็นศูนย์กลาง
+> ประชาชนเป็นที่หมาย
 
 ---
 
