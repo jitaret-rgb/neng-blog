@@ -1,4 +1,7 @@
 {{- with .Site.Params.comments.giscus -}}
+{{- $baseURL := $.Site.BaseURL | default "https://jitaret-rgb.github.io/neng-blog/" -}}
+{{- $lightThemeURL := printf "%scss/giscus-stack-light.css" $baseURL -}}
+{{- $darkThemeURL := printf "%scss/giscus-stack-dark.css" $baseURL -}}
 <div class="giscus-container" role="region" aria-label="Comments section">
 <script
     src="https://giscus.app/client.js"
@@ -11,7 +14,7 @@
     data-reactions-enabled="{{- .reactionsEnabled -}}"
     data-emit-metadata="{{- .emitMetadata -}}"
     data-input-position="{{- .inputPosition -}}"
-    data-theme="{{- .lightTheme -}}"
+    data-theme="{{- $lightThemeURL -}}"
     data-lang="{{- .lang -}}"
     data-loading="lazy"
     crossorigin="anonymous"
@@ -19,28 +22,30 @@
 ></script>
 </div>
 <script>
-    function setGiscusTheme(theme) {
-        const giscus = document.querySelector("iframe.giscus-frame");
-        if (giscus && giscus.contentWindow) {
-            try {
-                giscus.contentWindow.postMessage(
-                    {
-                        giscus: {
-                            setConfig: {
-                                theme: theme,
+    (function () {
+        const lightThemeURL = '{{- $lightThemeURL -}}';
+        const darkThemeURL = '{{- $darkThemeURL -}}';
+        
+        function setGiscusTheme(theme) {
+            const giscus = document.querySelector("iframe.giscus-frame");
+            if (giscus && giscus.contentWindow) {
+                try {
+                    giscus.contentWindow.postMessage(
+                        {
+                            giscus: {
+                                setConfig: {
+                                    theme: theme,
+                                },
                             },
                         },
-                    },
-                    "https://giscus.app"
-                );
-            } catch (err) {
-                // Silently fail if iframe not ready
-                console.debug("Giscus theme update failed:", err);
+                        "https://giscus.app"
+                    );
+                } catch (err) {
+                    console.debug("Giscus theme update failed:", err);
+                }
             }
         }
-    }
 
-    (function () {
         const messageHandler = (e) => {
             if (e.origin !== "https://giscus.app") return;
             handler();
@@ -51,9 +56,9 @@
 
         function handler() {
             if (document.documentElement.dataset.scheme === "light") {
-                setGiscusTheme('{{- .lightTheme -}}');
+                setGiscusTheme(lightThemeURL);
             } else {
-                setGiscusTheme('{{- .darkTheme -}}');
+                setGiscusTheme(darkThemeURL);
             }
         }
     })();
