@@ -4,12 +4,14 @@ Params:
     Widths: Slice of widths to generate for srcset
     Attributes: Map of HTML attributes for the <img> tag
     Format: Output format (webp, jpeg, png) - default: webp
+    Sizes: Sizes attribute for responsive images
 */ -}}
 
 {{- $resource := .Resource -}}
 {{- $widths := .Widths -}}
 {{- $attributes := .Attributes | default dict -}}
 {{- $format := .Format | default "webp" -}}  {{/* ค่าเริ่มต้นเป็น webp */}}
+{{- $sizes := .Sizes | default "(max-width: 800px) 100vw, 800px" -}}  {{/* เพิ่ม sizes เริ่มต้น */}}
 
 {{/* Generate srcset if Resource and Widths are provided */}}
 {{- if and $widths $resource (reflect.IsImageResourceProcessable $resource) -}}
@@ -24,7 +26,7 @@ Params:
     {{- if gt (len $srcset) 0 -}}
         {{- $permalink := default $resource.RelPermalink (index $attributes "src") -}}
         {{- $srcset = $srcset | append (printf "%s %dw" $permalink $resource.Width) -}}
-        {{- $attributes = merge $attributes (dict "srcset" (delimit $srcset ", ")) -}}
+        {{- $attributes = merge $attributes (dict "srcset" (delimit $srcset ", ") "sizes" $sizes) -}}
     {{- end -}}
 {{- end -}}
 

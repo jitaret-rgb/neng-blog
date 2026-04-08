@@ -24,20 +24,37 @@
   {{- if $link }}<a href="{{ $link }}"{{ with $target }} target="{{ . }}"{{ end }}{{ with $rel }} rel="{{ . }}"{{ end }}>{{ end -}}
   
   {{- if and $resource (reflect.IsImageResourceProcessable $resource) -}}
-    {{/* สร้างรูป WebP */}}
-    {{- $webpImage := $resource.Resize (printf "%dx webp" (or $width $resource.Width)) -}}
-    {{- $originalImage := $resource -}}
-    {{- if $width -}}
-      {{- $originalImage = $resource.Resize (printf "%dx" $width) -}}
+    {{/* สร้างรูปหลายขนาดในรูปแบบ WebP - consistent กับ img.html */}}
+    {{- $sizes := slice 400 800 1200 -}}
+    {{- $srcsetWebp := slice -}}
+    {{- $srcsetOriginal := slice -}}
+    
+    {{- range $sizes -}}
+      {{- if le . $resource.Width -}}
+        {{- $resizedWebp := $resource.Resize (printf "%dx webp" .) -}}
+        {{- $resizedOriginal := $resource.Resize (printf "%dx" .) -}}
+        {{- $srcsetWebp = $srcsetWebp | append (printf "%s %dw" $resizedWebp.RelPermalink .) -}}
+        {{- $srcsetOriginal = $srcsetOriginal | append (printf "%s %dw" $resizedOriginal.RelPermalink .) -}}
+      {{- end -}}
     {{- end -}}
     
+    {{- $defaultWidth := math.Min (or $width 800) $resource.Width -}}
+    {{- $webpImage := $resource.Resize (printf "%dx webp" $defaultWidth) -}}
+    {{- $originalImage := $resource.Resize (printf "%dx" $defaultWidth) -}}
+    
     <picture>
-      <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
-      <source srcset="{{ $originalImage.RelPermalink }}" type="image/{{ $resource.MediaType.SubType }}">
+      {{- if gt (len $srcsetWebp) 0 -}}
+        <source srcset="{{ delimit $srcsetWebp ", " }}" type="image/webp" sizes="(max-width: 800px) 100vw, 800px">
+      {{- else -}}
+        <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
+      {{- end -}}
+      {{- if gt (len $srcsetOriginal) 0 -}}
+        <source srcset="{{ delimit $srcsetOriginal ", " }}" type="image/{{ $resource.MediaType.SubType }}" sizes="(max-width: 800px) 100vw, 800px">
+      {{- end -}}
       <img src="{{ $originalImage.RelPermalink }}" 
            alt="{{ $alt }}" 
-           {{ with $width }}width="{{ . }}"{{ end }}
-           {{ with $height }}height="{{ . }}"{{ end }}
+           width="{{ $defaultWidth }}"
+           {{ with $height }}height="{{ . }}"{{ else }}height="{{ mul $defaultWidth $resource.Height | div $resource.Width }}"{{ end }}
            loading="lazy"
            decoding="async">
     </picture>

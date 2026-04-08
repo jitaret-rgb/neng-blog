@@ -13,6 +13,12 @@ ignoreFiles = ['\.kimi/.*']
   defaultTheme = "dark"
   mainSections = ["posts"]
   
+  # RSS Full Content (แสดงเนื้อหาเต็มใน RSS feed)
+  rssFullContent = true
+  
+  # Favicon (ต้องวางไฟล์ที่ static/favicon.ico)
+  # favicon = "/favicon.ico"
+  
   # Custom Font - Noto Sans Thai
   [[params.headCustomHTML]]
     html = """<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,11 +28,21 @@ ignoreFiles = ['\.kimi/.*']
   [params.sidebar]
     subtitle = "Bridging Technology and Community Development"
     avatar = "img/profile.jpg"
+    emoji = "💻"              # Emoji ที่แสดงเหนือ avatar
+    # compact = false         # ใช้ sidebar แบบ compact (optional)
     
   [params.article]
     math = false
     toc = true
     readingTime = true
+    headingAnchor = true      # แสดง anchor links ข้าง headings เมื่อ hover
+    
+    [params.article.mermaid]  # Mermaid diagram configuration
+      look = "classic"        # "classic" หรือ "handDrawn"
+      lightTheme = "default"
+      darkTheme = "dark"
+      securityLevel = "strict"  # "strict" หรือ "loose" (สำหรับ HTML labels)
+    
     [params.article.license]
       enabled = true
       default = "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">CC BY-NC 4.0</a>"
@@ -63,7 +79,7 @@ ignoreFiles = ['\.kimi/.*']
     limit = 10
     
   [params.footer]
-    since = 2026
+    since = 2026              # ปีเริ่มต้น blog (ปีปัจจุบัน)
     customText = ""
     
   [params.dateFormat]
@@ -95,6 +111,7 @@ ignoreFiles = ['\.kimi/.*']
   locale = "th_TH"
   [params.opengraph.twitter]
     site = "Majinman"
+    card = "summary_large_image"  # "summary" หรือ "summary_large_image"
 
 # Google Analytics
 [services]
