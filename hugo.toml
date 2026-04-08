@@ -47,8 +47,8 @@ theme = 'hugo-theme-stack'
     reactionsEnabled = "1"
     emitMetadata = "0"
     inputPosition = "bottom"
-    lightTheme = "preferred_color_scheme"
-    darkTheme = "preferred_color_scheme"
+    lightTheme = "light"
+    darkTheme = "dark_dimmed"
     lang = "en"
     loading = "lazy"
     

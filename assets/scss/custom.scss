@@ -63,3 +63,62 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
   }
 }
+
+/* Giscus Comments - Responsive & Theme Integration */
+.giscus {
+  margin-top: var(--section-separation);
+  width: 100%;
+  
+  /* Responsive iframe container */
+  .giscus-frame {
+    width: 100%;
+    min-height: 200px;
+    border: none;
+    border-radius: var(--card-border-radius);
+    background-color: var(--card-background);
+  }
+}
+
+/* Giscus container styling to match Stack theme */
+.giscus-container {
+  background-color: var(--card-background);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--shadow-l1);
+  margin-top: var(--section-separation);
+  
+  /* Mobile: use smaller padding */
+  @include respond(sm) {
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+  
+  /* Extra small screens */
+  @media (max-width: 480px) {
+    padding: var(--spacing-sm);
+    border-radius: calc(var(--card-border-radius) / 2);
+  }
+}
+
+/* Ensure giscus iframe takes full width on mobile */
+@media (max-width: 768px) {
+  .giscus {
+    .giscus-frame {
+      min-height: 180px;
+    }
+  }
+}
+
+/* Tablet and larger screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .giscus .giscus-frame {
+    min-height: 220px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1280px) {
+  .giscus .giscus-frame {
+    min-height: 250px;
+  }
+}
