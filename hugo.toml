@@ -40,7 +40,7 @@ ignoreFiles = ['\.kimi/.*']
     [params.article.mermaid]  # Mermaid diagram configuration
       look = "classic"        # "classic" หรือ "handDrawn"
       lightTheme = "default"
-      darkTheme = "dark"
+      darkTheme = "default"
       securityLevel = "strict"  # "strict" หรือ "loose" (สำหรับ HTML labels)
     
     [params.article.license]
@@ -72,6 +72,7 @@ ignoreFiles = ['\.kimi/.*']
     inputPosition = "bottom"
     lightTheme = "noborder_dark"
     darkTheme = "noborder_dark"
+    theme = "noborder_dark"
     lang = "en"
     loading = "lazy"
     

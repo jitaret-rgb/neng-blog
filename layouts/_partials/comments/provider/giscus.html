@@ -1,5 +1,5 @@
 {{- with .Site.Params.comments.giscus -}}
-{{- $theme := .darkTheme | default "noborder_dark" -}}
+{{- $theme := .theme | default .darkTheme | default "noborder_dark" -}}
 
 <div class="giscus-container" role="region" aria-label="Comments section">
 <script
@@ -15,52 +15,8 @@
     data-input-position="{{- .inputPosition -}}"
     data-theme="{{- $theme -}}"
     data-lang="{{- .lang -}}"
-    data-loading="lazy"
     crossorigin="anonymous"
-    async
-></script>
-</div>
-<script>
-    (function () {
-        const theme = '{{- $theme -}}';
-        
-        function setGiscusTheme(newTheme) {
-            const giscus = document.querySelector("iframe.giscus-frame");
-            if (giscus && giscus.contentWindow) {
-                try {
-                    giscus.contentWindow.postMessage(
-                        { giscus: { setConfig: { theme: newTheme } } },
-                        "https://giscus.app"
-                    );
-                } catch (err) {
-                    console.debug("Giscus theme update failed:", err);
-                }
-            }
-        }
-        
-        // อัปเดต theme ตอน giscus พร้อมใช้งาน
-        const messageHandler = (e) => {
-            if (e.origin !== "https://giscus.app") return;
-            if (!(typeof e.data === 'object' && e.data.giscus)) return;
-            
-            const giscusData = e.data.giscus;
-            if (giscusData.discussion || giscusData.error) {
-                setGiscusTheme(theme);
-            }
-        };
-        
-        window.addEventListener("message", messageHandler);
-        
-        // ตรวจสอบ theme เมื่อโหลดหน้าเสร็จ (DOM ready)
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', function() {
-                setGiscusTheme(theme);
-            });
-        } else {
-            setTimeout(function() {
-                setGiscusTheme(theme);
-            }, 100);
-        }
-    })();
+    async>
 </script>
+</div>
 {{- end -}}
