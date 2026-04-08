@@ -1,5 +1,6 @@
 {{- with .Site.Params.comments.giscus -}}
-{{- $theme := .lightTheme | default "noborder_dark" -}}
+{{- $lightTheme := .lightTheme | default "noborder_light" -}}
+{{- $darkTheme := .darkTheme | default "noborder_dark" -}}
 
 <div class="giscus-container" role="region" aria-label="Comments section">
 <script
@@ -13,7 +14,7 @@
     data-reactions-enabled="{{- .reactionsEnabled -}}"
     data-emit-metadata="{{- .emitMetadata -}}"
     data-input-position="{{- .inputPosition -}}"
-    data-theme="{{- $theme -}}"
+    data-theme="{{- $lightTheme -}}"
     data-lang="{{- .lang -}}"
     data-loading="lazy"
     crossorigin="anonymous"
@@ -22,9 +23,22 @@
 </div>
 <script>
     (function () {
-        const theme = '{{- $theme -}}';
+        const lightTheme = '{{- $lightTheme -}}';
+        const darkTheme = '{{- $darkTheme -}}';
         
-        function setGiscusTheme(newTheme) {
+        function getCurrentTheme() {
+            // ตรวจสอบจาก data-scheme ที่ตั้งค่าไว้ใน HTML (โดย Stack Theme)
+            const scheme = document.documentElement.dataset.scheme;
+            if (scheme === "dark") return darkTheme;
+            if (scheme === "light") return lightTheme;
+            // Auto mode: เช็ค system preference
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                return darkTheme;
+            }
+            return lightTheme;
+        }
+        
+        function setGiscusTheme(theme) {
             const giscus = document.querySelector("iframe.giscus-frame");
             if (giscus && giscus.contentWindow) {
                 try {
@@ -32,7 +46,7 @@
                         {
                             giscus: {
                                 setConfig: {
-                                    theme: newTheme,
+                                    theme: theme,
                                 },
                             },
                         },
@@ -52,22 +66,33 @@
             const giscusData = e.data.giscus;
             // เมื่อ giscus พร้อม (มี discussion หรือ error กลับมา)
             if (giscusData.discussion || giscusData.error) {
-                setGiscusTheme(theme);
+                setGiscusTheme(getCurrentTheme());
             }
         };
         
         window.addEventListener("message", messageHandler);
         
+        // ฟังก์ชันอัปเดต theme เมื่อ Stack Theme เปลี่ยน
+        function updateTheme() {
+            setGiscusTheme(getCurrentTheme());
+        }
+        
+        // รอฟัง event onColorSchemeChange จาก Stack theme
+        window.addEventListener("onColorSchemeChange", updateTheme);
+
+        // ตรวจสอบการเปลี่ยนแปลง localStorage (กรณีเปิดหลาย tab)
+        window.addEventListener("storage", function(e) {
+            if (e.key === "StackColorScheme") {
+                updateTheme();
+            }
+        });
+        
         // ตรวจสอบ theme เมื่อโหลดหน้าเสร็จ (DOM ready)
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', function() {
-                setGiscusTheme(theme);
-            });
+            document.addEventListener('DOMContentLoaded', updateTheme);
         } else {
             // DOM โหลดแล้ว รอ iframe สักครู่
-            setTimeout(function() {
-                setGiscusTheme(theme);
-            }, 100);
+            setTimeout(updateTheme, 100);
         }
     })();
 </script>

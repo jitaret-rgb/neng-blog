@@ -15,6 +15,7 @@
 | 2026-04-08 | ใช้ `services.googleAnalytics.ID` แทน `params.analytics.google.siteID` | Hugo internal template ต้องการแบบนี้ |
 | 2026-04-08 | เพิ่ม `giscus.app` เข้า CSP (script-src, frame-src, connect-src) | ไม่งั้น Giscus จะถูกบล็อก |
 | 2026-04-08 | เปลี่ยน Giscus theme เป็น `noborder_dark` | ต้องการให้สีเข้ากับ blog โดยไม่มีขอบ |
+| 2026-04-08 | Giscus สลับ theme ตาม Stack Theme | light → noborder_light, dark → noborder_dark |
 | 2026-04-08 | ป้องกัน `.kimi/` ไม่ให้ขึ้น GitHub/GitHub Pages | เพิ่ม `.gitignore` + `ignoreFiles` ใน hugo.toml |
 
 ## Technical Details
@@ -34,7 +35,7 @@
     category = "Announcements"
     categoryID = "DIC_kwDOR6Wt7c4C6TwS"
     mapping = "pathname"
-    lightTheme = "noborder_dark"
+    lightTheme = "noborder_light"
     darkTheme = "noborder_dark"
   ```
 
@@ -69,4 +70,5 @@
 ### 2026-04-08 (ช่วงบ่าย)
 - เปลี่ยน Giscus theme เป็น `noborder_dark` ทั้ง light และ dark mode
 - อัปเดต template `giscus.html` ให้ใช้ built-in theme แทน custom CSS
+- ปรับ Giscus ให้สลับ theme ตาม Stack Theme: light → noborder_light, dark → noborder_dark
 - ป้องกัน `.kimi/memory.md` ไม่ให้ขึ้น GitHub (`.gitignore`) และ GitHub Pages (`ignoreFiles`)
