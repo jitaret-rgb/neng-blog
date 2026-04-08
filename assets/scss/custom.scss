@@ -11,6 +11,60 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family);
 }
 
+/* ============================================
+   STACK THEME COLORS - MATCHING GISCUS
+   ============================================ */
+
+/* Light Mode - Match Giscus noborder_light */
+:root[data-scheme="light"] {
+  /* Background colors */
+  --body-background: #ffffff;
+  --card-background: #ffffff;
+  --card-background-hover: #f6f8fa;
+  
+  /* Text colors */
+  --card-text-color-main: #1f2328;
+  --card-text-color-secondary: #656d76;
+  --body-text-color: #1f2328;
+  
+  /* Accent colors */
+  --accent-color: #0969da;
+  --accent-color-darker: #0550ae;
+  
+  /* Borders - minimal/none to match noborder */
+  --card-border: transparent;
+  --card-separator-color: #d0d7de;
+  
+  /* Shadows */
+  --shadow-l1: 0 1px 2px rgba(31, 35, 40, 0.04);
+  --shadow-l2: 0 3px 6px rgba(31, 35, 40, 0.08);
+}
+
+/* Dark Mode - Match Giscus noborder_dark */
+:root[data-scheme="dark"] {
+  /* Background colors */
+  --body-background: #0d1117;
+  --card-background: #0d1117;
+  --card-background-hover: #161b22;
+  
+  /* Text colors */
+  --card-text-color-main: #e6edf3;
+  --card-text-color-secondary: #7d8590;
+  --body-text-color: #e6edf3;
+  
+  /* Accent colors */
+  --accent-color: #2f81f7;
+  --accent-color-darker: #58a6ff;
+  
+  /* Borders - minimal/none to match noborder */
+  --card-border: transparent;
+  --card-separator-color: #30363d;
+  
+  /* Shadows */
+  --shadow-l1: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-l2: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
 /* Copy Code Button - Single Button Only */
 .article-content {
   div.highlight {
