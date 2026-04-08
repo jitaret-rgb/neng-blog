@@ -14,11 +14,14 @@
 | 2026-04-08 | แก้ไขโครงสร้าง config `[params.comments]` | อย่าใส่ใต้ `[cookies]` จะทำให้ Hugo อ่านไม่เจอ |
 | 2026-04-08 | ใช้ `services.googleAnalytics.ID` แทน `params.analytics.google.siteID` | Hugo internal template ต้องการแบบนี้ |
 | 2026-04-08 | เพิ่ม `giscus.app` เข้า CSP (script-src, frame-src, connect-src) | ไม่งั้น Giscus จะถูกบล็อก |
+| 2026-04-08 | เปลี่ยน Giscus theme เป็น `noborder_dark` | ต้องการให้สีเข้ากับ blog โดยไม่มีขอบ |
+| 2026-04-08 | ป้องกัน `.kimi/` ไม่ให้ขึ้น GitHub/GitHub Pages | เพิ่ม `.gitignore` + `ignoreFiles` ใน hugo.toml |
 
 ## Technical Details
 
 ### Giscus Comments Setup
 - **ไฟล์**: `layouts/_partials/comments/provider/giscus.html`
+- **Theme**: `noborder_dark` (dark theme ไม่มีขอบ)
 - **Config** (`hugo.toml`):
   ```toml
   [params.comments]
@@ -31,7 +34,8 @@
     category = "Announcements"
     categoryID = "DIC_kwDOR6Wt7c4C6TwS"
     mapping = "pathname"
-    theme = "preferred_color_scheme"
+    lightTheme = "noborder_dark"
+    darkTheme = "noborder_dark"
   ```
 
 ### Google Analytics Setup
@@ -57,7 +61,12 @@
 
 ## Session History
 
-### 2026-04-08
+### 2026-04-08 (ช่วงเช้า)
 - แก้ไข Giscus ไม่แสดง (path ผิด + CSP)
 - แก้ไข Google Analytics ไม่ทำงาน (config ผิด)
 - ทดสอบ build สำเร็จทั้งคู่
+
+### 2026-04-08 (ช่วงบ่าย)
+- เปลี่ยน Giscus theme เป็น `noborder_dark` ทั้ง light และ dark mode
+- อัปเดต template `giscus.html` ให้ใช้ built-in theme แทน custom CSS
+- ป้องกัน `.kimi/memory.md` ไม่ให้ขึ้น GitHub (`.gitignore`) และ GitHub Pages (`ignoreFiles`)

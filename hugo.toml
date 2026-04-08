@@ -3,6 +3,9 @@ languageCode = 'th-th'
 title = 'Code & Community'
 theme = 'hugo-theme-stack'
 
+# Exclude local development files from build
+ignoreFiles = ['\.kimi/.*']
+
 [params]
   subtitle = "Bridging Technology and Community Development"
   description = "A blog about technology, community development, and life by Nueng"
@@ -47,8 +50,8 @@ theme = 'hugo-theme-stack'
     reactionsEnabled = "1"
     emitMetadata = "0"
     inputPosition = "bottom"
-    lightTheme = "light"
-    darkTheme = "dark_dimmed"
+    lightTheme = "noborder_dark"
+    darkTheme = "noborder_dark"
     lang = "en"
     loading = "lazy"
     
