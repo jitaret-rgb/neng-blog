@@ -317,3 +317,10 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
+
+/* Telegram Share Button */
+.article-share-button.telegram:hover {
+  background: #0088cc;
+  color: white;
+  border-color: #0088cc;
+}
