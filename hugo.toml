@@ -125,13 +125,11 @@ ignoreFiles = ['\.kimi/.*']
 
 [[params.widgets.homepage]]
   type = "categories"
-  [params.widgets.homepage.params]
-    limit = 10
+  params = { limit = 10 }
 
 [[params.widgets.homepage]]
   type = "tag-cloud"
-  [params.widgets.homepage.params]
-    limit = 10
+  params = { limit = 10 }
 
 [[params.widgets.page]]
   type = "toc"
@@ -222,6 +220,9 @@ ignoreFiles = ['\.kimi/.*']
     disableLatLong = true
     excludeFields = ""
     includeFields = ""
+
+[permalinks]
+  page = "/:slug/"
 
 # Markup
 [markup]
