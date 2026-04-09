@@ -325,6 +325,12 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #0088cc;
 }
 
+/* Related Content */
+.related-content {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--card-separator-color);
+  
   h2 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
