@@ -51,7 +51,8 @@
 | **ManyPixels** | ฟรี 100% | $0 | คล้าย unDraw | [manypixels.co](https://www.manypixels.co/gallery) |
 | **Open Peeps** | CC0 | $0 | รูปคนวาดมือ | [openpeeps.com](https://www.openpeeps.com/) |
 | **Humaaans** | CC0 | $0 | รูปคน Mix & Match | [humaaans.com](https://www.humaaans.com/) |
-| **Tabler Icons** | MIT | $0 | 4,000+ icons | [tabler.io/icons](https://tabler.io/icons) |
+| **Tabler Icons** | MIT | ฟรี | 4,000+ icons | [tabler.io/icons](https://tabler.io/icons) |
+| **Tabler Icons Pro** | Commercial | $29 | 7,000+ icons | [tabler.io/icons](https://tabler.io/icons) |
 | **Lucide Icons** | ISC | $0 | Icons ทันสมัย | [lucide.dev](https://lucide.dev/) |
 | **Heroicons** | MIT | $0 | Icons จาก Tailwind | [heroicons.com](https://heroicons.com/) |
 
@@ -132,8 +133,8 @@
 ```
 1. รูปปก: Unsplash → คุณภาพสูงสุด (1200x630 px)
 2. รูปประกอบ: Pexels / Unsplash → ตามหัวข้อ (800x600 px)
-3. Icons: Tabler Icons → ฟรี, ไม่ต้อง credit
-4. Illustrations: unDraw (ฟรี) หรือ Tabler (ซื้อแล้ว)
+3. Icons: Tabler Icons (ฟรี) หรือ Tabler Pro ($29)
+4. Illustrations: unDraw (ฟรี) หรือ Tabler Illustrations (ซื้อแล้ว $29)
 5. Infographic: Canva → สร้างเอง
 6. AI Images: Bing Image Creator → กรณีหายุาก
 ```
@@ -173,12 +174,19 @@
 
 ## 🔗 **ลิงก์ полезн**
 
+### **รูปถ่าย:**
 - [Unsplash](https://unsplash.com/)
 - [Pexels](https://www.pexels.com/)
 - [Pixabay](https://pixabay.com/)
+
+### **Illustrations:**
 - [unDraw](https://undraw.co/)
-- [Tabler Icons](https://tabler.io/icons)
+- [Tabler Icons](https://tabler.io/icons) (ฟรี + Pro)
+- [Tabler Illustrations](https://tabler.io/) (ซื้อแล้ว $29)
+
+### **เครื่องมือ:**
 - [Canva](https://www.canva.com/)
+- [Bing Image Creator](https://www.bing.com/create)
 
 ---
 
