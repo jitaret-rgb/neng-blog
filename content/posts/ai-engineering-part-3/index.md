@@ -378,7 +378,7 @@ RAG คือกุญแจสำคัญที่ทำให้ AI ตอบ
 
 ---
 
-## 📬 **ติดต่อฉัน**
+## 📬 **ติดต่อได้ที่**
 
 - ✈️ **Telegram:** https://t.me/Majinman
 - 📧 **Email:** jitaret@gmail.com
