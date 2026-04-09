@@ -2,16 +2,9 @@
 {{- with $related -}}
 <section class="related-content">
     <h2>📖 อ่านบทความที่เกี่ยวข้อง</h2>
-    <ul class="related-content__list">
+    <ul>
         {{- range . -}}
-            <li>
-                <a href="{{ .Permalink }}" class="related-content__link">
-                    <span class="related-content__title">{{ .Title }}</span>
-                    {{- if .Params.description -}}
-                        <span class="related-content__description">{{ .Params.description }}</span>
-                    {{- end -}}
-                </a>
-            </li>
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
         {{- end -}}
     </ul>
 </section>
