@@ -378,14 +378,7 @@ RAG คือกุญแจสำคัญที่ทำให้ AI ตอบ
 
 ---
 
-## 📬 **มีคำถามหรือข้อสงสัย?**
+## 📬 **ติดต่อฉัน**
 
-ติดต่อฉันได้ที่:
-
-- 🐙 **GitHub:** https://github.com/jitaret-rgb
 - ✈️ **Telegram:** https://t.me/Majinman
-- 📘 **Facebook:** https://www.facebook.com/jittaret.phromnanra/
-- 📺 **YouTube:** https://www.youtube.com/@jittaretpromnara5716
 - 📧 **Email:** jitaret@gmail.com
-
-ยินดีตอบคำถามครับ! 🙏
