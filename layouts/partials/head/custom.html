@@ -1,2 +1,7 @@
 {{- /* Custom Head - Security Headers */ -}}
 {{- partial "head/security.html" . -}}
+
+{{- /* Preconnect for Giscus - Improves comment loading speed */ -}}
+{{- if and .Site.Params.comments.enabled (eq .Site.Params.comments.provider "giscus") -}}
+<link rel="preconnect" href="https://giscus.app" crossorigin>
+{{- end -}}

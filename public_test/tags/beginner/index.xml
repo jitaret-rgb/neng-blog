@@ -1,17 +1,843 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Beginner on Code &amp; Community</title>
-        <link>https://jitaret-rgb.github.io/neng-blog/tags/beginner/</link>
-        <description>Recent content in Beginner on Code &amp; Community</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>th-th</language>
-        <managingEditor>jitaret@gmail.com (เหน่ง)</managingEditor>
-        <webMaster>jitaret@gmail.com (เหน่ง)</webMaster>
-        <lastBuildDate>Mon, 06 Apr 2026 08:20:00 +0700</lastBuildDate><atom:link href="https://jitaret-rgb.github.io/neng-blog/tags/beginner/index.xml" rel="self" type="application/rss+xml" /><item>
-            <title>เปิดโลก AI Assistant: คู่มือติดตั้ง OpenClaw สำหรับมือใหม่ (ฉบับไม่มีพื้นฐานก็ทำได้)</title>
-            <link>https://jitaret-rgb.github.io/neng-blog/posts/openclaw-install-guide/</link>
-            <pubDate>Mon, 06 Apr 2026 08:20:00 +0700</pubDate><author>jitaret@gmail.com (เหน่ง)</author>
-            <guid>https://jitaret-rgb.github.io/neng-blog/posts/openclaw-install-guide/</guid>
-            <description>&lt;img src=&#34;https://jitaret-rgb.github.io/neng-blog/&#34; alt=&#34;Featured image of post เปิดโลก AI Assistant: คู่มือติดตั้ง OpenClaw สำหรับมือใหม่ (ฉบับไม่มีพื้นฐานก็ทำได้)&#34; /&gt;&lt;h2 id=&#34;-บทนำ--openclaw-คออะไร&#34;&gt;&lt;a href=&#34;#-%e0%b8%9a%e0%b8%97%e0%b8%99%e0%b8%b3--openclaw-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;👋 บทนำ — OpenClaw คืออะไร?&#xA;&lt;/h2&gt;&lt;p&gt;เคยฝันไหมครับ? ว่าถ้ามี &lt;strong&gt;ผู้ช่วยส่วนตัว&lt;/strong&gt; ที่:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ตอบคำถามได้ตลอด 24 ชม.&lt;/li&gt;&#xA;&lt;li&gt;ช่วยเขียนบทความ ค้นหาข้อมูล จัดการไฟล์&lt;/li&gt;&#xA;&lt;li&gt;สั่งงานผ่านแชทได้เลย&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ฟรี!&lt;/strong&gt; (หรือถูกมาก)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; ทำให้ฝันนั้นเป็นจริงครับ!&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;openclaw-คออะไร&#34;&gt;&lt;a href=&#34;#openclaw-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;OpenClaw คืออะไร?&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; คือแพลตฟอร์มสำหรับสร้าง &lt;strong&gt;AI Assistant ส่วนตัว&lt;/strong&gt; ที่:&lt;/p&gt;&#xA;&lt;p&gt;✅ &lt;strong&gt;ควบคุมด้วยข้อความธรรมชาติ&lt;/strong&gt; — คุยเหมือนคน&lt;br&gt;&#xA;✅ &lt;strong&gt;เข้าถึงไฟล์ในเครื่องได้&lt;/strong&gt; — อ่าน/เขียน/แก้ไขไฟล์&lt;br&gt;&#xA;✅ &lt;strong&gt;ค้นหาเว็บได้&lt;/strong&gt; — ดึงข้อมูลจาก internet&lt;br&gt;&#xA;✅ &lt;strong&gt;ทำงานอัตโนมัติ&lt;/strong&gt; — ตั้งเวลา ส่งข้อความ&lt;br&gt;&#xA;✅ &lt;strong&gt;จำสิ่งที่คุยกัน&lt;/strong&gt; — มี Memory System&lt;br&gt;&#xA;✅ &lt;strong&gt;ฟรี!&lt;/strong&gt; — ใช้โมเดลฟรีได้หลายตัว&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;ทำไมตองใช-openclaw&#34;&gt;&lt;a href=&#34;#%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b9%83%e0%b8%8a-openclaw&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ทำไมต้องใช้ OpenClaw?&#xA;&lt;/h3&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;งาน&lt;/th&gt;&#xA;          &lt;th&gt;ทำเอง&lt;/th&gt;&#xA;          &lt;th&gt;มี OpenClaw&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;ค้นหาข้อมูล&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;เปิดเบราว์เซอร์เอง&lt;/td&gt;&#xA;          &lt;td&gt;สั่ง &amp;ldquo;มิก ค้นหาเรื่อง&amp;hellip;&amp;rdquo;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;เขียนบทความ&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;2-3 ชั่วโมง&lt;/td&gt;&#xA;          &lt;td&gt;30 นาที&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;จัดการไฟล์&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;เปิด File Explorer&lt;/td&gt;&#xA;          &lt;td&gt;สั่ง &amp;ldquo;มิก หาไฟล์&amp;hellip;&amp;rdquo;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;ตั้งเตือน&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;ตั้ง alarm เอง&lt;/td&gt;&#xA;          &lt;td&gt;สั่ง &amp;ldquo;เตือนฉันเรื่อง&amp;hellip;&amp;rdquo;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;สรุปเอกสาร&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;อ่านเองทั้งเล่ม&lt;/td&gt;&#xA;          &lt;td&gt;&amp;ldquo;มิก สรุปให้หน่อย&amp;rdquo;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&lt;strong&gt;ประหยัดเวลา:&lt;/strong&gt; 70-80%! ⏱️&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;ตองมความรกอนไหม&#34;&gt;&lt;a href=&#34;#%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a1%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%a3%e0%b8%81%e0%b8%ad%e0%b8%99%e0%b9%84%e0%b8%ab%e0%b8%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ต้องมีความรู้ก่อนไหม?&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;คำตอบ: ไม่!&lt;/strong&gt; 🎉&lt;/p&gt;&#xA;&lt;p&gt;ถ้าคุณ:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;✅ พิมพ์แชทได้&lt;/li&gt;&#xA;&lt;li&gt;✅ ดาวน์โหลดโปรแกรมได้&lt;/li&gt;&#xA;&lt;li&gt;✅ ก็อปปี้-วางได้&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;คุณก็ใช้ OpenClaw ได้แล้ว!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;บทความนี้จะพาทำทีละขั้นตอน &lt;strong&gt;ไม่มีทางตกแน่นอน!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-เตรยมตวกอนตดตง&#34;&gt;&lt;a href=&#34;#-%e0%b9%80%e0%b8%95%e0%b8%a3%e0%b8%a2%e0%b8%a1%e0%b8%95%e0%b8%a7%e0%b8%81%e0%b8%ad%e0%b8%99%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;📦 เตรียมตัวก่อนติดตั้ง&#xA;&lt;/h2&gt;&lt;h3 id=&#34;ขอกำหนดระบบ&#34;&gt;&lt;a href=&#34;#%e0%b8%82%e0%b8%ad%e0%b8%81%e0%b8%b3%e0%b8%ab%e0%b8%99%e0%b8%94%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ข้อกำหนดระบบ&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ Node.js: Node 24 (แนะนำ) หรือ Node 22.14+&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ RAM: 4GB+ (แนะนำ 8GB)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ CPU: 2 core+&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ พื้นที่: 1GB+&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ OS: macOS, Linux, Windows (Native/WSL2)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ Internet: สำหรับดาวน์โหลด&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ตองมอะไรบาง&#34;&gt;&lt;a href=&#34;#%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a1%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3%e0%b8%9a%e0%b8%b2%e0%b8%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ต้องมีอะไรบ้าง?&#xA;&lt;/h3&gt;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;คอมพิวเตอร์&lt;/strong&gt; (เครื่องไหนก็ได้)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Internet&lt;/strong&gt; (สำหรับดาวน์โหลด)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Telegram&lt;/strong&gt; (สำหรับแชทกับ AI)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;เวลา:&lt;/strong&gt; 15-30 นาที&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;ใชเวลาเทาไหร&#34;&gt;&lt;a href=&#34;#%e0%b9%83%e0%b8%8a%e0%b9%80%e0%b8%a7%e0%b8%a5%e0%b8%b2%e0%b9%80%e0%b8%97%e0%b8%b2%e0%b9%84%e0%b8%ab%e0%b8%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ใช้เวลาเท่าไหร่?&#xA;&lt;/h3&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;ขั้นตอน&lt;/th&gt;&#xA;          &lt;th&gt;เวลา&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;ติดตั้ง Node.js&lt;/td&gt;&#xA;          &lt;td&gt;5 นาที&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;ติดตั้ง OpenClaw&lt;/td&gt;&#xA;          &lt;td&gt;2 นาที&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;สร้าง Bot&lt;/td&gt;&#xA;          &lt;td&gt;3 นาที&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;ตั้งค่า&lt;/td&gt;&#xA;          &lt;td&gt;5 นาที&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;รวม&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;15 นาที&lt;/strong&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-ตดตงทละขนตอน&#34;&gt;&lt;a href=&#34;#-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87%e0%b8%97%e0%b8%a5%e0%b8%b0%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🚀 ติดตั้งทีละขั้นตอน&#xA;&lt;/h2&gt;&lt;h3 id=&#34;ขนตอนท-1-ตดตง-nodejs&#34;&gt;&lt;a href=&#34;#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-1-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-nodejs&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ขั้นตอนที่ 1: ติดตั้ง Node.js&#xA;&lt;/h3&gt;&lt;p&gt;OpenClaw ทำงานบน &lt;strong&gt;Node.js&lt;/strong&gt; — ไม่ต้องกังวลครับ ติดตั้งง่ายมาก!&lt;/p&gt;&#xA;&lt;h4 id=&#34;สำหรบ-windows&#34;&gt;&lt;a href=&#34;#%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a-windows&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;สำหรับ Windows:&#xA;&lt;/h4&gt;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;เปิดเว็บ:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://nodejs.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://nodejs.org/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;คลิกปุ่มสีเขียว&lt;/strong&gt; &lt;strong&gt;&amp;ldquo;LTS&amp;rdquo;&lt;/strong&gt; (Recommended)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ดาวน์โหลดเสร็จ&lt;/strong&gt; → ดับเบิลคลิกไฟล์&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;กด Next&lt;/strong&gt; → Next → Next → Finish&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;เสร็จ!&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h4 id=&#34;สำหรบ-macos&#34;&gt;&lt;a href=&#34;#%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a-macos&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;สำหรับ macOS:&#xA;&lt;/h4&gt;&lt;p&gt;เปิด Terminal แล้วพิมพ์:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;brew install node&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(ถ้าไม่มี Homebrew → ติดตั้งจาก &lt;a class=&#34;link&#34; href=&#34;https://brew.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://brew.sh/&lt;/a&gt;)&lt;/p&gt;&#xA;&lt;h4 id=&#34;สำหรบ-linux&#34;&gt;&lt;a href=&#34;#%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a-linux&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;สำหรับ Linux:&#xA;&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Ubuntu/Debian&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://deb.nodesource.com/setup_20.x &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo -E bash -&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install -y nodejs&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-ตรวจสอบวาตดตงสำเรจ&#34;&gt;&lt;a href=&#34;#-%e0%b8%95%e0%b8%a3%e0%b8%a7%e0%b8%88%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%a7%e0%b8%b2%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87%e0%b8%aa%e0%b8%b3%e0%b9%80%e0%b8%a3%e0%b8%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;✅ ตรวจสอบว่าติดตั้งสำเร็จ&#xA;&lt;/h3&gt;&lt;p&gt;เปิด Command Prompt (หรือ Terminal) แล้วพิมพ์:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;node --version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ถ้าขึ้นแบบนี้ = สำเร็จ!&lt;/strong&gt; ✅&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;v20.x.x&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ถ้าไม่ขึ้น&lt;/strong&gt; → ลองติดตั้งใหม่ หรือ Google error ที่เจอ&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;ขนตอนท-2-ตดตง-openclaw&#34;&gt;&lt;a href=&#34;#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-2-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-openclaw&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ขั้นตอนที่ 2: ติดตั้ง OpenClaw&#xA;&lt;/h3&gt;&lt;p&gt;มีหลายวิธี เลือกวิธีที่สะดวกครับ:&lt;/p&gt;&#xA;&lt;h4 id=&#34;วธท-1-installer-script-แนะนำ-&#34;&gt;&lt;a href=&#34;#%e0%b8%a7%e0%b8%98%e0%b8%97-1-installer-script-%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;วิธีที่ 1: Installer Script (แนะนำ ⭐)&#xA;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;macOS / Linux / WSL2:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://openclaw.ai/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bash&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Windows (PowerShell):&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;iwr &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;-useb&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;openclaw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ai&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;install&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ps1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;iex&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;วธท-2-npm&#34;&gt;&lt;a href=&#34;#%e0%b8%a7%e0%b8%98%e0%b8%97-2-npm&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;วิธีที่ 2: npm&#xA;&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g openclaw@latest&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;วธท-3-pnpm&#34;&gt;&lt;a href=&#34;#%e0%b8%a7%e0%b8%98%e0%b8%97-3-pnpm&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;วิธีที่ 3: pnpm&#xA;&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;pnpm add -g openclaw@latest&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;pnpm approve-builds -g  &lt;span class=&#34;c1&#34;&gt;# ← ต้องรันครั้งแรก&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;วธท-4-bun&#34;&gt;&lt;a href=&#34;#%e0%b8%a7%e0%b8%98%e0%b8%97-4-bun&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;วิธีที่ 4: bun&#xA;&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;bun add -g openclaw@latest&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;รอ 1-2 นาที&amp;hellip; เสร็จแล้ว!&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-ตรวจสอบวาตดตงสำเรจ-1&#34;&gt;&lt;a href=&#34;#-%e0%b8%95%e0%b8%a3%e0%b8%a7%e0%b8%88%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%a7%e0%b8%b2%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87%e0%b8%aa%e0%b8%b3%e0%b9%80%e0%b8%a3%e0%b8%88-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;✅ ตรวจสอบว่าติดตั้งสำเร็จ&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;openclaw --version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ถ้าขึ้นแบบนี้ = สำเร็จ!&lt;/strong&gt; ✅&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;OpenClaw 2026.x.x&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h3 id=&#34;ขนตอนท-3-สราง-telegram-bot&#34;&gt;&lt;a href=&#34;#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-3-%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87-telegram-bot&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ขั้นตอนที่ 3: สร้าง Telegram Bot&#xA;&lt;/h3&gt;&lt;p&gt;ตอนนี้เรามี OpenClaw แล้ว — ต่อไปสร้าง &amp;ldquo;หน้าตา&amp;rdquo; สำหรับคุย!&lt;/p&gt;&#xA;&lt;h4 id=&#34;1-เปด-telegram&#34;&gt;&lt;a href=&#34;#1-%e0%b9%80%e0%b8%9b%e0%b8%94-telegram&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1. เปิด Telegram&#xA;&lt;/h4&gt;&lt;ul&gt;&#xA;&lt;li&gt;บนมือถือ: แอป Telegram&lt;/li&gt;&#xA;&lt;li&gt;บนคอม: &lt;a class=&#34;link&#34; href=&#34;https://web.telegram.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://web.telegram.org/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;2-คนหา-botfather&#34;&gt;&lt;a href=&#34;#2-%e0%b8%84%e0%b8%99%e0%b8%ab%e0%b8%b2-botfather&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2. ค้นหา BotFather&#xA;&lt;/h4&gt;&lt;p&gt;พิมพ์ในช่องค้นหา: &lt;code&gt;@BotFather&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;3-เรมแชท&#34;&gt;&lt;a href=&#34;#3-%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b9%81%e0%b8%8a%e0%b8%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3. เริ่มแชท&#xA;&lt;/h4&gt;&lt;p&gt;คลิก &lt;strong&gt;Start&lt;/strong&gt; หรือพิมพ์ &lt;code&gt;/start&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;4-สราง-bot-ใหม&#34;&gt;&lt;a href=&#34;#4-%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87-bot-%e0%b9%83%e0%b8%ab%e0%b8%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4. สร้าง Bot ใหม่&#xA;&lt;/h4&gt;&lt;p&gt;พิมพ์: &lt;code&gt;/newbot&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;BotFather จะถาม:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. ชื่อ Bot:&lt;/strong&gt; พิมพ์อะไรก็ได้ (เช่น &lt;code&gt;Mick AI&lt;/code&gt;)&lt;br&gt;&#xA;&lt;strong&gt;2. Username:&lt;/strong&gt; ต้องลงท้ายด้วย &lt;code&gt;bot&lt;/code&gt; (เช่น &lt;code&gt;MickAssistantBot&lt;/code&gt;)&lt;/p&gt;&#xA;&lt;h4 id=&#34;5-copy-token&#34;&gt;&lt;a href=&#34;#5-copy-token&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5. Copy Token&#xA;&lt;/h4&gt;&lt;p&gt;BotFather จะส่ง &lt;strong&gt;API Token&lt;/strong&gt; มาให้ — &lt;strong&gt;สำคัญมาก!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Here&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;your&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;1234567890&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ABCdefGHIjklMNOpqrsTUVwxyz&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;⚠️&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;คำเตือน&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;เก็บไว้เป็นความลับ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;อย่าแชร์ให้ใคร&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;อย่า&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;upload&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;ขึ้น&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;อย่าโพสต์ในโซเชียล&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ก็อปปี้เก็บไว้&lt;/strong&gt; (วางใน Notepad ก่อนก็ได้)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-ความปลอดภยของ-token&#34;&gt;&lt;a href=&#34;#-%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%9b%e0%b8%a5%e0%b8%ad%e0%b8%94%e0%b8%a0%e0%b8%a2%e0%b8%82%e0%b8%ad%e0%b8%87-token&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🔒 ความปลอดภัยของ Token&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Token คืออะไร?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;คิดเหมือน &lt;strong&gt;รหัสผ่าน&lt;/strong&gt; ของ Bot คุณ — ใครมี Token = ควบคุม Bot ได้!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;สิ่งที่ต้องทำ:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;✅ เก็บในที่ปลอดภัย (password manager)&lt;/li&gt;&#xA;&lt;li&gt;✅ ใช้ environment variable&lt;/li&gt;&#xA;&lt;li&gt;✅ จำกัดสิทธิ์การเข้าถึง&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;สิ่งที่ห้ามทำ:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;❌ อย่า commit ขึ้น Git/GitHub&lt;/li&gt;&#xA;&lt;li&gt;❌ อย่าแชร์ในแชทสาธารณะ&lt;/li&gt;&#xA;&lt;li&gt;❌ อย่าแปะในโค้ดที่ share&lt;/li&gt;&#xA;&lt;li&gt;❌ อย่าส่งให้คนอื่น&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;ถ้า Token รั่วไหล:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;ไปที่ BotFather ทันที&lt;/li&gt;&#xA;&lt;li&gt;พิมพ์ &lt;code&gt;/revoke&lt;/code&gt; เพื่อยกเลิก Token เก่า&lt;/li&gt;&#xA;&lt;li&gt;สร้าง Bot ใหม่&lt;/li&gt;&#xA;&lt;li&gt;อัพเดต Token ใน config&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;ขนตอนท-4-ตงคา-openclaw&#34;&gt;&lt;a href=&#34;#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-4-%e0%b8%95%e0%b8%87%e0%b8%84%e0%b8%b2-openclaw&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ขั้นตอนที่ 4: ตั้งค่า OpenClaw&#xA;&lt;/h3&gt;&lt;p&gt;ตอนนี้มีทุกอย่างแล้ว — มาเชื่อมต่อกัน!&lt;/p&gt;&#xA;&lt;h4 id=&#34;1-สรางโฟลเดอรทำงาน&#34;&gt;&lt;a href=&#34;#1-%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87%e0%b9%82%e0%b8%9f%e0%b8%a5%e0%b9%80%e0%b8%94%e0%b8%ad%e0%b8%a3%e0%b8%97%e0%b8%b3%e0%b8%87%e0%b8%b2%e0%b8%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1. สร้างโฟลเดอร์ทำงาน&#xA;&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;mkdir ~/openclaw-workspace&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/openclaw-workspace&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;2-สรางไฟล-config&#34;&gt;&lt;a href=&#34;#2-%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87%e0%b9%84%e0%b8%9f%e0%b8%a5-config&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2. สร้างไฟล์ config&#xA;&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;openclaw init&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;คำสั่งนี้จะสร้างไฟล์ config ให้โดยอัตโนมัติ&lt;/p&gt;&#xA;&lt;h4 id=&#34;3-ตดตง-gateway-daemon&#34;&gt;&lt;a href=&#34;#3-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-gateway-daemon&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3. ติดตั้ง Gateway Daemon&#xA;&lt;/h4&gt;&lt;p&gt;หลังติดตั้งเสร็จ ให้ติดตั้ง Gateway ให้รันอัตโนมัติ:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;openclaw onboard --install-daemon&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;คำสั่งนี้จะ:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;สร้าง workspace ที่ &lt;code&gt;~/.openclaw/workspace&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;ติดตั้ง Gateway daemon (launchd/systemd)&lt;/li&gt;&#xA;&lt;li&gt;เปิด onboarding wizard&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;4-แกไข-config&#34;&gt;&lt;a href=&#34;#4-%e0%b9%81%e0%b8%81%e0%b9%84%e0%b8%82-config&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4. แก้ไข config&#xA;&lt;/h4&gt;&lt;p&gt;เปิดไฟล์ &lt;code&gt;~/.openclaw/openclaw.json&lt;/code&gt; แล้วเพิ่ม:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;telegram&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;botToken&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_BOT_TOKEN_HERE&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;หรือใช้ Onboarding:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;openclaw onboard&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Onboarding จะพาตั้งค่าทีละขั้นตอน!&lt;/p&gt;&#xA;&lt;p&gt;⚠️ &lt;strong&gt;คำเตือน:&lt;/strong&gt; อย่าแชร์ API Token ของคุณ!&lt;/p&gt;&#xA;&lt;h4 id=&#34;5-เรมใชงาน&#34;&gt;&lt;a href=&#34;#5-%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5. เริ่มใช้งาน&#xA;&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;openclaw gateway status  &lt;span class=&#34;c1&#34;&gt;# เช็คสถานะ&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;openclaw doctor          &lt;span class=&#34;c1&#34;&gt;# เช็คปัญหา&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ถ้า Gateway ยังไม่รัน:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;openclaw gateway start&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ถ้าขึ้นแบบนี้ = &lt;strong&gt;สำเร็จ!&lt;/strong&gt; 🎉&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ Gateway running&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ Telegram connected&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ Ready to chat!&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h3 id=&#34;ขนตอนท-5-เรมแชท&#34;&gt;&lt;a href=&#34;#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-5-%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b9%81%e0%b8%8a%e0%b8%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ขั้นตอนที่ 5: เริ่มแชท!&#xA;&lt;/h3&gt;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;เปิด Telegram&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ค้นหา Bot&lt;/strong&gt; ที่เราสร้าง (เช่น &lt;code&gt;MickAssistantBot&lt;/code&gt;)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;กด Start&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;พิมพ์:&lt;/strong&gt; &amp;ldquo;สวัสดี&amp;rdquo; หรือ &amp;ldquo;ช่วยแนะนำตัวหน่อย&amp;rdquo;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;strong&gt;ถ้า Bot ตอบ = เสร็จสมบูรณ์!&lt;/strong&gt; 🎉&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-แนะนำ-6-providers--llms&#34;&gt;&lt;a href=&#34;#-%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3-6-providers--llms&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🎯 แนะนำ 6 Providers + LLMs&#xA;&lt;/h2&gt;&lt;h3 id=&#34;provider-คออะไร&#34;&gt;&lt;a href=&#34;#provider-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Provider คืออะไร?&#xA;&lt;/h3&gt;&lt;p&gt;คิดง่ายๆ คือ &lt;strong&gt;&amp;ldquo;บริษัทที่ให้ใช้ AI&amp;rdquo;&lt;/strong&gt; ครับ&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; เป็นแค่ตัวกลาง — ต้องเชื่อมต่อกับ &lt;strong&gt;AI จริงๆ&lt;/strong&gt; จาก provider&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;เปรียบเทียบ:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; = โทรศัพท์&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Provider&lt;/strong&gt; = เครือข่าย (AIS, True, DTAC)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;LLM&lt;/strong&gt; = คนคุยสาย另一端&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;ทำไมตองม-provider&#34;&gt;&lt;a href=&#34;#%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a1-provider&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ทำไมต้องมี Provider?&#xA;&lt;/h3&gt;&lt;p&gt;เพราะ OpenClaw &lt;strong&gt;ไม่สร้าง AI เอง&lt;/strong&gt; — แต่เชื่อมต่อกับ AI ที่มีอยู่แล้ว&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ข้อดี:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;✅ เลือกได้ว่าจะใช้ AI ตัวไหน&lt;/li&gt;&#xA;&lt;li&gt;✅ จ่ายเฉพาะที่ใช้&lt;/li&gt;&#xA;&lt;li&gt;✅ เปลี่ยนได้ตลอด&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-bailian-alibaba-cloud---คมคาสด-&#34;&gt;&lt;a href=&#34;#1-bailian-alibaba-cloud---%e0%b8%84%e0%b8%a1%e0%b8%84%e0%b8%b2%e0%b8%aa%e0%b8%94-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1. Bailian (Alibaba Cloud) 🇨🇳 — คุ้มค่าสุด! 💰&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; Qwen 3, Qwen 2.5 (72B), Qwen-Max&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt; ✅ &lt;strong&gt;ฟรี 1,000,000 tokens/เดือน&lt;/strong&gt; (Qwen 2.5) &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;&#xA;&lt;strong&gt;Qwen 3:&lt;/strong&gt; 💰 $0.0005-0.002 / 1K tokens &lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;&#xA;&lt;strong&gt;(ประมาณ 500-1,000 บทความ/เดือน)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;🇹🇭 ภาษาไทยดีเยี่ยม&lt;/li&gt;&#xA;&lt;li&gt;📄 Context 256K tokens&lt;/li&gt;&#xA;&lt;li&gt;💰 คุ้มค่าสุดสำหรับใช้งานหนัก&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; ใช้งานทั่วไป, บล็อก, แชท, ใช้งานหนัก&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;วิธีใช้:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;สมัคร: &lt;a class=&#34;link&#34; href=&#34;https://bailian.console.aliyun.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://bailian.console.aliyun.com/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;สร้าง API Key&lt;/li&gt;&#xA;&lt;li&gt;ใส่ใน config OpenClaw&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;strong&gt;ตัวอย่าง config (สมมติ):&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;providers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;bailian&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;apiKey&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;sk-xxxxxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ← ใส่ Key ของคุณ&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ⚠️ อย่าใช้ Key ตัวอย่างนี้!&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;💰 ความคุ้มค่า:&lt;/strong&gt;&lt;br&gt;&#xA;ถ้าใช้ GPT-4o กับงานเดียวกัน → เสียเงิน ~$10-30/เดือน&lt;br&gt;&#xA;แต่ Qwen 2.5 → &lt;strong&gt;ฟรี!&lt;/strong&gt; (ประหยัด ~300-1,000 บาท/เดือน)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;2-groq---เรวสด-&#34;&gt;&lt;a href=&#34;#2-groq---%e0%b9%80%e0%b8%a3%e0%b8%a7%e0%b8%aa%e0%b8%94-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2. Groq 🇺🇸 — เร็วสุด! ⚡&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; Llama 3.1 (405B), Llama 3.3 (70B), Mixtral 8x22B&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt; ✅ ฟรี (~100 requests/day) &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;&#xA;&lt;strong&gt;Paid:&lt;/strong&gt; $0.05-$0.79 / 1M tokens &lt;sup id=&#34;fnref1:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;⚡ เร็วที่สุด (500+ tokens/วินาที)&lt;/li&gt;&#xA;&lt;li&gt;🆓 ฟรี tier เพียงพอสำหรับทดสอบ&lt;/li&gt;&#xA;&lt;li&gt;🔓 Open-source models&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; ทดลอง, prototype, ใช้งานที่ต้องการความเร็ว&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;วิธีใช้:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;สมัคร: &lt;a class=&#34;link&#34; href=&#34;https://console.groq.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://console.groq.com/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;สร้าง API Key&lt;/li&gt;&#xA;&lt;li&gt;ใส่ใน config&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;⚠️ &lt;strong&gt;สำคัญ:&lt;/strong&gt; อย่าแชร์ API Key ของคุณ!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ข้อจำกัด:&lt;/strong&gt; ฟรีจำกัด/วัน (แต่พอใช้สำหรับทดสอบ)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;3-google---ใชงานทวไป-&#34;&gt;&lt;a href=&#34;#3-google---%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%97%e0%b8%a7%e0%b9%84%e0%b8%9b-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3. Google 🇺🇸 — ใช้งานทั่วไป 🎯&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; Gemini 2.5 Pro, Gemini 2.0 Flash&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt; ✅ ฟรี 60 requests/นาที (Gemini 2.0 Flash) &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;&#xA;&lt;strong&gt;Gemini 3 Pro:&lt;/strong&gt; 💰 $1.25/$10 / 1M tokens &lt;sup id=&#34;fnref1:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;📚 Context 1M+ tokens (Gemini 3 Pro)&lt;/li&gt;&#xA;&lt;li&gt;🔗 ผสานกับ Google services&lt;/li&gt;&#xA;&lt;li&gt;🇹🇭 รองรับภาษาไทยดี&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; ทดลอง, ใช้งานทั่วไป&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;วิธีใช้:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;สมัคร: &lt;a class=&#34;link&#34; href=&#34;https://aistudio.google.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://aistudio.google.com/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;สร้าง API Key&lt;/li&gt;&#xA;&lt;li&gt;ใส่ใน config&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;🔒 &lt;strong&gt;ความปลอดภัย:&lt;/strong&gt; เก็บ Key เป็นความลับ!&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;4-openai---คณภาพสงสด-&#34;&gt;&lt;a href=&#34;#4-openai---%e0%b8%84%e0%b8%93%e0%b8%a0%e0%b8%b2%e0%b8%9e%e0%b8%aa%e0%b8%87%e0%b8%aa%e0%b8%94-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4. OpenAI 🇺🇸 — คุณภาพสูงสุด 👑&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; GPT-4.1, GPT-4o, o3-mini&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt; ❌ $0.002-0.015 / 1K tokens &lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;&#xA;&lt;strong&gt;GPT-4.1:&lt;/strong&gt; $2/$8 / 1M tokens &lt;sup id=&#34;fnref1:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;&#xA;&lt;strong&gt;GPT-4o-mini:&lt;/strong&gt; $0.15/$0.60 / 1M tokens (ถูกสุด!) &lt;sup id=&#34;fnref2:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;🧠 ฉลาดที่สุด&lt;/li&gt;&#xA;&lt;li&gt;🛠️ ทำงานหลากหลาย&lt;/li&gt;&#xA;&lt;li&gt;📚 เอกสารครบ&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; งานที่ต้องการความแม่นยำสูง, งานสำคัญ&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;วิธีใช้:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;สมัคร: &lt;a class=&#34;link&#34; href=&#34;https://platform.openai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://platform.openai.com/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;เติมเงิน ($5 ขั้นต่ำ)&lt;/li&gt;&#xA;&lt;li&gt;สร้าง API Key&lt;/li&gt;&#xA;&lt;li&gt;ใส่ใน config&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;⚠️ &lt;strong&gt;คำเตือน:&lt;/strong&gt; API Key OpenAI มีมูลค่า — ระวังการรั่วไหล!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ราคาตัวอย่าง:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;บทความ 1,000 คำ → ~$0.03-0.05 (~1-2 บาท)&lt;/li&gt;&#xA;&lt;li&gt;คุ้มค่าสำหรับงานสำคัญ!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;5-anthropic---เขยนบทความ-&#34;&gt;&lt;a href=&#34;#5-anthropic---%e0%b9%80%e0%b8%82%e0%b8%a2%e0%b8%99%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5. Anthropic 🇺🇸 — เขียนบทความ ✍️&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; Claude Sonnet 4.6, Claude Opus 4.6&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Claude Sonnet 4.6:&lt;/strong&gt; $3/$15 / 1M tokens (คุ้มค่าสุด!) &lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Claude Opus 4.6:&lt;/strong&gt; $15/$75 / 1M tokens (คุณภาพสูงสุด) &lt;sup id=&#34;fnref1:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;📝 เขียนบทความธรรมชาติ&lt;/li&gt;&#xA;&lt;li&gt;🧩 Tool calling ดีที่สุด&lt;/li&gt;&#xA;&lt;li&gt;🔒 ปลอดภัย&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; เขียนคอนเทนต์, สรุปเอกสารยาว&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;วิธีใช้:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;สมัคร: &lt;a class=&#34;link&#34; href=&#34;https://console.anthropic.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://console.anthropic.com/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;สร้าง API Key&lt;/li&gt;&#xA;&lt;li&gt;ใส่ใน config&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;🔒 &lt;strong&gt;สำคัญ:&lt;/strong&gt; อย่า commit API Key ขึ้น Git!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ข้อดี:&lt;/strong&gt; ถูกกว่า GPT-4 แต่เขียนบทความดีกว่า!&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;6-ollama---localสวนตว-&#34;&gt;&lt;a href=&#34;#6-ollama---local%e0%b8%aa%e0%b8%a7%e0%b8%99%e0%b8%95%e0%b8%a7-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6. Ollama 🏠 — Local/ส่วนตัว 🔒&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; Llama 3.1 (70B), Mistral Large, Gemma 2&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt; ✅ ฟรี 100%&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;💻 &lt;strong&gt;รันบนเครื่องตัวเอง&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;🔒 &lt;strong&gt;ไม่ต้องส่งข้อมูลออก&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;∞ &lt;strong&gt;ไม่จำกัด usage&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; ข้อมูลลับ, ใช้งานหนัก, ส่วนตัว&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;วิธีติดตั้ง:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. ติดตั้ง Ollama&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://ollama.com/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. ดาวน์โหลดโมเดล&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;ollama run llama3&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. เชื่อมต่อ OpenClaw&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# เพิ่มใน config:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;ollama:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;  enabled: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;  model: llama3&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ข้อจำกัด:&lt;/strong&gt; ต้องมี RAM 8GB+ และ CPU แรงหน่อย&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;💻 รันบนเครื่องตัวเอง&lt;/li&gt;&#xA;&lt;li&gt;🔒 ไม่ต้องส่งข้อมูลออก&lt;/li&gt;&#xA;&lt;li&gt;∞ ไม่จำกัด usage&lt;/li&gt;&#xA;&lt;li&gt;💰 ฟรี 100%&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-ตารางสรป&#34;&gt;&lt;a href=&#34;#-%e0%b8%95%e0%b8%b2%e0%b8%a3%e0%b8%b2%e0%b8%87%e0%b8%aa%e0%b8%a3%e0%b8%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;📊 ตารางสรุป&#xA;&lt;/h2&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;#&lt;/th&gt;&#xA;          &lt;th&gt;Provider&lt;/th&gt;&#xA;          &lt;th&gt;LLM&lt;/th&gt;&#xA;          &lt;th&gt;ราคา (ต่อ 1M tokens)&lt;/th&gt;&#xA;          &lt;th&gt;เหมาะกับ&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;1&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Bailian&lt;/strong&gt; 🇨🇳&lt;/td&gt;&#xA;          &lt;td&gt;Qwen 2.5&lt;/td&gt;&#xA;          &lt;td&gt;✅ ฟรี 1M tokens/เดือน&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;คุ้มค่าสุด&lt;/strong&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;2&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Groq&lt;/strong&gt; 🇺🇸&lt;/td&gt;&#xA;          &lt;td&gt;Llama 3.3&lt;/td&gt;&#xA;          &lt;td&gt;✅ ฟรี (~100/day)&lt;/td&gt;&#xA;          &lt;td&gt;เร็วสุด ⚡&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;3&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Google&lt;/strong&gt; 🇺🇸&lt;/td&gt;&#xA;          &lt;td&gt;Gemini 3 Flash&lt;/td&gt;&#xA;          &lt;td&gt;$0.075/$0.30&lt;/td&gt;&#xA;          &lt;td&gt;เร็ว/ประหยัด&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Google&lt;/strong&gt; 🇺🇸&lt;/td&gt;&#xA;          &lt;td&gt;Gemini 3 Pro&lt;/td&gt;&#xA;          &lt;td&gt;$1.25/$10&lt;/td&gt;&#xA;          &lt;td&gt;วิเคราะห์เอกสาร 📚&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;5&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;OpenAI&lt;/strong&gt; 🇺🇸&lt;/td&gt;&#xA;          &lt;td&gt;GPT-4o-mini&lt;/td&gt;&#xA;          &lt;td&gt;$0.15/$0.60&lt;/td&gt;&#xA;          &lt;td&gt;ถูกสุด 💰&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;6&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;OpenAI&lt;/strong&gt; 🇺🇸&lt;/td&gt;&#xA;          &lt;td&gt;GPT-4.1&lt;/td&gt;&#xA;          &lt;td&gt;$2/$8&lt;/td&gt;&#xA;          &lt;td&gt;งานคุณภาพ&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;7&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Anthropic&lt;/strong&gt; 🇺🇸&lt;/td&gt;&#xA;          &lt;td&gt;Claude Sonnet 4.6&lt;/td&gt;&#xA;          &lt;td&gt;$3/$15&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;แนะนำ!&lt;/strong&gt; ⭐&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;8&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Anthropic&lt;/strong&gt; 🇺🇸&lt;/td&gt;&#xA;          &lt;td&gt;Claude Opus 4.6&lt;/td&gt;&#xA;          &lt;td&gt;$15/$75&lt;/td&gt;&#xA;          &lt;td&gt;คุณภาพสูงสุด 👑&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;9&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Ollama&lt;/strong&gt; 🏠&lt;/td&gt;&#xA;          &lt;td&gt;Llama 3.3 70B&lt;/td&gt;&#xA;          &lt;td&gt;✅ ฟรี 100%&lt;/td&gt;&#xA;          &lt;td&gt;ส่วนตัว/Local 🔒&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-คำแนะนำการเลอก&#34;&gt;&lt;a href=&#34;#-%e0%b8%84%e0%b8%b3%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%80%e0%b8%a5%e0%b8%ad%e0%b8%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;💡 คำแนะนำการเลือก&#xA;&lt;/h2&gt;&lt;h3 id=&#34;-สำหรบมอใหม&#34;&gt;&lt;a href=&#34;#-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%a1%e0%b8%ad%e0%b9%83%e0%b8%ab%e0%b8%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🎯 สำหรับมือใหม่:&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;🎯 เริ่มที่: Bailian Qwen 2.5 (ฟรี 1M tokens)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;💰 งบจำกัด: GPT-4o-mini ($0.15/1M)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;⚡ ต้องการความเร็ว: Groq (500+ tokens/วินาที)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;⭐ คุ้มค่าสุด: Claude Sonnet 4.6 ($3/1M)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-สำหรบใชงานจรง&#34;&gt;&lt;a href=&#34;#-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%88%e0%b8%a3%e0%b8%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;💼 สำหรับใช้งานจริง:&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;📝 เขียนบทความ: Claude Sonnet 4.6 ($3/$15)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;💻 เขียนโค้ด: Claude Opus 4.6 ($15/$75)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;📚 วิเคราะห์เอกสาร: Gemini 3 Pro ($1.25/$10)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;🔒 ข้อมูลลับ: Ollama (Local, ฟรี)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;⚡ งานเร็ว: Gemini 3 Flash ($0.075/$0.30)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-สำหรบประหยด&#34;&gt;&lt;a href=&#34;#-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%ab%e0%b8%a2%e0%b8%94&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;💰 สำหรับประหยัด:&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ ฟรี 100%: Ollama (Local)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ ฟรี quota: Bailian (1M tokens/เดือน)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ ถูกสุด: GPT-4o-mini ($0.15/$0.60)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ คุ้มค่า: Claude Sonnet 4.6 ($3/$15)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ เร็ว/ถูก: Gemini 3 Flash ($0.075/$0.30)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-เปรยบเทยบราคา-2026&#34;&gt;&lt;a href=&#34;#-%e0%b9%80%e0%b8%9b%e0%b8%a3%e0%b8%a2%e0%b8%9a%e0%b9%80%e0%b8%97%e0%b8%a2%e0%b8%9a%e0%b8%a3%e0%b8%b2%e0%b8%84%e0%b8%b2-2026&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;💰 เปรียบเทียบราคา (2026)&#xA;&lt;/h2&gt;&lt;h3 id=&#34;ถกสด--แพงสด&#34;&gt;&lt;a href=&#34;#%e0%b8%96%e0%b8%81%e0%b8%aa%e0%b8%94--%e0%b9%81%e0%b8%9e%e0%b8%87%e0%b8%aa%e0%b8%94&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ถูกสุด → แพงสุด:&#xA;&lt;/h3&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;อันดับ&lt;/th&gt;&#xA;          &lt;th&gt;Model&lt;/th&gt;&#xA;          &lt;th&gt;ราคา Input/Output&lt;/th&gt;&#xA;          &lt;th&gt;ต่อเดือน*&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;🥇&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Ollama (Local)&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;ฟรี&lt;/td&gt;&#xA;          &lt;td&gt;ฟรี&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;🥈&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Bailian Qwen 2.5&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;ฟรี 1M tokens&lt;/td&gt;&#xA;          &lt;td&gt;ฟรี&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;🥉&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;GPT-4o-mini&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;$0.15/$0.60&lt;/td&gt;&#xA;          &lt;td&gt;~$3-10&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Gemini 3 Flash&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;$0.075/$0.30&lt;/td&gt;&#xA;          &lt;td&gt;~$5-15&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;5&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Claude Sonnet 4.6&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;$3/$15&lt;/td&gt;&#xA;          &lt;td&gt;~$30-100&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;6&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Gemini 3 Pro&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;$1.25/$10&lt;/td&gt;&#xA;          &lt;td&gt;~$50-150&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;7&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Claude Opus 4.6&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;$15/$75&lt;/td&gt;&#xA;          &lt;td&gt;~$150-500&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;* ประมาณการสำหรับใช้งานทั่วไป (10-50 บทความ/เดือน)&lt;/p&gt;&#xA;&lt;h3 id=&#34;สรป&#34;&gt;&lt;a href=&#34;#%e0%b8%aa%e0%b8%a3%e0%b8%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;สรุป:&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;💰 งบจำกัด:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;   → Bailian Qwen 2.5 (ฟรี 1M tokens)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;   → GPT-4o-mini ($0.15/1M)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;⭐ คุ้มค่าสุด:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;   → Claude Sonnet 4.6 ($3/$15)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;👑 คุณภาพสูงสุด:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;   → Claude Opus 4.6 ($15/$75)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;🔒 ส่วนตัว:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;   → Ollama (Local, ฟรี)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-ทดสอบใชงาน&#34;&gt;&lt;a href=&#34;#-%e0%b8%97%e0%b8%94%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🧪 ทดสอบใช้งาน&#xA;&lt;/h2&gt;&lt;h3 id=&#34;เชคการตดตง&#34;&gt;&lt;a href=&#34;#%e0%b9%80%e0%b8%8a%e0%b8%84%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;เช็คการติดตั้ง:&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;openclaw --version      &lt;span class=&#34;c1&#34;&gt;# เช็ค CLI&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;openclaw doctor         &lt;span class=&#34;c1&#34;&gt;# เช็คปัญหา&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;openclaw gateway status &lt;span class=&#34;c1&#34;&gt;# เช็ค Gateway&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;คำสงแรกทควรลอง&#34;&gt;&lt;a href=&#34;#%e0%b8%84%e0%b8%b3%e0%b8%aa%e0%b8%87%e0%b9%81%e0%b8%a3%e0%b8%81%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%a3%e0%b8%a5%e0%b8%ad%e0%b8%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;คำสั่งแรกที่ควรลอง:&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;สวัสดี&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ช่วยแนะนำตัวหน่อย&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;มีอะไรทำได้บ้าง&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;คำสงทใชบอย&#34;&gt;&lt;a href=&#34;#%e0%b8%84%e0%b8%b3%e0%b8%aa%e0%b8%87%e0%b8%97%e0%b9%83%e0%b8%8a%e0%b8%9a%e0%b8%ad%e0%b8%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;คำสั่งที่ใช้บ่อย:&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ค้นหาข้อมูลเรื่อง...&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;เขียนบทความเกี่ยวกับ...&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ช่วยสรุปเอกสารนี้...&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;เตือนฉันเรื่อง... เวลา...&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;หาไฟล์ชื่อ...&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-ความปลอดภย--สงทตองร&#34;&gt;&lt;a href=&#34;#-%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%9b%e0%b8%a5%e0%b8%ad%e0%b8%94%e0%b8%a0%e0%b8%a2--%e0%b8%aa%e0%b8%87%e0%b8%97%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🔒 ความปลอดภัย — สิ่งที่ต้องรู้&#xA;&lt;/h2&gt;&lt;h3 id=&#34;api-keys-และ-tokens&#34;&gt;&lt;a href=&#34;#api-keys-%e0%b9%81%e0%b8%a5%e0%b8%b0-tokens&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;API Keys และ Tokens&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;สิ่งที่ต้องจำ:&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;    &lt;blockquote&gt;&#xA;        &lt;p&gt;🚨 &lt;strong&gt;API Keys และ Tokens คือรหัสผ่าน!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;อย่าแชร์ให้ใคร&lt;/li&gt;&#xA;&lt;li&gt;อย่า upload ขึ้น GitHub&lt;/li&gt;&#xA;&lt;li&gt;อย่าโพสต์ในโซเชียล&lt;/li&gt;&#xA;&lt;li&gt;อย่าส่งในแชทสาธารณะ&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;    &lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;วิธีเก็บที่ปลอดภัย:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;ใช้ Environment Variables&lt;/strong&gt; (แนะนำ):&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;OPENCLAW_TELEGRAM_TOKEN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;your-token-here&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;BAILIAN_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;your-key-here&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;&lt;strong&gt;ใช้ Password Manager&lt;/strong&gt;:&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;1Password&lt;/li&gt;&#xA;&lt;li&gt;Bitwarden (ฟรี)&lt;/li&gt;&#xA;&lt;li&gt;KeePass&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;&lt;strong&gt;ไฟล์แยกต่างหาก&lt;/strong&gt; (ไม่ commit):&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# config-secret.yaml (อย่า commit!)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;telegram&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;botToken&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;your-token&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ถ้า Key รั่วไหล:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;ยกเลิก Key ทันที (revoke)&lt;/li&gt;&#xA;&lt;li&gt;สร้าง Key ใหม่&lt;/li&gt;&#xA;&lt;li&gt;อัพเดต config&lt;/li&gt;&#xA;&lt;li&gt;ตรวจสอบการใช้งานผิดปกติ&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;ตวอยางการใชงานจรง&#34;&gt;&lt;a href=&#34;#%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%88%e0%b8%a3%e0%b8%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ตัวอย่างการใช้งานจริง:&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;คุณ: &amp;#34;มิก ช่วยค้นหาข้อมูลเรื่อง AI ล่าสุดให้หน่อย&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;มิก: [web_search]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;มิก: &amp;#34;เจอข่าวล่าสุดเมื่อวานนี้: OpenAI เปิดตัว GPT-5...&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;คุณ: &amp;#34;มิก เขียนบทความเรื่อง AI สำหรับมือใหม่&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;มิก: [เขียนบทความ]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;มิก: &amp;#34;เขียนเสร็จครับ! ความยาว 1,500 คำ อยากแก้ตรงไหนบอกได้เลย&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;คุณ: &amp;#34;มิก เตือนฉันประชุมพรุ่งนี้ 10 โมง&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;มิก: [สร้าง reminder]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;มิก: &amp;#34;ตั้งเตือนแล้วครับ! จะเตือนพรุ่งนี้ 09:30&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-troubleshooting&#34;&gt;&lt;a href=&#34;#-troubleshooting&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;❓ Troubleshooting&#xA;&lt;/h2&gt;&lt;h3 id=&#34;ปญหา-bot-ไมตอบ&#34;&gt;&lt;a href=&#34;#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2-bot-%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b8%ad%e0%b8%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ปัญหา: Bot ไม่ตอบ&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;วิธีแก้:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;เช็ค Token ถูกต้องไหม&lt;/li&gt;&#xA;&lt;li&gt;เช็ค Gateway รันอยู่ไหม: &lt;code&gt;openclaw gateway status&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Restart: &lt;code&gt;openclaw gateway restart&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;ปญหา-ตดตง-nodejs-ไมได&#34;&gt;&lt;a href=&#34;#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-nodejs-%e0%b9%84%e0%b8%a1%e0%b9%84%e0%b8%94&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ปัญหา: ติดตั้ง Node.js ไม่ได้&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;วิธีแก้:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;ใช้ installer script (แนะนำ)&lt;/li&gt;&#xA;&lt;li&gt;ดาวน์โหลดจาก &lt;a class=&#34;link&#34; href=&#34;https://nodejs.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://nodejs.org/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;ใช้ Node 24 (แนะนำ) หรือ 22.14+&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;ปญหา-openclaw-not-found&#34;&gt;&lt;a href=&#34;#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2-openclaw-not-found&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ปัญหา: &lt;code&gt;openclaw&lt;/code&gt; not found&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;วิธีแก้:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# เช็ค Node ติดตั้งไหม&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;node -v&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# เช็ค global packages&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;npm prefix -g&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# เช็ค PATH&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ถ้า $(npm prefix -g)/bin ไม่มีใน PATH&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;npm prefix -g&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/bin:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;เพิ่มใน &lt;code&gt;~/.zshrc&lt;/code&gt; หรือ &lt;code&gt;~/.bashrc&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;npm prefix -g&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/bin:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ปญหา-sharp-build-errors-npm&#34;&gt;&lt;a href=&#34;#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2-sharp-build-errors-npm&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ปัญหา: sharp build errors (npm)&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;วิธีแก้:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SHARP_IGNORE_GLOBAL_LIBVIPS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; npm install -g openclaw@latest&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-สรป&#34;&gt;&lt;a href=&#34;#-%e0%b8%aa%e0%b8%a3%e0%b8%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🎉 สรุป&#xA;&lt;/h2&gt;&lt;h3 id=&#34;สงททำเสรจวนน&#34;&gt;&lt;a href=&#34;#%e0%b8%aa%e0%b8%87%e0%b8%97%e0%b8%97%e0%b8%b3%e0%b9%80%e0%b8%aa%e0%b8%a3%e0%b8%88%e0%b8%a7%e0%b8%99%e0%b8%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;สิ่งที่ทำเสร็จวันนี้:&#xA;&lt;/h3&gt;&lt;ol&gt;&#xA;&lt;li&gt;✅ รู้ว่า OpenClaw คืออะไร&lt;/li&gt;&#xA;&lt;li&gt;✅ ติดตั้ง Node.js&lt;/li&gt;&#xA;&lt;li&gt;✅ ติดตั้ง OpenClaw&lt;/li&gt;&#xA;&lt;li&gt;✅ สร้าง Telegram Bot&lt;/li&gt;&#xA;&lt;li&gt;✅ ตั้งค่า config&lt;/li&gt;&#xA;&lt;li&gt;✅ รู้จัก 6 Providers + LLMs&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;ขนตอนตอไป&#34;&gt;&lt;a href=&#34;#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b9%84%e0%b8%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ขั้นตอนต่อไป:&#xA;&lt;/h3&gt;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;เลือก Provider&lt;/strong&gt; → แนะนำ Bailian (ฟรี)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;สมัคร + สร้าง API Key&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ใส่ใน config&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;เริ่มใช้งาน!&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-พรอมเรมตนหรอยง&#34;&gt;&lt;a href=&#34;#-%e0%b8%9e%e0%b8%a3%e0%b8%ad%e0%b8%a1%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b8%95%e0%b8%99%e0%b8%ab%e0%b8%a3%e0%b8%ad%e0%b8%a2%e0%b8%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🚀 พร้อมเริ่มต้นหรือยัง?&#xA;&lt;/h2&gt;&lt;h3 id=&#34;ลองตดตงดครบ&#34;&gt;&lt;a href=&#34;#%e0%b8%a5%e0%b8%ad%e0%b8%87%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87%e0%b8%94%e0%b8%84%e0%b8%a3%e0%b8%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;ลองติดตั้งดูครับ!&#xA;&lt;/h3&gt;&lt;h4 id=&#34;1-ตดตง-openclaw-วธแนะนำ&#34;&gt;&lt;a href=&#34;#1-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-openclaw-%e0%b8%a7%e0%b8%98%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1. ติดตั้ง OpenClaw (วิธีแนะนำ):&#xA;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;macOS / Linux / WSL2:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://openclaw.ai/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bash&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Windows (PowerShell):&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;iwr &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;-useb&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;openclaw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ai&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;install&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ps1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;iex&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;2-ตดตง-gateway-daemon&#34;&gt;&lt;a href=&#34;#2-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-gateway-daemon&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2. ติดตั้ง Gateway Daemon:&#xA;&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;openclaw onboard --install-daemon&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;3-สราง-bot&#34;&gt;&lt;a href=&#34;#3-%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87-bot&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3. สร้าง Bot:&#xA;&lt;/h4&gt;&lt;p&gt;@BotFather บน Telegram&lt;/p&gt;&#xA;&lt;h4 id=&#34;4-เลอก-provider&#34;&gt;&lt;a href=&#34;#4-%e0%b9%80%e0%b8%a5%e0%b8%ad%e0%b8%81-provider&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4. เลือก Provider:&#xA;&lt;/h4&gt;&lt;p&gt;แนะนำ Bailian (ฟรี 1M tokens) หรือ Claude Sonnet 4.6 (คุ้มค่า)&lt;/p&gt;&#xA;&lt;h4 id=&#34;5-เรมคย&#34;&gt;&lt;a href=&#34;#5-%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b8%84%e0%b8%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5. เริ่มคุย:&#xA;&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;มิก ช่วยแนะนำตัวหน่อย&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-เรยนรเพมเตม&#34;&gt;&lt;a href=&#34;#-%e0%b9%80%e0%b8%a3%e0%b8%a2%e0%b8%99%e0%b8%a3%e0%b9%80%e0%b8%9e%e0%b8%a1%e0%b9%80%e0%b8%95%e0%b8%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;📚 เรียนรู้เพิ่มเติม:&#xA;&lt;/h3&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;แหล่ง&lt;/th&gt;&#xA;          &lt;th&gt;ลิงก์&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.openclaw.ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://docs.openclaw.ai&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Installation Guide&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.openclaw.ai/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://docs.openclaw.ai/install&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Discord Community&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://discord.gg/clawd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://discord.gg/clawd&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/openclaw/openclaw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://github.com/openclaw/openclaw&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Skill Hub&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://clawhub.ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://clawhub.ai&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Bailian Console&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://bailian.console.aliyun.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://bailian.console.aliyun.com/&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Groq Console&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://console.groq.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://console.groq.com/&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-มคำถาม&#34;&gt;&lt;a href=&#34;#-%e0%b8%a1%e0%b8%84%e0%b8%b3%e0%b8%96%e0%b8%b2%e0%b8%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;💬 มีคำถาม?&#xA;&lt;/h2&gt;&lt;p&gt;ถ้าติดตรงไหน หรืออยากได้ความช่วยเหลือ:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;ถาม Mick&lt;/strong&gt; ได้เลย (ถ้าติดตั้งแล้ว)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;เข้า Discord Community&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;อ่าน Documentation&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;สุดท้ายนี้&amp;hellip;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;เทคโนโลยีมีไว้เพื่อทำให้ชีวิตง่ายขึ้น ไม่ใช่ทำให้ซับซ้อนขึ้น&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; ไม่ใช่แค่ tool — แต่เป็น &lt;strong&gt;ผู้ช่วยส่วนตัว&lt;/strong&gt; ที่ช่วยคุณทำงานซ้ำๆ เพื่อให้คุณมีเวลาไปทำสิ่งที่สำคัญจริงๆ&lt;/p&gt;&#xA;&lt;p&gt;แล้วคุณล่ะ? พร้อมหรือยังที่จะมี AI Assistant ส่วนตัว? 🚀&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;em&gt;บทความโดย เหน่ง (Nueng)&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;Community Development Officer (นักวิชาการพัฒนาชุมชน)&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;Community Development Department, Ministry of Interior (กรมการพัฒนาชุมชน กระทรวงมหาดไทย)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;อัพเดทล่าสุด: 2026-04-06&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-อางอง&#34;&gt;&lt;a href=&#34;#-%e0%b8%ad%e0%b8%b2%e0%b8%87%e0%b8%ad%e0%b8%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;📚 อ้างอิง&#xA;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;หมายเหตุ:&lt;/strong&gt; ราคาอาจมีการเปลี่ยนแปลง — ตรวจสอบกับผู้ให้บริการก่อนใช้งานจริง&lt;/p&gt;&#xA;&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;&#xA;&lt;hr&gt;&#xA;&lt;ol&gt;&#xA;&lt;li id=&#34;fn:1&#34;&gt;&#xA;&lt;p&gt;&lt;strong&gt;Bailian (Alibaba Cloud)&lt;/strong&gt; — &lt;a class=&#34;link&#34; href=&#34;https://help.aliyun.com/zh/model-studio/model-pricing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;阿里云百炼模型价格&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://pricepertoken.com/pricing-page/provider/qwen&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Qwen API Pricing 2026&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li id=&#34;fn:2&#34;&gt;&#xA;&lt;p&gt;&lt;strong&gt;Groq&lt;/strong&gt; — &lt;a class=&#34;link&#34; href=&#34;https://groq.com/pricing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Groq Pricing&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://apicents.com/provider/groq&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Groq API Pricing 2026&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.grizzlypeaksoftware.com/articles/p/groq-api-free-tier-limits-in-2026-what-you-actually-get-uwysd6mb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Groq Free Tier Limits&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li id=&#34;fn:3&#34;&gt;&#xA;&lt;p&gt;&lt;strong&gt;Google&lt;/strong&gt; — &lt;a class=&#34;link&#34; href=&#34;https://aistudio.google.com/pricing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Google AI Studio Pricing&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://haimaker.ai/blog/gemini-3-flash-preview-openclaw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Gemini Models 2026&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li id=&#34;fn:4&#34;&gt;&#xA;&lt;p&gt;&lt;strong&gt;OpenAI&lt;/strong&gt; — &lt;a class=&#34;link&#34; href=&#34;https://openai.com/api/pricing/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;OpenAI API Pricing&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://langcopilot.com/llm-pricing/openai/gpt-4.1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;GPT-4.1 Pricing 2026&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://haimaker.ai/blog/best-models-for-clawdbot/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Best Models for OpenClaw&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref2:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li id=&#34;fn:5&#34;&gt;&#xA;&lt;p&gt;&lt;strong&gt;Anthropic&lt;/strong&gt; — &lt;a class=&#34;link&#34; href=&#34;https://console.anthropic.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Anthropic Console&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://haimaker.ai/blog/best-models-for-clawdbot/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Best Models for OpenClaw 2026&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/div&gt;&#xA;</description>
-        </item></channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beginner on Code &amp; Community</title><link>https://jitaret-rgb.github.io/neng-blog/tags/beginner/</link><description>Recent content in Beginner on Code &amp; Community</description><generator>Hugo -- gohugo.io</generator><language>th-th</language><managingEditor>jitaret@gmail.com (เหน่ง)</managingEditor><webMaster>jitaret@gmail.com (เหน่ง)</webMaster><lastBuildDate>Mon, 06 Apr 2026 08:20:00 +0700</lastBuildDate><atom:link href="https://jitaret-rgb.github.io/neng-blog/tags/beginner/index.xml" rel="self" type="application/rss+xml"/><item><title>เปิดโลก AI Assistant: คู่มือติดตั้ง OpenClaw สำหรับมือใหม่ (ฉบับไม่มีพื้นฐานก็ทำได้)</title><link>https://jitaret-rgb.github.io/neng-blog/posts/openclaw-install-guide/</link><pubDate>Mon, 06 Apr 2026 08:20:00 +0700</pubDate><author>jitaret@gmail.com (เหน่ง)</author><guid>https://jitaret-rgb.github.io/neng-blog/posts/openclaw-install-guide/</guid><description>&lt;img src="https://jitaret-rgb.github.io/neng-blog/" alt="Featured image of post เปิดโลก AI Assistant: คู่มือติดตั้ง OpenClaw สำหรับมือใหม่ (ฉบับไม่มีพื้นฐานก็ทำได้)" /&gt;&lt;h2 id="-บทนำ--openclaw-คออะไร"&gt;&lt;a href="#-%e0%b8%9a%e0%b8%97%e0%b8%99%e0%b8%b3--openclaw-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3" class="header-anchor"&gt;&lt;/a&gt;👋 บทนำ — OpenClaw คืออะไร?
+&lt;/h2&gt;&lt;p&gt;เคยฝันไหมครับ? ว่าถ้ามี &lt;strong&gt;ผู้ช่วยส่วนตัว&lt;/strong&gt; ที่:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ตอบคำถามได้ตลอด 24 ชม.&lt;/li&gt;
+&lt;li&gt;ช่วยเขียนบทความ ค้นหาข้อมูล จัดการไฟล์&lt;/li&gt;
+&lt;li&gt;สั่งงานผ่านแชทได้เลย&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ฟรี!&lt;/strong&gt; (หรือถูกมาก)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; ทำให้ฝันนั้นเป็นจริงครับ!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="openclaw-คออะไร"&gt;&lt;a href="#openclaw-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3" class="header-anchor"&gt;&lt;/a&gt;OpenClaw คืออะไร?
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; คือแพลตฟอร์มสำหรับสร้าง &lt;strong&gt;AI Assistant ส่วนตัว&lt;/strong&gt; ที่:&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;ควบคุมด้วยข้อความธรรมชาติ&lt;/strong&gt; — คุยเหมือนคน&lt;br&gt;
+✅ &lt;strong&gt;เข้าถึงไฟล์ในเครื่องได้&lt;/strong&gt; — อ่าน/เขียน/แก้ไขไฟล์&lt;br&gt;
+✅ &lt;strong&gt;ค้นหาเว็บได้&lt;/strong&gt; — ดึงข้อมูลจาก internet&lt;br&gt;
+✅ &lt;strong&gt;ทำงานอัตโนมัติ&lt;/strong&gt; — ตั้งเวลา ส่งข้อความ&lt;br&gt;
+✅ &lt;strong&gt;จำสิ่งที่คุยกัน&lt;/strong&gt; — มี Memory System&lt;br&gt;
+✅ &lt;strong&gt;ฟรี!&lt;/strong&gt; — ใช้โมเดลฟรีได้หลายตัว&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="ทำไมตองใช-openclaw"&gt;&lt;a href="#%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b9%83%e0%b8%8a-openclaw" class="header-anchor"&gt;&lt;/a&gt;ทำไมต้องใช้ OpenClaw?
+&lt;/h3&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;งาน&lt;/th&gt;
+ &lt;th&gt;ทำเอง&lt;/th&gt;
+ &lt;th&gt;มี OpenClaw&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;ค้นหาข้อมูล&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;เปิดเบราว์เซอร์เอง&lt;/td&gt;
+ &lt;td&gt;สั่ง &amp;ldquo;มิก ค้นหาเรื่อง&amp;hellip;&amp;rdquo;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;เขียนบทความ&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;2-3 ชั่วโมง&lt;/td&gt;
+ &lt;td&gt;30 นาที&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;จัดการไฟล์&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;เปิด File Explorer&lt;/td&gt;
+ &lt;td&gt;สั่ง &amp;ldquo;มิก หาไฟล์&amp;hellip;&amp;rdquo;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;ตั้งเตือน&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;ตั้ง alarm เอง&lt;/td&gt;
+ &lt;td&gt;สั่ง &amp;ldquo;เตือนฉันเรื่อง&amp;hellip;&amp;rdquo;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;สรุปเอกสาร&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;อ่านเองทั้งเล่ม&lt;/td&gt;
+ &lt;td&gt;&amp;ldquo;มิก สรุปให้หน่อย&amp;rdquo;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;ประหยัดเวลา:&lt;/strong&gt; 70-80%! ⏱️&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="ตองมความรกอนไหม"&gt;&lt;a href="#%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a1%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%a3%e0%b8%81%e0%b8%ad%e0%b8%99%e0%b9%84%e0%b8%ab%e0%b8%a1" class="header-anchor"&gt;&lt;/a&gt;ต้องมีความรู้ก่อนไหม?
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;คำตอบ: ไม่!&lt;/strong&gt; 🎉&lt;/p&gt;
+&lt;p&gt;ถ้าคุณ:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ พิมพ์แชทได้&lt;/li&gt;
+&lt;li&gt;✅ ดาวน์โหลดโปรแกรมได้&lt;/li&gt;
+&lt;li&gt;✅ ก็อปปี้-วางได้&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;คุณก็ใช้ OpenClaw ได้แล้ว!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;บทความนี้จะพาทำทีละขั้นตอน &lt;strong&gt;ไม่มีทางตกแน่นอน!&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-เตรยมตวกอนตดตง"&gt;&lt;a href="#-%e0%b9%80%e0%b8%95%e0%b8%a3%e0%b8%a2%e0%b8%a1%e0%b8%95%e0%b8%a7%e0%b8%81%e0%b8%ad%e0%b8%99%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87" class="header-anchor"&gt;&lt;/a&gt;📦 เตรียมตัวก่อนติดตั้ง
+&lt;/h2&gt;&lt;h3 id="ขอกำหนดระบบ"&gt;&lt;a href="#%e0%b8%82%e0%b8%ad%e0%b8%81%e0%b8%b3%e0%b8%ab%e0%b8%99%e0%b8%94%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%9a" class="header-anchor"&gt;&lt;/a&gt;ข้อกำหนดระบบ
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;✅ Node.js: Node 24 (แนะนำ) หรือ Node 22.14+
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;✅ RAM: 4GB+ (แนะนำ 8GB)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;✅ CPU: 2 core+
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt;✅ พื้นที่: 1GB+
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;5&lt;/span&gt;&lt;span class="cl"&gt;✅ OS: macOS, Linux, Windows (Native/WSL2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;6&lt;/span&gt;&lt;span class="cl"&gt;✅ Internet: สำหรับดาวน์โหลด
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="ตองมอะไรบาง"&gt;&lt;a href="#%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a1%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3%e0%b8%9a%e0%b8%b2%e0%b8%87" class="header-anchor"&gt;&lt;/a&gt;ต้องมีอะไรบ้าง?
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;คอมพิวเตอร์&lt;/strong&gt; (เครื่องไหนก็ได้)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Internet&lt;/strong&gt; (สำหรับดาวน์โหลด)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Telegram&lt;/strong&gt; (สำหรับแชทกับ AI)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;เวลา:&lt;/strong&gt; 15-30 นาที&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="ใชเวลาเทาไหร"&gt;&lt;a href="#%e0%b9%83%e0%b8%8a%e0%b9%80%e0%b8%a7%e0%b8%a5%e0%b8%b2%e0%b9%80%e0%b8%97%e0%b8%b2%e0%b9%84%e0%b8%ab%e0%b8%a3" class="header-anchor"&gt;&lt;/a&gt;ใช้เวลาเท่าไหร่?
+&lt;/h3&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;ขั้นตอน&lt;/th&gt;
+ &lt;th&gt;เวลา&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ติดตั้ง Node.js&lt;/td&gt;
+ &lt;td&gt;5 นาที&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ติดตั้ง OpenClaw&lt;/td&gt;
+ &lt;td&gt;2 นาที&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;สร้าง Bot&lt;/td&gt;
+ &lt;td&gt;3 นาที&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ตั้งค่า&lt;/td&gt;
+ &lt;td&gt;5 นาที&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;รวม&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;15 นาที&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="-ตดตงทละขนตอน"&gt;&lt;a href="#-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87%e0%b8%97%e0%b8%a5%e0%b8%b0%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99" class="header-anchor"&gt;&lt;/a&gt;🚀 ติดตั้งทีละขั้นตอน
+&lt;/h2&gt;&lt;h3 id="ขนตอนท-1-ตดตง-nodejs"&gt;&lt;a href="#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-1-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-nodejs" class="header-anchor"&gt;&lt;/a&gt;ขั้นตอนที่ 1: ติดตั้ง Node.js
+&lt;/h3&gt;&lt;p&gt;OpenClaw ทำงานบน &lt;strong&gt;Node.js&lt;/strong&gt; — ไม่ต้องกังวลครับ ติดตั้งง่ายมาก!&lt;/p&gt;
+&lt;h4 id="สำหรบ-windows"&gt;&lt;a href="#%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a-windows" class="header-anchor"&gt;&lt;/a&gt;สำหรับ Windows:
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;เปิดเว็บ:&lt;/strong&gt; &lt;a class="link" href="https://nodejs.org/" target="_blank" rel="noopener"
+ &gt;https://nodejs.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;คลิกปุ่มสีเขียว&lt;/strong&gt; &lt;strong&gt;&amp;ldquo;LTS&amp;rdquo;&lt;/strong&gt; (Recommended)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ดาวน์โหลดเสร็จ&lt;/strong&gt; → ดับเบิลคลิกไฟล์&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;กด Next&lt;/strong&gt; → Next → Next → Finish&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;เสร็จ!&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="สำหรบ-macos"&gt;&lt;a href="#%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a-macos" class="header-anchor"&gt;&lt;/a&gt;สำหรับ macOS:
+&lt;/h4&gt;&lt;p&gt;เปิด Terminal แล้วพิมพ์:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;brew install node
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(ถ้าไม่มี Homebrew → ติดตั้งจาก &lt;a class="link" href="https://brew.sh/" target="_blank" rel="noopener"
+ &gt;https://brew.sh/&lt;/a&gt;)&lt;/p&gt;
+&lt;h4 id="สำหรบ-linux"&gt;&lt;a href="#%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a-linux" class="header-anchor"&gt;&lt;/a&gt;สำหรับ Linux:
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Ubuntu/Debian&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;curl -fsSL https://deb.nodesource.com/setup_20.x &lt;span class="p"&gt;|&lt;/span&gt; sudo -E bash -
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;sudo apt-get install -y nodejs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="-ตรวจสอบวาตดตงสำเรจ"&gt;&lt;a href="#-%e0%b8%95%e0%b8%a3%e0%b8%a7%e0%b8%88%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%a7%e0%b8%b2%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87%e0%b8%aa%e0%b8%b3%e0%b9%80%e0%b8%a3%e0%b8%88" class="header-anchor"&gt;&lt;/a&gt;✅ ตรวจสอบว่าติดตั้งสำเร็จ
+&lt;/h3&gt;&lt;p&gt;เปิด Command Prompt (หรือ Terminal) แล้วพิมพ์:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;node --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ถ้าขึ้นแบบนี้ = สำเร็จ!&lt;/strong&gt; ✅&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;v20.x.x
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ถ้าไม่ขึ้น&lt;/strong&gt; → ลองติดตั้งใหม่ หรือ Google error ที่เจอ&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="ขนตอนท-2-ตดตง-openclaw"&gt;&lt;a href="#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-2-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-openclaw" class="header-anchor"&gt;&lt;/a&gt;ขั้นตอนที่ 2: ติดตั้ง OpenClaw
+&lt;/h3&gt;&lt;p&gt;มีหลายวิธี เลือกวิธีที่สะดวกครับ:&lt;/p&gt;
+&lt;h4 id="วธท-1-installer-script-แนะนำ-"&gt;&lt;a href="#%e0%b8%a7%e0%b8%98%e0%b8%97-1-installer-script-%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3-" class="header-anchor"&gt;&lt;/a&gt;วิธีที่ 1: Installer Script (แนะนำ ⭐)
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;macOS / Linux / WSL2:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;curl -fsSL https://openclaw.ai/install.sh &lt;span class="p"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Windows (PowerShell):&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;iwr &lt;/span&gt;&lt;span class="n"&gt;-useb&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;//&lt;/span&gt;&lt;span class="n"&gt;openclaw&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ai&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;ps1&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;iex
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="วธท-2-npm"&gt;&lt;a href="#%e0%b8%a7%e0%b8%98%e0%b8%97-2-npm" class="header-anchor"&gt;&lt;/a&gt;วิธีที่ 2: npm
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;npm install -g openclaw@latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="วธท-3-pnpm"&gt;&lt;a href="#%e0%b8%a7%e0%b8%98%e0%b8%97-3-pnpm" class="header-anchor"&gt;&lt;/a&gt;วิธีที่ 3: pnpm
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;pnpm add -g openclaw@latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;pnpm approve-builds -g &lt;span class="c1"&gt;# ← ต้องรันครั้งแรก&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="วธท-4-bun"&gt;&lt;a href="#%e0%b8%a7%e0%b8%98%e0%b8%97-4-bun" class="header-anchor"&gt;&lt;/a&gt;วิธีที่ 4: bun
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;bun add -g openclaw@latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;รอ 1-2 นาที&amp;hellip; เสร็จแล้ว!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="-ตรวจสอบวาตดตงสำเรจ-1"&gt;&lt;a href="#-%e0%b8%95%e0%b8%a3%e0%b8%a7%e0%b8%88%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%a7%e0%b8%b2%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87%e0%b8%aa%e0%b8%b3%e0%b9%80%e0%b8%a3%e0%b8%88-1" class="header-anchor"&gt;&lt;/a&gt;✅ ตรวจสอบว่าติดตั้งสำเร็จ
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;openclaw --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ถ้าขึ้นแบบนี้ = สำเร็จ!&lt;/strong&gt; ✅&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;OpenClaw 2026.x.x
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="ขนตอนท-3-สราง-telegram-bot"&gt;&lt;a href="#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-3-%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87-telegram-bot" class="header-anchor"&gt;&lt;/a&gt;ขั้นตอนที่ 3: สร้าง Telegram Bot
+&lt;/h3&gt;&lt;p&gt;ตอนนี้เรามี OpenClaw แล้ว — ต่อไปสร้าง &amp;ldquo;หน้าตา&amp;rdquo; สำหรับคุย!&lt;/p&gt;
+&lt;h4 id="1-เปด-telegram"&gt;&lt;a href="#1-%e0%b9%80%e0%b8%9b%e0%b8%94-telegram" class="header-anchor"&gt;&lt;/a&gt;1. เปิด Telegram
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;บนมือถือ: แอป Telegram&lt;/li&gt;
+&lt;li&gt;บนคอม: &lt;a class="link" href="https://web.telegram.org/" target="_blank" rel="noopener"
+ &gt;https://web.telegram.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="2-คนหา-botfather"&gt;&lt;a href="#2-%e0%b8%84%e0%b8%99%e0%b8%ab%e0%b8%b2-botfather" class="header-anchor"&gt;&lt;/a&gt;2. ค้นหา BotFather
+&lt;/h4&gt;&lt;p&gt;พิมพ์ในช่องค้นหา: &lt;code&gt;@BotFather&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id="3-เรมแชท"&gt;&lt;a href="#3-%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b9%81%e0%b8%8a%e0%b8%97" class="header-anchor"&gt;&lt;/a&gt;3. เริ่มแชท
+&lt;/h4&gt;&lt;p&gt;คลิก &lt;strong&gt;Start&lt;/strong&gt; หรือพิมพ์ &lt;code&gt;/start&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id="4-สราง-bot-ใหม"&gt;&lt;a href="#4-%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87-bot-%e0%b9%83%e0%b8%ab%e0%b8%a1" class="header-anchor"&gt;&lt;/a&gt;4. สร้าง Bot ใหม่
+&lt;/h4&gt;&lt;p&gt;พิมพ์: &lt;code&gt;/newbot&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;BotFather จะถาม:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. ชื่อ Bot:&lt;/strong&gt; พิมพ์อะไรก็ได้ (เช่น &lt;code&gt;Mick AI&lt;/code&gt;)&lt;br&gt;
+&lt;strong&gt;2. Username:&lt;/strong&gt; ต้องลงท้ายด้วย &lt;code&gt;bot&lt;/code&gt; (เช่น &lt;code&gt;MickAssistantBot&lt;/code&gt;)&lt;/p&gt;
+&lt;h4 id="5-copy-token"&gt;&lt;a href="#5-copy-token" class="header-anchor"&gt;&lt;/a&gt;5. Copy Token
+&lt;/h4&gt;&lt;p&gt;BotFather จะส่ง &lt;strong&gt;API Token&lt;/strong&gt; มาให้ — &lt;strong&gt;สำคัญมาก!&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-gdscript3" data-lang="gdscript3"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Here&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;token&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="mi"&gt;1234567890&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;ABCdefGHIjklMNOpqrsTUVwxyz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;⚠️&lt;/span&gt; &lt;span class="err"&gt;คำเตือน&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;5&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="err"&gt;เก็บไว้เป็นความลับ&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;6&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="err"&gt;อย่าแชร์ให้ใคร&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;7&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="err"&gt;อย่า&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="err"&gt;ขึ้น&lt;/span&gt; &lt;span class="n"&gt;GitHub&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;8&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="err"&gt;อย่าโพสต์ในโซเชียล&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ก็อปปี้เก็บไว้&lt;/strong&gt; (วางใน Notepad ก่อนก็ได้)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="-ความปลอดภยของ-token"&gt;&lt;a href="#-%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%9b%e0%b8%a5%e0%b8%ad%e0%b8%94%e0%b8%a0%e0%b8%a2%e0%b8%82%e0%b8%ad%e0%b8%87-token" class="header-anchor"&gt;&lt;/a&gt;🔒 ความปลอดภัยของ Token
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Token คืออะไร?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;คิดเหมือน &lt;strong&gt;รหัสผ่าน&lt;/strong&gt; ของ Bot คุณ — ใครมี Token = ควบคุม Bot ได้!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;สิ่งที่ต้องทำ:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ เก็บในที่ปลอดภัย (password manager)&lt;/li&gt;
+&lt;li&gt;✅ ใช้ environment variable&lt;/li&gt;
+&lt;li&gt;✅ จำกัดสิทธิ์การเข้าถึง&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;สิ่งที่ห้ามทำ:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;❌ อย่า commit ขึ้น Git/GitHub&lt;/li&gt;
+&lt;li&gt;❌ อย่าแชร์ในแชทสาธารณะ&lt;/li&gt;
+&lt;li&gt;❌ อย่าแปะในโค้ดที่ share&lt;/li&gt;
+&lt;li&gt;❌ อย่าส่งให้คนอื่น&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;ถ้า Token รั่วไหล:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ไปที่ BotFather ทันที&lt;/li&gt;
+&lt;li&gt;พิมพ์ &lt;code&gt;/revoke&lt;/code&gt; เพื่อยกเลิก Token เก่า&lt;/li&gt;
+&lt;li&gt;สร้าง Bot ใหม่&lt;/li&gt;
+&lt;li&gt;อัพเดต Token ใน config&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id="ขนตอนท-4-ตงคา-openclaw"&gt;&lt;a href="#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-4-%e0%b8%95%e0%b8%87%e0%b8%84%e0%b8%b2-openclaw" class="header-anchor"&gt;&lt;/a&gt;ขั้นตอนที่ 4: ตั้งค่า OpenClaw
+&lt;/h3&gt;&lt;p&gt;ตอนนี้มีทุกอย่างแล้ว — มาเชื่อมต่อกัน!&lt;/p&gt;
+&lt;h4 id="1-สรางโฟลเดอรทำงาน"&gt;&lt;a href="#1-%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87%e0%b9%82%e0%b8%9f%e0%b8%a5%e0%b9%80%e0%b8%94%e0%b8%ad%e0%b8%a3%e0%b8%97%e0%b8%b3%e0%b8%87%e0%b8%b2%e0%b8%99" class="header-anchor"&gt;&lt;/a&gt;1. สร้างโฟลเดอร์ทำงาน
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;mkdir ~/openclaw-workspace
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/openclaw-workspace
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="2-สรางไฟล-config"&gt;&lt;a href="#2-%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87%e0%b9%84%e0%b8%9f%e0%b8%a5-config" class="header-anchor"&gt;&lt;/a&gt;2. สร้างไฟล์ config
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;openclaw init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;คำสั่งนี้จะสร้างไฟล์ config ให้โดยอัตโนมัติ&lt;/p&gt;
+&lt;h4 id="3-ตดตง-gateway-daemon"&gt;&lt;a href="#3-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-gateway-daemon" class="header-anchor"&gt;&lt;/a&gt;3. ติดตั้ง Gateway Daemon
+&lt;/h4&gt;&lt;p&gt;หลังติดตั้งเสร็จ ให้ติดตั้ง Gateway ให้รันอัตโนมัติ:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;openclaw onboard --install-daemon
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;คำสั่งนี้จะ:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;สร้าง workspace ที่ &lt;code&gt;~/.openclaw/workspace&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ติดตั้ง Gateway daemon (launchd/systemd)&lt;/li&gt;
+&lt;li&gt;เปิด onboarding wizard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="4-แกไข-config"&gt;&lt;a href="#4-%e0%b9%81%e0%b8%81%e0%b9%84%e0%b8%82-config" class="header-anchor"&gt;&lt;/a&gt;4. แก้ไข config
+&lt;/h4&gt;&lt;p&gt;เปิดไฟล์ &lt;code&gt;~/.openclaw/openclaw.json&lt;/code&gt; แล้วเพิ่ม:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;telegram&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;botToken&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;YOUR_BOT_TOKEN_HERE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;5&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;หรือใช้ Onboarding:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;openclaw onboard
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Onboarding จะพาตั้งค่าทีละขั้นตอน!&lt;/p&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;คำเตือน:&lt;/strong&gt; อย่าแชร์ API Token ของคุณ!&lt;/p&gt;
+&lt;h4 id="5-เรมใชงาน"&gt;&lt;a href="#5-%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99" class="header-anchor"&gt;&lt;/a&gt;5. เริ่มใช้งาน
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;openclaw gateway status &lt;span class="c1"&gt;# เช็คสถานะ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;openclaw doctor &lt;span class="c1"&gt;# เช็คปัญหา&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ถ้า Gateway ยังไม่รัน:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;openclaw gateway start
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ถ้าขึ้นแบบนี้ = &lt;strong&gt;สำเร็จ!&lt;/strong&gt; 🎉&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;✅ Gateway running
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;✅ Telegram connected
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;✅ Ready to chat!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="ขนตอนท-5-เรมแชท"&gt;&lt;a href="#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-5-%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b9%81%e0%b8%8a%e0%b8%97" class="header-anchor"&gt;&lt;/a&gt;ขั้นตอนที่ 5: เริ่มแชท!
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;เปิด Telegram&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ค้นหา Bot&lt;/strong&gt; ที่เราสร้าง (เช่น &lt;code&gt;MickAssistantBot&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;กด Start&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;พิมพ์:&lt;/strong&gt; &amp;ldquo;สวัสดี&amp;rdquo; หรือ &amp;ldquo;ช่วยแนะนำตัวหน่อย&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;ถ้า Bot ตอบ = เสร็จสมบูรณ์!&lt;/strong&gt; 🎉&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-แนะนำ-6-providers--llms"&gt;&lt;a href="#-%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3-6-providers--llms" class="header-anchor"&gt;&lt;/a&gt;🎯 แนะนำ 6 Providers + LLMs
+&lt;/h2&gt;&lt;h3 id="provider-คออะไร"&gt;&lt;a href="#provider-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3" class="header-anchor"&gt;&lt;/a&gt;Provider คืออะไร?
+&lt;/h3&gt;&lt;p&gt;คิดง่ายๆ คือ &lt;strong&gt;&amp;ldquo;บริษัทที่ให้ใช้ AI&amp;rdquo;&lt;/strong&gt; ครับ&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; เป็นแค่ตัวกลาง — ต้องเชื่อมต่อกับ &lt;strong&gt;AI จริงๆ&lt;/strong&gt; จาก provider&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;เปรียบเทียบ:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; = โทรศัพท์&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Provider&lt;/strong&gt; = เครือข่าย (AIS, True, DTAC)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LLM&lt;/strong&gt; = คนคุยสาย另一端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="ทำไมตองม-provider"&gt;&lt;a href="#%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a1-provider" class="header-anchor"&gt;&lt;/a&gt;ทำไมต้องมี Provider?
+&lt;/h3&gt;&lt;p&gt;เพราะ OpenClaw &lt;strong&gt;ไม่สร้าง AI เอง&lt;/strong&gt; — แต่เชื่อมต่อกับ AI ที่มีอยู่แล้ว&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ข้อดี:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ เลือกได้ว่าจะใช้ AI ตัวไหน&lt;/li&gt;
+&lt;li&gt;✅ จ่ายเฉพาะที่ใช้&lt;/li&gt;
+&lt;li&gt;✅ เปลี่ยนได้ตลอด&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="1-bailian-alibaba-cloud---คมคาสด-"&gt;&lt;a href="#1-bailian-alibaba-cloud---%e0%b8%84%e0%b8%a1%e0%b8%84%e0%b8%b2%e0%b8%aa%e0%b8%94-" class="header-anchor"&gt;&lt;/a&gt;1. Bailian (Alibaba Cloud) 🇨🇳 — คุ้มค่าสุด! 💰
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; Qwen 3, Qwen 2.5 (72B), Qwen-Max&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt; ✅ &lt;strong&gt;ฟรี 1,000,000 tokens/เดือน&lt;/strong&gt; (Qwen 2.5) &lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;
+&lt;strong&gt;Qwen 3:&lt;/strong&gt; 💰 $0.0005-0.002 / 1K tokens &lt;sup id="fnref1:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;
+&lt;strong&gt;(ประมาณ 500-1,000 บทความ/เดือน)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🇹🇭 ภาษาไทยดีเยี่ยม&lt;/li&gt;
+&lt;li&gt;📄 Context 256K tokens&lt;/li&gt;
+&lt;li&gt;💰 คุ้มค่าสุดสำหรับใช้งานหนัก&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; ใช้งานทั่วไป, บล็อก, แชท, ใช้งานหนัก&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;วิธีใช้:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;สมัคร: &lt;a class="link" href="https://bailian.console.aliyun.com/" target="_blank" rel="noopener"
+ &gt;https://bailian.console.aliyun.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;สร้าง API Key&lt;/li&gt;
+&lt;li&gt;ใส่ใน config OpenClaw&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;ตัวอย่าง config (สมมติ):&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;providers&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;bailian&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;apiKey&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;sk-xxxxxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;# ← ใส่ Key ของคุณ&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;# ⚠️ อย่าใช้ Key ตัวอย่างนี้!&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;💰 ความคุ้มค่า:&lt;/strong&gt;&lt;br&gt;
+ถ้าใช้ GPT-4o กับงานเดียวกัน → เสียเงิน ~$10-30/เดือน&lt;br&gt;
+แต่ Qwen 2.5 → &lt;strong&gt;ฟรี!&lt;/strong&gt; (ประหยัด ~300-1,000 บาท/เดือน)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="2-groq---เรวสด-"&gt;&lt;a href="#2-groq---%e0%b9%80%e0%b8%a3%e0%b8%a7%e0%b8%aa%e0%b8%94-" class="header-anchor"&gt;&lt;/a&gt;2. Groq 🇺🇸 — เร็วสุด! ⚡
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; Llama 3.1 (405B), Llama 3.3 (70B), Mixtral 8x22B&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt; ✅ ฟรี (~100 requests/day) &lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;
+&lt;strong&gt;Paid:&lt;/strong&gt; $0.05-$0.79 / 1M tokens &lt;sup id="fnref1:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;⚡ เร็วที่สุด (500+ tokens/วินาที)&lt;/li&gt;
+&lt;li&gt;🆓 ฟรี tier เพียงพอสำหรับทดสอบ&lt;/li&gt;
+&lt;li&gt;🔓 Open-source models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; ทดลอง, prototype, ใช้งานที่ต้องการความเร็ว&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;วิธีใช้:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;สมัคร: &lt;a class="link" href="https://console.groq.com/" target="_blank" rel="noopener"
+ &gt;https://console.groq.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;สร้าง API Key&lt;/li&gt;
+&lt;li&gt;ใส่ใน config&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;สำคัญ:&lt;/strong&gt; อย่าแชร์ API Key ของคุณ!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ข้อจำกัด:&lt;/strong&gt; ฟรีจำกัด/วัน (แต่พอใช้สำหรับทดสอบ)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="3-google---ใชงานทวไป-"&gt;&lt;a href="#3-google---%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%97%e0%b8%a7%e0%b9%84%e0%b8%9b-" class="header-anchor"&gt;&lt;/a&gt;3. Google 🇺🇸 — ใช้งานทั่วไป 🎯
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; Gemini 2.5 Pro, Gemini 2.0 Flash&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt; ✅ ฟรี 60 requests/นาที (Gemini 2.0 Flash) &lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;
+&lt;strong&gt;Gemini 3 Pro:&lt;/strong&gt; 💰 $1.25/$10 / 1M tokens &lt;sup id="fnref1:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;📚 Context 1M+ tokens (Gemini 3 Pro)&lt;/li&gt;
+&lt;li&gt;🔗 ผสานกับ Google services&lt;/li&gt;
+&lt;li&gt;🇹🇭 รองรับภาษาไทยดี&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; ทดลอง, ใช้งานทั่วไป&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;วิธีใช้:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;สมัคร: &lt;a class="link" href="https://aistudio.google.com/" target="_blank" rel="noopener"
+ &gt;https://aistudio.google.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;สร้าง API Key&lt;/li&gt;
+&lt;li&gt;ใส่ใน config&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;🔒 &lt;strong&gt;ความปลอดภัย:&lt;/strong&gt; เก็บ Key เป็นความลับ!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="4-openai---คณภาพสงสด-"&gt;&lt;a href="#4-openai---%e0%b8%84%e0%b8%93%e0%b8%a0%e0%b8%b2%e0%b8%9e%e0%b8%aa%e0%b8%87%e0%b8%aa%e0%b8%94-" class="header-anchor"&gt;&lt;/a&gt;4. OpenAI 🇺🇸 — คุณภาพสูงสุด 👑
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; GPT-4.1, GPT-4o, o3-mini&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt; ❌ $0.002-0.015 / 1K tokens &lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;
+&lt;strong&gt;GPT-4.1:&lt;/strong&gt; $2/$8 / 1M tokens &lt;sup id="fnref1:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;
+&lt;strong&gt;GPT-4o-mini:&lt;/strong&gt; $0.15/$0.60 / 1M tokens (ถูกสุด!) &lt;sup id="fnref2:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🧠 ฉลาดที่สุด&lt;/li&gt;
+&lt;li&gt;🛠️ ทำงานหลากหลาย&lt;/li&gt;
+&lt;li&gt;📚 เอกสารครบ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; งานที่ต้องการความแม่นยำสูง, งานสำคัญ&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;วิธีใช้:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;สมัคร: &lt;a class="link" href="https://platform.openai.com/" target="_blank" rel="noopener"
+ &gt;https://platform.openai.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;เติมเงิน ($5 ขั้นต่ำ)&lt;/li&gt;
+&lt;li&gt;สร้าง API Key&lt;/li&gt;
+&lt;li&gt;ใส่ใน config&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;คำเตือน:&lt;/strong&gt; API Key OpenAI มีมูลค่า — ระวังการรั่วไหล!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ราคาตัวอย่าง:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;บทความ 1,000 คำ → ~$0.03-0.05 (~1-2 บาท)&lt;/li&gt;
+&lt;li&gt;คุ้มค่าสำหรับงานสำคัญ!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="5-anthropic---เขยนบทความ-"&gt;&lt;a href="#5-anthropic---%e0%b9%80%e0%b8%82%e0%b8%a2%e0%b8%99%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1-" class="header-anchor"&gt;&lt;/a&gt;5. Anthropic 🇺🇸 — เขียนบทความ ✍️
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; Claude Sonnet 4.6, Claude Opus 4.6&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Claude Sonnet 4.6:&lt;/strong&gt; $3/$15 / 1M tokens (คุ้มค่าสุด!) &lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude Opus 4.6:&lt;/strong&gt; $15/$75 / 1M tokens (คุณภาพสูงสุด) &lt;sup id="fnref1:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;📝 เขียนบทความธรรมชาติ&lt;/li&gt;
+&lt;li&gt;🧩 Tool calling ดีที่สุด&lt;/li&gt;
+&lt;li&gt;🔒 ปลอดภัย&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; เขียนคอนเทนต์, สรุปเอกสารยาว&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;วิธีใช้:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;สมัคร: &lt;a class="link" href="https://console.anthropic.com/" target="_blank" rel="noopener"
+ &gt;https://console.anthropic.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;สร้าง API Key&lt;/li&gt;
+&lt;li&gt;ใส่ใน config&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;🔒 &lt;strong&gt;สำคัญ:&lt;/strong&gt; อย่า commit API Key ขึ้น Git!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ข้อดี:&lt;/strong&gt; ถูกกว่า GPT-4 แต่เขียนบทความดีกว่า!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="6-ollama---localสวนตว-"&gt;&lt;a href="#6-ollama---local%e0%b8%aa%e0%b8%a7%e0%b8%99%e0%b8%95%e0%b8%a7-" class="header-anchor"&gt;&lt;/a&gt;6. Ollama 🏠 — Local/ส่วนตัว 🔒
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LLM:&lt;/strong&gt; Llama 3.1 (70B), Mistral Large, Gemma 2&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ราคา:&lt;/strong&gt; ✅ ฟรี 100%&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;💻 &lt;strong&gt;รันบนเครื่องตัวเอง&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🔒 &lt;strong&gt;ไม่ต้องส่งข้อมูลออก&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;∞ &lt;strong&gt;ไม่จำกัด usage&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;เหมาะสำหรับ:&lt;/strong&gt; ข้อมูลลับ, ใช้งานหนัก, ส่วนตัว&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;วิธีติดตั้ง:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 1. ติดตั้ง Ollama&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 2&lt;/span&gt;&lt;span class="cl"&gt;curl -fsSL https://ollama.com/install.sh &lt;span class="p"&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 3&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 4&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 2. ดาวน์โหลดโมเดล&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 5&lt;/span&gt;&lt;span class="cl"&gt;ollama run llama3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 6&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 7&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 3. เชื่อมต่อ OpenClaw&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 8&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# เพิ่มใน config:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 9&lt;/span&gt;&lt;span class="cl"&gt;ollama:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;10&lt;/span&gt;&lt;span class="cl"&gt; enabled: &lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;11&lt;/span&gt;&lt;span class="cl"&gt; model: llama3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ข้อจำกัด:&lt;/strong&gt; ต้องมี RAM 8GB+ และ CPU แรงหน่อย&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;จุดเด่น:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;💻 รันบนเครื่องตัวเอง&lt;/li&gt;
+&lt;li&gt;🔒 ไม่ต้องส่งข้อมูลออก&lt;/li&gt;
+&lt;li&gt;∞ ไม่จำกัด usage&lt;/li&gt;
+&lt;li&gt;💰 ฟรี 100%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-ตารางสรป"&gt;&lt;a href="#-%e0%b8%95%e0%b8%b2%e0%b8%a3%e0%b8%b2%e0%b8%87%e0%b8%aa%e0%b8%a3%e0%b8%9b" class="header-anchor"&gt;&lt;/a&gt;📊 ตารางสรุป
+&lt;/h2&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;#&lt;/th&gt;
+ &lt;th&gt;Provider&lt;/th&gt;
+ &lt;th&gt;LLM&lt;/th&gt;
+ &lt;th&gt;ราคา (ต่อ 1M tokens)&lt;/th&gt;
+ &lt;th&gt;เหมาะกับ&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;1&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Bailian&lt;/strong&gt; 🇨🇳&lt;/td&gt;
+ &lt;td&gt;Qwen 2.5&lt;/td&gt;
+ &lt;td&gt;✅ ฟรี 1M tokens/เดือน&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;คุ้มค่าสุด&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Groq&lt;/strong&gt; 🇺🇸&lt;/td&gt;
+ &lt;td&gt;Llama 3.3&lt;/td&gt;
+ &lt;td&gt;✅ ฟรี (~100/day)&lt;/td&gt;
+ &lt;td&gt;เร็วสุด ⚡&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;3&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Google&lt;/strong&gt; 🇺🇸&lt;/td&gt;
+ &lt;td&gt;Gemini 3 Flash&lt;/td&gt;
+ &lt;td&gt;$0.075/$0.30&lt;/td&gt;
+ &lt;td&gt;เร็ว/ประหยัด&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Google&lt;/strong&gt; 🇺🇸&lt;/td&gt;
+ &lt;td&gt;Gemini 3 Pro&lt;/td&gt;
+ &lt;td&gt;$1.25/$10&lt;/td&gt;
+ &lt;td&gt;วิเคราะห์เอกสาร 📚&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;5&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;OpenAI&lt;/strong&gt; 🇺🇸&lt;/td&gt;
+ &lt;td&gt;GPT-4o-mini&lt;/td&gt;
+ &lt;td&gt;$0.15/$0.60&lt;/td&gt;
+ &lt;td&gt;ถูกสุด 💰&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;6&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;OpenAI&lt;/strong&gt; 🇺🇸&lt;/td&gt;
+ &lt;td&gt;GPT-4.1&lt;/td&gt;
+ &lt;td&gt;$2/$8&lt;/td&gt;
+ &lt;td&gt;งานคุณภาพ&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;7&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Anthropic&lt;/strong&gt; 🇺🇸&lt;/td&gt;
+ &lt;td&gt;Claude Sonnet 4.6&lt;/td&gt;
+ &lt;td&gt;$3/$15&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;แนะนำ!&lt;/strong&gt; ⭐&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;8&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Anthropic&lt;/strong&gt; 🇺🇸&lt;/td&gt;
+ &lt;td&gt;Claude Opus 4.6&lt;/td&gt;
+ &lt;td&gt;$15/$75&lt;/td&gt;
+ &lt;td&gt;คุณภาพสูงสุด 👑&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;9&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Ollama&lt;/strong&gt; 🏠&lt;/td&gt;
+ &lt;td&gt;Llama 3.3 70B&lt;/td&gt;
+ &lt;td&gt;✅ ฟรี 100%&lt;/td&gt;
+ &lt;td&gt;ส่วนตัว/Local 🔒&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="-คำแนะนำการเลอก"&gt;&lt;a href="#-%e0%b8%84%e0%b8%b3%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%80%e0%b8%a5%e0%b8%ad%e0%b8%81" class="header-anchor"&gt;&lt;/a&gt;💡 คำแนะนำการเลือก
+&lt;/h2&gt;&lt;h3 id="-สำหรบมอใหม"&gt;&lt;a href="#-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%a1%e0%b8%ad%e0%b9%83%e0%b8%ab%e0%b8%a1" class="header-anchor"&gt;&lt;/a&gt;🎯 สำหรับมือใหม่:
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;🎯 เริ่มที่: Bailian Qwen 2.5 (ฟรี 1M tokens)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;💰 งบจำกัด: GPT-4o-mini ($0.15/1M)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;⚡ ต้องการความเร็ว: Groq (500+ tokens/วินาที)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt;⭐ คุ้มค่าสุด: Claude Sonnet 4.6 ($3/1M)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="-สำหรบใชงานจรง"&gt;&lt;a href="#-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%88%e0%b8%a3%e0%b8%87" class="header-anchor"&gt;&lt;/a&gt;💼 สำหรับใช้งานจริง:
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;📝 เขียนบทความ: Claude Sonnet 4.6 ($3/$15)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;💻 เขียนโค้ด: Claude Opus 4.6 ($15/$75)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;📚 วิเคราะห์เอกสาร: Gemini 3 Pro ($1.25/$10)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt;🔒 ข้อมูลลับ: Ollama (Local, ฟรี)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;5&lt;/span&gt;&lt;span class="cl"&gt;⚡ งานเร็ว: Gemini 3 Flash ($0.075/$0.30)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="-สำหรบประหยด"&gt;&lt;a href="#-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%ab%e0%b8%a2%e0%b8%94" class="header-anchor"&gt;&lt;/a&gt;💰 สำหรับประหยัด:
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;✅ ฟรี 100%: Ollama (Local)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;✅ ฟรี quota: Bailian (1M tokens/เดือน)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;✅ ถูกสุด: GPT-4o-mini ($0.15/$0.60)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt;✅ คุ้มค่า: Claude Sonnet 4.6 ($3/$15)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;5&lt;/span&gt;&lt;span class="cl"&gt;✅ เร็ว/ถูก: Gemini 3 Flash ($0.075/$0.30)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-เปรยบเทยบราคา-2026"&gt;&lt;a href="#-%e0%b9%80%e0%b8%9b%e0%b8%a3%e0%b8%a2%e0%b8%9a%e0%b9%80%e0%b8%97%e0%b8%a2%e0%b8%9a%e0%b8%a3%e0%b8%b2%e0%b8%84%e0%b8%b2-2026" class="header-anchor"&gt;&lt;/a&gt;💰 เปรียบเทียบราคา (2026)
+&lt;/h2&gt;&lt;h3 id="ถกสด--แพงสด"&gt;&lt;a href="#%e0%b8%96%e0%b8%81%e0%b8%aa%e0%b8%94--%e0%b9%81%e0%b8%9e%e0%b8%87%e0%b8%aa%e0%b8%94" class="header-anchor"&gt;&lt;/a&gt;ถูกสุด → แพงสุด:
+&lt;/h3&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;อันดับ&lt;/th&gt;
+ &lt;th&gt;Model&lt;/th&gt;
+ &lt;th&gt;ราคา Input/Output&lt;/th&gt;
+ &lt;th&gt;ต่อเดือน*&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;🥇&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Ollama (Local)&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;ฟรี&lt;/td&gt;
+ &lt;td&gt;ฟรี&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;🥈&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Bailian Qwen 2.5&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;ฟรี 1M tokens&lt;/td&gt;
+ &lt;td&gt;ฟรี&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;🥉&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;GPT-4o-mini&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;$0.15/$0.60&lt;/td&gt;
+ &lt;td&gt;~$3-10&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Gemini 3 Flash&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;$0.075/$0.30&lt;/td&gt;
+ &lt;td&gt;~$5-15&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;5&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Claude Sonnet 4.6&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;$3/$15&lt;/td&gt;
+ &lt;td&gt;~$30-100&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;6&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Gemini 3 Pro&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;$1.25/$10&lt;/td&gt;
+ &lt;td&gt;~$50-150&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;7&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Claude Opus 4.6&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;$15/$75&lt;/td&gt;
+ &lt;td&gt;~$150-500&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;* ประมาณการสำหรับใช้งานทั่วไป (10-50 บทความ/เดือน)&lt;/p&gt;
+&lt;h3 id="สรป"&gt;&lt;a href="#%e0%b8%aa%e0%b8%a3%e0%b8%9b" class="header-anchor"&gt;&lt;/a&gt;สรุป:
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 1&lt;/span&gt;&lt;span class="cl"&gt;💰 งบจำกัด:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 2&lt;/span&gt;&lt;span class="cl"&gt; → Bailian Qwen 2.5 (ฟรี 1M tokens)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 3&lt;/span&gt;&lt;span class="cl"&gt; → GPT-4o-mini ($0.15/1M)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 4&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 5&lt;/span&gt;&lt;span class="cl"&gt;⭐ คุ้มค่าสุด:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 6&lt;/span&gt;&lt;span class="cl"&gt; → Claude Sonnet 4.6 ($3/$15)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 7&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 8&lt;/span&gt;&lt;span class="cl"&gt;👑 คุณภาพสูงสุด:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 9&lt;/span&gt;&lt;span class="cl"&gt; → Claude Opus 4.6 ($15/$75)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;10&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;11&lt;/span&gt;&lt;span class="cl"&gt;🔒 ส่วนตัว:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;12&lt;/span&gt;&lt;span class="cl"&gt; → Ollama (Local, ฟรี)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-ทดสอบใชงาน"&gt;&lt;a href="#-%e0%b8%97%e0%b8%94%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99" class="header-anchor"&gt;&lt;/a&gt;🧪 ทดสอบใช้งาน
+&lt;/h2&gt;&lt;h3 id="เชคการตดตง"&gt;&lt;a href="#%e0%b9%80%e0%b8%8a%e0%b8%84%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87" class="header-anchor"&gt;&lt;/a&gt;เช็คการติดตั้ง:
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;openclaw --version &lt;span class="c1"&gt;# เช็ค CLI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;openclaw doctor &lt;span class="c1"&gt;# เช็คปัญหา&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;openclaw gateway status &lt;span class="c1"&gt;# เช็ค Gateway&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="คำสงแรกทควรลอง"&gt;&lt;a href="#%e0%b8%84%e0%b8%b3%e0%b8%aa%e0%b8%87%e0%b9%81%e0%b8%a3%e0%b8%81%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%a3%e0%b8%a5%e0%b8%ad%e0%b8%87" class="header-anchor"&gt;&lt;/a&gt;คำสั่งแรกที่ควรลอง:
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&amp;#34;สวัสดี&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;&amp;#34;ช่วยแนะนำตัวหน่อย&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;&amp;#34;มีอะไรทำได้บ้าง&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="คำสงทใชบอย"&gt;&lt;a href="#%e0%b8%84%e0%b8%b3%e0%b8%aa%e0%b8%87%e0%b8%97%e0%b9%83%e0%b8%8a%e0%b8%9a%e0%b8%ad%e0%b8%a2" class="header-anchor"&gt;&lt;/a&gt;คำสั่งที่ใช้บ่อย:
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&amp;#34;ค้นหาข้อมูลเรื่อง...&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;&amp;#34;เขียนบทความเกี่ยวกับ...&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;&amp;#34;ช่วยสรุปเอกสารนี้...&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt;&amp;#34;เตือนฉันเรื่อง... เวลา...&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;5&lt;/span&gt;&lt;span class="cl"&gt;&amp;#34;หาไฟล์ชื่อ...&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-ความปลอดภย--สงทตองร"&gt;&lt;a href="#-%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%9b%e0%b8%a5%e0%b8%ad%e0%b8%94%e0%b8%a0%e0%b8%a2--%e0%b8%aa%e0%b8%87%e0%b8%97%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a3" class="header-anchor"&gt;&lt;/a&gt;🔒 ความปลอดภัย — สิ่งที่ต้องรู้
+&lt;/h2&gt;&lt;h3 id="api-keys-และ-tokens"&gt;&lt;a href="#api-keys-%e0%b9%81%e0%b8%a5%e0%b8%b0-tokens" class="header-anchor"&gt;&lt;/a&gt;API Keys และ Tokens
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;สิ่งที่ต้องจำ:&lt;/strong&gt;&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;🚨 &lt;strong&gt;API Keys และ Tokens คือรหัสผ่าน!&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;อย่าแชร์ให้ใคร&lt;/li&gt;
+&lt;li&gt;อย่า upload ขึ้น GitHub&lt;/li&gt;
+&lt;li&gt;อย่าโพสต์ในโซเชียล&lt;/li&gt;
+&lt;li&gt;อย่าส่งในแชทสาธารณะ&lt;/li&gt;
+&lt;/ul&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;วิธีเก็บที่ปลอดภัย:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;ใช้ Environment Variables&lt;/strong&gt; (แนะนำ):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;OPENCLAW_TELEGRAM_TOKEN&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;your-token-here&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;BAILIAN_API_KEY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;your-key-here&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;&lt;strong&gt;ใช้ Password Manager&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;1Password&lt;/li&gt;
+&lt;li&gt;Bitwarden (ฟรี)&lt;/li&gt;
+&lt;li&gt;KeePass&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start="3"&gt;
+&lt;li&gt;&lt;strong&gt;ไฟล์แยกต่างหาก&lt;/strong&gt; (ไม่ commit):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# config-secret.yaml (อย่า commit!)&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;telegram&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;botToken&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;your-token&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ถ้า Key รั่วไหล:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ยกเลิก Key ทันที (revoke)&lt;/li&gt;
+&lt;li&gt;สร้าง Key ใหม่&lt;/li&gt;
+&lt;li&gt;อัพเดต config&lt;/li&gt;
+&lt;li&gt;ตรวจสอบการใช้งานผิดปกติ&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="ตวอยางการใชงานจรง"&gt;&lt;a href="#%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%83%e0%b8%8a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%88%e0%b8%a3%e0%b8%87" class="header-anchor"&gt;&lt;/a&gt;ตัวอย่างการใช้งานจริง:
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 1&lt;/span&gt;&lt;span class="cl"&gt;คุณ: &amp;#34;มิก ช่วยค้นหาข้อมูลเรื่อง AI ล่าสุดให้หน่อย&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 2&lt;/span&gt;&lt;span class="cl"&gt;มิก: [web_search]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 3&lt;/span&gt;&lt;span class="cl"&gt;มิก: &amp;#34;เจอข่าวล่าสุดเมื่อวานนี้: OpenAI เปิดตัว GPT-5...&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 4&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 5&lt;/span&gt;&lt;span class="cl"&gt;คุณ: &amp;#34;มิก เขียนบทความเรื่อง AI สำหรับมือใหม่&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 6&lt;/span&gt;&lt;span class="cl"&gt;มิก: [เขียนบทความ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 7&lt;/span&gt;&lt;span class="cl"&gt;มิก: &amp;#34;เขียนเสร็จครับ! ความยาว 1,500 คำ อยากแก้ตรงไหนบอกได้เลย&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 8&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 9&lt;/span&gt;&lt;span class="cl"&gt;คุณ: &amp;#34;มิก เตือนฉันประชุมพรุ่งนี้ 10 โมง&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;10&lt;/span&gt;&lt;span class="cl"&gt;มิก: [สร้าง reminder]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;11&lt;/span&gt;&lt;span class="cl"&gt;มิก: &amp;#34;ตั้งเตือนแล้วครับ! จะเตือนพรุ่งนี้ 09:30&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-troubleshooting"&gt;&lt;a href="#-troubleshooting" class="header-anchor"&gt;&lt;/a&gt;❓ Troubleshooting
+&lt;/h2&gt;&lt;h3 id="ปญหา-bot-ไมตอบ"&gt;&lt;a href="#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2-bot-%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b8%ad%e0%b8%9a" class="header-anchor"&gt;&lt;/a&gt;ปัญหา: Bot ไม่ตอบ
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;วิธีแก้:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;เช็ค Token ถูกต้องไหม&lt;/li&gt;
+&lt;li&gt;เช็ค Gateway รันอยู่ไหม: &lt;code&gt;openclaw gateway status&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Restart: &lt;code&gt;openclaw gateway restart&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="ปญหา-ตดตง-nodejs-ไมได"&gt;&lt;a href="#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-nodejs-%e0%b9%84%e0%b8%a1%e0%b9%84%e0%b8%94" class="header-anchor"&gt;&lt;/a&gt;ปัญหา: ติดตั้ง Node.js ไม่ได้
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;วิธีแก้:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ใช้ installer script (แนะนำ)&lt;/li&gt;
+&lt;li&gt;ดาวน์โหลดจาก &lt;a class="link" href="https://nodejs.org/" target="_blank" rel="noopener"
+ &gt;https://nodejs.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ใช้ Node 24 (แนะนำ) หรือ 22.14+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="ปญหา-openclaw-not-found"&gt;&lt;a href="#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2-openclaw-not-found" class="header-anchor"&gt;&lt;/a&gt;ปัญหา: &lt;code&gt;openclaw&lt;/code&gt; not found
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;วิธีแก้:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# เช็ค Node ติดตั้งไหม&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 2&lt;/span&gt;&lt;span class="cl"&gt;node -v
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 3&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 4&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# เช็ค global packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 5&lt;/span&gt;&lt;span class="cl"&gt;npm prefix -g
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 6&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 7&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# เช็ค PATH&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 8&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 9&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;10&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# ถ้า $(npm prefix -g)/bin ไม่มีใน PATH&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;11&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;npm prefix -g&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;/bin:&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;เพิ่มใน &lt;code&gt;~/.zshrc&lt;/code&gt; หรือ &lt;code&gt;~/.bashrc&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;npm prefix -g&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;/bin:&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="ปญหา-sharp-build-errors-npm"&gt;&lt;a href="#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2-sharp-build-errors-npm" class="header-anchor"&gt;&lt;/a&gt;ปัญหา: sharp build errors (npm)
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;วิธีแก้:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;SHARP_IGNORE_GLOBAL_LIBVIPS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; npm install -g openclaw@latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-สรป"&gt;&lt;a href="#-%e0%b8%aa%e0%b8%a3%e0%b8%9b" class="header-anchor"&gt;&lt;/a&gt;🎉 สรุป
+&lt;/h2&gt;&lt;h3 id="สงททำเสรจวนน"&gt;&lt;a href="#%e0%b8%aa%e0%b8%87%e0%b8%97%e0%b8%97%e0%b8%b3%e0%b9%80%e0%b8%aa%e0%b8%a3%e0%b8%88%e0%b8%a7%e0%b8%99%e0%b8%99" class="header-anchor"&gt;&lt;/a&gt;สิ่งที่ทำเสร็จวันนี้:
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;✅ รู้ว่า OpenClaw คืออะไร&lt;/li&gt;
+&lt;li&gt;✅ ติดตั้ง Node.js&lt;/li&gt;
+&lt;li&gt;✅ ติดตั้ง OpenClaw&lt;/li&gt;
+&lt;li&gt;✅ สร้าง Telegram Bot&lt;/li&gt;
+&lt;li&gt;✅ ตั้งค่า config&lt;/li&gt;
+&lt;li&gt;✅ รู้จัก 6 Providers + LLMs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="ขนตอนตอไป"&gt;&lt;a href="#%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b9%84%e0%b8%9b" class="header-anchor"&gt;&lt;/a&gt;ขั้นตอนต่อไป:
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;เลือก Provider&lt;/strong&gt; → แนะนำ Bailian (ฟรี)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;สมัคร + สร้าง API Key&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ใส่ใน config&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;เริ่มใช้งาน!&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="-พรอมเรมตนหรอยง"&gt;&lt;a href="#-%e0%b8%9e%e0%b8%a3%e0%b8%ad%e0%b8%a1%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b8%95%e0%b8%99%e0%b8%ab%e0%b8%a3%e0%b8%ad%e0%b8%a2%e0%b8%87" class="header-anchor"&gt;&lt;/a&gt;🚀 พร้อมเริ่มต้นหรือยัง?
+&lt;/h2&gt;&lt;h3 id="ลองตดตงดครบ"&gt;&lt;a href="#%e0%b8%a5%e0%b8%ad%e0%b8%87%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87%e0%b8%94%e0%b8%84%e0%b8%a3%e0%b8%9a" class="header-anchor"&gt;&lt;/a&gt;ลองติดตั้งดูครับ!
+&lt;/h3&gt;&lt;h4 id="1-ตดตง-openclaw-วธแนะนำ"&gt;&lt;a href="#1-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-openclaw-%e0%b8%a7%e0%b8%98%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3" class="header-anchor"&gt;&lt;/a&gt;1. ติดตั้ง OpenClaw (วิธีแนะนำ):
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;macOS / Linux / WSL2:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;curl -fsSL https://openclaw.ai/install.sh &lt;span class="p"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Windows (PowerShell):&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;iwr &lt;/span&gt;&lt;span class="n"&gt;-useb&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;//&lt;/span&gt;&lt;span class="n"&gt;openclaw&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ai&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;ps1&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;iex
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="2-ตดตง-gateway-daemon"&gt;&lt;a href="#2-%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87-gateway-daemon" class="header-anchor"&gt;&lt;/a&gt;2. ติดตั้ง Gateway Daemon:
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;openclaw onboard --install-daemon
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="3-สราง-bot"&gt;&lt;a href="#3-%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87-bot" class="header-anchor"&gt;&lt;/a&gt;3. สร้าง Bot:
+&lt;/h4&gt;&lt;p&gt;@BotFather บน Telegram&lt;/p&gt;
+&lt;h4 id="4-เลอก-provider"&gt;&lt;a href="#4-%e0%b9%80%e0%b8%a5%e0%b8%ad%e0%b8%81-provider" class="header-anchor"&gt;&lt;/a&gt;4. เลือก Provider:
+&lt;/h4&gt;&lt;p&gt;แนะนำ Bailian (ฟรี 1M tokens) หรือ Claude Sonnet 4.6 (คุ้มค่า)&lt;/p&gt;
+&lt;h4 id="5-เรมคย"&gt;&lt;a href="#5-%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b8%84%e0%b8%a2" class="header-anchor"&gt;&lt;/a&gt;5. เริ่มคุย:
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;&amp;#34;มิก ช่วยแนะนำตัวหน่อย&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="-เรยนรเพมเตม"&gt;&lt;a href="#-%e0%b9%80%e0%b8%a3%e0%b8%a2%e0%b8%99%e0%b8%a3%e0%b9%80%e0%b8%9e%e0%b8%a1%e0%b9%80%e0%b8%95%e0%b8%a1" class="header-anchor"&gt;&lt;/a&gt;📚 เรียนรู้เพิ่มเติม:
+&lt;/h3&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;แหล่ง&lt;/th&gt;
+ &lt;th&gt;ลิงก์&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a class="link" href="https://docs.openclaw.ai" target="_blank" rel="noopener"
+ &gt;https://docs.openclaw.ai&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Installation Guide&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a class="link" href="https://docs.openclaw.ai/install" target="_blank" rel="noopener"
+ &gt;https://docs.openclaw.ai/install&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Discord Community&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a class="link" href="https://discord.gg/clawd" target="_blank" rel="noopener"
+ &gt;https://discord.gg/clawd&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a class="link" href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener"
+ &gt;https://github.com/openclaw/openclaw&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Skill Hub&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a class="link" href="https://clawhub.ai" target="_blank" rel="noopener"
+ &gt;https://clawhub.ai&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Bailian Console&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a class="link" href="https://bailian.console.aliyun.com/" target="_blank" rel="noopener"
+ &gt;https://bailian.console.aliyun.com/&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Groq Console&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a class="link" href="https://console.groq.com/" target="_blank" rel="noopener"
+ &gt;https://console.groq.com/&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="-มคำถาม"&gt;&lt;a href="#-%e0%b8%a1%e0%b8%84%e0%b8%b3%e0%b8%96%e0%b8%b2%e0%b8%a1" class="header-anchor"&gt;&lt;/a&gt;💬 มีคำถาม?
+&lt;/h2&gt;&lt;p&gt;ถ้าติดตรงไหน หรืออยากได้ความช่วยเหลือ:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ถาม Mick&lt;/strong&gt; ได้เลย (ถ้าติดตั้งแล้ว)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;เข้า Discord Community&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;อ่าน Documentation&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;สุดท้ายนี้&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;เทคโนโลยีมีไว้เพื่อทำให้ชีวิตง่ายขึ้น ไม่ใช่ทำให้ซับซ้อนขึ้น&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OpenClaw&lt;/strong&gt; ไม่ใช่แค่ tool — แต่เป็น &lt;strong&gt;ผู้ช่วยส่วนตัว&lt;/strong&gt; ที่ช่วยคุณทำงานซ้ำๆ เพื่อให้คุณมีเวลาไปทำสิ่งที่สำคัญจริงๆ&lt;/p&gt;
+&lt;p&gt;แล้วคุณล่ะ? พร้อมหรือยังที่จะมี AI Assistant ส่วนตัว? 🚀&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;บทความโดย เหน่ง (Nueng)&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;Community Development Officer (นักวิชาการพัฒนาชุมชน)&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;Community Development Department, Ministry of Interior (กรมการพัฒนาชุมชน กระทรวงมหาดไทย)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;อัพเดทล่าสุด: 2026-04-06&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-อางอง"&gt;&lt;a href="#-%e0%b8%ad%e0%b8%b2%e0%b8%87%e0%b8%ad%e0%b8%87" class="header-anchor"&gt;&lt;/a&gt;📚 อ้างอิง
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;หมายเหตุ:&lt;/strong&gt; ราคาอาจมีการเปลี่ยนแปลง — ตรวจสอบกับผู้ให้บริการก่อนใช้งานจริง&lt;/p&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;strong&gt;Bailian (Alibaba Cloud)&lt;/strong&gt; — &lt;a class="link" href="https://help.aliyun.com/zh/model-studio/model-pricing" target="_blank" rel="noopener"
+ &gt;阿里云百炼模型价格&lt;/a&gt;, &lt;a class="link" href="https://pricepertoken.com/pricing-page/provider/qwen" target="_blank" rel="noopener"
+ &gt;Qwen API Pricing 2026&lt;/a&gt;&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;&lt;strong&gt;Groq&lt;/strong&gt; — &lt;a class="link" href="https://groq.com/pricing" target="_blank" rel="noopener"
+ &gt;Groq Pricing&lt;/a&gt;, &lt;a class="link" href="https://apicents.com/provider/groq" target="_blank" rel="noopener"
+ &gt;Groq API Pricing 2026&lt;/a&gt;, &lt;a class="link" href="https://www.grizzlypeaksoftware.com/articles/p/groq-api-free-tier-limits-in-2026-what-you-actually-get-uwysd6mb" target="_blank" rel="noopener"
+ &gt;Groq Free Tier Limits&lt;/a&gt;&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;&lt;strong&gt;Google&lt;/strong&gt; — &lt;a class="link" href="https://aistudio.google.com/pricing" target="_blank" rel="noopener"
+ &gt;Google AI Studio Pricing&lt;/a&gt;, &lt;a class="link" href="https://haimaker.ai/blog/gemini-3-flash-preview-openclaw" target="_blank" rel="noopener"
+ &gt;Gemini Models 2026&lt;/a&gt;&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;&lt;strong&gt;OpenAI&lt;/strong&gt; — &lt;a class="link" href="https://openai.com/api/pricing/" target="_blank" rel="noopener"
+ &gt;OpenAI API Pricing&lt;/a&gt;, &lt;a class="link" href="https://langcopilot.com/llm-pricing/openai/gpt-4.1" target="_blank" rel="noopener"
+ &gt;GPT-4.1 Pricing 2026&lt;/a&gt;, &lt;a class="link" href="https://haimaker.ai/blog/best-models-for-clawdbot/" target="_blank" rel="noopener"
+ &gt;Best Models for OpenClaw&lt;/a&gt;&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref2:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;&lt;strong&gt;Anthropic&lt;/strong&gt; — &lt;a class="link" href="https://console.anthropic.com/" target="_blank" rel="noopener"
+ &gt;Anthropic Console&lt;/a&gt;, &lt;a class="link" href="https://haimaker.ai/blog/best-models-for-clawdbot/" target="_blank" rel="noopener"
+ &gt;Best Models for OpenClaw 2026&lt;/a&gt;&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item></channel></rss>

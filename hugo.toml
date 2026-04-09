@@ -74,7 +74,7 @@ ignoreFiles = ['\.kimi/.*']
     darkTheme = "noborder_dark"
     theme = "noborder_dark"
     lang = "en"
-    loading = "lazy"
+    loading = "eager"
     
   [params.cards]
     limit = 10

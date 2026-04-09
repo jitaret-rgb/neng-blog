@@ -1,5 +1,6 @@
 {{- with .Site.Params.comments.giscus -}}
 {{- $theme := .theme | default .darkTheme | default "noborder_dark" -}}
+{{- $loading := .loading | default "eager" -}}
 
 <div class="giscus-container" role="region" aria-label="Comments section">
 <script
@@ -15,6 +16,7 @@
     data-input-position="{{- .inputPosition -}}"
     data-theme="{{- $theme -}}"
     data-lang="{{- .lang -}}"
+    data-loading="{{- $loading -}}"
     crossorigin="anonymous"
     async>
 </script>

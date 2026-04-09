@@ -1,1254 +1,194 @@
-<!DOCTYPE html>
-<html lang="th-th" dir="ltr">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="คู่มือวางแผน AI App สำหรับงานชุมชน ฉบับมือใหม่ อ่านง่าย ทำตามได้ ไม่ต้องมีพื้นฐาน Programming">
-<title>AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน</title>
-
-
-<link rel="canonical" href="https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-part-1/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
-
-
-<link rel="stylesheet" href="/neng-blog/scss/style.min.25744ac613673dd4c96f567145e0588400eccfe27d0a884ed9e7cd91f9b9cdb0.css"><meta property='og:title' content="AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน">
-<meta property='og:description' content="คู่มือวางแผน AI App สำหรับงานชุมชน ฉบับมือใหม่ อ่านง่าย ทำตามได้ ไม่ต้องมีพื้นฐาน Programming">
-<meta property='og:url' content='https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-part-1/'>
-<meta property='og:site_name' content='Code &amp; Community'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='ai-engineering' /><meta property='article:tag' content='community-development' /><meta property='article:tag' content='ai-planning' /><meta property='article:tag' content='beginner-guide' /><meta property='article:published_time' content='2026-04-07T18:00:00&#43;07:00'/><meta property='article:modified_time' content='2026-04-07T18:00:00&#43;07:00'/><meta property='og:image' content='https://jitaret-rgb.github.io/neng-blog/' />
-<meta name="twitter:site" content="@Majinman">
-    <meta name="twitter:creator" content="@Majinman"><meta name="twitter:title" content="AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน">
-<meta name="twitter:description" content="คู่มือวางแผน AI App สำหรับงานชุมชน ฉบับมือใหม่ อ่านง่าย ทำตามได้ ไม่ต้องมีพื้นฐาน Programming"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://jitaret-rgb.github.io/neng-blog/' />
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q59XSCDQZR"></script>
-      <script>
-        var doNotTrack = false;
-        if ( true ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-Q59XSCDQZR');
-        }
-      </script>
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="DENY">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-
-<meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
+<!doctype html><html lang=th-th dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="คู่มือวางแผน AI App สำหรับงานชุมชน ฉบับมือใหม่ อ่านง่าย ทำตามได้ ไม่ต้องมีพื้นฐาน Programming"><title>AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน</title><link rel=canonical href=https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-part-1/><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href=/neng-blog/scss/style.min.25744ac613673dd4c96f567145e0588400eccfe27d0a884ed9e7cd91f9b9cdb0.css><meta property='og:title' content="AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน"><meta property='og:description' content="คู่มือวางแผน AI App สำหรับงานชุมชน ฉบับมือใหม่ อ่านง่าย ทำตามได้ ไม่ต้องมีพื้นฐาน Programming"><meta property='og:url' content='https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-part-1/'><meta property='og:site_name' content='Code & Community'><meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:tag' content='ai-engineering'><meta property='article:tag' content='community-development'><meta property='article:tag' content='ai-planning'><meta property='article:tag' content='beginner-guide'><meta property='article:published_time' content='2026-04-07T18:00:00+07:00'><meta property='article:modified_time' content='2026-04-07T18:00:00+07:00'><meta property='og:image' content='https://jitaret-rgb.github.io/neng-blog/'><meta name=twitter:site content="@Majinman"><meta name=twitter:creator content="@Majinman"><meta name=twitter:title content="AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน"><meta name=twitter:description content="คู่มือวางแผน AI App สำหรับงานชุมชน ฉบับมือใหม่ อ่านง่าย ทำตามได้ ไม่ต้องมีพื้นฐาน Programming"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://jitaret-rgb.github.io/neng-blog/'><script async src="https://www.googletagmanager.com/gtag/js?id=G-Q59XSCDQZR"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-Q59XSCDQZR")}</script><meta http-equiv=X-Content-Type-Options content="nosniff"><meta http-equiv=X-Frame-Options content="DENY"><meta http-equiv=X-XSS-Protection content="1; mode=block"><meta http-equiv=Referrer-Policy content="strict-origin-when-cross-origin"><meta http-equiv=Content-Security-Policy content="default-src 'self'; 
                script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://giscus.app; 
                style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
                font-src 'self' https://fonts.gstatic.com; 
                img-src 'self' https://images.unsplash.com https://cdn.jsdelivr.net data: blob:; 
                frame-src https://giscus.app;
-               connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net https://giscus.app;">
-
-
-<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-
-    </head>
-    <body class="
-    article-page
-    ">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "dark");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header>
-        <figure class="site-avatar">
-                <a href="/neng-blog/">
-                    <img src="/neng-blog/img/profile_hu_de2cac54e10d7047.jpg" 
-                        width="400"
-                        height="400"
-                        class="site-logo"
-                        loading="lazy"
-                        alt="Avatar">
-                </a>
-                
-                    <span class="emoji">💻</span>
-                
-            </figure>
-        
-        
-        <div class="site-meta">
-            <h1 class="site-name"><a href="/neng-blog/">Code &amp; Community</a></h1>
-            <h2 class="site-description">Bridging Technology and Community Development</h2>
-        </div>
-    </header><ol class="menu-social">
-            
-                <li>
-                    <a 
-                        href='https://github.com/jitaret-rgb'
-                        
-                        title="GitHub"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://t.me/Majinman'
-                        
-                        title="Telegram"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://www.facebook.com/jittaret.phromnanra/'
-                        target="_blank"
-                        title="Facebook"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://www.youtube.com/@jittaretpromnara5716'
-                        target="_blank"
-                        title="YouTube"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
-  <path d="M10 9l5 3l-5 3z" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-        </ol><ol class="menu" id="main-menu">
-        
-        
-        
-        <li >
-            <a href='/neng-blog/' >
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-
-
-                
-                <span>Home</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/neng-blog/posts/' >
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-article" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-  <path d="M7 8h10" />
-  <path d="M7 12h10" />
-  <path d="M7 16h10" />
-</svg>
-
-
-
-                
-                <span>Posts</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/neng-blog/categories/' >
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M14 4h6v6h-6z" />
-  <path d="M4 14h6v6h-6z" />
-  <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-  <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-</svg>
-
-
-
-                
-                <span>Categories</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/neng-blog/tags/' >
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M7.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-  <path d="M3 6v5.172a2 2 0 0 0 .586 1.414l7.71 7.71a2.41 2.41 0 0 0 3.408 0l5.592 -5.592a2.41 2.41 0 0 0 0 -3.408l-7.71 -7.71a2 2 0 0 0 -1.414 -.586h-5.172a3 3 0 0 0 -3 3z" />
-</svg>
-  
-
-
-                
-                <span>Tags</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/neng-blog/about/' >
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-</svg>
-
-
-
-                
-                <span>About</span>
-            </a>
-        </li>
-        
-        <li class="menu-bottom-section">
-            <ol class="menu">
-
-                
-                    <li id="dark-mode-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                        <span>Dark Mode</span>
-                    </li>
-                
-            </ol>
-        </li>
-    </ol>
-</aside>
-
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
-        
-        <div class="widget--toc">
-            <nav class="toc-nav" id="TableOfContents">
-                
-  <ul>
-    <li><a href="#-สารบญตอนท-1">📋 <strong>สารบัญตอนที่ 1</strong></a></li>
-    <li><a href="#-ทำไมตองวางแผนกอน">🤔 <strong>ทำไมต้องวางแผนก่อน?</strong></a>
-      <ul>
-        <li><a href="#ปญหาทพบบอย"><strong>ปัญหาที่พบบ่อย:</strong></a></li>
-        <li><a href="#ถาไมวางแผน"><strong>ถ้าไม่วางแผน:</strong></a></li>
-        <li><a href="#ถาวางแผนด"><strong>ถ้าวางแผนดี:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-5-ขนตอนวางแผน-ai-app">📊 <strong>5 ขั้นตอนวางแผน AI App</strong></a>
-      <ul>
-        <li><a href="#ภาพรวม"><strong>ภาพรวม:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-step-1-ระบปญหา">📍 <strong>Step 1: ระบุปัญหา</strong></a>
-      <ul>
-        <li><a href="#คำถาม-4-ขอทตองตอบ"><strong>คำถาม 4 ข้อที่ต้องตอบ:</strong></a></li>
-        <li><a href="#ตวอยางท-1-ชาวบานถามเรองสวสดการ"><strong>ตัวอย่างที่ 1: ชาวบ้านถามเรื่องสวัสดิการ</strong></a></li>
-        <li><a href="#ตวอยางท-2-ทำรายงานประชมไมทน"><strong>ตัวอย่างที่ 2: ทำรายงานประชุมไม่ทัน</strong></a></li>
-        <li><a href="#-แบบฝกหด"><strong>✍️ แบบฝึกหัด:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-step-2-เลอก-use-case">🎯 <strong>Step 2: เลือก Use Case</strong></a>
-      <ul>
-        <li><a href="#use-case-คออะไร"><strong>Use Case คืออะไร?</strong></a></li>
-        <li><a href="#ตาราง-use-cases-สำหรบงานชมชน"><strong>ตาราง Use Cases สำหรับงานชุมชน:</strong></a></li>
-        <li><a href="#แนะนำสำหรบมอใหม"><strong>แนะนำสำหรับมือใหม่:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-step-3-กำหนดขอบเขต">📏 <strong>Step 3: กำหนดขอบเขต</strong></a>
-      <ul>
-        <li><a href="#ทำไมตองกำหนดขอบเขต"><strong>ทำไมต้องกำหนดขอบเขต?</strong></a></li>
-        <li><a href="#ตวอยาง-chatbot-สวสดการ"><strong>ตัวอย่าง: Chatbot สวัสดิการ</strong></a></li>
-        <li><a href="#send-off-strategy-สงตอมนษย"><strong>Send-off Strategy (ส่งต่อมนุษย์):</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-step-4-เลอกโมเดล">🤖 <strong>Step 4: เลือกโมเดล</strong></a>
-      <ul>
-        <li><a href="#เปรยบเทยบโมเดลยอดนยม"><strong>เปรียบเทียบโมเดลยอดนิยม:</strong></a></li>
-        <li><a href="#แนะนำสำหรบแตละ-use-case"><strong>แนะนำสำหรับแต่ละ Use Case:</strong></a></li>
-        <li><a href="#-เปรยบเทยบราคา"><strong>💰 เปรียบเทียบราคา:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-step-5-ออกแบบ-human-ai-interface">🎨 <strong>Step 5: ออกแบบ Human-AI Interface</strong></a>
-      <ul>
-        <li><a href="#human-ai-collaboration-คออะไร"><strong>Human-AI Collaboration คืออะไร?</strong></a></li>
-        <li><a href="#ตารางแบงงาน"><strong>ตารางแบ่งงาน:</strong></a></li>
-        <li><a href="#หลกการสำคญ"><strong>หลักการสำคัญ:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-ตวอยาง-chatbot-สวสดการชมชน">💡 <strong>ตัวอย่าง: Chatbot สวัสดิการชุมชน</strong></a>
-      <ul>
-        <li><a href="#ขอมลโครงการ-สมมต"><strong>ข้อมูลโครงการ (สมมติ):</strong></a></li>
-        <li><a href="#ปญหา"><strong>ปัญหา:</strong></a></li>
-        <li><a href="#วธแก"><strong>วิธีแก้:</strong></a></li>
-        <li><a href="#ผลลพธ-หลง-3-เดอน---ตวอยางสมมต"><strong>ผลลัพธ์ (หลัง 3 เดือน) - ตัวอย่างสมมติ:</strong></a></li>
-        <li><a href="#บทเรยนทได-จากตวอยางสมมต"><strong>บทเรียนที่ได้ (จากตัวอย่างสมมติ):</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-checklist-กอนเรมพฒนา">✅ <strong>Checklist ก่อนเริ่มพัฒนา</strong></a>
-      <ul>
-        <li><a href="#planning-checklist"><strong>Planning Checklist:</strong></a></li>
-        <li><a href="#technical-checklist"><strong>Technical Checklist:</strong></a></li>
-        <li><a href="#people-checklist"><strong>People Checklist:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-สรปตอนท-1">📝 <strong>สรุปตอนที่ 1</strong></a>
-      <ul>
-        <li><a href="#สงทเรยนร"><strong>สิ่งที่เรียนรู้:</strong></a></li>
-        <li><a href="#การบาน"><strong>การบ้าน:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-ตอนทตอไป">🚀 <strong>ตอนที่ต่อไป:</strong></a></li>
-  </ul>
-
-            </nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
-
-            <main class="main full-width">
-    <article class="has-image main-article">
-    <header class="article-header">
-    <div class="article-image">
-        <a href="/neng-blog/posts/ai-engineering-part-1/">
-            
-
-<img alt="Featured image of post AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน" height="630" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" src="/neng-blog/posts/ai-engineering-part-1/cover_hu_7b67a8ff12c8e666.jpg" srcset="/neng-blog/posts/ai-engineering-part-1/cover_hu_abca7ca16e60abc5.webp 400w, /neng-blog/posts/ai-engineering-part-1/cover_hu_55256bd2e4ac2a04.webp 800w, /neng-blog/posts/ai-engineering-part-1/cover_hu_7b67a8ff12c8e666.jpg 1200w" width="1200">
-
-        </a>
-    </div>
-    
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            
-            
-            
-            <a href="/neng-blog/categories/tutorial/" style="background-color: hsl(135, 60%, 84%); color: hsl(135, 60%, 15%);">
-                Tutorial
-            </a>
-        
-            
-            
-            
-            <a href="/neng-blog/categories/community-development/" style="background-color: hsl(51, 60%, 84%); color: hsl(51, 60%, 15%);">
-                Community Development
-            </a>
-        
-            
-            
-            
-            <a href="/neng-blog/categories/ai/" style="background-color: hsl(167, 60%, 84%); color: hsl(167, 60%, 15%);">
-                AI
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/neng-blog/posts/ai-engineering-part-1/">AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            คู่มือวางแผน AI App สำหรับงานชุมชน ฉบับมือใหม่ อ่านง่าย ทำตามได้ ไม่ต้องมีพื้นฐาน Programming
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    
-    
-    
-    <footer class="article-meta">
-        
-            <div class="inline-meta">
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                    <time class="article-time--published" datetime='2026-04-07T18:00:00&#43;07:00'>Apr 07, 2026</time>
-                
-
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                    <time class="article-time--reading">
-                        5 minutes read
-                    </time>
-                
-            </div>
-        
-
-        
-
-        
-    </footer>
-    
-</div>
-
-</header>
-
-    
-    <aside class="article-toc">
-        <details>
-            <summary>
-                <div class="article-toc-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
-                    <span>Table of contents</span>
-                </div>
-            </summary>
-            <nav class="toc-nav">
-                
-  <ul>
-    <li><a href="#-สารบญตอนท-1">📋 <strong>สารบัญตอนที่ 1</strong></a></li>
-    <li><a href="#-ทำไมตองวางแผนกอน">🤔 <strong>ทำไมต้องวางแผนก่อน?</strong></a>
-      <ul>
-        <li><a href="#ปญหาทพบบอย"><strong>ปัญหาที่พบบ่อย:</strong></a></li>
-        <li><a href="#ถาไมวางแผน"><strong>ถ้าไม่วางแผน:</strong></a></li>
-        <li><a href="#ถาวางแผนด"><strong>ถ้าวางแผนดี:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-5-ขนตอนวางแผน-ai-app">📊 <strong>5 ขั้นตอนวางแผน AI App</strong></a>
-      <ul>
-        <li><a href="#ภาพรวม"><strong>ภาพรวม:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-step-1-ระบปญหา">📍 <strong>Step 1: ระบุปัญหา</strong></a>
-      <ul>
-        <li><a href="#คำถาม-4-ขอทตองตอบ"><strong>คำถาม 4 ข้อที่ต้องตอบ:</strong></a></li>
-        <li><a href="#ตวอยางท-1-ชาวบานถามเรองสวสดการ"><strong>ตัวอย่างที่ 1: ชาวบ้านถามเรื่องสวัสดิการ</strong></a></li>
-        <li><a href="#ตวอยางท-2-ทำรายงานประชมไมทน"><strong>ตัวอย่างที่ 2: ทำรายงานประชุมไม่ทัน</strong></a></li>
-        <li><a href="#-แบบฝกหด"><strong>✍️ แบบฝึกหัด:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-step-2-เลอก-use-case">🎯 <strong>Step 2: เลือก Use Case</strong></a>
-      <ul>
-        <li><a href="#use-case-คออะไร"><strong>Use Case คืออะไร?</strong></a></li>
-        <li><a href="#ตาราง-use-cases-สำหรบงานชมชน"><strong>ตาราง Use Cases สำหรับงานชุมชน:</strong></a></li>
-        <li><a href="#แนะนำสำหรบมอใหม"><strong>แนะนำสำหรับมือใหม่:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-step-3-กำหนดขอบเขต">📏 <strong>Step 3: กำหนดขอบเขต</strong></a>
-      <ul>
-        <li><a href="#ทำไมตองกำหนดขอบเขต"><strong>ทำไมต้องกำหนดขอบเขต?</strong></a></li>
-        <li><a href="#ตวอยาง-chatbot-สวสดการ"><strong>ตัวอย่าง: Chatbot สวัสดิการ</strong></a></li>
-        <li><a href="#send-off-strategy-สงตอมนษย"><strong>Send-off Strategy (ส่งต่อมนุษย์):</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-step-4-เลอกโมเดล">🤖 <strong>Step 4: เลือกโมเดล</strong></a>
-      <ul>
-        <li><a href="#เปรยบเทยบโมเดลยอดนยม"><strong>เปรียบเทียบโมเดลยอดนิยม:</strong></a></li>
-        <li><a href="#แนะนำสำหรบแตละ-use-case"><strong>แนะนำสำหรับแต่ละ Use Case:</strong></a></li>
-        <li><a href="#-เปรยบเทยบราคา"><strong>💰 เปรียบเทียบราคา:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-step-5-ออกแบบ-human-ai-interface">🎨 <strong>Step 5: ออกแบบ Human-AI Interface</strong></a>
-      <ul>
-        <li><a href="#human-ai-collaboration-คออะไร"><strong>Human-AI Collaboration คืออะไร?</strong></a></li>
-        <li><a href="#ตารางแบงงาน"><strong>ตารางแบ่งงาน:</strong></a></li>
-        <li><a href="#หลกการสำคญ"><strong>หลักการสำคัญ:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-ตวอยาง-chatbot-สวสดการชมชน">💡 <strong>ตัวอย่าง: Chatbot สวัสดิการชุมชน</strong></a>
-      <ul>
-        <li><a href="#ขอมลโครงการ-สมมต"><strong>ข้อมูลโครงการ (สมมติ):</strong></a></li>
-        <li><a href="#ปญหา"><strong>ปัญหา:</strong></a></li>
-        <li><a href="#วธแก"><strong>วิธีแก้:</strong></a></li>
-        <li><a href="#ผลลพธ-หลง-3-เดอน---ตวอยางสมมต"><strong>ผลลัพธ์ (หลัง 3 เดือน) - ตัวอย่างสมมติ:</strong></a></li>
-        <li><a href="#บทเรยนทได-จากตวอยางสมมต"><strong>บทเรียนที่ได้ (จากตัวอย่างสมมติ):</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-checklist-กอนเรมพฒนา">✅ <strong>Checklist ก่อนเริ่มพัฒนา</strong></a>
-      <ul>
-        <li><a href="#planning-checklist"><strong>Planning Checklist:</strong></a></li>
-        <li><a href="#technical-checklist"><strong>Technical Checklist:</strong></a></li>
-        <li><a href="#people-checklist"><strong>People Checklist:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-สรปตอนท-1">📝 <strong>สรุปตอนที่ 1</strong></a>
-      <ul>
-        <li><a href="#สงทเรยนร"><strong>สิ่งที่เรียนรู้:</strong></a></li>
-        <li><a href="#การบาน"><strong>การบ้าน:</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-ตอนทตอไป">🚀 <strong>ตอนที่ต่อไป:</strong></a></li>
-  </ul>
-
-            </nav>
-        </details>
-    </aside>
-    
-
-    <section class="article-content">
-    
-    
-    <h1 id="-ai-engineering-ตอนท-1-วางแผน-ai-app-สำหรบงานชมชน"><a href="#-ai-engineering-%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-1-%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99-ai-app-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99" class="header-anchor"></a>🎯 AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน
-</h1><p><strong>ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน</strong></p>
-<hr>
-<p><strong>ผู้เขียน:</strong> เหน่ง (นักวิชาการพัฒนาชุมชน)<br>
-<strong>สังกัด:</strong> กรมการพัฒนาชุมชน กระทรวงมหาดไทย<br>
-<strong>วันที่:</strong> 7 เมษายน 2569</p>
-<hr>
-<h2 id="-สารบญตอนท-1"><a href="#-%e0%b8%aa%e0%b8%b2%e0%b8%a3%e0%b8%9a%e0%b8%8d%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-1" class="header-anchor"></a>📋 <strong>สารบัญตอนที่ 1</strong>
-</h2><ol>
-<li><a class="link" href="#%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b9%89%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99%e0%b8%81%e0%b9%88%e0%b8%ad%e0%b8%99" >ทำไมต้องวางแผนก่อน?</a></li>
-<li><a class="link" href="#5-%e0%b8%82%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99-ai-app" >5 ขั้นตอนวางแผน AI App</a></li>
-<li><a class="link" href="#%e0%b8%95%e0%b8%b1%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b9%88%e0%b8%b2%e0%b8%87%e0%b8%88%e0%b8%a3%e0%b8%b4%e0%b8%87%e0%b8%88%e0%b8%b2%e0%b8%81%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%8a%e0%b8%b8%e0%b8%a1%e0%b8%8a%e0%b8%99" >ตัวอย่างจริงจากงานชุมชน</a></li>
-<li><a class="link" href="#checklist-%e0%b8%81%e0%b9%88%e0%b8%ad%e0%b8%99%e0%b9%80%e0%b8%a3%e0%b8%b4%e0%b9%88%e0%b8%a1" >Checklist ก่อนเริ่ม</a></li>
-</ol>
-<hr>
-<h2 id="-ทำไมตองวางแผนกอน"><a href="#-%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99%e0%b8%81%e0%b8%ad%e0%b8%99" class="header-anchor"></a>🤔 <strong>ทำไมต้องวางแผนก่อน?</strong>
-</h2><h3 id="ปญหาทพบบอย"><a href="#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2%e0%b8%97%e0%b8%9e%e0%b8%9a%e0%b8%9a%e0%b8%ad%e0%b8%a2" class="header-anchor"></a><strong>ปัญหาที่พบบ่อย:</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">❌ เห็นคนอื่นใช้ AI ก็อยากใช้บ้าง
-</span></span><span class="line"><span class="ln">2</span><span class="cl">❌ ไม่รู้ว่าเริ่มตรงไหน
-</span></span><span class="line"><span class="ln">3</span><span class="cl">❌ เลือกเครื่องมือผิด
-</span></span><span class="line"><span class="ln">4</span><span class="cl">❌ ใช้ไปสักพักก็เลิก
-</span></span><span class="line"><span class="ln">5</span><span class="cl">❌ เสียเงินฟรี
-</span></span></code></pre></div><h3 id="ถาไมวางแผน"><a href="#%e0%b8%96%e0%b8%b2%e0%b9%84%e0%b8%a1%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99" class="header-anchor"></a><strong>ถ้าไม่วางแผน:</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">เวลา: 100%
-</span></span><span class="line"><span class="ln">2</span><span class="cl">ผลลัพธ์: 10%
-</span></span><span class="line"><span class="ln">3</span><span class="cl">ความคุ้มค่า: ❌
-</span></span></code></pre></div><h3 id="ถาวางแผนด"><a href="#%e0%b8%96%e0%b8%b2%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99%e0%b8%94" class="header-anchor"></a><strong>ถ้าวางแผนดี:</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">เวลา: 50%
-</span></span><span class="line"><span class="ln">2</span><span class="cl">ผลลัพธ์: 90%
-</span></span><span class="line"><span class="ln">3</span><span class="cl">ความคุ้มค่า: ✅
-</span></span></code></pre></div><hr>
-<h2 id="-5-ขนตอนวางแผน-ai-app"><a href="#-5-%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99-ai-app" class="header-anchor"></a>📊 <strong>5 ขั้นตอนวางแผน AI App</strong>
-</h2><h3 id="ภาพรวม"><a href="#%e0%b8%a0%e0%b8%b2%e0%b8%9e%e0%b8%a3%e0%b8%a7%e0%b8%a1" class="header-anchor"></a><strong>ภาพรวม:</strong>
-</h3><p>
-
-<img alt="AI Planning Process" class="gallery-image" data-flex-basis="320px" data-flex-grow="133" height="600" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" src="/neng-blog/posts/ai-engineering-part-1/image1_hu_56ff88ba6b9b1be9.jpg" srcset="/neng-blog/posts/ai-engineering-part-1/image1_hu_d4a2191416c3b838.webp 400w, /neng-blog/posts/ai-engineering-part-1/image1_hu_56ff88ba6b9b1be9.jpg 800w" width="800">
-
-<em>ภาพ: กระบวนการวางแผน AI App - ภาพประกอบจาก Unsplash</em></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">         ┌─────────────────┐
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">         │  1. ระบุปัญหา   │
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">         └────────┬────────
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">                  │
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">         ┌────────▼────────┐
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">         │  2. เลือก Use   │
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">         │     Case        │
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">         └────────┬────────┘
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">                  │
-</span></span><span class="line"><span class="ln">10</span><span class="cl">         ┌────────▼────────┐
-</span></span><span class="line"><span class="ln">11</span><span class="cl">         │  3. กำหนดขอบเขต │
-</span></span><span class="line"><span class="ln">12</span><span class="cl">         └────────┬────────┘
-</span></span><span class="line"><span class="ln">13</span><span class="cl">                  │
-</span></span><span class="line"><span class="ln">14</span><span class="cl">         ┌────────▼────────┐
-</span></span><span class="line"><span class="ln">15</span><span class="cl">         │  4. เลือกโมเดล  │
-</span></span><span class="line"><span class="ln">16</span><span class="cl">         └────────┬────────┘
-</span></span><span class="line"><span class="ln">17</span><span class="cl">                  │
-</span></span><span class="line"><span class="ln">18</span><span class="cl">         ┌────────▼────────┐
-</span></span><span class="line"><span class="ln">19</span><span class="cl">         │  5. ออกแบบ      │
-</span></span><span class="line"><span class="ln">20</span><span class="cl">         │    Interface    │
-</span></span><span class="line"><span class="ln">21</span><span class="cl">         └─────────────────┘
-</span></span></code></pre></div><hr>
-<h2 id="-step-1-ระบปญหา"><a href="#-step-1-%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2" class="header-anchor"></a>📍 <strong>Step 1: ระบุปัญหา</strong>
-</h2><h3 id="คำถาม-4-ขอทตองตอบ"><a href="#%e0%b8%84%e0%b8%b3%e0%b8%96%e0%b8%b2%e0%b8%a1-4-%e0%b8%82%e0%b8%ad%e0%b8%97%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%95%e0%b8%ad%e0%b8%9a" class="header-anchor"></a><strong>คำถาม 4 ข้อที่ต้องตอบ:</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">❓ 1. ปัญหาคืออะไร?
-</span></span><span class="line"><span class="ln">2</span><span class="cl">❓ 2. ใครได้รับผลกระทบ?
-</span></span><span class="line"><span class="ln">3</span><span class="cl">❓ 3. ปัจจุบันแก้ยังไง?
-</span></span><span class="line"><span class="ln">4</span><span class="cl">❓ 4. AI ช่วยอะไรได้?
-</span></span></code></pre></div><hr>
-<h3 id="ตวอยางท-1-ชาวบานถามเรองสวสดการ"><a href="#%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b8%97-1-%e0%b8%8a%e0%b8%b2%e0%b8%a7%e0%b8%9a%e0%b8%b2%e0%b8%99%e0%b8%96%e0%b8%b2%e0%b8%a1%e0%b9%80%e0%b8%a3%e0%b8%ad%e0%b8%87%e0%b8%aa%e0%b8%a7%e0%b8%aa%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3" class="header-anchor"></a><strong>ตัวอย่างที่ 1: ชาวบ้านถามเรื่องสวัสดิการ</strong>
-</h3><p><strong>1. ปัญหาคืออะไร?</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">ชาวบ้านโทรถามเรื่องเบี้ยยังชีพผู้สูงอายุวันละ 50+ สาย
-</span></span></code></pre></div><p><strong>2. ใครได้รับผลกระทบ?</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">- ผู้สูงอายุ (รอนาน)
-</span></span><span class="line"><span class="ln">2</span><span class="cl">- เจ้าหน้าที่ (รับไม่ไหว)
-</span></span><span class="line"><span class="ln">3</span><span class="cl">- นายก อบต. (ชาวบ้านบ่น)
-</span></span></code></pre></div><p><strong>3. ปัจจุบันแก้ยังไง?</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">- รับโทรศัพท์
-</span></span><span class="line"><span class="ln">2</span><span class="cl">- ตอบ LINE
-</span></span><span class="line"><span class="ln">3</span><span class="cl">- ลงพื้นที่อธิบาย
-</span></span></code></pre></div><p><strong>4. AI ช่วยอะไรได้?</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">Chatbot ตอบคำถามพื้นฐานอัตโนมัติ 24/7
-</span></span></code></pre></div><hr>
-<h3 id="ตวอยางท-2-ทำรายงานประชมไมทน"><a href="#%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b8%97-2-%e0%b8%97%e0%b8%b3%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%8a%e0%b8%a1%e0%b9%84%e0%b8%a1%e0%b8%97%e0%b8%99" class="header-anchor"></a><strong>ตัวอย่างที่ 2: ทำรายงานประชุมไม่ทัน</strong>
-</h3><p><strong>1. ปัญหาคืออะไร?</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">ประชุมบ่อย ทำรายงานไม่ทัน ต้องใช้เวลา 3 ชม./ครั้ง
-</span></span></code></pre></div><p><strong>2. ใครได้รับผลกระทบ?</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">- เจ้าหน้าที่ (เหนื่อย)
-</span></span><span class="line"><span class="ln">2</span><span class="cl">- หัวหน้า (รายงานช้า)
-</span></span><span class="line"><span class="ln">3</span><span class="cl">- ที่ประชุม (รอรายงาน)
-</span></span></code></pre></div><p><strong>3. ปัจจุบันแก้ยังไง?</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">- จดมือ
-</span></span><span class="line"><span class="ln">2</span><span class="cl">- พิมพ์เอง
-</span></span><span class="line"><span class="ln">3</span><span class="cl">- ทำงานล่วงเวลา
-</span></span></code></pre></div><p><strong>4. AI ช่วยอะไรได้?</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">สรุปการประชุมอัตโนมัติ + แยก Action Items
-</span></span></code></pre></div><hr>
-<h3 id="-แบบฝกหด"><a href="#-%e0%b9%81%e0%b8%9a%e0%b8%9a%e0%b8%9d%e0%b8%81%e0%b8%ab%e0%b8%94" class="header-anchor"></a><strong>✍️ แบบฝึกหัด:</strong>
-</h3><p>ลองเขียนปัญหาของคุณดูครับ:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">1. ปัญหาคืออะไร?
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">   → _________________________________
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">2. ใครได้รับผลกระทบ?
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">   → _________________________________
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">3. ปัจจุบันแก้ยังไง?
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">   → _________________________________
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
-</span></span><span class="line"><span class="ln">10</span><span class="cl">4. AI ช่วยอะไรได้?
-</span></span><span class="line"><span class="ln">11</span><span class="cl">   → _________________________________
-</span></span></code></pre></div><hr>
-<h2 id="-step-2-เลอก-use-case"><a href="#-step-2-%e0%b9%80%e0%b8%a5%e0%b8%ad%e0%b8%81-use-case" class="header-anchor"></a>🎯 <strong>Step 2: เลือก Use Case</strong>
-</h2><h3 id="use-case-คออะไร"><a href="#use-case-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3" class="header-anchor"></a><strong>Use Case คืออะไร?</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">Use Case = &#34;งานเฉพาะที่ AI จะทำให้&#34;
-</span></span></code></pre></div><p><strong>ไม่ใช่:</strong> &ldquo;ใช้ AI ทำทุกอย่าง&rdquo;<br>
-<strong>แต่คือ:</strong> &ldquo;ใช้ AI ทำ <strong>หนึ่งเรื่อง</strong>&rdquo;</p>
-<hr>
-<h3 id="ตาราง-use-cases-สำหรบงานชมชน"><a href="#%e0%b8%95%e0%b8%b2%e0%b8%a3%e0%b8%b2%e0%b8%87-use-cases-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99" class="header-anchor"></a><strong>ตาราง Use Cases สำหรับงานชุมชน:</strong>
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>หมวดหมู่</th>
-          <th>Use Case</th>
-          <th>ความยาก</th>
-          <th>ผลกระทบ</th>
-          <th>แนะนำ</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Conversational</strong></td>
-          <td>Chatbot ตอบคำถาม</td>
-          <td>⭐⭐</td>
-          <td>สูง</td>
-          <td>✅ เริ่มที่นี่</td>
-      </tr>
-      <tr>
-          <td><strong>Writing</strong></td>
-          <td>สร้างโพสต์ Facebook</td>
-          <td>⭐</td>
-          <td>ปานกลาง</td>
-          <td>✅ ง่าย</td>
-      </tr>
-      <tr>
-          <td><strong>Summarization</strong></td>
-          <td>สรุปการประชุม</td>
-          <td>⭐⭐</td>
-          <td>ปานกลาง</td>
-          <td>✅ คุ้มค่า</td>
-      </tr>
-      <tr>
-          <td><strong>Data Extraction</strong></td>
-          <td>ดึงข้อมูลแบบสำรวจ</td>
-          <td>⭐⭐⭐</td>
-          <td>สูง</td>
-          <td>⭐ ปานกลาง</td>
-      </tr>
-      <tr>
-          <td><strong>Workflow</strong></td>
-          <td>จัดกิจกรรมชุมชน</td>
-          <td>⭐⭐⭐</td>
-          <td>สูง</td>
-          <td>⭐ ยาก</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h3 id="แนะนำสำหรบมอใหม"><a href="#%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%a1%e0%b8%ad%e0%b9%83%e0%b8%ab%e0%b8%a1" class="header-anchor"></a><strong>แนะนำสำหรับมือใหม่:</strong>
-</h3><p><strong>เริ่มจาก:</strong></p>
-<ol>
-<li>✅ <strong>Chatbot</strong> — ง่าย เห็นผลเร็ว</li>
-<li>✅ <strong>Summarization</strong> — คุ้มค่า ประหยัดเวลา</li>
-</ol>
-<p><strong>ยังไม่แนะนำ:</strong></p>
-<ul>
-<li>❌ Data Extraction — ยาก ต้องมีข้อมูลเยอะ</li>
-<li>❌ Workflow — ซับซ้อน ต้อง integrate หลายระบบ</li>
-</ul>
-<hr>
-<h2 id="-step-3-กำหนดขอบเขต"><a href="#-step-3-%e0%b8%81%e0%b8%b3%e0%b8%ab%e0%b8%99%e0%b8%94%e0%b8%82%e0%b8%ad%e0%b8%9a%e0%b9%80%e0%b8%82%e0%b8%95" class="header-anchor"></a>📏 <strong>Step 3: กำหนดขอบเขต</strong>
-</h2><h3 id="ทำไมตองกำหนดขอบเขต"><a href="#%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%81%e0%b8%b3%e0%b8%ab%e0%b8%99%e0%b8%94%e0%b8%82%e0%b8%ad%e0%b8%9a%e0%b9%80%e0%b8%82%e0%b8%95" class="header-anchor"></a><strong>ทำไมต้องกำหนดขอบเขต?</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">❌ ไม่กำหนด → AI พยายามทำทุกอย่าง → ผลลัพธ์แย่
-</span></span><span class="line"><span class="ln">2</span><span class="cl">✅ กำหนดชัด → AI ทำ **หนึ่งเรื่อง** → ผลลัพธ์ดี
-</span></span></code></pre></div><hr>
-<h3 id="ตวอยาง-chatbot-สวสดการ"><a href="#%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87-chatbot-%e0%b8%aa%e0%b8%a7%e0%b8%aa%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3" class="header-anchor"></a><strong>ตัวอย่าง: Chatbot สวัสดิการ</strong>
-</h3><p><strong>✅ In Scope (ทำอะไร):</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">- ตอบคำถามเบี้ยยังชีพผู้สูงอายุ
-</span></span><span class="line"><span class="ln">2</span><span class="cl">- ตอบคำถามบัตรสวัสดิการ
-</span></span><span class="line"><span class="ln">3</span><span class="cl">- ตอบคำถามโครงการเงินกู้ กทบ.
-</span></span><span class="line"><span class="ln">4</span><span class="cl">- เวลาทำการ: 24/7
-</span></span><span class="line"><span class="ln">5</span><span class="cl">- ภาษา: ไทย
-</span></span></code></pre></div><p><strong>❌ Out of Scope (ไม่ทำอะไร):</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">- เรื่องการเมือง
-</span></span><span class="line"><span class="ln">2</span><span class="cl">- เรื่องส่วนตัว
-</span></span><span class="line"><span class="ln">3</span><span class="cl">- ข้อมูลความลับ
-</span></span><span class="line"><span class="ln">4</span><span class="cl">- กรณีฉุกเฉิน (ให้โทร 191)
-</span></span><span class="line"><span class="ln">5</span><span class="cl">- เรื่องนอกเหนือจากสวัสดิการ
-</span></span></code></pre></div><hr>
-<h3 id="send-off-strategy-สงตอมนษย"><a href="#send-off-strategy-%e0%b8%aa%e0%b8%87%e0%b8%95%e0%b8%ad%e0%b8%a1%e0%b8%99%e0%b8%a9%e0%b8%a2" class="header-anchor"></a><strong>Send-off Strategy (ส่งต่อมนุษย์):</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">เมื่อไหร่ให้ส่งต่อมนุษย์?
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">1. คำถามซับซ้อน
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">   → &#34;กรุณารอเจ้าหน้าที่ติดต่อกลับ&#34;
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">2. ข้อมูลไม่ชัดเจน
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">   → &#34;ขอตรวจสอบข้อมูลเพิ่มเติม&#34;
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">3. เรื่องอารมณ์/ความเครียด
-</span></span><span class="line"><span class="ln">10</span><span class="cl">   → &#34;ขอแนะนำปรึกษาเจ้าหน้าที่โดยตรง&#34;
-</span></span><span class="line"><span class="ln">11</span><span class="cl">
-</span></span><span class="line"><span class="ln">12</span><span class="cl">4. กรณีฉุกเฉิน
-</span></span><span class="line"><span class="ln">13</span><span class="cl">   → &#34;กรุณาโทร 191 ทันที&#34;
-</span></span></code></pre></div><hr>
-<h2 id="-step-4-เลอกโมเดล"><a href="#-step-4-%e0%b9%80%e0%b8%a5%e0%b8%ad%e0%b8%81%e0%b9%82%e0%b8%a1%e0%b9%80%e0%b8%94%e0%b8%a5" class="header-anchor"></a>🤖 <strong>Step 4: เลือกโมเดล</strong>
-</h2><h3 id="เปรยบเทยบโมเดลยอดนยม"><a href="#%e0%b9%80%e0%b8%9b%e0%b8%a3%e0%b8%a2%e0%b8%9a%e0%b9%80%e0%b8%97%e0%b8%a2%e0%b8%9a%e0%b9%82%e0%b8%a1%e0%b9%80%e0%b8%94%e0%b8%a5%e0%b8%a2%e0%b8%ad%e0%b8%94%e0%b8%99%e0%b8%a2%e0%b8%a1" class="header-anchor"></a><strong>เปรียบเทียบโมเดลยอดนิยม:</strong>
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>โมเดล</th>
-          <th>ราคา</th>
-          <th>ภาษาไทย</th>
-          <th>Context</th>
-          <th>เหมาะกับ</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Qwen 2.5</strong></td>
-          <td>ฟรี 1M tokens/เดือน</td>
-          <td>⭐⭐⭐⭐</td>
-          <td>32K</td>
-          <td>✅ Chatbot ทั่วไป</td>
-      </tr>
-      <tr>
-          <td><strong>GPT-4o-mini</strong></td>
-          <td>$0.15/1M tokens</td>
-          <td>⭐⭐⭐⭐</td>
-          <td>128K</td>
-          <td>✅ งบจำกัด</td>
-      </tr>
-      <tr>
-          <td><strong>Claude Sonnet</strong></td>
-          <td>$3/1M tokens</td>
-          <td>⭐⭐⭐⭐⭐</td>
-          <td>200K</td>
-          <td>✅ Content</td>
-      </tr>
-      <tr>
-          <td><strong>Gemini 2.0</strong></td>
-          <td>ฟรี 60 requests/min</td>
-          <td>⭐⭐⭐⭐</td>
-          <td>1M</td>
-          <td>✅ ทดลอง</td>
-      </tr>
-      <tr>
-          <td><strong>Llama 3</strong></td>
-          <td>ฟรี (host เอง)</td>
-          <td>⭐⭐⭐</td>
-          <td>8K</td>
-          <td>🔒 ข้อมูลลับ</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h3 id="แนะนำสำหรบแตละ-use-case"><a href="#%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b9%81%e0%b8%95%e0%b8%a5%e0%b8%b0-use-case" class="header-anchor"></a><strong>แนะนำสำหรับแต่ละ Use Case:</strong>
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>Use Case</th>
-          <th>โมเดลแนะนำ</th>
-          <th>เหตุผล</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Chatbot</strong></td>
-          <td>Qwen 2.5</td>
-          <td>ฟรี ภาษาไทยดี</td>
-      </tr>
-      <tr>
-          <td><strong>Content</strong></td>
-          <td>Claude Sonnet</td>
-          <td>ภาษาธรรมชาติ</td>
-      </tr>
-      <tr>
-          <td><strong>Summarization</strong></td>
-          <td>Gemini 2.0</td>
-          <td>ฟรี Context ยาว</td>
-      </tr>
-      <tr>
-          <td><strong>Data Analysis</strong></td>
-          <td>GPT-4o-mini</td>
-          <td>ถูก แม่นยำ</td>
-      </tr>
-      <tr>
-          <td><strong>ข้อมูลลับ</strong></td>
-          <td>Llama 3</td>
-          <td>Host เอง ปลอดภัย</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h3 id="-เปรยบเทยบราคา"><a href="#-%e0%b9%80%e0%b8%9b%e0%b8%a3%e0%b8%a2%e0%b8%9a%e0%b9%80%e0%b8%97%e0%b8%a2%e0%b8%9a%e0%b8%a3%e0%b8%b2%e0%b8%84%e0%b8%b2" class="header-anchor"></a><strong>💰 เปรียบเทียบราคา:</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">**สมมติ:** ตอบคำถามวันละ 100 คำถาม
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">      คำถามละ 500 tokens
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">      รวม: 50,000 tokens/วัน = 1.5M tokens/เดือน
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">Qwen 2.5:     ฟรี (1M tokens แรก)
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">              ส่วนเกิน: ~$1-2/เดือน
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">GPT-4o-mini:  1.5M x $0.00015 = $0.225/เดือน
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">              (~8 บาท/เดือน!)
-</span></span><span class="line"><span class="ln">10</span><span class="cl">
-</span></span><span class="line"><span class="ln">11</span><span class="cl">Claude Sonnet: 1.5M x $0.003 = $4.5/เดือน
-</span></span><span class="line"><span class="ln">12</span><span class="cl">               (~160 บาท/เดือน)
-</span></span><span class="line"><span class="ln">13</span><span class="cl">
-</span></span><span class="line"><span class="ln">14</span><span class="cl">สรุป: ถูกมาก! เริ่มต้นที่ 0-200 บาท/เดือน
-</span></span></code></pre></div><hr>
-<h2 id="-step-5-ออกแบบ-human-ai-interface"><a href="#-step-5-%e0%b8%ad%e0%b8%ad%e0%b8%81%e0%b9%81%e0%b8%9a%e0%b8%9a-human-ai-interface" class="header-anchor"></a>🎨 <strong>Step 5: ออกแบบ Human-AI Interface</strong>
-</h2><h3 id="human-ai-collaboration-คออะไร"><a href="#human-ai-collaboration-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3" class="header-anchor"></a><strong>Human-AI Collaboration คืออะไร?</strong>
-</h3><p>
-
-<img alt="Human-AI Collaboration" class="gallery-image" data-flex-basis="320px" data-flex-grow="133" height="600" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" src="/neng-blog/posts/ai-engineering-part-1/image2_hu_71abffcd90240902.jpg" srcset="/neng-blog/posts/ai-engineering-part-1/image2_hu_e7bf75e7877b9714.webp 400w, /neng-blog/posts/ai-engineering-part-1/image2_hu_71abffcd90240902.jpg 800w" width="800">
-
-<em>ภาพ: มนุษย์และ AI ทำงานร่วมกัน - ภาพประกอบจาก Unsplash</em></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">ไม่ใช่: AI แทนที่มนุษย์
-</span></span><span class="line"><span class="ln">2</span><span class="cl">แต่คือ: AI + มนุษย์ = ดีกว่า
-</span></span></code></pre></div><hr>
-<h3 id="ตารางแบงงาน"><a href="#%e0%b8%95%e0%b8%b2%e0%b8%a3%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9a%e0%b8%87%e0%b8%87%e0%b8%b2%e0%b8%99" class="header-anchor"></a><strong>ตารางแบ่งงาน:</strong>
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>AI ทำอะไรได้</th>
-          <th>มนุษย์ทำอะไร</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>✅ ตอบคำถามพื้นฐาน</td>
-          <td>✅ ตรวจสอบความถูกต้อง</td>
-      </tr>
-      <tr>
-          <td>✅ สรุปข้อมูล</td>
-          <td>✅ ตัดสินใจสำคัญ</td>
-      </tr>
-      <tr>
-          <td>✅ จัดหมวดหมู่</td>
-          <td>✅ ประสานงานส่วนตัว</td>
-      </tr>
-      <tr>
-          <td>✅ แปลภาษา</td>
-          <td>✅ กรณีฉุกเฉิน</td>
-      </tr>
-      <tr>
-          <td>✅ ร่างเนื้อหา</td>
-          <td>✅ ตรวจสอบ final</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h3 id="หลกการสำคญ"><a href="#%e0%b8%ab%e0%b8%a5%e0%b8%81%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%aa%e0%b8%b3%e0%b8%84%e0%b8%8d" class="header-anchor"></a><strong>หลักการสำคัญ:</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">┌─────────────────────────────────────┐
-</span></span><span class="line"><span class="ln">2</span><span class="cl">│   AI เป็นเครื่องมือ                  │
-</span></span><span class="line"><span class="ln">3</span><span class="cl">│   มนุษย์เป็นผู้ตัดสินใจ             │
-</span></span><span class="line"><span class="ln">4</span><span class="cl">│                                     │
-</span></span><span class="line"><span class="ln">5</span><span class="cl">│   AI เสนอ → มนุษย์ตรวจสอบ → ตัดสินใจ│
-</span></span><span class="line"><span class="ln">6</span><span class="cl">└─────────────────────────────────────┘
-</span></span></code></pre></div><hr>
-<h2 id="-ตวอยาง-chatbot-สวสดการชมชน"><a href="#-%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87-chatbot-%e0%b8%aa%e0%b8%a7%e0%b8%aa%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99" class="header-anchor"></a>💡 <strong>ตัวอย่าง: Chatbot สวัสดิการชุมชน</strong>
-</h2>
-    <blockquote>
-        <p><strong>⚠️ หมายเหตุ:</strong> นี่เป็น <strong>ตัวอย่างสมมติ</strong> เพื่อประกอบการเรียนรู้<br>
-ชื่อสถานที่และข้อมูลเป็นเพียง <strong>ตัวอย่าง</strong> เพื่อให้เห็นภาพชัดเจน<br>
-สามารถนำไปปรับใช้กับหน่วยงานจริงได้</p>
-
-    </blockquote>
-<h3 id="ขอมลโครงการ-สมมต"><a href="#%e0%b8%82%e0%b8%ad%e0%b8%a1%e0%b8%a5%e0%b9%82%e0%b8%84%e0%b8%a3%e0%b8%87%e0%b8%81%e0%b8%b2%e0%b8%a3-%e0%b8%aa%e0%b8%a1%e0%b8%a1%e0%b8%95" class="header-anchor"></a><strong>ข้อมูลโครงการ (สมมติ):</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">📍 สถานที่: อบต.ตัวอย่าง (สมมติ) จ.ตัวอย่าง (สมมติ)
-</span></span><span class="line"><span class="ln">2</span><span class="cl">📅 เวลา: มกราคม - มีนาคม 2569
-</span></span><span class="line"><span class="ln">3</span><span class="cl">👥 ทีม: เจ้าหน้าที่ 3 คน
-</span></span></code></pre></div><hr>
-<h3 id="ปญหา"><a href="#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2" class="header-anchor"></a><strong>ปัญหา:</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">❌ ชาวบ้านโทรถามเรื่องเบี้ยยังชีพวันละ 50+ สาย
-</span></span><span class="line"><span class="ln">2</span><span class="cl">❌ เจ้าหน้าที่ 3 คน รับไม่ไหว
-</span></span><span class="line"><span class="ln">3</span><span class="cl">❌ ชาวบ้านรอนาน บางทีไม่ได้คำตอบ
-</span></span><span class="line"><span class="ln">4</span><span class="cl">❌ เจ้าหน้าที่ไม่มีเวลาทำโครงการใหม่
-</span></span></code></pre></div><hr>
-<h3 id="วธแก"><a href="#%e0%b8%a7%e0%b8%98%e0%b9%81%e0%b8%81" class="header-anchor"></a><strong>วิธีแก้:</strong>
-</h3><p><strong>1. รวบรวม FAQ</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">- รวบรวมคำถามพบบ่อย 50 คำถาม
-</span></span><span class="line"><span class="ln">2</span><span class="cl">- เขียนคำตอบมาตรฐาน
-</span></span><span class="line"><span class="ln">3</span><span class="cl">- แบ่งหมวดหมู่ (เบี้ยยังชีพ, บัตรสวัสดิการ, กทบ.)
-</span></span></code></pre></div><p><strong>2. สร้าง Chatbot</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">- ใช้ Qwen 2.5 (ฟรี)
-</span></span><span class="line"><span class="ln">2</span><span class="cl">- ใช้ RAG (Retrieval-Augmented Generation)
-</span></span><span class="line"><span class="ln">3</span><span class="cl">- Deploy บน LINE (ชาวบ้านคุ้นเคย)
-</span></span></code></pre></div><p><strong>3. ทดสอบ</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">- ทดสอบกับ อสม. 10 คน
-</span></span><span class="line"><span class="ln">2</span><span class="cl">- แก้ไขคำตอบผิด
-</span></span><span class="line"><span class="ln">3</span><span class="cl">- เพิ่มคำถามใหม่
-</span></span></code></pre></div><p><strong>4. เปิดใช้งาน</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">- เปิดใช้งานจริง
-</span></span><span class="line"><span class="ln">2</span><span class="cl">- มีปุ่ม &#34;ติดต่อเจ้าหน้าที่&#34;
-</span></span><span class="line"><span class="ln">3</span><span class="cl">- ติดตามการใช้งาน
-</span></span></code></pre></div><hr>
-<h3 id="ผลลพธ-หลง-3-เดอน---ตวอยางสมมต"><a href="#%e0%b8%9c%e0%b8%a5%e0%b8%a5%e0%b8%9e%e0%b8%98-%e0%b8%ab%e0%b8%a5%e0%b8%87-3-%e0%b9%80%e0%b8%94%e0%b8%ad%e0%b8%99---%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b8%aa%e0%b8%a1%e0%b8%a1%e0%b8%95" class="header-anchor"></a><strong>ผลลัพธ์ (หลัง 3 เดือน) - ตัวอย่างสมมติ:</strong>
-</h3>
-    <blockquote>
-        <p><strong>⚠️ หมายเหตุ:</strong> ตัวเลขนี้เป็น <strong>ตัวอย่างสมมติ</strong> เพื่อแสดงให้เห็นถึงความเป็นไปได้<br>
-ผลลัพธ์จริงอาจแตกต่างกันไปตามบริบทของแต่ละพื้นที่</p>
-
-    </blockquote>
-<div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>ตัวชี้วัด</th>
-          <th>ก่อน</th>
-          <th>หลัง</th>
-          <th>เปลี่ยนแปลง</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>สายโทรเข้า</strong></td>
-          <td>50 สาย/วัน</td>
-          <td>15 สาย/วัน</td>
-          <td>📉 -70%</td>
-      </tr>
-      <tr>
-          <td><strong>เวลารอคำตอบ</strong></td>
-          <td>30 นาที</td>
-          <td>0 นาที</td>
-          <td>⚡ ทันที</td>
-      </tr>
-      <tr>
-          <td><strong>เวลาเจ้าหน้าที่</strong></td>
-          <td>4 ชม./วัน</td>
-          <td>1 ชม./วัน</td>
-          <td>⏱️ -75%</td>
-      </tr>
-      <tr>
-          <td><strong>โครงการใหม่</strong></td>
-          <td>0 โครงการ</td>
-          <td>3 โครงการ</td>
-          <td>📈 +3</td>
-      </tr>
-      <tr>
-          <td><strong>ความพึงพอใจ</strong></td>
-          <td>60%</td>
-          <td>90%</td>
-          <td>😊 +30%</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h3 id="บทเรยนทได-จากตวอยางสมมต"><a href="#%e0%b8%9a%e0%b8%97%e0%b9%80%e0%b8%a3%e0%b8%a2%e0%b8%99%e0%b8%97%e0%b9%84%e0%b8%94-%e0%b8%88%e0%b8%b2%e0%b8%81%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b8%aa%e0%b8%a1%e0%b8%a1%e0%b8%95" class="header-anchor"></a><strong>บทเรียนที่ได้ (จากตัวอย่างสมมติ):</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">✅ ชาวบ้านชอบมาก (ได้คำตอบทันที)
-</span></span><span class="line"><span class="ln">2</span><span class="cl">✅ เจ้าหน้าที่มีเวลาทำโครงการอื่น
-</span></span><span class="line"><span class="ln">3</span><span class="cl">✅ คำถามซ้ำๆ ลดลง
-</span></span><span class="line"><span class="ln">4</span><span class="cl">✅ ข้อมูลเป็นระบบมากขึ้น
-</span></span><span class="line"><span class="ln">5</span><span class="cl">
-</span></span><span class="line"><span class="ln">6</span><span class="cl">⚠️ ต้องดูแลตอบคำถามใหม่ๆ
-</span></span><span class="line"><span class="ln">7</span><span class="cl">⚠️ บางคำถามยังต้องส่งต่อมนุษย์
-</span></span><span class="line"><span class="ln">8</span><span class="cl">⚠️ ต้องอัพเดต FAQ เป็นระยะ
-</span></span></code></pre></div>
-    <blockquote>
-        <p><strong>💡 สรุปบทเรียน:</strong> นี่เป็นบทเรียนที่คาดหวังจาก <strong>ตัวอย่างสมมติ</strong><br>
-บทเรียนจริงอาจแตกต่างกันไปตามการนำไปใช้งานจริง</p>
-
-    </blockquote>
-<hr>
-<h2 id="-checklist-กอนเรมพฒนา"><a href="#-checklist-%e0%b8%81%e0%b8%ad%e0%b8%99%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2" class="header-anchor"></a>✅ <strong>Checklist ก่อนเริ่มพัฒนา</strong>
-</h2><h3 id="planning-checklist"><a href="#planning-checklist" class="header-anchor"></a><strong>Planning Checklist:</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">□ ระบุปัญหาชัดเจนแล้ว (เขียนเป็น 1 ย่อหน้า)
-</span></span><span class="line"><span class="ln">2</span><span class="cl">□ เลือก Use Case เหมาะสม (เริ่มจากง่าย)
-</span></span><span class="line"><span class="ln">3</span><span class="cl">□ กำหนดขอบเขต (In/Out of Scope)
-</span></span><span class="line"><span class="ln">4</span><span class="cl">□ เลือกโมเดล (เริ่มจากฟรี)
-</span></span><span class="line"><span class="ln">5</span><span class="cl">□ ออกแบบ Human-AI Interface
-</span></span><span class="line"><span class="ln">6</span><span class="cl">□ วางแผน Evaluation (จะวัดความสำเร็จยังไง)
-</span></span><span class="line"><span class="ln">7</span><span class="cl">□ เตรียมข้อมูล (เอกสาร, FAQ)
-</span></span><span class="line"><span class="ln">8</span><span class="cl">□ ทดสอบกับผู้ใช้กลุ่มเล็ก (10-20 คน)
-</span></span></code></pre></div><hr>
-<h3 id="technical-checklist"><a href="#technical-checklist" class="header-anchor"></a><strong>Technical Checklist:</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">□ มีบัญชี Provider (Qwen, OpenAI, etc.)
-</span></span><span class="line"><span class="ln">2</span><span class="cl">□ มี API Key
-</span></span><span class="line"><span class="ln">3</span><span class="cl">□ มีที่ deploy (เครื่องตัวเอง, cloud)
-</span></span><span class="line"><span class="ln">4</span><span class="cl">□ มีช่องทางติดต่อผู้ใช้ (LINE, Facebook, etc.)
-</span></span><span class="line"><span class="ln">5</span><span class="cl">□ มีระบบติดตามการใช้งาน (Analytics)
-</span></span><span class="line"><span class="ln">6</span><span class="cl">□ มีแผน backup ข้อมูล
-</span></span></code></pre></div><hr>
-<h3 id="people-checklist"><a href="#people-checklist" class="header-anchor"></a><strong>People Checklist:</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">□ หัวหน้าสนับสนุน
-</span></span><span class="line"><span class="ln">2</span><span class="cl">□ ทีมงานเข้าใจ
-</span></span><span class="line"><span class="ln">3</span><span class="cl">□ ผู้ใช้พร้อมทดสอบ
-</span></span><span class="line"><span class="ln">4</span><span class="cl">□ มีคนดูแลระบบ
-</span></span><span class="line"><span class="ln">5</span><span class="cl">□ มีคนตอบคำถาม (กรณี AI ตอบไม่ได้)
-</span></span></code></pre></div><hr>
-<h2 id="-สรปตอนท-1"><a href="#-%e0%b8%aa%e0%b8%a3%e0%b8%9b%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-1" class="header-anchor"></a>📝 <strong>สรุปตอนที่ 1</strong>
-</h2><h3 id="สงทเรยนร"><a href="#%e0%b8%aa%e0%b8%87%e0%b8%97%e0%b9%80%e0%b8%a3%e0%b8%a2%e0%b8%99%e0%b8%a3" class="header-anchor"></a><strong>สิ่งที่เรียนรู้:</strong>
-</h3><ol>
-<li>✅ <strong>ทำไมต้องวางแผน</strong> — ประหยัดเวลา เพิ่มผลลัพธ์</li>
-<li>✅ <strong>5 ขั้นตอน</strong> — ปัญหา → Use Case → ขอบเขต → โมเดล → Interface</li>
-<li>✅ <strong>ตัวอย่างจริง</strong> — Chatbot สวัสดิการชุมชน</li>
-<li>✅ <strong>Checklist</strong> — ตรวจสอบก่อนเริ่ม</li>
-</ol>
-<hr>
-<h3 id="การบาน"><a href="#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9a%e0%b8%b2%e0%b8%99" class="header-anchor"></a><strong>การบ้าน:</strong>
-</h3><p>ลองวางแผน AI App สำหรับงานของคุณดูครับ:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">1. ปัญหาของคุณคืออะไร?
-</span></span><span class="line"><span class="ln">2</span><span class="cl">2. Use Case อะไรที่เหมาะสม?
-</span></span><span class="line"><span class="ln">3</span><span class="cl">3. ขอบเขตทำอะไร/ไม่ทำอะไร?
-</span></span><span class="line"><span class="ln">4</span><span class="cl">4. โมเดลอะไรที่เหมาะสม?
-</span></span><span class="line"><span class="ln">5</span><span class="cl">5. มนุษย์ + AI จะทำงานร่วมกันยังไง?
-</span></span></code></pre></div><hr>
-<h2 id="-ตอนทตอไป"><a href="#-%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97%e0%b8%95%e0%b8%ad%e0%b9%84%e0%b8%9b" class="header-anchor"></a>🚀 <strong>ตอนที่ต่อไป:</strong>
-</h2><p><strong>ตอนที่ 2: Prompt Engineering สร้างคอนเทนต์</strong></p>
-<p>คุณจะเรียนรู้:</p>
-<ul>
-<li>✍️ เขียน Prompt ยังไงให้ได้ผลลัพธ์ดี</li>
-<li>เทคนิคเขียน Prompt สำหรับงานชุมชน</li>
-<li>📝 ตัวอย่าง Prompt ใช้จริง</li>
-<li>⚠️ ข้อผิดพลาดที่พบบ่อย</li>
-</ul>
-<hr>
-<p><strong>อ่านจบแล้วลองวางแผนดูครับ!</strong></p>
-<p><strong>ตอนหน้าเจอกันครับ!</strong> 🚀</p>
-<hr>
-<p><em>ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน</em><br>
-<em>ตอนที่ 2/6: วางแผน AI App</em><br>
-<em>โดย เหน่ง - นักวิชาการพัฒนาชุมชน</em><br>
-<em>กรมการพัฒนาชุมชน กระทรวงมหาดไทย</em></p>
-
-</section>
-
-
-    <footer class="article-meta article-footer">
-    
-    <section class="article-tags">
-        
-            <a href="/neng-blog/tags/ai-engineering/">Ai-Engineering</a>
-        
-            <a href="/neng-blog/tags/community-development/">Community-Development</a>
-        
-            <a href="/neng-blog/tags/ai-planning/">Ai-Planning</a>
-        
-            <a href="/neng-blog/tags/beginner-guide/">Beginner-Guide</a>
-        
-    </section>
-
-
-    
-    <section class="article-copyright inline-meta">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></span>
-    </section>
-    </footer>
-
-
-    
-</article>
-
-    
-
-    
-
-<aside>
-    <h2 class="section-title">Related content</h2>
-    <div class="subsection-list">
-        <div class="article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/neng-blog/posts/ai-engineering-intro/">
-        
-        <div class="article-image">
-            <img alt="Featured image of post AI Engineering สำหรับนักพัฒนาชุมชน: บทนำ - ทำไมต้องใช้ AI กับ 4 ภารกิจหลัก?" height="150" loading="lazy" src="/neng-blog/posts/ai-engineering-intro/cover_hu_46aa488dd2607be8.webp" srcset="/neng-blog/posts/ai-engineering-intro/cover_hu_46aa488dd2607be8.webp 1x, /neng-blog/posts/ai-engineering-intro/cover_hu_5eca8354b71ca7f9.webp 2x" width="250">
-
-        </div>
-        
-
-        <div class="article-details"style="background: linear-gradient(0deg, #21255980 0%, #4155acC0 100%);">
-            <h2 class="article-title">AI Engineering สำหรับนักพัฒนาชุมชน: บทนำ - ทำไมต้องใช้ AI กับ 4 ภารกิจหลัก?</h2>
-        </div>
-    </a>
-</article>
-            
-        </div>
-    </div>
-</aside>
-
-     
-    
-        
-        <div class="giscus-container" role="region" aria-label="Comments section">
-<script
-    src="https://giscus.app/client.js"
-    data-repo="jitaret-rgb/neng-blog"
-    data-repo-id="R_kgDOR6Wt7Q"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOR6Wt7c4C6TwS"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="noborder_dark"
-    data-lang="en"
-    crossorigin="anonymous"
-    async>
-</script>
-</div>
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-        2026 Code &amp; Community
-    </section>
-    
-    <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
-    </section>
-</footer>
-
-
-    
-
-
-
-<script type="module">
+               connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net https://giscus.app;"><meta http-equiv=Permissions-Policy content="geolocation=(), microphone=(), camera=()"><link rel=preconnect href=https://giscus.app crossorigin></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/neng-blog/><img src=/neng-blog/img/profile_hu_de2cac54e10d7047.jpg width=400 height=400 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>💻</span></figure><div class=site-meta><h1 class=site-name><a href=/neng-blog/>Code & Community</a></h1><h2 class=site-description>Bridging Technology and Community Development</h2></div></header><ol class=menu-social><li><a href=https://github.com/jitaret-rgb title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://t.me/Majinman title=Telegram rel=me><svg class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4 6 6 4-16-18 7 4 2 2 6 3-4"/></svg></a></li><li><a href=https://www.facebook.com/jittaret.phromnanra/ target=_blank title=Facebook rel=me><svg class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 011-1h3V3h-3a5 5 0 00-5 5v2H7"/></svg></a></li><li><a href=https://www.youtube.com/@jittaretpromnara5716 target=_blank title=YouTube rel=me><svg class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 014-4h12a4 4 0 014 4v8a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><path d="M10 9l5 3-5 3z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/neng-blog/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12H3l9-9 9 9h-2"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/neng-blog/posts/><svg class="icon icon-tabler icon-tabler-article" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4m0 2a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M7 8h10"/><path d="M7 12h10"/><path d="M7 16h10"/></svg>
+<span>Posts</span></a></li><li><a href=/neng-blog/categories/><svg class="icon icon-tabler icon-tabler-category-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 4h6v6h-6z"/><path d="M4 14h6v6H4z"/><path d="M17 17m-3 0a3 3 0 106 0 3 3 0 10-6 0"/><path d="M7 7M4 7a3 3 0 106 0A3 3 0 104 7"/></svg>
+<span>Categories</span></a></li><li><a href=/neng-blog/tags/><svg class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7.5 7.5m-1 0a1 1 0 102 0 1 1 0 10-2 0"/><path d="M3 6v5.172a2 2 0 00.586 1.414l7.71 7.71a2.41 2.41.0 003.408.0l5.592-5.592a2.41 2.41.0 000-3.408l-7.71-7.71A2 2 0 0011.172 3H6A3 3 0 003 6z"/></svg>
+<span>Tags</span></a></li><li><a href=/neng-blog/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 108 0A4 4 0 008 7"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Dark Mode</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc><nav class=toc-nav id=TableOfContents><ul><li><a href=#-สารบญตอนท-1>📋 <strong>สารบัญตอนที่ 1</strong></a></li><li><a href=#-ทำไมตองวางแผนกอน>🤔 <strong>ทำไมต้องวางแผนก่อน?</strong></a><ul><li><a href=#ปญหาทพบบอย><strong>ปัญหาที่พบบ่อย:</strong></a></li><li><a href=#ถาไมวางแผน><strong>ถ้าไม่วางแผน:</strong></a></li><li><a href=#ถาวางแผนด><strong>ถ้าวางแผนดี:</strong></a></li></ul></li><li><a href=#-5-ขนตอนวางแผน-ai-app>📊 <strong>5 ขั้นตอนวางแผน AI App</strong></a><ul><li><a href=#ภาพรวม><strong>ภาพรวม:</strong></a></li></ul></li><li><a href=#-step-1-ระบปญหา>📍 <strong>Step 1: ระบุปัญหา</strong></a><ul><li><a href=#คำถาม-4-ขอทตองตอบ><strong>คำถาม 4 ข้อที่ต้องตอบ:</strong></a></li><li><a href=#ตวอยางท-1-ชาวบานถามเรองสวสดการ><strong>ตัวอย่างที่ 1: ชาวบ้านถามเรื่องสวัสดิการ</strong></a></li><li><a href=#ตวอยางท-2-ทำรายงานประชมไมทน><strong>ตัวอย่างที่ 2: ทำรายงานประชุมไม่ทัน</strong></a></li><li><a href=#-แบบฝกหด><strong>✍️ แบบฝึกหัด:</strong></a></li></ul></li><li><a href=#-step-2-เลอก-use-case>🎯 <strong>Step 2: เลือก Use Case</strong></a><ul><li><a href=#use-case-คออะไร><strong>Use Case คืออะไร?</strong></a></li><li><a href=#ตาราง-use-cases-สำหรบงานชมชน><strong>ตาราง Use Cases สำหรับงานชุมชน:</strong></a></li><li><a href=#แนะนำสำหรบมอใหม><strong>แนะนำสำหรับมือใหม่:</strong></a></li></ul></li><li><a href=#-step-3-กำหนดขอบเขต>📏 <strong>Step 3: กำหนดขอบเขต</strong></a><ul><li><a href=#ทำไมตองกำหนดขอบเขต><strong>ทำไมต้องกำหนดขอบเขต?</strong></a></li><li><a href=#ตวอยาง-chatbot-สวสดการ><strong>ตัวอย่าง: Chatbot สวัสดิการ</strong></a></li><li><a href=#send-off-strategy-สงตอมนษย><strong>Send-off Strategy (ส่งต่อมนุษย์):</strong></a></li></ul></li><li><a href=#-step-4-เลอกโมเดล>🤖 <strong>Step 4: เลือกโมเดล</strong></a><ul><li><a href=#เปรยบเทยบโมเดลยอดนยม><strong>เปรียบเทียบโมเดลยอดนิยม:</strong></a></li><li><a href=#แนะนำสำหรบแตละ-use-case><strong>แนะนำสำหรับแต่ละ Use Case:</strong></a></li><li><a href=#-เปรยบเทยบราคา><strong>💰 เปรียบเทียบราคา:</strong></a></li></ul></li><li><a href=#-step-5-ออกแบบ-human-ai-interface>🎨 <strong>Step 5: ออกแบบ Human-AI Interface</strong></a><ul><li><a href=#human-ai-collaboration-คออะไร><strong>Human-AI Collaboration คืออะไร?</strong></a></li><li><a href=#ตารางแบงงาน><strong>ตารางแบ่งงาน:</strong></a></li><li><a href=#หลกการสำคญ><strong>หลักการสำคัญ:</strong></a></li></ul></li><li><a href=#-ตวอยาง-chatbot-สวสดการชมชน>💡 <strong>ตัวอย่าง: Chatbot สวัสดิการชุมชน</strong></a><ul><li><a href=#ขอมลโครงการ-สมมต><strong>ข้อมูลโครงการ (สมมติ):</strong></a></li><li><a href=#ปญหา><strong>ปัญหา:</strong></a></li><li><a href=#วธแก><strong>วิธีแก้:</strong></a></li><li><a href=#ผลลพธ-หลง-3-เดอน---ตวอยางสมมต><strong>ผลลัพธ์ (หลัง 3 เดือน) - ตัวอย่างสมมติ:</strong></a></li><li><a href=#บทเรยนทได-จากตวอยางสมมต><strong>บทเรียนที่ได้ (จากตัวอย่างสมมติ):</strong></a></li></ul></li><li><a href=#-checklist-กอนเรมพฒนา>✅ <strong>Checklist ก่อนเริ่มพัฒนา</strong></a><ul><li><a href=#planning-checklist><strong>Planning Checklist:</strong></a></li><li><a href=#technical-checklist><strong>Technical Checklist:</strong></a></li><li><a href=#people-checklist><strong>People Checklist:</strong></a></li></ul></li><li><a href=#-สรปตอนท-1>📝 <strong>สรุปตอนที่ 1</strong></a><ul><li><a href=#สงทเรยนร><strong>สิ่งที่เรียนรู้:</strong></a></li><li><a href=#การบาน><strong>การบ้าน:</strong></a></li></ul></li><li><a href=#-ตอนตอไป>🚀 <strong>ตอนต่อไป:</strong></a></li></ul></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/neng-blog/posts/ai-engineering-part-1/><img alt="Featured image of post AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน" height=630 loading=lazy sizes="(max-width: 800px) 100vw, 800px" src=/neng-blog/posts/ai-engineering-part-1/cover_hu_7b67a8ff12c8e666.jpg srcset="/neng-blog/posts/ai-engineering-part-1/cover_hu_abca7ca16e60abc5.webp 400w, /neng-blog/posts/ai-engineering-part-1/cover_hu_55256bd2e4ac2a04.webp 800w, /neng-blog/posts/ai-engineering-part-1/cover_hu_7b67a8ff12c8e666.jpg 1200w" width=1200></a></div><div class=article-details><header class=article-category><a href=/neng-blog/categories/tutorial/ style=background-color:#beefca;color:#0f3d1b>Tutorial
+</a><a href=/neng-blog/categories/community-development/ style=background-color:#efe7be;color:#3d360f>Community Development
+</a><a href=/neng-blog/categories/ai/ style=background-color:#beefe4;color:#0f3d33>AI</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/neng-blog/posts/ai-engineering-part-1/>AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน</a></h2><h3 class=article-subtitle>คู่มือวางแผน AI App สำหรับงานชุมชน ฉบับมือใหม่ อ่านง่าย ทำตามได้ ไม่ต้องมีพื้นฐาน Programming</h3></div><footer class=article-meta><div class=inline-meta><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2026-04-07T18:00:00+07:00>Apr 07, 2026</time>
+<svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>5 minutes read</time></div></footer></div></header><aside class=article-toc><details><summary><div class=article-toc-title><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6-6 6"/></svg>
+<span>Table of contents</span></div></summary><nav class=toc-nav><ul><li><a href=#-สารบญตอนท-1>📋 <strong>สารบัญตอนที่ 1</strong></a></li><li><a href=#-ทำไมตองวางแผนกอน>🤔 <strong>ทำไมต้องวางแผนก่อน?</strong></a><ul><li><a href=#ปญหาทพบบอย><strong>ปัญหาที่พบบ่อย:</strong></a></li><li><a href=#ถาไมวางแผน><strong>ถ้าไม่วางแผน:</strong></a></li><li><a href=#ถาวางแผนด><strong>ถ้าวางแผนดี:</strong></a></li></ul></li><li><a href=#-5-ขนตอนวางแผน-ai-app>📊 <strong>5 ขั้นตอนวางแผน AI App</strong></a><ul><li><a href=#ภาพรวม><strong>ภาพรวม:</strong></a></li></ul></li><li><a href=#-step-1-ระบปญหา>📍 <strong>Step 1: ระบุปัญหา</strong></a><ul><li><a href=#คำถาม-4-ขอทตองตอบ><strong>คำถาม 4 ข้อที่ต้องตอบ:</strong></a></li><li><a href=#ตวอยางท-1-ชาวบานถามเรองสวสดการ><strong>ตัวอย่างที่ 1: ชาวบ้านถามเรื่องสวัสดิการ</strong></a></li><li><a href=#ตวอยางท-2-ทำรายงานประชมไมทน><strong>ตัวอย่างที่ 2: ทำรายงานประชุมไม่ทัน</strong></a></li><li><a href=#-แบบฝกหด><strong>✍️ แบบฝึกหัด:</strong></a></li></ul></li><li><a href=#-step-2-เลอก-use-case>🎯 <strong>Step 2: เลือก Use Case</strong></a><ul><li><a href=#use-case-คออะไร><strong>Use Case คืออะไร?</strong></a></li><li><a href=#ตาราง-use-cases-สำหรบงานชมชน><strong>ตาราง Use Cases สำหรับงานชุมชน:</strong></a></li><li><a href=#แนะนำสำหรบมอใหม><strong>แนะนำสำหรับมือใหม่:</strong></a></li></ul></li><li><a href=#-step-3-กำหนดขอบเขต>📏 <strong>Step 3: กำหนดขอบเขต</strong></a><ul><li><a href=#ทำไมตองกำหนดขอบเขต><strong>ทำไมต้องกำหนดขอบเขต?</strong></a></li><li><a href=#ตวอยาง-chatbot-สวสดการ><strong>ตัวอย่าง: Chatbot สวัสดิการ</strong></a></li><li><a href=#send-off-strategy-สงตอมนษย><strong>Send-off Strategy (ส่งต่อมนุษย์):</strong></a></li></ul></li><li><a href=#-step-4-เลอกโมเดล>🤖 <strong>Step 4: เลือกโมเดล</strong></a><ul><li><a href=#เปรยบเทยบโมเดลยอดนยม><strong>เปรียบเทียบโมเดลยอดนิยม:</strong></a></li><li><a href=#แนะนำสำหรบแตละ-use-case><strong>แนะนำสำหรับแต่ละ Use Case:</strong></a></li><li><a href=#-เปรยบเทยบราคา><strong>💰 เปรียบเทียบราคา:</strong></a></li></ul></li><li><a href=#-step-5-ออกแบบ-human-ai-interface>🎨 <strong>Step 5: ออกแบบ Human-AI Interface</strong></a><ul><li><a href=#human-ai-collaboration-คออะไร><strong>Human-AI Collaboration คืออะไร?</strong></a></li><li><a href=#ตารางแบงงาน><strong>ตารางแบ่งงาน:</strong></a></li><li><a href=#หลกการสำคญ><strong>หลักการสำคัญ:</strong></a></li></ul></li><li><a href=#-ตวอยาง-chatbot-สวสดการชมชน>💡 <strong>ตัวอย่าง: Chatbot สวัสดิการชุมชน</strong></a><ul><li><a href=#ขอมลโครงการ-สมมต><strong>ข้อมูลโครงการ (สมมติ):</strong></a></li><li><a href=#ปญหา><strong>ปัญหา:</strong></a></li><li><a href=#วธแก><strong>วิธีแก้:</strong></a></li><li><a href=#ผลลพธ-หลง-3-เดอน---ตวอยางสมมต><strong>ผลลัพธ์ (หลัง 3 เดือน) - ตัวอย่างสมมติ:</strong></a></li><li><a href=#บทเรยนทได-จากตวอยางสมมต><strong>บทเรียนที่ได้ (จากตัวอย่างสมมติ):</strong></a></li></ul></li><li><a href=#-checklist-กอนเรมพฒนา>✅ <strong>Checklist ก่อนเริ่มพัฒนา</strong></a><ul><li><a href=#planning-checklist><strong>Planning Checklist:</strong></a></li><li><a href=#technical-checklist><strong>Technical Checklist:</strong></a></li><li><a href=#people-checklist><strong>People Checklist:</strong></a></li></ul></li><li><a href=#-สรปตอนท-1>📝 <strong>สรุปตอนที่ 1</strong></a><ul><li><a href=#สงทเรยนร><strong>สิ่งที่เรียนรู้:</strong></a></li><li><a href=#การบาน><strong>การบ้าน:</strong></a></li></ul></li><li><a href=#-ตอนตอไป>🚀 <strong>ตอนต่อไป:</strong></a></li></ul></nav></details></aside><section class=article-content><h1 id=-ai-engineering-ตอนท-1-วางแผน-ai-app-สำหรบงานชมชน><a href=#-ai-engineering-%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-1-%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99-ai-app-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99 class=header-anchor></a>🎯 AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน</h1><p><strong>ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน</strong></p><hr><p><strong>ผู้เขียน:</strong> เหน่ง (นักวิชาการพัฒนาชุมชน)<br><strong>สังกัด:</strong> กรมการพัฒนาชุมชน กระทรวงมหาดไทย<br><strong>วันที่:</strong> 7 เมษายน 2569</p><hr><h2 id=-สารบญตอนท-1><a href=#-%e0%b8%aa%e0%b8%b2%e0%b8%a3%e0%b8%9a%e0%b8%8d%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-1 class=header-anchor></a>📋 <strong>สารบัญตอนที่ 1</strong></h2><ol><li><a class=link href=#%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b9%89%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99%e0%b8%81%e0%b9%88%e0%b8%ad%e0%b8%99>ทำไมต้องวางแผนก่อน?</a></li><li><a class=link href=#5-%e0%b8%82%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99-ai-app>5 ขั้นตอนวางแผน AI App</a></li><li><a class=link href=#%e0%b8%95%e0%b8%b1%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b9%88%e0%b8%b2%e0%b8%87%e0%b8%88%e0%b8%a3%e0%b8%b4%e0%b8%87%e0%b8%88%e0%b8%b2%e0%b8%81%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%8a%e0%b8%b8%e0%b8%a1%e0%b8%8a%e0%b8%99>ตัวอย่างจริงจากงานชุมชน</a></li><li><a class=link href=#checklist-%e0%b8%81%e0%b9%88%e0%b8%ad%e0%b8%99%e0%b9%80%e0%b8%a3%e0%b8%b4%e0%b9%88%e0%b8%a1>Checklist ก่อนเริ่ม</a></li></ol><hr><h2 id=-ทำไมตองวางแผนกอน><a href=#-%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99%e0%b8%81%e0%b8%ad%e0%b8%99 class=header-anchor></a>🤔 <strong>ทำไมต้องวางแผนก่อน?</strong></h2><h3 id=ปญหาทพบบอย><a href=#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2%e0%b8%97%e0%b8%9e%e0%b8%9a%e0%b8%9a%e0%b8%ad%e0%b8%a2 class=header-anchor></a><strong>ปัญหาที่พบบ่อย:</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>❌ เห็นคนอื่นใช้ AI ก็อยากใช้บ้าง
+</span></span><span class=line><span class=ln>2</span><span class=cl>❌ ไม่รู้ว่าเริ่มตรงไหน
+</span></span><span class=line><span class=ln>3</span><span class=cl>❌ เลือกเครื่องมือผิด
+</span></span><span class=line><span class=ln>4</span><span class=cl>❌ ใช้ไปสักพักก็เลิก
+</span></span><span class=line><span class=ln>5</span><span class=cl>❌ เสียเงินฟรี
+</span></span></code></pre></div><h3 id=ถาไมวางแผน><a href=#%e0%b8%96%e0%b8%b2%e0%b9%84%e0%b8%a1%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99 class=header-anchor></a><strong>ถ้าไม่วางแผน:</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>เวลา: 100%
+</span></span><span class=line><span class=ln>2</span><span class=cl>ผลลัพธ์: 10%
+</span></span><span class=line><span class=ln>3</span><span class=cl>ความคุ้มค่า: ❌
+</span></span></code></pre></div><h3 id=ถาวางแผนด><a href=#%e0%b8%96%e0%b8%b2%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99%e0%b8%94 class=header-anchor></a><strong>ถ้าวางแผนดี:</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>เวลา: 50%
+</span></span><span class=line><span class=ln>2</span><span class=cl>ผลลัพธ์: 90%
+</span></span><span class=line><span class=ln>3</span><span class=cl>ความคุ้มค่า: ✅
+</span></span></code></pre></div><hr><h2 id=-5-ขนตอนวางแผน-ai-app><a href=#-5-%e0%b8%82%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%a7%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9c%e0%b8%99-ai-app class=header-anchor></a>📊 <strong>5 ขั้นตอนวางแผน AI App</strong></h2><h3 id=ภาพรวม><a href=#%e0%b8%a0%e0%b8%b2%e0%b8%9e%e0%b8%a3%e0%b8%a7%e0%b8%a1 class=header-anchor></a><strong>ภาพรวม:</strong></h3><p><img alt="AI Planning Process" class=gallery-image data-flex-basis=320px data-flex-grow=133 height=600 loading=lazy sizes="(max-width: 800px) 100vw, 800px" src=/neng-blog/posts/ai-engineering-part-1/image1_hu_56ff88ba6b9b1be9.jpg srcset="/neng-blog/posts/ai-engineering-part-1/image1_hu_d4a2191416c3b838.webp 400w, /neng-blog/posts/ai-engineering-part-1/image1_hu_56ff88ba6b9b1be9.jpg 800w" width=800>
+<em>ภาพ: กระบวนการวางแผน AI App - ภาพประกอบจาก Unsplash</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>         ┌─────────────────┐
+</span></span><span class=line><span class=ln> 2</span><span class=cl>         │  1. ระบุปัญหา   │
+</span></span><span class=line><span class=ln> 3</span><span class=cl>         └────────┬────────
+</span></span><span class=line><span class=ln> 4</span><span class=cl>                  │
+</span></span><span class=line><span class=ln> 5</span><span class=cl>         ┌────────▼────────┐
+</span></span><span class=line><span class=ln> 6</span><span class=cl>         │  2. เลือก Use   │
+</span></span><span class=line><span class=ln> 7</span><span class=cl>         │     Case        │
+</span></span><span class=line><span class=ln> 8</span><span class=cl>         └────────┬────────┘
+</span></span><span class=line><span class=ln> 9</span><span class=cl>                  │
+</span></span><span class=line><span class=ln>10</span><span class=cl>         ┌────────▼────────┐
+</span></span><span class=line><span class=ln>11</span><span class=cl>         │  3. กำหนดขอบเขต │
+</span></span><span class=line><span class=ln>12</span><span class=cl>         └────────┬────────┘
+</span></span><span class=line><span class=ln>13</span><span class=cl>                  │
+</span></span><span class=line><span class=ln>14</span><span class=cl>         ┌────────▼────────┐
+</span></span><span class=line><span class=ln>15</span><span class=cl>         │  4. เลือกโมเดล  │
+</span></span><span class=line><span class=ln>16</span><span class=cl>         └────────┬────────┘
+</span></span><span class=line><span class=ln>17</span><span class=cl>                  │
+</span></span><span class=line><span class=ln>18</span><span class=cl>         ┌────────▼────────┐
+</span></span><span class=line><span class=ln>19</span><span class=cl>         │  5. ออกแบบ      │
+</span></span><span class=line><span class=ln>20</span><span class=cl>         │    Interface    │
+</span></span><span class=line><span class=ln>21</span><span class=cl>         └─────────────────┘
+</span></span></code></pre></div><hr><h2 id=-step-1-ระบปญหา><a href=#-step-1-%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2 class=header-anchor></a>📍 <strong>Step 1: ระบุปัญหา</strong></h2><h3 id=คำถาม-4-ขอทตองตอบ><a href=#%e0%b8%84%e0%b8%b3%e0%b8%96%e0%b8%b2%e0%b8%a1-4-%e0%b8%82%e0%b8%ad%e0%b8%97%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%95%e0%b8%ad%e0%b8%9a class=header-anchor></a><strong>คำถาม 4 ข้อที่ต้องตอบ:</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>❓ 1. ปัญหาคืออะไร?
+</span></span><span class=line><span class=ln>2</span><span class=cl>❓ 2. ใครได้รับผลกระทบ?
+</span></span><span class=line><span class=ln>3</span><span class=cl>❓ 3. ปัจจุบันแก้ยังไง?
+</span></span><span class=line><span class=ln>4</span><span class=cl>❓ 4. AI ช่วยอะไรได้?
+</span></span></code></pre></div><hr><h3 id=ตวอยางท-1-ชาวบานถามเรองสวสดการ><a href=#%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b8%97-1-%e0%b8%8a%e0%b8%b2%e0%b8%a7%e0%b8%9a%e0%b8%b2%e0%b8%99%e0%b8%96%e0%b8%b2%e0%b8%a1%e0%b9%80%e0%b8%a3%e0%b8%ad%e0%b8%87%e0%b8%aa%e0%b8%a7%e0%b8%aa%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3 class=header-anchor></a><strong>ตัวอย่างที่ 1: ชาวบ้านถามเรื่องสวัสดิการ</strong></h3><p><strong>1. ปัญหาคืออะไร?</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>ชาวบ้านโทรถามเรื่องเบี้ยยังชีพผู้สูงอายุวันละ 50+ สาย
+</span></span></code></pre></div><p><strong>2. ใครได้รับผลกระทบ?</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>- ผู้สูงอายุ (รอนาน)
+</span></span><span class=line><span class=ln>2</span><span class=cl>- เจ้าหน้าที่ (รับไม่ไหว)
+</span></span><span class=line><span class=ln>3</span><span class=cl>- นายก อบต. (ชาวบ้านบ่น)
+</span></span></code></pre></div><p><strong>3. ปัจจุบันแก้ยังไง?</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>- รับโทรศัพท์
+</span></span><span class=line><span class=ln>2</span><span class=cl>- ตอบ LINE
+</span></span><span class=line><span class=ln>3</span><span class=cl>- ลงพื้นที่อธิบาย
+</span></span></code></pre></div><p><strong>4. AI ช่วยอะไรได้?</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>Chatbot ตอบคำถามพื้นฐานอัตโนมัติ 24/7
+</span></span></code></pre></div><hr><h3 id=ตวอยางท-2-ทำรายงานประชมไมทน><a href=#%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b8%97-2-%e0%b8%97%e0%b8%b3%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%8a%e0%b8%a1%e0%b9%84%e0%b8%a1%e0%b8%97%e0%b8%99 class=header-anchor></a><strong>ตัวอย่างที่ 2: ทำรายงานประชุมไม่ทัน</strong></h3><p><strong>1. ปัญหาคืออะไร?</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>ประชุมบ่อย ทำรายงานไม่ทัน ต้องใช้เวลา 3 ชม./ครั้ง
+</span></span></code></pre></div><p><strong>2. ใครได้รับผลกระทบ?</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>- เจ้าหน้าที่ (เหนื่อย)
+</span></span><span class=line><span class=ln>2</span><span class=cl>- หัวหน้า (รายงานช้า)
+</span></span><span class=line><span class=ln>3</span><span class=cl>- ที่ประชุม (รอรายงาน)
+</span></span></code></pre></div><p><strong>3. ปัจจุบันแก้ยังไง?</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>- จดมือ
+</span></span><span class=line><span class=ln>2</span><span class=cl>- พิมพ์เอง
+</span></span><span class=line><span class=ln>3</span><span class=cl>- ทำงานล่วงเวลา
+</span></span></code></pre></div><p><strong>4. AI ช่วยอะไรได้?</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>สรุปการประชุมอัตโนมัติ + แยก Action Items
+</span></span></code></pre></div><hr><h3 id=-แบบฝกหด><a href=#-%e0%b9%81%e0%b8%9a%e0%b8%9a%e0%b8%9d%e0%b8%81%e0%b8%ab%e0%b8%94 class=header-anchor></a><strong>✍️ แบบฝึกหัด:</strong></h3><p>ลองเขียนปัญหาของคุณดูครับ:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>1. ปัญหาคืออะไร?
+</span></span><span class=line><span class=ln> 2</span><span class=cl>   → _________________________________
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl>2. ใครได้รับผลกระทบ?
+</span></span><span class=line><span class=ln> 5</span><span class=cl>   → _________________________________
+</span></span><span class=line><span class=ln> 6</span><span class=cl>
+</span></span><span class=line><span class=ln> 7</span><span class=cl>3. ปัจจุบันแก้ยังไง?
+</span></span><span class=line><span class=ln> 8</span><span class=cl>   → _________________________________
+</span></span><span class=line><span class=ln> 9</span><span class=cl>
+</span></span><span class=line><span class=ln>10</span><span class=cl>4. AI ช่วยอะไรได้?
+</span></span><span class=line><span class=ln>11</span><span class=cl>   → _________________________________
+</span></span></code></pre></div><hr><h2 id=-step-2-เลอก-use-case><a href=#-step-2-%e0%b9%80%e0%b8%a5%e0%b8%ad%e0%b8%81-use-case class=header-anchor></a>🎯 <strong>Step 2: เลือก Use Case</strong></h2><h3 id=use-case-คออะไร><a href=#use-case-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3 class=header-anchor></a><strong>Use Case คืออะไร?</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>Use Case = &#34;งานเฉพาะที่ AI จะทำให้&#34;
+</span></span></code></pre></div><p><strong>ไม่ใช่:</strong> &ldquo;ใช้ AI ทำทุกอย่าง&rdquo;<br><strong>แต่คือ:</strong> &ldquo;ใช้ AI ทำ <strong>หนึ่งเรื่อง</strong>&rdquo;</p><hr><h3 id=ตาราง-use-cases-สำหรบงานชมชน><a href=#%e0%b8%95%e0%b8%b2%e0%b8%a3%e0%b8%b2%e0%b8%87-use-cases-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99 class=header-anchor></a><strong>ตาราง Use Cases สำหรับงานชุมชน:</strong></h3><div class=table-wrapper><table><thead><tr><th>หมวดหมู่</th><th>Use Case</th><th>ความยาก</th><th>ผลกระทบ</th><th>แนะนำ</th></tr></thead><tbody><tr><td><strong>Conversational</strong></td><td>Chatbot ตอบคำถาม</td><td>⭐⭐</td><td>สูง</td><td>✅ เริ่มที่นี่</td></tr><tr><td><strong>Writing</strong></td><td>สร้างโพสต์ Facebook</td><td>⭐</td><td>ปานกลาง</td><td>✅ ง่าย</td></tr><tr><td><strong>Summarization</strong></td><td>สรุปการประชุม</td><td>⭐⭐</td><td>ปานกลาง</td><td>✅ คุ้มค่า</td></tr><tr><td><strong>Data Extraction</strong></td><td>ดึงข้อมูลแบบสำรวจ</td><td>⭐⭐⭐</td><td>สูง</td><td>⭐ ปานกลาง</td></tr><tr><td><strong>Workflow</strong></td><td>จัดกิจกรรมชุมชน</td><td>⭐⭐⭐</td><td>สูง</td><td>⭐ ยาก</td></tr></tbody></table></div><hr><h3 id=แนะนำสำหรบมอใหม><a href=#%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%a1%e0%b8%ad%e0%b9%83%e0%b8%ab%e0%b8%a1 class=header-anchor></a><strong>แนะนำสำหรับมือใหม่:</strong></h3><p><strong>เริ่มจาก:</strong></p><ol><li>✅ <strong>Chatbot</strong> — ง่าย เห็นผลเร็ว</li><li>✅ <strong>Summarization</strong> — คุ้มค่า ประหยัดเวลา</li></ol><p><strong>ยังไม่แนะนำ:</strong></p><ul><li>❌ Data Extraction — ยาก ต้องมีข้อมูลเยอะ</li><li>❌ Workflow — ซับซ้อน ต้อง integrate หลายระบบ</li></ul><hr><h2 id=-step-3-กำหนดขอบเขต><a href=#-step-3-%e0%b8%81%e0%b8%b3%e0%b8%ab%e0%b8%99%e0%b8%94%e0%b8%82%e0%b8%ad%e0%b8%9a%e0%b9%80%e0%b8%82%e0%b8%95 class=header-anchor></a>📏 <strong>Step 3: กำหนดขอบเขต</strong></h2><h3 id=ทำไมตองกำหนดขอบเขต><a href=#%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%81%e0%b8%b3%e0%b8%ab%e0%b8%99%e0%b8%94%e0%b8%82%e0%b8%ad%e0%b8%9a%e0%b9%80%e0%b8%82%e0%b8%95 class=header-anchor></a><strong>ทำไมต้องกำหนดขอบเขต?</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>❌ ไม่กำหนด → AI พยายามทำทุกอย่าง → ผลลัพธ์แย่
+</span></span><span class=line><span class=ln>2</span><span class=cl>✅ กำหนดชัด → AI ทำ **หนึ่งเรื่อง** → ผลลัพธ์ดี
+</span></span></code></pre></div><hr><h3 id=ตวอยาง-chatbot-สวสดการ><a href=#%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87-chatbot-%e0%b8%aa%e0%b8%a7%e0%b8%aa%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3 class=header-anchor></a><strong>ตัวอย่าง: Chatbot สวัสดิการ</strong></h3><p><strong>✅ In Scope (ทำอะไร):</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>- ตอบคำถามเบี้ยยังชีพผู้สูงอายุ
+</span></span><span class=line><span class=ln>2</span><span class=cl>- ตอบคำถามบัตรสวัสดิการ
+</span></span><span class=line><span class=ln>3</span><span class=cl>- ตอบคำถามโครงการเงินกู้ กทบ.
+</span></span><span class=line><span class=ln>4</span><span class=cl>- เวลาทำการ: 24/7
+</span></span><span class=line><span class=ln>5</span><span class=cl>- ภาษา: ไทย
+</span></span></code></pre></div><p><strong>❌ Out of Scope (ไม่ทำอะไร):</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>- เรื่องการเมือง
+</span></span><span class=line><span class=ln>2</span><span class=cl>- เรื่องส่วนตัว
+</span></span><span class=line><span class=ln>3</span><span class=cl>- ข้อมูลความลับ
+</span></span><span class=line><span class=ln>4</span><span class=cl>- กรณีฉุกเฉิน (ให้โทร 191)
+</span></span><span class=line><span class=ln>5</span><span class=cl>- เรื่องนอกเหนือจากสวัสดิการ
+</span></span></code></pre></div><hr><h3 id=send-off-strategy-สงตอมนษย><a href=#send-off-strategy-%e0%b8%aa%e0%b8%87%e0%b8%95%e0%b8%ad%e0%b8%a1%e0%b8%99%e0%b8%a9%e0%b8%a2 class=header-anchor></a><strong>Send-off Strategy (ส่งต่อมนุษย์):</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>เมื่อไหร่ให้ส่งต่อมนุษย์?
+</span></span><span class=line><span class=ln> 2</span><span class=cl>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>1. คำถามซับซ้อน
+</span></span><span class=line><span class=ln> 4</span><span class=cl>   → &#34;กรุณารอเจ้าหน้าที่ติดต่อกลับ&#34;
+</span></span><span class=line><span class=ln> 5</span><span class=cl>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>2. ข้อมูลไม่ชัดเจน
+</span></span><span class=line><span class=ln> 7</span><span class=cl>   → &#34;ขอตรวจสอบข้อมูลเพิ่มเติม&#34;
+</span></span><span class=line><span class=ln> 8</span><span class=cl>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>3. เรื่องอารมณ์/ความเครียด
+</span></span><span class=line><span class=ln>10</span><span class=cl>   → &#34;ขอแนะนำปรึกษาเจ้าหน้าที่โดยตรง&#34;
+</span></span><span class=line><span class=ln>11</span><span class=cl>
+</span></span><span class=line><span class=ln>12</span><span class=cl>4. กรณีฉุกเฉิน
+</span></span><span class=line><span class=ln>13</span><span class=cl>   → &#34;กรุณาโทร 191 ทันที&#34;
+</span></span></code></pre></div><hr><h2 id=-step-4-เลอกโมเดล><a href=#-step-4-%e0%b9%80%e0%b8%a5%e0%b8%ad%e0%b8%81%e0%b9%82%e0%b8%a1%e0%b9%80%e0%b8%94%e0%b8%a5 class=header-anchor></a>🤖 <strong>Step 4: เลือกโมเดล</strong></h2><h3 id=เปรยบเทยบโมเดลยอดนยม><a href=#%e0%b9%80%e0%b8%9b%e0%b8%a3%e0%b8%a2%e0%b8%9a%e0%b9%80%e0%b8%97%e0%b8%a2%e0%b8%9a%e0%b9%82%e0%b8%a1%e0%b9%80%e0%b8%94%e0%b8%a5%e0%b8%a2%e0%b8%ad%e0%b8%94%e0%b8%99%e0%b8%a2%e0%b8%a1 class=header-anchor></a><strong>เปรียบเทียบโมเดลยอดนิยม:</strong></h3><div class=table-wrapper><table><thead><tr><th>โมเดล</th><th>ราคา</th><th>ภาษาไทย</th><th>Context</th><th>เหมาะกับ</th></tr></thead><tbody><tr><td><strong>Qwen 2.5</strong></td><td>ฟรี 1M tokens/เดือน</td><td>⭐⭐⭐⭐</td><td>32K</td><td>✅ Chatbot ทั่วไป</td></tr><tr><td><strong>GPT-4o-mini</strong></td><td>$0.15/1M tokens</td><td>⭐⭐⭐⭐</td><td>128K</td><td>✅ งบจำกัด</td></tr><tr><td><strong>Claude Sonnet</strong></td><td>$3/1M tokens</td><td>⭐⭐⭐⭐⭐</td><td>200K</td><td>✅ Content</td></tr><tr><td><strong>Gemini 2.0</strong></td><td>ฟรี 60 requests/min</td><td>⭐⭐⭐⭐</td><td>1M</td><td>✅ ทดลอง</td></tr><tr><td><strong>Llama 3</strong></td><td>ฟรี (host เอง)</td><td>⭐⭐⭐</td><td>8K</td><td>🔒 ข้อมูลลับ</td></tr></tbody></table></div><hr><h3 id=แนะนำสำหรบแตละ-use-case><a href=#%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b9%81%e0%b8%95%e0%b8%a5%e0%b8%b0-use-case class=header-anchor></a><strong>แนะนำสำหรับแต่ละ Use Case:</strong></h3><div class=table-wrapper><table><thead><tr><th>Use Case</th><th>โมเดลแนะนำ</th><th>เหตุผล</th></tr></thead><tbody><tr><td><strong>Chatbot</strong></td><td>Qwen 2.5</td><td>ฟรี ภาษาไทยดี</td></tr><tr><td><strong>Content</strong></td><td>Claude Sonnet</td><td>ภาษาธรรมชาติ</td></tr><tr><td><strong>Summarization</strong></td><td>Gemini 2.0</td><td>ฟรี Context ยาว</td></tr><tr><td><strong>Data Analysis</strong></td><td>GPT-4o-mini</td><td>ถูก แม่นยำ</td></tr><tr><td><strong>ข้อมูลลับ</strong></td><td>Llama 3</td><td>Host เอง ปลอดภัย</td></tr></tbody></table></div><hr><h3 id=-เปรยบเทยบราคา><a href=#-%e0%b9%80%e0%b8%9b%e0%b8%a3%e0%b8%a2%e0%b8%9a%e0%b9%80%e0%b8%97%e0%b8%a2%e0%b8%9a%e0%b8%a3%e0%b8%b2%e0%b8%84%e0%b8%b2 class=header-anchor></a><strong>💰 เปรียบเทียบราคา:</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>**สมมติ:** ตอบคำถามวันละ 100 คำถาม
+</span></span><span class=line><span class=ln> 2</span><span class=cl>      คำถามละ 500 tokens
+</span></span><span class=line><span class=ln> 3</span><span class=cl>      รวม: 50,000 tokens/วัน = 1.5M tokens/เดือน
+</span></span><span class=line><span class=ln> 4</span><span class=cl>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>Qwen 2.5:     ฟรี (1M tokens แรก)
+</span></span><span class=line><span class=ln> 6</span><span class=cl>              ส่วนเกิน: ~$1-2/เดือน
+</span></span><span class=line><span class=ln> 7</span><span class=cl>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>GPT-4o-mini:  1.5M x $0.00015 = $0.225/เดือน
+</span></span><span class=line><span class=ln> 9</span><span class=cl>              (~8 บาท/เดือน!)
+</span></span><span class=line><span class=ln>10</span><span class=cl>
+</span></span><span class=line><span class=ln>11</span><span class=cl>Claude Sonnet: 1.5M x $0.003 = $4.5/เดือน
+</span></span><span class=line><span class=ln>12</span><span class=cl>               (~160 บาท/เดือน)
+</span></span><span class=line><span class=ln>13</span><span class=cl>
+</span></span><span class=line><span class=ln>14</span><span class=cl>สรุป: ถูกมาก! เริ่มต้นที่ 0-200 บาท/เดือน
+</span></span></code></pre></div><hr><h2 id=-step-5-ออกแบบ-human-ai-interface><a href=#-step-5-%e0%b8%ad%e0%b8%ad%e0%b8%81%e0%b9%81%e0%b8%9a%e0%b8%9a-human-ai-interface class=header-anchor></a>🎨 <strong>Step 5: ออกแบบ Human-AI Interface</strong></h2><h3 id=human-ai-collaboration-คออะไร><a href=#human-ai-collaboration-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3 class=header-anchor></a><strong>Human-AI Collaboration คืออะไร?</strong></h3><p><img alt="Human-AI Collaboration" class=gallery-image data-flex-basis=320px data-flex-grow=133 height=600 loading=lazy sizes="(max-width: 800px) 100vw, 800px" src=/neng-blog/posts/ai-engineering-part-1/image2_hu_71abffcd90240902.jpg srcset="/neng-blog/posts/ai-engineering-part-1/image2_hu_e7bf75e7877b9714.webp 400w, /neng-blog/posts/ai-engineering-part-1/image2_hu_71abffcd90240902.jpg 800w" width=800>
+<em>ภาพ: มนุษย์และ AI ทำงานร่วมกัน - ภาพประกอบจาก Unsplash</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>ไม่ใช่: AI แทนที่มนุษย์
+</span></span><span class=line><span class=ln>2</span><span class=cl>แต่คือ: AI + มนุษย์ = ดีกว่า
+</span></span></code></pre></div><hr><h3 id=ตารางแบงงาน><a href=#%e0%b8%95%e0%b8%b2%e0%b8%a3%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9a%e0%b8%87%e0%b8%87%e0%b8%b2%e0%b8%99 class=header-anchor></a><strong>ตารางแบ่งงาน:</strong></h3><div class=table-wrapper><table><thead><tr><th>AI ทำอะไรได้</th><th>มนุษย์ทำอะไร</th></tr></thead><tbody><tr><td>✅ ตอบคำถามพื้นฐาน</td><td>✅ ตรวจสอบความถูกต้อง</td></tr><tr><td>✅ สรุปข้อมูล</td><td>✅ ตัดสินใจสำคัญ</td></tr><tr><td>✅ จัดหมวดหมู่</td><td>✅ ประสานงานส่วนตัว</td></tr><tr><td>✅ แปลภาษา</td><td>✅ กรณีฉุกเฉิน</td></tr><tr><td>✅ ร่างเนื้อหา</td><td>✅ ตรวจสอบ final</td></tr></tbody></table></div><hr><h3 id=หลกการสำคญ><a href=#%e0%b8%ab%e0%b8%a5%e0%b8%81%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%aa%e0%b8%b3%e0%b8%84%e0%b8%8d class=header-anchor></a><strong>หลักการสำคัญ:</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>┌─────────────────────────────────────┐
+</span></span><span class=line><span class=ln>2</span><span class=cl>│   AI เป็นเครื่องมือ                  │
+</span></span><span class=line><span class=ln>3</span><span class=cl>│   มนุษย์เป็นผู้ตัดสินใจ             │
+</span></span><span class=line><span class=ln>4</span><span class=cl>│                                     │
+</span></span><span class=line><span class=ln>5</span><span class=cl>│   AI เสนอ → มนุษย์ตรวจสอบ → ตัดสินใจ│
+</span></span><span class=line><span class=ln>6</span><span class=cl>└─────────────────────────────────────┘
+</span></span></code></pre></div><hr><h2 id=-ตวอยาง-chatbot-สวสดการชมชน><a href=#-%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87-chatbot-%e0%b8%aa%e0%b8%a7%e0%b8%aa%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99 class=header-anchor></a>💡 <strong>ตัวอย่าง: Chatbot สวัสดิการชุมชน</strong></h2><blockquote><p><strong>⚠️ หมายเหตุ:</strong> นี่เป็น <strong>ตัวอย่างสมมติ</strong> เพื่อประกอบการเรียนรู้<br>ชื่อสถานที่และข้อมูลเป็นเพียง <strong>ตัวอย่าง</strong> เพื่อให้เห็นภาพชัดเจน<br>สามารถนำไปปรับใช้กับหน่วยงานจริงได้</p></blockquote><h3 id=ขอมลโครงการ-สมมต><a href=#%e0%b8%82%e0%b8%ad%e0%b8%a1%e0%b8%a5%e0%b9%82%e0%b8%84%e0%b8%a3%e0%b8%87%e0%b8%81%e0%b8%b2%e0%b8%a3-%e0%b8%aa%e0%b8%a1%e0%b8%a1%e0%b8%95 class=header-anchor></a><strong>ข้อมูลโครงการ (สมมติ):</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>📍 สถานที่: อบต.ตัวอย่าง (สมมติ) จ.ตัวอย่าง (สมมติ)
+</span></span><span class=line><span class=ln>2</span><span class=cl>📅 เวลา: มกราคม - มีนาคม 2569
+</span></span><span class=line><span class=ln>3</span><span class=cl>👥 ทีม: เจ้าหน้าที่ 3 คน
+</span></span></code></pre></div><hr><h3 id=ปญหา><a href=#%e0%b8%9b%e0%b8%8d%e0%b8%ab%e0%b8%b2 class=header-anchor></a><strong>ปัญหา:</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>❌ ชาวบ้านโทรถามเรื่องเบี้ยยังชีพวันละ 50+ สาย
+</span></span><span class=line><span class=ln>2</span><span class=cl>❌ เจ้าหน้าที่ 3 คน รับไม่ไหว
+</span></span><span class=line><span class=ln>3</span><span class=cl>❌ ชาวบ้านรอนาน บางทีไม่ได้คำตอบ
+</span></span><span class=line><span class=ln>4</span><span class=cl>❌ เจ้าหน้าที่ไม่มีเวลาทำโครงการใหม่
+</span></span></code></pre></div><hr><h3 id=วธแก><a href=#%e0%b8%a7%e0%b8%98%e0%b9%81%e0%b8%81 class=header-anchor></a><strong>วิธีแก้:</strong></h3><p><strong>1. รวบรวม FAQ</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>- รวบรวมคำถามพบบ่อย 50 คำถาม
+</span></span><span class=line><span class=ln>2</span><span class=cl>- เขียนคำตอบมาตรฐาน
+</span></span><span class=line><span class=ln>3</span><span class=cl>- แบ่งหมวดหมู่ (เบี้ยยังชีพ, บัตรสวัสดิการ, กทบ.)
+</span></span></code></pre></div><p><strong>2. สร้าง Chatbot</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>- ใช้ Qwen 2.5 (ฟรี)
+</span></span><span class=line><span class=ln>2</span><span class=cl>- ใช้ RAG (Retrieval-Augmented Generation)
+</span></span><span class=line><span class=ln>3</span><span class=cl>- Deploy บน LINE (ชาวบ้านคุ้นเคย)
+</span></span></code></pre></div><p><strong>3. ทดสอบ</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>- ทดสอบกับ อสม. 10 คน
+</span></span><span class=line><span class=ln>2</span><span class=cl>- แก้ไขคำตอบผิด
+</span></span><span class=line><span class=ln>3</span><span class=cl>- เพิ่มคำถามใหม่
+</span></span></code></pre></div><p><strong>4. เปิดใช้งาน</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>- เปิดใช้งานจริง
+</span></span><span class=line><span class=ln>2</span><span class=cl>- มีปุ่ม &#34;ติดต่อเจ้าหน้าที่&#34;
+</span></span><span class=line><span class=ln>3</span><span class=cl>- ติดตามการใช้งาน
+</span></span></code></pre></div><hr><h3 id=ผลลพธ-หลง-3-เดอน---ตวอยางสมมต><a href=#%e0%b8%9c%e0%b8%a5%e0%b8%a5%e0%b8%9e%e0%b8%98-%e0%b8%ab%e0%b8%a5%e0%b8%87-3-%e0%b9%80%e0%b8%94%e0%b8%ad%e0%b8%99---%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b8%aa%e0%b8%a1%e0%b8%a1%e0%b8%95 class=header-anchor></a><strong>ผลลัพธ์ (หลัง 3 เดือน) - ตัวอย่างสมมติ:</strong></h3><blockquote><p><strong>⚠️ หมายเหตุ:</strong> ตัวเลขนี้เป็น <strong>ตัวอย่างสมมติ</strong> เพื่อแสดงให้เห็นถึงความเป็นไปได้<br>ผลลัพธ์จริงอาจแตกต่างกันไปตามบริบทของแต่ละพื้นที่</p></blockquote><div class=table-wrapper><table><thead><tr><th>ตัวชี้วัด</th><th>ก่อน</th><th>หลัง</th><th>เปลี่ยนแปลง</th></tr></thead><tbody><tr><td><strong>สายโทรเข้า</strong></td><td>50 สาย/วัน</td><td>15 สาย/วัน</td><td>📉 -70%</td></tr><tr><td><strong>เวลารอคำตอบ</strong></td><td>30 นาที</td><td>0 นาที</td><td>⚡ ทันที</td></tr><tr><td><strong>เวลาเจ้าหน้าที่</strong></td><td>4 ชม./วัน</td><td>1 ชม./วัน</td><td>⏱️ -75%</td></tr><tr><td><strong>โครงการใหม่</strong></td><td>0 โครงการ</td><td>3 โครงการ</td><td>📈 +3</td></tr><tr><td><strong>ความพึงพอใจ</strong></td><td>60%</td><td>90%</td><td>😊 +30%</td></tr></tbody></table></div><hr><h3 id=บทเรยนทได-จากตวอยางสมมต><a href=#%e0%b8%9a%e0%b8%97%e0%b9%80%e0%b8%a3%e0%b8%a2%e0%b8%99%e0%b8%97%e0%b9%84%e0%b8%94-%e0%b8%88%e0%b8%b2%e0%b8%81%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b8%aa%e0%b8%a1%e0%b8%a1%e0%b8%95 class=header-anchor></a><strong>บทเรียนที่ได้ (จากตัวอย่างสมมติ):</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>✅ ชาวบ้านชอบมาก (ได้คำตอบทันที)
+</span></span><span class=line><span class=ln>2</span><span class=cl>✅ เจ้าหน้าที่มีเวลาทำโครงการอื่น
+</span></span><span class=line><span class=ln>3</span><span class=cl>✅ คำถามซ้ำๆ ลดลง
+</span></span><span class=line><span class=ln>4</span><span class=cl>✅ ข้อมูลเป็นระบบมากขึ้น
+</span></span><span class=line><span class=ln>5</span><span class=cl>
+</span></span><span class=line><span class=ln>6</span><span class=cl>⚠️ ต้องดูแลตอบคำถามใหม่ๆ
+</span></span><span class=line><span class=ln>7</span><span class=cl>⚠️ บางคำถามยังต้องส่งต่อมนุษย์
+</span></span><span class=line><span class=ln>8</span><span class=cl>⚠️ ต้องอัพเดต FAQ เป็นระยะ
+</span></span></code></pre></div><blockquote><p><strong>💡 สรุปบทเรียน:</strong> นี่เป็นบทเรียนที่คาดหวังจาก <strong>ตัวอย่างสมมติ</strong><br>บทเรียนจริงอาจแตกต่างกันไปตามการนำไปใช้งานจริง</p></blockquote><hr><h2 id=-checklist-กอนเรมพฒนา><a href=#-checklist-%e0%b8%81%e0%b8%ad%e0%b8%99%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2 class=header-anchor></a>✅ <strong>Checklist ก่อนเริ่มพัฒนา</strong></h2><h3 id=planning-checklist><a href=#planning-checklist class=header-anchor></a><strong>Planning Checklist:</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>□ ระบุปัญหาชัดเจนแล้ว (เขียนเป็น 1 ย่อหน้า)
+</span></span><span class=line><span class=ln>2</span><span class=cl>□ เลือก Use Case เหมาะสม (เริ่มจากง่าย)
+</span></span><span class=line><span class=ln>3</span><span class=cl>□ กำหนดขอบเขต (In/Out of Scope)
+</span></span><span class=line><span class=ln>4</span><span class=cl>□ เลือกโมเดล (เริ่มจากฟรี)
+</span></span><span class=line><span class=ln>5</span><span class=cl>□ ออกแบบ Human-AI Interface
+</span></span><span class=line><span class=ln>6</span><span class=cl>□ วางแผน Evaluation (จะวัดความสำเร็จยังไง)
+</span></span><span class=line><span class=ln>7</span><span class=cl>□ เตรียมข้อมูล (เอกสาร, FAQ)
+</span></span><span class=line><span class=ln>8</span><span class=cl>□ ทดสอบกับผู้ใช้กลุ่มเล็ก (10-20 คน)
+</span></span></code></pre></div><hr><h3 id=technical-checklist><a href=#technical-checklist class=header-anchor></a><strong>Technical Checklist:</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>□ มีบัญชี Provider (Qwen, OpenAI, etc.)
+</span></span><span class=line><span class=ln>2</span><span class=cl>□ มี API Key
+</span></span><span class=line><span class=ln>3</span><span class=cl>□ มีที่ deploy (เครื่องตัวเอง, cloud)
+</span></span><span class=line><span class=ln>4</span><span class=cl>□ มีช่องทางติดต่อผู้ใช้ (LINE, Facebook, etc.)
+</span></span><span class=line><span class=ln>5</span><span class=cl>□ มีระบบติดตามการใช้งาน (Analytics)
+</span></span><span class=line><span class=ln>6</span><span class=cl>□ มีแผน backup ข้อมูล
+</span></span></code></pre></div><hr><h3 id=people-checklist><a href=#people-checklist class=header-anchor></a><strong>People Checklist:</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>□ หัวหน้าสนับสนุน
+</span></span><span class=line><span class=ln>2</span><span class=cl>□ ทีมงานเข้าใจ
+</span></span><span class=line><span class=ln>3</span><span class=cl>□ ผู้ใช้พร้อมทดสอบ
+</span></span><span class=line><span class=ln>4</span><span class=cl>□ มีคนดูแลระบบ
+</span></span><span class=line><span class=ln>5</span><span class=cl>□ มีคนตอบคำถาม (กรณี AI ตอบไม่ได้)
+</span></span></code></pre></div><hr><h2 id=-สรปตอนท-1><a href=#-%e0%b8%aa%e0%b8%a3%e0%b8%9b%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%97-1 class=header-anchor></a>📝 <strong>สรุปตอนที่ 1</strong></h2><h3 id=สงทเรยนร><a href=#%e0%b8%aa%e0%b8%87%e0%b8%97%e0%b9%80%e0%b8%a3%e0%b8%a2%e0%b8%99%e0%b8%a3 class=header-anchor></a><strong>สิ่งที่เรียนรู้:</strong></h3><ol><li>✅ <strong>ทำไมต้องวางแผน</strong> — ประหยัดเวลา เพิ่มผลลัพธ์</li><li>✅ <strong>5 ขั้นตอน</strong> — ปัญหา → Use Case → ขอบเขต → โมเดล → Interface</li><li>✅ <strong>ตัวอย่างจริง</strong> — Chatbot สวัสดิการชุมชน</li><li>✅ <strong>Checklist</strong> — ตรวจสอบก่อนเริ่ม</li></ol><hr><h3 id=การบาน><a href=#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9a%e0%b8%b2%e0%b8%99 class=header-anchor></a><strong>การบ้าน:</strong></h3><p>ลองวางแผน AI App สำหรับงานของคุณดูครับ:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>1. ปัญหาของคุณคืออะไร?
+</span></span><span class=line><span class=ln>2</span><span class=cl>2. Use Case อะไรที่เหมาะสม?
+</span></span><span class=line><span class=ln>3</span><span class=cl>3. ขอบเขตทำอะไร/ไม่ทำอะไร?
+</span></span><span class=line><span class=ln>4</span><span class=cl>4. โมเดลอะไรที่เหมาะสม?
+</span></span><span class=line><span class=ln>5</span><span class=cl>5. มนุษย์ + AI จะทำงานร่วมกันยังไง?
+</span></span></code></pre></div><hr><h2 id=-ตอนตอไป><a href=#-%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b9%84%e0%b8%9b class=header-anchor></a>🚀 <strong>ตอนต่อไป:</strong></h2><p><strong>ตอนที่ 2: Prompt Engineering สร้างคอนเทนต์</strong></p><p>คุณจะเรียนรู้:</p><ul><li>✍️ เขียน Prompt ยังไงให้ได้ผลลัพธ์ดี</li><li>เทคนิคเขียน Prompt สำหรับงานชุมชน</li><li>📝 ตัวอย่าง Prompt ใช้จริง</li><li>⚠️ ข้อผิดพลาดที่พบบ่อย</li></ul><hr><p><strong>อ่านจบแล้วลองวางแผนดูครับ!</strong></p><p><strong>ตอนหน้าเจอกันครับ!</strong> 🚀</p><hr><p><em>ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน</em><br><em>ตอนที่ 2/6: วางแผน AI App</em><br><em>โดย เหน่ง - นักวิชาการพัฒนาชุมชน</em><br><em>กรมการพัฒนาชุมชน กระทรวงมหาดไทย</em></p></section><footer class="article-meta article-footer"><section class=article-tags><a href=/neng-blog/tags/ai-engineering/>Ai-Engineering</a>
+<a href=/neng-blog/tags/community-development/>Community-Development</a>
+<a href=/neng-blog/tags/ai-planning/>Ai-Planning</a>
+<a href=/neng-blog/tags/beginner-guide/>Beginner-Guide</a></section><section class="article-copyright inline-meta"><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span><a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/>CC BY-NC 4.0</a></span></section></footer></article><aside><h2 class=section-title>Related content</h2><div class=subsection-list><div class=article-list--tile><article class=has-image><a href=/neng-blog/posts/ai-engineering-intro/><div class=article-image><img alt="Featured image of post AI Engineering สำหรับนักพัฒนาชุมชน: บทนำ - ทำไมต้องใช้ AI กับ 4 ภารกิจหลัก?" height=150 loading=lazy src=/neng-blog/posts/ai-engineering-intro/cover_hu_46aa488dd2607be8.webp srcset="/neng-blog/posts/ai-engineering-intro/cover_hu_46aa488dd2607be8.webp 1x, /neng-blog/posts/ai-engineering-intro/cover_hu_5eca8354b71ca7f9.webp 2x" width=250></div><div class=article-details style="background:linear-gradient(0deg,#21255980 0%,#4155acC0 100%)"><h2 class=article-title>AI Engineering สำหรับนักพัฒนาชุมชน: บทนำ - ทำไมต้องใช้ AI กับ 4 ภารกิจหลัก?</h2></div></a></article></div></div></aside><div class=giscus-container role=region aria-label="Comments section"><script src=https://giscus.app/client.js data-repo=jitaret-rgb/neng-blog data-repo-id=R_kgDOR6Wt7Q data-category=Announcements data-category-id=DIC_kwDOR6Wt7c4C6TwS data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=bottom data-theme=noborder_dark data-lang=en data-loading=eager crossorigin=anonymous async></script></div><footer class=site-footer><section class=copyright>&copy;
+2026 Code & Community</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=4.0.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><script type=module>
     import gallery from '\/neng-blog\/ts\/gallery.js';
 
     const articleContent = document.querySelector('.article-content');
@@ -1272,50 +212,4 @@
         });
         lightbox.init();
     }
-</script>
-    
-
-            </main>
-        </div>
-        
-<script type="text/javascript" src="/neng-blog/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js" defer></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const codeBlocks = document.querySelectorAll('.article-content div.highlight');
-  
-  codeBlocks.forEach(function(block) {
-    
-    const existingButton = block.querySelector('.copy-code-button');
-    if (existingButton) {
-      return; 
-    }
-    
-    const button = document.createElement('button');
-    button.className = 'copy-code-button';
-    button.textContent = 'Copy';
-    button.setAttribute('aria-label', 'Copy code');
-    
-    button.addEventListener('click', function() {
-      const code = block.querySelector('code');
-      if (code) {
-        navigator.clipboard.writeText(code.textContent).then(function() {
-          button.textContent = 'Copied!';
-          button.style.background = 'var(--accent-color)';
-          button.style.color = '#fff';
-          setTimeout(function() {
-            button.textContent = 'Copy';
-            button.style.background = '';
-            button.style.color = '';
-          }, 2000);
-        });
-      }
-    });
-    
-    block.appendChild(button);
-  });
-});
-</script>
-
-
-    </body>
-</html>
+</script></main></div><script type=text/javascript src=/neng-blog/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js defer></script><script>document.addEventListener("DOMContentLoaded",function(){const e=document.querySelectorAll(".article-content div.highlight");e.forEach(function(e){const n=e.querySelector(".copy-code-button");if(n)return;const t=document.createElement("button");t.className="copy-code-button",t.textContent="Copy",t.setAttribute("aria-label","Copy code"),t.addEventListener("click",function(){const n=e.querySelector("code");n&&navigator.clipboard.writeText(n.textContent).then(function(){t.textContent="Copied!",t.style.background="var(--accent-color)",t.style.color="#fff",setTimeout(function(){t.textContent="Copy",t.style.background="",t.style.color=""},2e3)})}),e.appendChild(t)})})</script></body></html>

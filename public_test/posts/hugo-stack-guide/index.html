@@ -1,1103 +1,251 @@
-<!DOCTYPE html>
-<html lang="th-th" dir="ltr">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="คู่มือการใช้งาน Hugo Stack Theme ทุกฟีเจอร์ ตั้งแต่ติดตั้งจนถึงปรับแต่งขั้นสูง">
-<title>คู่มือ Hugo Stack Theme ฉบับสมบูรณ์</title>
-
-
-<link rel="canonical" href="https://jitaret-rgb.github.io/neng-blog/posts/hugo-stack-guide/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
-
-
-<link rel="stylesheet" href="/neng-blog/scss/style.min.25744ac613673dd4c96f567145e0588400eccfe27d0a884ed9e7cd91f9b9cdb0.css"><meta property='og:title' content="คู่มือ Hugo Stack Theme ฉบับสมบูรณ์">
-<meta property='og:description' content="คู่มือการใช้งาน Hugo Stack Theme ทุกฟีเจอร์ ตั้งแต่ติดตั้งจนถึงปรับแต่งขั้นสูง">
-<meta property='og:url' content='https://jitaret-rgb.github.io/neng-blog/posts/hugo-stack-guide/'>
-<meta property='og:site_name' content='Code &amp; Community'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='stack' /><meta property='article:tag' content='theme' /><meta property='article:tag' content='guide' /><meta property='article:tag' content='tutorial' /><meta property='article:published_time' content='2026-04-06T19:00:00&#43;07:00'/><meta property='article:modified_time' content='2026-04-06T19:00:00&#43;07:00'/><meta property='og:image' content='https://jitaret-rgb.github.io/neng-blog/' />
-<meta name="twitter:site" content="@Majinman">
-    <meta name="twitter:creator" content="@Majinman"><meta name="twitter:title" content="คู่มือ Hugo Stack Theme ฉบับสมบูรณ์">
-<meta name="twitter:description" content="คู่มือการใช้งาน Hugo Stack Theme ทุกฟีเจอร์ ตั้งแต่ติดตั้งจนถึงปรับแต่งขั้นสูง"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://jitaret-rgb.github.io/neng-blog/' />
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q59XSCDQZR"></script>
-      <script>
-        var doNotTrack = false;
-        if ( true ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-Q59XSCDQZR');
-        }
-      </script>
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="DENY">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-
-<meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
+<!doctype html><html lang=th-th dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="คู่มือการใช้งาน Hugo Stack Theme ทุกฟีเจอร์ ตั้งแต่ติดตั้งจนถึงปรับแต่งขั้นสูง"><title>คู่มือ Hugo Stack Theme ฉบับสมบูรณ์</title><link rel=canonical href=https://jitaret-rgb.github.io/neng-blog/posts/hugo-stack-guide/><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href=/neng-blog/scss/style.min.25744ac613673dd4c96f567145e0588400eccfe27d0a884ed9e7cd91f9b9cdb0.css><meta property='og:title' content="คู่มือ Hugo Stack Theme ฉบับสมบูรณ์"><meta property='og:description' content="คู่มือการใช้งาน Hugo Stack Theme ทุกฟีเจอร์ ตั้งแต่ติดตั้งจนถึงปรับแต่งขั้นสูง"><meta property='og:url' content='https://jitaret-rgb.github.io/neng-blog/posts/hugo-stack-guide/'><meta property='og:site_name' content='Code & Community'><meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:tag' content='hugo'><meta property='article:tag' content='stack'><meta property='article:tag' content='theme'><meta property='article:tag' content='guide'><meta property='article:tag' content='tutorial'><meta property='article:published_time' content='2026-04-06T19:00:00+07:00'><meta property='article:modified_time' content='2026-04-06T19:00:00+07:00'><meta property='og:image' content='https://jitaret-rgb.github.io/neng-blog/'><meta name=twitter:site content="@Majinman"><meta name=twitter:creator content="@Majinman"><meta name=twitter:title content="คู่มือ Hugo Stack Theme ฉบับสมบูรณ์"><meta name=twitter:description content="คู่มือการใช้งาน Hugo Stack Theme ทุกฟีเจอร์ ตั้งแต่ติดตั้งจนถึงปรับแต่งขั้นสูง"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://jitaret-rgb.github.io/neng-blog/'><script async src="https://www.googletagmanager.com/gtag/js?id=G-Q59XSCDQZR"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-Q59XSCDQZR")}</script><meta http-equiv=X-Content-Type-Options content="nosniff"><meta http-equiv=X-Frame-Options content="DENY"><meta http-equiv=X-XSS-Protection content="1; mode=block"><meta http-equiv=Referrer-Policy content="strict-origin-when-cross-origin"><meta http-equiv=Content-Security-Policy content="default-src 'self'; 
                script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://giscus.app; 
                style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
                font-src 'self' https://fonts.gstatic.com; 
                img-src 'self' https://images.unsplash.com https://cdn.jsdelivr.net data: blob:; 
                frame-src https://giscus.app;
-               connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net https://giscus.app;">
-
-
-<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-
-    </head>
-    <body class="
-    article-page
-    ">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "dark");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header>
-        <figure class="site-avatar">
-                <a href="/neng-blog/">
-                    <img src="/neng-blog/img/profile_hu_de2cac54e10d7047.jpg" 
-                        width="400"
-                        height="400"
-                        class="site-logo"
-                        loading="lazy"
-                        alt="Avatar">
-                </a>
-                
-                    <span class="emoji">💻</span>
-                
-            </figure>
-        
-        
-        <div class="site-meta">
-            <h1 class="site-name"><a href="/neng-blog/">Code &amp; Community</a></h1>
-            <h2 class="site-description">Bridging Technology and Community Development</h2>
-        </div>
-    </header><ol class="menu-social">
-            
-                <li>
-                    <a 
-                        href='https://github.com/jitaret-rgb'
-                        
-                        title="GitHub"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://t.me/Majinman'
-                        
-                        title="Telegram"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://www.facebook.com/jittaret.phromnanra/'
-                        target="_blank"
-                        title="Facebook"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://www.youtube.com/@jittaretpromnara5716'
-                        target="_blank"
-                        title="YouTube"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
-  <path d="M10 9l5 3l-5 3z" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-        </ol><ol class="menu" id="main-menu">
-        
-        
-        
-        <li >
-            <a href='/neng-blog/' >
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-
-
-                
-                <span>Home</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/neng-blog/posts/' >
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-article" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-  <path d="M7 8h10" />
-  <path d="M7 12h10" />
-  <path d="M7 16h10" />
-</svg>
-
-
-
-                
-                <span>Posts</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/neng-blog/categories/' >
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M14 4h6v6h-6z" />
-  <path d="M4 14h6v6h-6z" />
-  <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-  <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-</svg>
-
-
-
-                
-                <span>Categories</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/neng-blog/tags/' >
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M7.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-  <path d="M3 6v5.172a2 2 0 0 0 .586 1.414l7.71 7.71a2.41 2.41 0 0 0 3.408 0l5.592 -5.592a2.41 2.41 0 0 0 0 -3.408l-7.71 -7.71a2 2 0 0 0 -1.414 -.586h-5.172a3 3 0 0 0 -3 3z" />
-</svg>
-  
-
-
-                
-                <span>Tags</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/neng-blog/about/' >
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-</svg>
-
-
-
-                
-                <span>About</span>
-            </a>
-        </li>
-        
-        <li class="menu-bottom-section">
-            <ol class="menu">
-
-                
-                    <li id="dark-mode-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                        <span>Dark Mode</span>
-                    </li>
-                
-            </ol>
-        </li>
-    </ol>
-</aside>
-
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
-        
-        <div class="widget--toc">
-            <nav class="toc-nav" id="TableOfContents">
-                
-  <ul>
-    <li><a href="#-สารบญ">📋 สารบัญ</a></li>
-    <li><a href="#-ขอมลเบองตน">📖 ข้อมูลเบื้องต้น</a>
-      <ul>
-        <li><a href="#hugo-stack-คออะไร">Hugo Stack คืออะไร?</a></li>
-        <li><a href="#ฟเจอรหลก">ฟีเจอร์หลัก:</a></li>
-      </ul>
-    </li>
-    <li><a href="#-การตดตง">🚀 การติดตั้ง</a>
-      <ul>
-        <li><a href="#วธท-1-ใช-starter-template-แนะนำ">วิธีที่ 1: ใช้ Starter Template (แนะนำ)</a></li>
-        <li><a href="#วธท-2-hugo-module">วิธีที่ 2: Hugo Module</a></li>
-        <li><a href="#วธท-3-git-submodule">วิธีที่ 3: Git Submodule</a></li>
-      </ul>
-    </li>
-    <li><a href="#-การตงคา-configuration">⚙️ การตั้งค่า (Configuration)</a>
-      <ul>
-        <li><a href="#1-sidebar-แถบดานขาง">1. <strong>Sidebar</strong> (แถบด้านข้าง)</a></li>
-        <li><a href="#2-article-บทความ">2. <strong>Article</strong> (บทความ)</a></li>
-        <li><a href="#3-widgets-วดเจตดานขวา">3. <strong>Widgets</strong> (วิดเจ็ตด้านขวา)</a></li>
-        <li><a href="#4-menu-เมน">4. <strong>Menu</strong> (เมนู)</a></li>
-      </ul>
-    </li>
-    <li><a href="#-การเขยนบทความ">✍️ การเขียนบทความ</a>
-      <ul>
-        <li><a href="#โครงสรางไฟล-page-bundles">โครงสร้างไฟล์ (Page Bundles)</a></li>
-        <li><a href="#front-matter">Front Matter</a></li>
-        <li><a href="#การใสรป">การใส่รูป</a></li>
-      </ul>
-    </li>
-    <li><a href="#-ฟเจอรพเศษ">🎨 ฟีเจอร์พิเศษ</a>
-      <ul>
-        <li><a href="#1-dark-mode">1. <strong>Dark Mode</strong></a></li>
-        <li><a href="#2-local-search">2. <strong>Local Search</strong></a></li>
-        <li><a href="#3-archives">3. <strong>Archives</strong></a></li>
-        <li><a href="#4-math-typesetting-katex">4. <strong>Math Typesetting (KaTeX)</strong></a></li>
-        <li><a href="#5-mermaid-diagrams">5. <strong>Mermaid Diagrams</strong></a></li>
-        <li><a href="#2-custom-icons">2. <strong>Custom Icons</strong></a></li>
-        <li><a href="#3-override-theme-files">3. <strong>Override Theme Files</strong></a></li>
-        <li><a href="#4-multilingual">4. <strong>Multilingual</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-สรปการตงคาทสำคญ">📊 สรุปการตั้งค่าที่สำคัญ</a>
-      <ul>
-        <li><a href="#hugotoml-ตวอยางเตม">hugo.toml (ตัวอย่างเต็ม)</a></li>
-      </ul>
-    </li>
-    <li><a href="#-ลงกทเปนประโยชน">🔗 ลิงก์ที่เป็นประโยชน์</a></li>
-    <li><a href="#-เคลดลบ">💡 เคล็ดลับ</a></li>
-  </ul>
-
-            </nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
-
-            <main class="main full-width">
-    <article class="has-image main-article">
-    <header class="article-header">
-    <div class="article-image">
-        <a href="/neng-blog/posts/hugo-stack-guide/">
-            
-
-<img alt="Featured image of post คู่มือ Hugo Stack Theme ฉบับสมบูรณ์" height="405" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" src="/neng-blog/posts/hugo-stack-guide/cover_hu_5da3dfe4cee1937c.jpg" srcset="/neng-blog/posts/hugo-stack-guide/cover_hu_254d38ff68916b64.webp 400w, /neng-blog/posts/hugo-stack-guide/cover_hu_c1fcd35c27670d99.webp 800w, /neng-blog/posts/hugo-stack-guide/cover_hu_431962111517cf58.webp 1200w, /neng-blog/posts/hugo-stack-guide/cover_hu_5da3dfe4cee1937c.jpg 1280w" width="1280">
-
-        </a>
-    </div>
-    
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            
-            
-            
-            <a href="/neng-blog/categories/tutorial/" style="background-color: hsl(135, 60%, 84%); color: hsl(135, 60%, 15%);">
-                Tutorial
-            </a>
-        
-            
-            
-            
-            <a href="/neng-blog/categories/documentation/" style="background-color: hsl(201, 60%, 84%); color: hsl(201, 60%, 15%);">
-                Documentation
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/neng-blog/posts/hugo-stack-guide/">คู่มือ Hugo Stack Theme ฉบับสมบูรณ์</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            คู่มือการใช้งาน Hugo Stack Theme ทุกฟีเจอร์ ตั้งแต่ติดตั้งจนถึงปรับแต่งขั้นสูง
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    
-    
-    
-    <footer class="article-meta">
-        
-            <div class="inline-meta">
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                    <time class="article-time--published" datetime='2026-04-06T19:00:00&#43;07:00'>Apr 06, 2026</time>
-                
-
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                    <time class="article-time--reading">
-                        5 minutes read
-                    </time>
-                
-            </div>
-        
-
-        
-
-        
-    </footer>
-    
-</div>
-
-</header>
-
-    
-    <aside class="article-toc">
-        <details>
-            <summary>
-                <div class="article-toc-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
-                    <span>Table of contents</span>
-                </div>
-            </summary>
-            <nav class="toc-nav">
-                
-  <ul>
-    <li><a href="#-สารบญ">📋 สารบัญ</a></li>
-    <li><a href="#-ขอมลเบองตน">📖 ข้อมูลเบื้องต้น</a>
-      <ul>
-        <li><a href="#hugo-stack-คออะไร">Hugo Stack คืออะไร?</a></li>
-        <li><a href="#ฟเจอรหลก">ฟีเจอร์หลัก:</a></li>
-      </ul>
-    </li>
-    <li><a href="#-การตดตง">🚀 การติดตั้ง</a>
-      <ul>
-        <li><a href="#วธท-1-ใช-starter-template-แนะนำ">วิธีที่ 1: ใช้ Starter Template (แนะนำ)</a></li>
-        <li><a href="#วธท-2-hugo-module">วิธีที่ 2: Hugo Module</a></li>
-        <li><a href="#วธท-3-git-submodule">วิธีที่ 3: Git Submodule</a></li>
-      </ul>
-    </li>
-    <li><a href="#-การตงคา-configuration">⚙️ การตั้งค่า (Configuration)</a>
-      <ul>
-        <li><a href="#1-sidebar-แถบดานขาง">1. <strong>Sidebar</strong> (แถบด้านข้าง)</a></li>
-        <li><a href="#2-article-บทความ">2. <strong>Article</strong> (บทความ)</a></li>
-        <li><a href="#3-widgets-วดเจตดานขวา">3. <strong>Widgets</strong> (วิดเจ็ตด้านขวา)</a></li>
-        <li><a href="#4-menu-เมน">4. <strong>Menu</strong> (เมนู)</a></li>
-      </ul>
-    </li>
-    <li><a href="#-การเขยนบทความ">✍️ การเขียนบทความ</a>
-      <ul>
-        <li><a href="#โครงสรางไฟล-page-bundles">โครงสร้างไฟล์ (Page Bundles)</a></li>
-        <li><a href="#front-matter">Front Matter</a></li>
-        <li><a href="#การใสรป">การใส่รูป</a></li>
-      </ul>
-    </li>
-    <li><a href="#-ฟเจอรพเศษ">🎨 ฟีเจอร์พิเศษ</a>
-      <ul>
-        <li><a href="#1-dark-mode">1. <strong>Dark Mode</strong></a></li>
-        <li><a href="#2-local-search">2. <strong>Local Search</strong></a></li>
-        <li><a href="#3-archives">3. <strong>Archives</strong></a></li>
-        <li><a href="#4-math-typesetting-katex">4. <strong>Math Typesetting (KaTeX)</strong></a></li>
-        <li><a href="#5-mermaid-diagrams">5. <strong>Mermaid Diagrams</strong></a></li>
-        <li><a href="#2-custom-icons">2. <strong>Custom Icons</strong></a></li>
-        <li><a href="#3-override-theme-files">3. <strong>Override Theme Files</strong></a></li>
-        <li><a href="#4-multilingual">4. <strong>Multilingual</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#-สรปการตงคาทสำคญ">📊 สรุปการตั้งค่าที่สำคัญ</a>
-      <ul>
-        <li><a href="#hugotoml-ตวอยางเตม">hugo.toml (ตัวอย่างเต็ม)</a></li>
-      </ul>
-    </li>
-    <li><a href="#-ลงกทเปนประโยชน">🔗 ลิงก์ที่เป็นประโยชน์</a></li>
-    <li><a href="#-เคลดลบ">💡 เคล็ดลับ</a></li>
-  </ul>
-
-            </nav>
-        </details>
-    </aside>
-    
-
-    <section class="article-content">
-    
-    
-    <h1 id="-คมอ-hugo-stack-theme-ฉบบสมบรณ"><a href="#-%e0%b8%84%e0%b8%a1%e0%b8%ad-hugo-stack-theme-%e0%b8%89%e0%b8%9a%e0%b8%9a%e0%b8%aa%e0%b8%a1%e0%b8%9a%e0%b8%a3%e0%b8%93" class="header-anchor"></a>📚 คู่มือ Hugo Stack Theme ฉบับสมบูรณ์
-</h1><p><strong>อัพเดท:</strong> 2026-04-06<br>
-<strong>เวอร์ชัน:</strong> Hugo Stack v4<br>
-<strong>Hugo:</strong> 0.157.0+ extended</p>
-<hr>
-<h2 id="-สารบญ"><a href="#-%e0%b8%aa%e0%b8%b2%e0%b8%a3%e0%b8%9a%e0%b8%8d" class="header-anchor"></a>📋 สารบัญ
-</h2><ol>
-<li><a class="link" href="#%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%a1%e0%b8%b9%e0%b8%a5%e0%b9%80%e0%b8%9a%e0%b8%b7%e0%b9%89%e0%b8%ad%e0%b8%87%e0%b8%95%e0%b9%89%e0%b8%99" >ข้อมูลเบื้องต้น</a></li>
-<li><a class="link" href="#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%b4%e0%b8%94%e0%b8%95%e0%b8%b1%e0%b9%89%e0%b8%87" >การติดตั้ง</a></li>
-<li><a class="link" href="#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%b1%e0%b9%89%e0%b8%87%e0%b8%84%e0%b9%88%e0%b8%b2-configuration" >การตั้งค่า (Configuration)</a></li>
-<li><a class="link" href="#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%80%e0%b8%82%e0%b8%b5%e0%b8%a2%e0%b8%99%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1" >การเขียนบทความ</a></li>
-<li><a class="link" href="#widgets" >Widgets</a></li>
-<li><a class="link" href="#menu" >Menu</a></li>
-<li><a class="link" href="#%e0%b8%9f%e0%b8%b5%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%a3%e0%b9%8c%e0%b8%9e%e0%b8%b4%e0%b9%80%e0%b8%a8%e0%b8%a9" >ฟีเจอร์พิเศษ</a></li>
-<li><a class="link" href="#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9b%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b9%81%e0%b8%95%e0%b9%88%e0%b8%87%e0%b8%82%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b8%aa%e0%b8%b9%e0%b8%87" >การปรับแต่งขั้นสูง</a></li>
-</ol>
-<hr>
-<h2 id="-ขอมลเบองตน"><a href="#-%e0%b8%82%e0%b8%ad%e0%b8%a1%e0%b8%a5%e0%b9%80%e0%b8%9a%e0%b8%ad%e0%b8%87%e0%b8%95%e0%b8%99" class="header-anchor"></a>📖 ข้อมูลเบื้องต้น
-</h2><h3 id="hugo-stack-คออะไร"><a href="#hugo-stack-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3" class="header-anchor"></a>Hugo Stack คืออะไร?
-</h3><p><strong>Hugo Stack</strong> คือธีมสำหรับ Hugo แบบ card-style ที่ออกแบบมาสำหรับ blogger โดยเฉพาะ</p>
-<h3 id="ฟเจอรหลก"><a href="#%e0%b8%9f%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%a3%e0%b8%ab%e0%b8%a5%e0%b8%81" class="header-anchor"></a>ฟีเจอร์หลัก:
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>ฟีเจอร์</th>
-          <th>คำอธิบาย</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>🌙 <strong>Dark Mode</strong></td>
-          <td>โหมดมืดอัตโนมัติตามระบบ</td>
-      </tr>
-      <tr>
-          <td>📱 <strong>Responsive</strong></td>
-          <td>รองรับทุกอุปกรณ์</td>
-      </tr>
-      <tr>
-          <td>🌐 <strong>Multilingual</strong></td>
-          <td>รองรับหลายภาษา</td>
-      </tr>
-      <tr>
-          <td>🔍 <strong>Local Search</strong></td>
-          <td>ค้นหาในเว็บ</td>
-      </tr>
-      <tr>
-          <td>📑 <strong>Table of Contents</strong></td>
-          <td>สารบัญบทความ</td>
-      </tr>
-      <tr>
-          <td>🖼️ <strong>Image Gallery</strong></td>
-          <td>แกลเลอรี่รูปภาพ</td>
-      </tr>
-      <tr>
-          <td>⚡ <strong>Fast</strong></td>
-          <td>เร็วและเบา (ไม่มี framework)</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h2 id="-การตดตง"><a href="#-%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87" class="header-anchor"></a>🚀 การติดตั้ง
-</h2><h3 id="วธท-1-ใช-starter-template-แนะนำ"><a href="#%e0%b8%a7%e0%b8%98%e0%b8%97-1-%e0%b9%83%e0%b8%8a-starter-template-%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3" class="header-anchor"></a>วิธีที่ 1: ใช้ Starter Template (แนะนำ)
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">git clone https://github.com/CaiJimmy/hugo-theme-stack-starter my-blog
-</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">cd</span> my-blog
-</span></span><span class="line"><span class="ln">3</span><span class="cl">hugo server
-</span></span></code></pre></div><h3 id="วธท-2-hugo-module"><a href="#%e0%b8%a7%e0%b8%98%e0%b8%97-2-hugo-module" class="header-anchor"></a>วิธีที่ 2: Hugo Module
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># Initialize module</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">hugo mod init github.com/me/my-blog
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="c1"># Add theme to config</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c1"># hugo.toml</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="o">[[</span>module.imports<span class="o">]]</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="nv">path</span> <span class="o">=</span> <span class="s2">&#34;github.com/CaiJimmy/hugo-theme-stack/v4&#34;</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="c1"># Update theme</span>
-</span></span><span class="line"><span class="ln">10</span><span class="cl">hugo mod get -u github.com/CaiJimmy/hugo-theme-stack/v4
-</span></span><span class="line"><span class="ln">11</span><span class="cl">hugo mod tidy
-</span></span></code></pre></div><h3 id="วธท-3-git-submodule"><a href="#%e0%b8%a7%e0%b8%98%e0%b8%97-3-git-submodule" class="header-anchor"></a>วิธีที่ 3: Git Submodule
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
-</span></span></code></pre></div><hr>
-<h2 id="-การตงคา-configuration"><a href="#-%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%87%e0%b8%84%e0%b8%b2-configuration" class="header-anchor"></a>⚙️ การตั้งค่า (Configuration)
-</h2><h3 id="1-sidebar-แถบดานขาง"><a href="#1-sidebar-%e0%b9%81%e0%b8%96%e0%b8%9a%e0%b8%94%e0%b8%b2%e0%b8%99%e0%b8%82%e0%b8%b2%e0%b8%87" class="header-anchor"></a>1. <strong>Sidebar</strong> (แถบด้านข้าง)
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">sidebar</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="nx">compact</span> <span class="p">=</span> <span class="kc">false</span>          <span class="c"># โหมด compact</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="nx">emoji</span> <span class="p">=</span> <span class="s2">&#34;👋&#34;</span>             <span class="c"># Emoji ด้านบน</span>
-</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="nx">subtitle</span> <span class="p">=</span> <span class="s2">&#34;คำอธิบายสั้นๆ&#34;</span>
-</span></span><span class="line"><span class="ln">5</span><span class="cl">  <span class="nx">avatar</span> <span class="p">=</span> <span class="s2">&#34;img/profile.jpg&#34;</span>  <span class="c"># รูปโปรไฟล์ (ต้องอยู่ใน assets/img/)</span>
-</span></span></code></pre></div><p><strong>ตำแหน่งรูปโปรไฟล์:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">assets/
-</span></span><span class="line"><span class="ln">2</span><span class="cl">└── img/
-</span></span><span class="line"><span class="ln">3</span><span class="cl">    └── profile.jpg  ← วางรูปที่นี่
-</span></span></code></pre></div><hr>
-<h3 id="2-article-บทความ"><a href="#2-article-%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1" class="header-anchor"></a>2. <strong>Article</strong> (บทความ)
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">article</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="nx">headingAnchor</span> <span class="p">=</span> <span class="kc">false</span>    <span class="c"># แสดง # ข้างหัวข้อ</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="nx">math</span> <span class="p">=</span> <span class="kc">false</span>             <span class="c"># เปิดใช้ KaTeX (สมการคณิตศาสตร์)</span>
-</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="nx">toc</span> <span class="p">=</span> <span class="kc">true</span>               <span class="c"># แสดงสารบัญ</span>
-</span></span><span class="line"><span class="ln">5</span><span class="cl">  <span class="nx">readingTime</span> <span class="p">=</span> <span class="kc">true</span>       <span class="c"># แสดงเวลาอ่าน</span>
-</span></span><span class="line"><span class="ln">6</span><span class="cl">  
-</span></span><span class="line"><span class="ln">7</span><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">article</span><span class="p">.</span><span class="nx">license</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">8</span><span class="cl">    <span class="nx">enabled</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="ln">9</span><span class="cl">    <span class="nx">default</span> <span class="p">=</span> <span class="s2">&#34;CC BY-NC 4.0&#34;</span>
-</span></span></code></pre></div><p><strong>Mermaid Diagrams:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">article</span><span class="p">.</span><span class="nx">mermaid</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="nx">look</span> <span class="p">=</span> <span class="s2">&#34;classic&#34;</span>         <span class="c"># classic หรือ handDrawn</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="nx">lightTheme</span> <span class="p">=</span> <span class="s2">&#34;default&#34;</span>   <span class="c"># ธีมสำหรับ light mode</span>
-</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="nx">darkTheme</span> <span class="p">=</span> <span class="s2">&#34;dark&#34;</span>       <span class="c"># ธีมสำหรับ dark mode (สลับธีมอัตโนมัติ)</span>
-</span></span><span class="line"><span class="ln">5</span><span class="cl">  <span class="nx">securityLevel</span> <span class="p">=</span> <span class="s2">&#34;strict&#34;</span>
-</span></span></code></pre></div><hr>
-<h3 id="3-widgets-วดเจตดานขวา"><a href="#3-widgets-%e0%b8%a7%e0%b8%94%e0%b9%80%e0%b8%88%e0%b8%95%e0%b8%94%e0%b8%b2%e0%b8%99%e0%b8%82%e0%b8%a7%e0%b8%b2" class="header-anchor"></a>3. <strong>Widgets</strong> (วิดเจ็ตด้านขวา)
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">homepage</span><span class="p">]]</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;search&#34;</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">homepage</span><span class="p">]]</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;archives&#34;</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">homepage</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="nx">limit</span> <span class="p">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">homepage</span><span class="p">]]</span>
-</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-</span></span><span class="line"><span class="ln">11</span><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">homepage</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="nx">limit</span> <span class="p">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl">
-</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">homepage</span><span class="p">]]</span>
-</span></span><span class="line"><span class="ln">15</span><span class="cl">  <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;tag-cloud&#34;</span>
-</span></span><span class="line"><span class="ln">16</span><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">homepage</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">17</span><span class="cl">    <span class="nx">limit</span> <span class="p">=</span> <span class="mi">10</span>
-</span></span></code></pre></div><p><strong>Widgets ที่มี:</strong></p>
-<div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>Widget</th>
-          <th>คำอธิบาย</th>
-          <th>Params</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>search</code></td>
-          <td>ช่องค้นหา</td>
-          <td>-</td>
-      </tr>
-      <tr>
-          <td><code>archives</code></td>
-          <td>รายการปี</td>
-          <td><code>limit</code></td>
-      </tr>
-      <tr>
-          <td><code>categories</code></td>
-          <td>หมวดหมู่</td>
-          <td><code>limit</code></td>
-      </tr>
-      <tr>
-          <td><code>toc</code></td>
-          <td>สารบัญ</td>
-          <td>-</td>
-      </tr>
-      <tr>
-          <td><code>tag-cloud</code></td>
-          <td>แท็ก</td>
-          <td><code>limit</code></td>
-      </tr>
-      <tr>
-          <td><code>taxonomy</code></td>
-          <td>taxonomy กำหนดเอง</td>
-          <td><code>taxonomy</code>, <code>limit</code>, <code>icon</code></td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h3 id="4-menu-เมน"><a href="#4-menu-%e0%b9%80%e0%b8%a1%e0%b8%99" class="header-anchor"></a>4. <strong>Menu</strong> (เมนู)
-</h3><p><strong>วิธีที่ 1: เพิ่มใน Front Matter (แนะนำ)</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;บทความ&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nt">menu</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w">  </span><span class="nt">main</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;บทความ&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span>-<span class="m">90</span><span class="w">
-</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;article&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">9</span><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span></code></pre></div><p><strong>วิธีที่ 2: เพิ่มใน Config</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Home&#34;</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;home&#34;</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="p">[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="nx">icon</span> <span class="p">=</span> <span class="s2">&#34;home&#34;</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="nx">newTab</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
-</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="ln">11</span><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Posts&#34;</span>
-</span></span><span class="line"><span class="ln">12</span><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/posts/&#34;</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="ln">14</span><span class="cl">  <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
-</span></span><span class="line"><span class="ln">15</span><span class="cl">  <span class="p">[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">16</span><span class="cl">    <span class="nx">icon</span> <span class="p">=</span> <span class="s2">&#34;archive&#34;</span>
-</span></span></code></pre></div><p><strong>Social Menu:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">social</span><span class="p">]]</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;GitHub&#34;</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://github.com/yourusername&#34;</span>
-</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="ln">5</span><span class="cl">  <span class="p">[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">social</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">6</span><span class="cl">    <span class="nx">icon</span> <span class="p">=</span> <span class="s2">&#34;github&#34;</span>
-</span></span><span class="line"><span class="ln">7</span><span class="cl">    <span class="nx">newTab</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span></code></pre></div><hr>
-<h2 id="-การเขยนบทความ"><a href="#-%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%80%e0%b8%82%e0%b8%a2%e0%b8%99%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1" class="header-anchor"></a>✍️ การเขียนบทความ
-</h2><h3 id="โครงสรางไฟล-page-bundles"><a href="#%e0%b9%82%e0%b8%84%e0%b8%a3%e0%b8%87%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87%e0%b9%84%e0%b8%9f%e0%b8%a5-page-bundles" class="header-anchor"></a>โครงสร้างไฟล์ (Page Bundles)
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">content/
-</span></span><span class="line"><span class="ln">2</span><span class="cl">└── posts/
-</span></span><span class="line"><span class="ln">3</span><span class="cl">    └── my-first-post/
-</span></span><span class="line"><span class="ln">4</span><span class="cl">        ├── index.md       ← เนื้อหา
-</span></span><span class="line"><span class="ln">5</span><span class="cl">        ├── image1.png     ← รูป
-</span></span><span class="line"><span class="ln">6</span><span class="cl">        └── image2.png
-</span></span></code></pre></div><h3 id="front-matter"><a href="#front-matter" class="header-anchor"></a>Front Matter
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="l">title = &#34;ชื่อบทความ&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="l">date = 2026-04-06T19:00:00+07:00</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="l">draft = false</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="l">tags = [&#34;tag1&#34;, &#34;tag2&#34;]</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="l">categories = [&#34;Category&#34;]</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="l">image = &#34;image1.png&#34; </span><span class="w"> </span><span class="c"># รูปปก</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="l">description = &#34;คำอธิบายสั้นๆ&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="l">slug = &#34;my-first-post&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="l">toc = true           </span><span class="w"> </span><span class="c"># เปิด/ปิดสารบัญ</span><span class="w">
-</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="l">math = true          </span><span class="w"> </span><span class="c"># เปิด/ปิด KaTeX</span><span class="w">
-</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="l">license = &#34;CC BY-NC&#34; </span><span class="w"> </span><span class="c"># License (override)</span><span class="w">
-</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span></code></pre></div><h3 id="การใสรป"><a href="#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%83%e0%b8%aa%e0%b8%a3%e0%b8%9b" class="header-anchor"></a>การใส่รูป
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="ln">1</span><span class="cl">![<span class="nt">คำอธิบายรูป</span>](<span class="na">image1.png</span>)
-</span></span><span class="line"><span class="ln">2</span><span class="cl">
-</span></span><span class="line"><span class="ln">3</span><span class="cl">![<span class="nt">รูปที่ 2</span>](<span class="na">image2.png</span>)
-</span></span></code></pre></div><p><strong>Image Gallery:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="ln">1</span><span class="cl">![<span class="nt">รูปที่ 1</span>](<span class="na">image1.png</span>) ![<span class="nt">รูปที่ 2</span>](<span class="na">image2.png</span>)
-</span></span><span class="line"><span class="ln">2</span><span class="cl">![<span class="nt">รูปที่ 3</span>](<span class="na">image3.png</span>)
-</span></span></code></pre></div><p>จะแสดงเป็น 2 แถว (2 รูปบน, 1 รูปล่าง)</p>
-<hr>
-<h2 id="-ฟเจอรพเศษ"><a href="#-%e0%b8%9f%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%a3%e0%b8%9e%e0%b9%80%e0%b8%a8%e0%b8%a9" class="header-anchor"></a>🎨 ฟีเจอร์พิเศษ
-</h2><h3 id="1-dark-mode"><a href="#1-dark-mode" class="header-anchor"></a>1. <strong>Dark Mode</strong>
-</h3><ul>
-<li>เปิด/ปิดอัตโนมัติตามระบบ</li>
-<li>หรือคลิกปุ่ม Dark Mode ใน sidebar</li>
-</ul>
-<h3 id="2-local-search"><a href="#2-local-search" class="header-anchor"></a>2. <strong>Local Search</strong>
-</h3><p>ต้องสร้างหน้า Search ก่อน:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">hugo new search/_index.md
-</span></span></code></pre></div><p><strong>Front Matter:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Search&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nt">layout</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;search&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span></code></pre></div><h3 id="3-archives"><a href="#3-archives" class="header-anchor"></a>3. <strong>Archives</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">hugo new archives/_index.md
-</span></span></code></pre></div><p><strong>Front Matter:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Archives&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nt">layout</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;archives&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span></code></pre></div><h3 id="4-math-typesetting-katex"><a href="#4-math-typesetting-katex" class="header-anchor"></a>4. <strong>Math Typesetting (KaTeX)</strong>
-</h3><p><strong>เปิดใน config:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">article</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="nx">math</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span></code></pre></div><p><strong>หรือเปิดในบทความ:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="l">math = true</span><span class="w">
-</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span></code></pre></div><p><strong>ใช้:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="ln">1</span><span class="cl">Inline: $E = mc^2$
-</span></span><span class="line"><span class="ln">2</span><span class="cl">
-</span></span><span class="line"><span class="ln">3</span><span class="cl">Block:
-</span></span><span class="line"><span class="ln">4</span><span class="cl">$$
-</span></span><span class="line"><span class="ln">5</span><span class="cl">E = mc^2
-</span></span><span class="line"><span class="ln">6</span><span class="cl">$$
-</span></span></code></pre></div><h3 id="5-mermaid-diagrams"><a href="#5-mermaid-diagrams" class="header-anchor"></a>5. <strong>Mermaid Diagrams</strong>
-</h3><p><strong>เปิดใน config:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">article</span><span class="p">.</span><span class="nx">mermaid</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="nx">enabled</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span></code></pre></div><p><strong>ใช้:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="ln">1</span><span class="cl">```mermaid
-</span></span><span class="line"><span class="ln">2</span><span class="cl">graph TD;
-</span></span><span class="line"><span class="ln">3</span><span class="cl">    A--&gt;B;
-</span></span><span class="line"><span class="ln">4</span><span class="cl">    A--&gt;C;
-</span></span><span class="line"><span class="ln">5</span><span class="cl">    B--&gt;D;
-</span></span><span class="line"><span class="ln">6</span><span class="cl">    C--&gt;D;
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">---
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">## 🔧 การปรับแต่งขั้นสูง
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">### 1. **Custom CSS**
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">สร้างไฟล์: `assets/scss/custom.scss`
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
-</span></span><span class="line"><span class="ln">10</span><span class="cl">```scss
-</span></span><span class="line"><span class="ln">11</span><span class="cl">// ตัวอย่าง: เปลี่ยนสี accent
-</span></span><span class="line"><span class="ln">12</span><span class="cl">:root {
-</span></span><span class="line"><span class="ln">13</span><span class="cl">  --accent-color: #your-color;
-</span></span><span class="line"><span class="ln">14</span><span class="cl">}
-</span></span><span class="line"><span class="ln">15</span><span class="cl">
-</span></span><span class="line"><span class="ln">16</span><span class="cl">// เปลี่ยนฟอนต์
-</span></span><span class="line"><span class="ln">17</span><span class="cl">body {
-</span></span><span class="line"><span class="ln">18</span><span class="cl">  font-family: &#39;Your Font&#39;, sans-serif;
-</span></span><span class="line"><span class="ln">19</span><span class="cl">}
-</span></span></code></pre></div><h3 id="2-custom-icons"><a href="#2-custom-icons" class="header-anchor"></a>2. <strong>Custom Icons</strong>
-</h3><p>ดาวน์โหลด SVG จาก <a class="link" href="https://tabler-icons.io"  target="_blank" rel="noopener"
-    >Tabler Icons</a></p>
-<p>วางที่: <code>assets/icons/your-icon.svg</code></p>
-<p><strong>ใช้:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="nx">icon</span> <span class="p">=</span> <span class="s2">&#34;your-icon&#34;</span>
-</span></span></code></pre></div><h3 id="3-override-theme-files"><a href="#3-override-theme-files" class="header-anchor"></a>3. <strong>Override Theme Files</strong>
-</h3><p>คัดลอกไฟล์จาก theme มาที่โปรเจกต์:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">themes/hugo-theme-stack/layouts/_partials/header.html
-</span></span><span class="line"><span class="ln">2</span><span class="cl">→
-</span></span><span class="line"><span class="ln">3</span><span class="cl">layouts/_partials/header.html
-</span></span></code></pre></div><p>แก้ไขไฟล์ใน <code>layouts/</code> จะ override theme</p>
-<h3 id="4-multilingual"><a href="#4-multilingual" class="header-anchor"></a>4. <strong>Multilingual</strong>
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;My Blog&#34;</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">th</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;ไทย&#34;</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;บล็อกของฉัน&#34;</span>
-</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-</span></span></code></pre></div><hr>
-<h2 id="-สรปการตงคาทสำคญ"><a href="#-%e0%b8%aa%e0%b8%a3%e0%b8%9b%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%87%e0%b8%84%e0%b8%b2%e0%b8%97%e0%b8%aa%e0%b8%b3%e0%b8%84%e0%b8%8d" class="header-anchor"></a>📊 สรุปการตั้งค่าที่สำคัญ
-</h2><h3 id="hugotoml-ตวอยางเตม"><a href="#hugotoml-%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b9%80%e0%b8%95%e0%b8%a1" class="header-anchor"></a>hugo.toml (ตัวอย่างเต็ม)
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://example.com/&#34;</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;บล็อกของฉัน&#34;</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;hugo-theme-stack&#34;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;th-th&#34;</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;บล็อกส่วนตัว&#34;</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="nx">defaultTheme</span> <span class="p">=</span> <span class="s2">&#34;auto&#34;</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="nx">mainSections</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;posts&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">10</span><span class="cl">  
-</span></span><span class="line"><span class="ln">11</span><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">sidebar</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="nx">emoji</span> <span class="p">=</span> <span class="s2">&#34;👋&#34;</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="nx">subtitle</span> <span class="p">=</span> <span class="s2">&#34;คำอธิบาย&#34;</span>
-</span></span><span class="line"><span class="ln">14</span><span class="cl">    <span class="nx">avatar</span> <span class="p">=</span> <span class="s2">&#34;img/profile.jpg&#34;</span>
-</span></span><span class="line"><span class="ln">15</span><span class="cl">  
-</span></span><span class="line"><span class="ln">16</span><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">article</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">17</span><span class="cl">    <span class="nx">toc</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="nx">readingTime</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="ln">19</span><span class="cl">    
-</span></span><span class="line"><span class="ln">20</span><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">article</span><span class="p">.</span><span class="nx">license</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">21</span><span class="cl">      <span class="nx">enabled</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="ln">22</span><span class="cl">      <span class="nx">default</span> <span class="p">=</span> <span class="s2">&#34;CC BY-NC 4.0&#34;</span>
-</span></span><span class="line"><span class="ln">23</span><span class="cl">  
-</span></span><span class="line"><span class="ln">24</span><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">homepage</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">25</span><span class="cl">    <span class="nx">-</span> <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;search&#34;</span>
-</span></span><span class="line"><span class="ln">26</span><span class="cl">    <span class="nx">-</span> <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;archives&#34;</span>
-</span></span><span class="line"><span class="ln">27</span><span class="cl">    <span class="nx">-</span> <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-</span></span><span class="line"><span class="ln">28</span><span class="cl">    <span class="nx">-</span> <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;tag-cloud&#34;</span>
-</span></span><span class="line"><span class="ln">29</span><span class="cl">
-</span></span><span class="line"><span class="ln">30</span><span class="cl"><span class="p">[</span><span class="nx">menu</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">31</span><span class="cl">  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="ln">32</span><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Home&#34;</span>
-</span></span><span class="line"><span class="ln">33</span><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span>
-</span></span><span class="line"><span class="ln">34</span><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="ln">35</span><span class="cl">    <span class="p">[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">36</span><span class="cl">      <span class="nx">icon</span> <span class="p">=</span> <span class="s2">&#34;home&#34;</span>
-</span></span><span class="line"><span class="ln">37</span><span class="cl">  
-</span></span><span class="line"><span class="ln">38</span><span class="cl">  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">social</span><span class="p">]]</span>
-</span></span><span class="line"><span class="ln">39</span><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;GitHub&#34;</span>
-</span></span><span class="line"><span class="ln">40</span><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://github.com/username&#34;</span>
-</span></span><span class="line"><span class="ln">41</span><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="ln">42</span><span class="cl">    <span class="p">[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">social</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">43</span><span class="cl">      <span class="nx">icon</span> <span class="p">=</span> <span class="s2">&#34;github&#34;</span>
-</span></span><span class="line"><span class="ln">44</span><span class="cl">
-</span></span><span class="line"><span class="ln">45</span><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">46</span><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">th</span><span class="p">]</span>
-</span></span><span class="line"><span class="ln">47</span><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;ไทย&#34;</span>
-</span></span><span class="line"><span class="ln">48</span><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span></code></pre></div><hr>
-<h2 id="-ลงกทเปนประโยชน"><a href="#-%e0%b8%a5%e0%b8%87%e0%b8%81%e0%b8%97%e0%b9%80%e0%b8%9b%e0%b8%99%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b9%82%e0%b8%a2%e0%b8%8a%e0%b8%99" class="header-anchor"></a>🔗 ลิงก์ที่เป็นประโยชน์
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>แหล่ง</th>
-          <th>ลิงก์</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Official Docs</strong></td>
-          <td><a class="link" href="https://stack.cai.im/"  target="_blank" rel="noopener"
-    >https://stack.cai.im/</a></td>
-      </tr>
-      <tr>
-          <td><strong>GitHub Repo</strong></td>
-          <td><a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack"  target="_blank" rel="noopener"
-    >https://github.com/CaiJimmy/hugo-theme-stack</a></td>
-      </tr>
-      <tr>
-          <td><strong>Demo</strong></td>
-          <td><a class="link" href="https://demo.stack.cai.im/"  target="_blank" rel="noopener"
-    >https://demo.stack.cai.im/</a></td>
-      </tr>
-      <tr>
-          <td><strong>Starter Template</strong></td>
-          <td><a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack-starter"  target="_blank" rel="noopener"
-    >https://github.com/CaiJimmy/hugo-theme-stack-starter</a></td>
-      </tr>
-      <tr>
-          <td><strong>Tabler Icons</strong></td>
-          <td><a class="link" href="https://tabler-icons.io"  target="_blank" rel="noopener"
-    >https://tabler-icons.io</a></td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h2 id="-เคลดลบ"><a href="#-%e0%b9%80%e0%b8%84%e0%b8%a5%e0%b8%94%e0%b8%a5%e0%b8%9a" class="header-anchor"></a>💡 เคล็ดลับ
-</h2><ol>
-<li><strong>ใช้ Page Bundles</strong> — จัดการรูปและเนื้อหาในโฟลเดอร์เดียวกัน</li>
-<li><strong>ใช้ Starter Template</strong> — เริ่มต้นง่าย มี GitHub Actions ให้แล้ว</li>
-<li><strong>Custom CSS ใน assets/scss/</strong> — ไม่ต้องแก้ theme</li>
-<li><strong>ใช้ Front Matter menu</strong> — เมนูจะ highlight อัตโนมัติ</li>
-<li><strong>รูปต้องอยู่ใน assets/</strong> — สำหรับ avatar และรูปในธีม</li>
-</ol>
-<hr>
-<p><strong>อัพเดทล่าสุด:</strong> 2026-04-06<br>
-<strong>เขียนโดย:</strong> เหน่ง</p>
-<hr>
-<p><em>เอกสารนี้อ้างอิงจาก <a class="link" href="https://stack.cai.im/"  target="_blank" rel="noopener"
-    >Hugo Stack Official Documentation</a></em></p>
-
-</section>
-
-
-    <footer class="article-meta article-footer">
-    
-    <section class="article-tags">
-        
-            <a href="/neng-blog/tags/hugo/">Hugo</a>
-        
-            <a href="/neng-blog/tags/stack/">Stack</a>
-        
-            <a href="/neng-blog/tags/theme/">Theme</a>
-        
-            <a href="/neng-blog/tags/guide/">Guide</a>
-        
-            <a href="/neng-blog/tags/tutorial/">Tutorial</a>
-        
-    </section>
-
-
-    
-    <section class="article-copyright inline-meta">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></span>
-    </section>
-    </footer>
-
-
-    
-</article>
-
-    
-
-    
-
-<aside>
-    <h2 class="section-title">Related content</h2>
-    <div class="subsection-list">
-        <div class="article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/neng-blog/posts/openclaw-install-guide/">
-        
-        <div class="article-image">
-            <img alt="Featured image of post เปิดโลก AI Assistant: คู่มือติดตั้ง OpenClaw สำหรับมือใหม่ (ฉบับไม่มีพื้นฐานก็ทำได้)" height="150" loading="lazy" src="/neng-blog/posts/openclaw-install-guide/cover_hu_f3c4583a90455f7f.webp" srcset="/neng-blog/posts/openclaw-install-guide/cover_hu_f3c4583a90455f7f.webp 1x, /neng-blog/posts/openclaw-install-guide/cover_hu_714878ca2387a772.webp 2x" width="250">
-
-        </div>
-        
-
-        <div class="article-details"style="background: linear-gradient(0deg, #f10c1980 0%, #fefefeC0 100%);">
-            <h2 class="article-title">เปิดโลก AI Assistant: คู่มือติดตั้ง OpenClaw สำหรับมือใหม่ (ฉบับไม่มีพื้นฐานก็ทำได้)</h2>
-        </div>
-    </a>
-</article>
-            
-        </div>
-    </div>
-</aside>
-
-     
-    
-        
-        <div class="giscus-container" role="region" aria-label="Comments section">
-<script
-    src="https://giscus.app/client.js"
-    data-repo="jitaret-rgb/neng-blog"
-    data-repo-id="R_kgDOR6Wt7Q"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOR6Wt7c4C6TwS"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="noborder_dark"
-    data-lang="en"
-    crossorigin="anonymous"
-    async>
-</script>
-</div>
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-        2026 Code &amp; Community
-    </section>
-    
-    <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
-    </section>
-</footer>
-
-
-    
-
-
-
-<script type="module">
+               connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net https://giscus.app;"><meta http-equiv=Permissions-Policy content="geolocation=(), microphone=(), camera=()"><link rel=preconnect href=https://giscus.app crossorigin></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/neng-blog/><img src=/neng-blog/img/profile_hu_de2cac54e10d7047.jpg width=400 height=400 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>💻</span></figure><div class=site-meta><h1 class=site-name><a href=/neng-blog/>Code & Community</a></h1><h2 class=site-description>Bridging Technology and Community Development</h2></div></header><ol class=menu-social><li><a href=https://github.com/jitaret-rgb title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://t.me/Majinman title=Telegram rel=me><svg class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4 6 6 4-16-18 7 4 2 2 6 3-4"/></svg></a></li><li><a href=https://www.facebook.com/jittaret.phromnanra/ target=_blank title=Facebook rel=me><svg class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 011-1h3V3h-3a5 5 0 00-5 5v2H7"/></svg></a></li><li><a href=https://www.youtube.com/@jittaretpromnara5716 target=_blank title=YouTube rel=me><svg class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 014-4h12a4 4 0 014 4v8a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><path d="M10 9l5 3-5 3z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/neng-blog/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12H3l9-9 9 9h-2"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/neng-blog/posts/><svg class="icon icon-tabler icon-tabler-article" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4m0 2a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M7 8h10"/><path d="M7 12h10"/><path d="M7 16h10"/></svg>
+<span>Posts</span></a></li><li><a href=/neng-blog/categories/><svg class="icon icon-tabler icon-tabler-category-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 4h6v6h-6z"/><path d="M4 14h6v6H4z"/><path d="M17 17m-3 0a3 3 0 106 0 3 3 0 10-6 0"/><path d="M7 7M4 7a3 3 0 106 0A3 3 0 104 7"/></svg>
+<span>Categories</span></a></li><li><a href=/neng-blog/tags/><svg class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7.5 7.5m-1 0a1 1 0 102 0 1 1 0 10-2 0"/><path d="M3 6v5.172a2 2 0 00.586 1.414l7.71 7.71a2.41 2.41.0 003.408.0l5.592-5.592a2.41 2.41.0 000-3.408l-7.71-7.71A2 2 0 0011.172 3H6A3 3 0 003 6z"/></svg>
+<span>Tags</span></a></li><li><a href=/neng-blog/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 108 0A4 4 0 008 7"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Dark Mode</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc><nav class=toc-nav id=TableOfContents><ul><li><a href=#-สารบญ>📋 สารบัญ</a></li><li><a href=#-ขอมลเบองตน>📖 ข้อมูลเบื้องต้น</a><ul><li><a href=#hugo-stack-คออะไร>Hugo Stack คืออะไร?</a></li><li><a href=#ฟเจอรหลก>ฟีเจอร์หลัก:</a></li></ul></li><li><a href=#-การตดตง>🚀 การติดตั้ง</a><ul><li><a href=#วธท-1-ใช-starter-template-แนะนำ>วิธีที่ 1: ใช้ Starter Template (แนะนำ)</a></li><li><a href=#วธท-2-hugo-module>วิธีที่ 2: Hugo Module</a></li><li><a href=#วธท-3-git-submodule>วิธีที่ 3: Git Submodule</a></li></ul></li><li><a href=#-การตงคา-configuration>⚙️ การตั้งค่า (Configuration)</a><ul><li><a href=#1-sidebar-แถบดานขาง>1. <strong>Sidebar</strong> (แถบด้านข้าง)</a></li><li><a href=#2-article-บทความ>2. <strong>Article</strong> (บทความ)</a></li><li><a href=#3-widgets-วดเจตดานขวา>3. <strong>Widgets</strong> (วิดเจ็ตด้านขวา)</a></li><li><a href=#4-menu-เมน>4. <strong>Menu</strong> (เมนู)</a></li></ul></li><li><a href=#-การเขยนบทความ>✍️ การเขียนบทความ</a><ul><li><a href=#โครงสรางไฟล-page-bundles>โครงสร้างไฟล์ (Page Bundles)</a></li><li><a href=#front-matter>Front Matter</a></li><li><a href=#การใสรป>การใส่รูป</a></li></ul></li><li><a href=#-ฟเจอรพเศษ>🎨 ฟีเจอร์พิเศษ</a><ul><li><a href=#1-dark-mode>1. <strong>Dark Mode</strong></a></li><li><a href=#2-local-search>2. <strong>Local Search</strong></a></li><li><a href=#3-archives>3. <strong>Archives</strong></a></li><li><a href=#4-math-typesetting-katex>4. <strong>Math Typesetting (KaTeX)</strong></a></li><li><a href=#5-mermaid-diagrams>5. <strong>Mermaid Diagrams</strong></a></li><li><a href=#2-custom-icons>2. <strong>Custom Icons</strong></a></li><li><a href=#3-override-theme-files>3. <strong>Override Theme Files</strong></a></li><li><a href=#4-multilingual>4. <strong>Multilingual</strong></a></li></ul></li><li><a href=#-สรปการตงคาทสำคญ>📊 สรุปการตั้งค่าที่สำคัญ</a><ul><li><a href=#hugotoml-ตวอยางเตม>hugo.toml (ตัวอย่างเต็ม)</a></li></ul></li><li><a href=#-ลงกทเปนประโยชน>🔗 ลิงก์ที่เป็นประโยชน์</a></li><li><a href=#-เคลดลบ>💡 เคล็ดลับ</a></li></ul></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/neng-blog/posts/hugo-stack-guide/><img alt="Featured image of post คู่มือ Hugo Stack Theme ฉบับสมบูรณ์" height=405 loading=lazy sizes="(max-width: 800px) 100vw, 800px" src=/neng-blog/posts/hugo-stack-guide/cover_hu_5da3dfe4cee1937c.jpg srcset="/neng-blog/posts/hugo-stack-guide/cover_hu_254d38ff68916b64.webp 400w, /neng-blog/posts/hugo-stack-guide/cover_hu_c1fcd35c27670d99.webp 800w, /neng-blog/posts/hugo-stack-guide/cover_hu_431962111517cf58.webp 1200w, /neng-blog/posts/hugo-stack-guide/cover_hu_5da3dfe4cee1937c.jpg 1280w" width=1280></a></div><div class=article-details><header class=article-category><a href=/neng-blog/categories/tutorial/ style=background-color:#beefca;color:#0f3d1b>Tutorial
+</a><a href=/neng-blog/categories/documentation/ style=background-color:#bedeef;color:#0f2d3d>Documentation</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/neng-blog/posts/hugo-stack-guide/>คู่มือ Hugo Stack Theme ฉบับสมบูรณ์</a></h2><h3 class=article-subtitle>คู่มือการใช้งาน Hugo Stack Theme ทุกฟีเจอร์ ตั้งแต่ติดตั้งจนถึงปรับแต่งขั้นสูง</h3></div><footer class=article-meta><div class=inline-meta><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2026-04-06T19:00:00+07:00>Apr 06, 2026</time>
+<svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>5 minutes read</time></div></footer></div></header><aside class=article-toc><details><summary><div class=article-toc-title><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6-6 6"/></svg>
+<span>Table of contents</span></div></summary><nav class=toc-nav><ul><li><a href=#-สารบญ>📋 สารบัญ</a></li><li><a href=#-ขอมลเบองตน>📖 ข้อมูลเบื้องต้น</a><ul><li><a href=#hugo-stack-คออะไร>Hugo Stack คืออะไร?</a></li><li><a href=#ฟเจอรหลก>ฟีเจอร์หลัก:</a></li></ul></li><li><a href=#-การตดตง>🚀 การติดตั้ง</a><ul><li><a href=#วธท-1-ใช-starter-template-แนะนำ>วิธีที่ 1: ใช้ Starter Template (แนะนำ)</a></li><li><a href=#วธท-2-hugo-module>วิธีที่ 2: Hugo Module</a></li><li><a href=#วธท-3-git-submodule>วิธีที่ 3: Git Submodule</a></li></ul></li><li><a href=#-การตงคา-configuration>⚙️ การตั้งค่า (Configuration)</a><ul><li><a href=#1-sidebar-แถบดานขาง>1. <strong>Sidebar</strong> (แถบด้านข้าง)</a></li><li><a href=#2-article-บทความ>2. <strong>Article</strong> (บทความ)</a></li><li><a href=#3-widgets-วดเจตดานขวา>3. <strong>Widgets</strong> (วิดเจ็ตด้านขวา)</a></li><li><a href=#4-menu-เมน>4. <strong>Menu</strong> (เมนู)</a></li></ul></li><li><a href=#-การเขยนบทความ>✍️ การเขียนบทความ</a><ul><li><a href=#โครงสรางไฟล-page-bundles>โครงสร้างไฟล์ (Page Bundles)</a></li><li><a href=#front-matter>Front Matter</a></li><li><a href=#การใสรป>การใส่รูป</a></li></ul></li><li><a href=#-ฟเจอรพเศษ>🎨 ฟีเจอร์พิเศษ</a><ul><li><a href=#1-dark-mode>1. <strong>Dark Mode</strong></a></li><li><a href=#2-local-search>2. <strong>Local Search</strong></a></li><li><a href=#3-archives>3. <strong>Archives</strong></a></li><li><a href=#4-math-typesetting-katex>4. <strong>Math Typesetting (KaTeX)</strong></a></li><li><a href=#5-mermaid-diagrams>5. <strong>Mermaid Diagrams</strong></a></li><li><a href=#2-custom-icons>2. <strong>Custom Icons</strong></a></li><li><a href=#3-override-theme-files>3. <strong>Override Theme Files</strong></a></li><li><a href=#4-multilingual>4. <strong>Multilingual</strong></a></li></ul></li><li><a href=#-สรปการตงคาทสำคญ>📊 สรุปการตั้งค่าที่สำคัญ</a><ul><li><a href=#hugotoml-ตวอยางเตม>hugo.toml (ตัวอย่างเต็ม)</a></li></ul></li><li><a href=#-ลงกทเปนประโยชน>🔗 ลิงก์ที่เป็นประโยชน์</a></li><li><a href=#-เคลดลบ>💡 เคล็ดลับ</a></li></ul></nav></details></aside><section class=article-content><h1 id=-คมอ-hugo-stack-theme-ฉบบสมบรณ><a href=#-%e0%b8%84%e0%b8%a1%e0%b8%ad-hugo-stack-theme-%e0%b8%89%e0%b8%9a%e0%b8%9a%e0%b8%aa%e0%b8%a1%e0%b8%9a%e0%b8%a3%e0%b8%93 class=header-anchor></a>📚 คู่มือ Hugo Stack Theme ฉบับสมบูรณ์</h1><p><strong>อัพเดท:</strong> 2026-04-06<br><strong>เวอร์ชัน:</strong> Hugo Stack v4<br><strong>Hugo:</strong> 0.157.0+ extended</p><hr><h2 id=-สารบญ><a href=#-%e0%b8%aa%e0%b8%b2%e0%b8%a3%e0%b8%9a%e0%b8%8d class=header-anchor></a>📋 สารบัญ</h2><ol><li><a class=link href=#%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%a1%e0%b8%b9%e0%b8%a5%e0%b9%80%e0%b8%9a%e0%b8%b7%e0%b9%89%e0%b8%ad%e0%b8%87%e0%b8%95%e0%b9%89%e0%b8%99>ข้อมูลเบื้องต้น</a></li><li><a class=link href=#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%b4%e0%b8%94%e0%b8%95%e0%b8%b1%e0%b9%89%e0%b8%87>การติดตั้ง</a></li><li><a class=link href=#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%b1%e0%b9%89%e0%b8%87%e0%b8%84%e0%b9%88%e0%b8%b2-configuration>การตั้งค่า (Configuration)</a></li><li><a class=link href=#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%80%e0%b8%82%e0%b8%b5%e0%b8%a2%e0%b8%99%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1>การเขียนบทความ</a></li><li><a class=link href=#widgets>Widgets</a></li><li><a class=link href=#menu>Menu</a></li><li><a class=link href=#%e0%b8%9f%e0%b8%b5%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%a3%e0%b9%8c%e0%b8%9e%e0%b8%b4%e0%b9%80%e0%b8%a8%e0%b8%a9>ฟีเจอร์พิเศษ</a></li><li><a class=link href=#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9b%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b9%81%e0%b8%95%e0%b9%88%e0%b8%87%e0%b8%82%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b8%aa%e0%b8%b9%e0%b8%87>การปรับแต่งขั้นสูง</a></li></ol><hr><h2 id=-ขอมลเบองตน><a href=#-%e0%b8%82%e0%b8%ad%e0%b8%a1%e0%b8%a5%e0%b9%80%e0%b8%9a%e0%b8%ad%e0%b8%87%e0%b8%95%e0%b8%99 class=header-anchor></a>📖 ข้อมูลเบื้องต้น</h2><h3 id=hugo-stack-คออะไร><a href=#hugo-stack-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3 class=header-anchor></a>Hugo Stack คืออะไร?</h3><p><strong>Hugo Stack</strong> คือธีมสำหรับ Hugo แบบ card-style ที่ออกแบบมาสำหรับ blogger โดยเฉพาะ</p><h3 id=ฟเจอรหลก><a href=#%e0%b8%9f%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%a3%e0%b8%ab%e0%b8%a5%e0%b8%81 class=header-anchor></a>ฟีเจอร์หลัก:</h3><div class=table-wrapper><table><thead><tr><th>ฟีเจอร์</th><th>คำอธิบาย</th></tr></thead><tbody><tr><td>🌙 <strong>Dark Mode</strong></td><td>โหมดมืดอัตโนมัติตามระบบ</td></tr><tr><td>📱 <strong>Responsive</strong></td><td>รองรับทุกอุปกรณ์</td></tr><tr><td>🌐 <strong>Multilingual</strong></td><td>รองรับหลายภาษา</td></tr><tr><td>🔍 <strong>Local Search</strong></td><td>ค้นหาในเว็บ</td></tr><tr><td>📑 <strong>Table of Contents</strong></td><td>สารบัญบทความ</td></tr><tr><td>🖼️ <strong>Image Gallery</strong></td><td>แกลเลอรี่รูปภาพ</td></tr><tr><td>⚡ <strong>Fast</strong></td><td>เร็วและเบา (ไม่มี framework)</td></tr></tbody></table></div><hr><h2 id=-การตดตง><a href=#-%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%94%e0%b8%95%e0%b8%87 class=header-anchor></a>🚀 การติดตั้ง</h2><h3 id=วธท-1-ใช-starter-template-แนะนำ><a href=#%e0%b8%a7%e0%b8%98%e0%b8%97-1-%e0%b9%83%e0%b8%8a-starter-template-%e0%b9%81%e0%b8%99%e0%b8%b0%e0%b8%99%e0%b8%b3 class=header-anchor></a>วิธีที่ 1: ใช้ Starter Template (แนะนำ)</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>git clone https://github.com/CaiJimmy/hugo-theme-stack-starter my-blog
+</span></span><span class=line><span class=ln>2</span><span class=cl><span class=nb>cd</span> my-blog
+</span></span><span class=line><span class=ln>3</span><span class=cl>hugo server
+</span></span></code></pre></div><h3 id=วธท-2-hugo-module><a href=#%e0%b8%a7%e0%b8%98%e0%b8%97-2-hugo-module class=header-anchor></a>วิธีที่ 2: Hugo Module</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln> 1</span><span class=cl><span class=c1># Initialize module</span>
+</span></span><span class=line><span class=ln> 2</span><span class=cl>hugo mod init github.com/me/my-blog
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl><span class=c1># Add theme to config</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl><span class=c1># hugo.toml</span>
+</span></span><span class=line><span class=ln> 6</span><span class=cl><span class=o>[[</span>module.imports<span class=o>]]</span>
+</span></span><span class=line><span class=ln> 7</span><span class=cl>  <span class=nv>path</span> <span class=o>=</span> <span class=s2>&#34;github.com/CaiJimmy/hugo-theme-stack/v4&#34;</span>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>
+</span></span><span class=line><span class=ln> 9</span><span class=cl><span class=c1># Update theme</span>
+</span></span><span class=line><span class=ln>10</span><span class=cl>hugo mod get -u github.com/CaiJimmy/hugo-theme-stack/v4
+</span></span><span class=line><span class=ln>11</span><span class=cl>hugo mod tidy
+</span></span></code></pre></div><h3 id=วธท-3-git-submodule><a href=#%e0%b8%a7%e0%b8%98%e0%b8%97-3-git-submodule class=header-anchor></a>วิธีที่ 3: Git Submodule</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+</span></span></code></pre></div><hr><h2 id=-การตงคา-configuration><a href=#-%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%87%e0%b8%84%e0%b8%b2-configuration class=header-anchor></a>⚙️ การตั้งค่า (Configuration)</h2><h3 id=1-sidebar-แถบดานขาง><a href=#1-sidebar-%e0%b9%81%e0%b8%96%e0%b8%9a%e0%b8%94%e0%b8%b2%e0%b8%99%e0%b8%82%e0%b8%b2%e0%b8%87 class=header-anchor></a>1. <strong>Sidebar</strong> (แถบด้านข้าง)</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=ln>1</span><span class=cl><span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>sidebar</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>2</span><span class=cl>  <span class=nx>compact</span> <span class=p>=</span> <span class=kc>false</span>          <span class=c># โหมด compact</span>
+</span></span><span class=line><span class=ln>3</span><span class=cl>  <span class=nx>emoji</span> <span class=p>=</span> <span class=s2>&#34;👋&#34;</span>             <span class=c># Emoji ด้านบน</span>
+</span></span><span class=line><span class=ln>4</span><span class=cl>  <span class=nx>subtitle</span> <span class=p>=</span> <span class=s2>&#34;คำอธิบายสั้นๆ&#34;</span>
+</span></span><span class=line><span class=ln>5</span><span class=cl>  <span class=nx>avatar</span> <span class=p>=</span> <span class=s2>&#34;img/profile.jpg&#34;</span>  <span class=c># รูปโปรไฟล์ (ต้องอยู่ใน assets/img/)</span>
+</span></span></code></pre></div><p><strong>ตำแหน่งรูปโปรไฟล์:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>assets/
+</span></span><span class=line><span class=ln>2</span><span class=cl>└── img/
+</span></span><span class=line><span class=ln>3</span><span class=cl>    └── profile.jpg  ← วางรูปที่นี่
+</span></span></code></pre></div><hr><h3 id=2-article-บทความ><a href=#2-article-%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1 class=header-anchor></a>2. <strong>Article</strong> (บทความ)</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=ln>1</span><span class=cl><span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>article</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>2</span><span class=cl>  <span class=nx>headingAnchor</span> <span class=p>=</span> <span class=kc>false</span>    <span class=c># แสดง # ข้างหัวข้อ</span>
+</span></span><span class=line><span class=ln>3</span><span class=cl>  <span class=nx>math</span> <span class=p>=</span> <span class=kc>false</span>             <span class=c># เปิดใช้ KaTeX (สมการคณิตศาสตร์)</span>
+</span></span><span class=line><span class=ln>4</span><span class=cl>  <span class=nx>toc</span> <span class=p>=</span> <span class=kc>true</span>               <span class=c># แสดงสารบัญ</span>
+</span></span><span class=line><span class=ln>5</span><span class=cl>  <span class=nx>readingTime</span> <span class=p>=</span> <span class=kc>true</span>       <span class=c># แสดงเวลาอ่าน</span>
+</span></span><span class=line><span class=ln>6</span><span class=cl>  
+</span></span><span class=line><span class=ln>7</span><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>article</span><span class=p>.</span><span class=nx>license</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>8</span><span class=cl>    <span class=nx>enabled</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=ln>9</span><span class=cl>    <span class=nx>default</span> <span class=p>=</span> <span class=s2>&#34;CC BY-NC 4.0&#34;</span>
+</span></span></code></pre></div><p><strong>Mermaid Diagrams:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=ln>1</span><span class=cl><span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>article</span><span class=p>.</span><span class=nx>mermaid</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>2</span><span class=cl>  <span class=nx>look</span> <span class=p>=</span> <span class=s2>&#34;classic&#34;</span>         <span class=c># classic หรือ handDrawn</span>
+</span></span><span class=line><span class=ln>3</span><span class=cl>  <span class=nx>lightTheme</span> <span class=p>=</span> <span class=s2>&#34;default&#34;</span>   <span class=c># ธีมสำหรับ light mode</span>
+</span></span><span class=line><span class=ln>4</span><span class=cl>  <span class=nx>darkTheme</span> <span class=p>=</span> <span class=s2>&#34;dark&#34;</span>       <span class=c># ธีมสำหรับ dark mode (สลับธีมอัตโนมัติ)</span>
+</span></span><span class=line><span class=ln>5</span><span class=cl>  <span class=nx>securityLevel</span> <span class=p>=</span> <span class=s2>&#34;strict&#34;</span>
+</span></span></code></pre></div><hr><h3 id=3-widgets-วดเจตดานขวา><a href=#3-widgets-%e0%b8%a7%e0%b8%94%e0%b9%80%e0%b8%88%e0%b8%95%e0%b8%94%e0%b8%b2%e0%b8%99%e0%b8%82%e0%b8%a7%e0%b8%b2 class=header-anchor></a>3. <strong>Widgets</strong> (วิดเจ็ตด้านขวา)</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=ln> 1</span><span class=cl><span class=p>[[</span><span class=nx>params</span><span class=p>.</span><span class=nx>widgets</span><span class=p>.</span><span class=nx>homepage</span><span class=p>]]</span>
+</span></span><span class=line><span class=ln> 2</span><span class=cl>  <span class=nx>type</span> <span class=p>=</span> <span class=s2>&#34;search&#34;</span>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl><span class=p>[[</span><span class=nx>params</span><span class=p>.</span><span class=nx>widgets</span><span class=p>.</span><span class=nx>homepage</span><span class=p>]]</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>  <span class=nx>type</span> <span class=p>=</span> <span class=s2>&#34;archives&#34;</span>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>widgets</span><span class=p>.</span><span class=nx>homepage</span><span class=p>.</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=ln> 7</span><span class=cl>    <span class=nx>limit</span> <span class=p>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>
+</span></span><span class=line><span class=ln> 9</span><span class=cl><span class=p>[[</span><span class=nx>params</span><span class=p>.</span><span class=nx>widgets</span><span class=p>.</span><span class=nx>homepage</span><span class=p>]]</span>
+</span></span><span class=line><span class=ln>10</span><span class=cl>  <span class=nx>type</span> <span class=p>=</span> <span class=s2>&#34;categories&#34;</span>
+</span></span><span class=line><span class=ln>11</span><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>widgets</span><span class=p>.</span><span class=nx>homepage</span><span class=p>.</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>12</span><span class=cl>    <span class=nx>limit</span> <span class=p>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=ln>13</span><span class=cl>
+</span></span><span class=line><span class=ln>14</span><span class=cl><span class=p>[[</span><span class=nx>params</span><span class=p>.</span><span class=nx>widgets</span><span class=p>.</span><span class=nx>homepage</span><span class=p>]]</span>
+</span></span><span class=line><span class=ln>15</span><span class=cl>  <span class=nx>type</span> <span class=p>=</span> <span class=s2>&#34;tag-cloud&#34;</span>
+</span></span><span class=line><span class=ln>16</span><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>widgets</span><span class=p>.</span><span class=nx>homepage</span><span class=p>.</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>17</span><span class=cl>    <span class=nx>limit</span> <span class=p>=</span> <span class=mi>10</span>
+</span></span></code></pre></div><p><strong>Widgets ที่มี:</strong></p><div class=table-wrapper><table><thead><tr><th>Widget</th><th>คำอธิบาย</th><th>Params</th></tr></thead><tbody><tr><td><code>search</code></td><td>ช่องค้นหา</td><td>-</td></tr><tr><td><code>archives</code></td><td>รายการปี</td><td><code>limit</code></td></tr><tr><td><code>categories</code></td><td>หมวดหมู่</td><td><code>limit</code></td></tr><tr><td><code>toc</code></td><td>สารบัญ</td><td>-</td></tr><tr><td><code>tag-cloud</code></td><td>แท็ก</td><td><code>limit</code></td></tr><tr><td><code>taxonomy</code></td><td>taxonomy กำหนดเอง</td><td><code>taxonomy</code>, <code>limit</code>, <code>icon</code></td></tr></tbody></table></div><hr><h3 id=4-menu-เมน><a href=#4-menu-%e0%b9%80%e0%b8%a1%e0%b8%99 class=header-anchor></a>4. <strong>Menu</strong> (เมนู)</h3><p><strong>วิธีที่ 1: เพิ่มใน Front Matter (แนะนำ)</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=ln>1</span><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span><span class=line><span class=ln>2</span><span class=cl><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;บทความ&#34;</span><span class=w>
+</span></span></span><span class=line><span class=ln>3</span><span class=cl><span class=nt>menu</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=ln>4</span><span class=cl><span class=w>  </span><span class=nt>main</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=ln>5</span><span class=cl><span class=w>    </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;บทความ&#34;</span><span class=w>
+</span></span></span><span class=line><span class=ln>6</span><span class=cl><span class=w>    </span><span class=nt>weight</span><span class=p>:</span><span class=w> </span>-<span class=m>90</span><span class=w>
+</span></span></span><span class=line><span class=ln>7</span><span class=cl><span class=w>    </span><span class=nt>params</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=ln>8</span><span class=cl><span class=w>      </span><span class=nt>icon</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;article&#34;</span><span class=w>
+</span></span></span><span class=line><span class=ln>9</span><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span></code></pre></div><p><strong>วิธีที่ 2: เพิ่มใน Config</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=ln> 1</span><span class=cl><span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=ln> 2</span><span class=cl>  <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;Home&#34;</span>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>  <span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;/&#34;</span>
+</span></span><span class=line><span class=ln> 4</span><span class=cl>  <span class=nx>weight</span> <span class=p>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>  <span class=nx>identifier</span> <span class=p>=</span> <span class=s2>&#34;home&#34;</span>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>  <span class=p>[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>.</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=ln> 7</span><span class=cl>    <span class=nx>icon</span> <span class=p>=</span> <span class=s2>&#34;home&#34;</span>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>    <span class=nx>newTab</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>
+</span></span><span class=line><span class=ln>10</span><span class=cl><span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=ln>11</span><span class=cl>  <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;Posts&#34;</span>
+</span></span><span class=line><span class=ln>12</span><span class=cl>  <span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;/posts/&#34;</span>
+</span></span><span class=line><span class=ln>13</span><span class=cl>  <span class=nx>weight</span> <span class=p>=</span> <span class=mi>2</span>
+</span></span><span class=line><span class=ln>14</span><span class=cl>  <span class=nx>identifier</span> <span class=p>=</span> <span class=s2>&#34;posts&#34;</span>
+</span></span><span class=line><span class=ln>15</span><span class=cl>  <span class=p>[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>.</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>16</span><span class=cl>    <span class=nx>icon</span> <span class=p>=</span> <span class=s2>&#34;archive&#34;</span>
+</span></span></code></pre></div><p><strong>Social Menu:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=ln>1</span><span class=cl><span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>social</span><span class=p>]]</span>
+</span></span><span class=line><span class=ln>2</span><span class=cl>  <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;GitHub&#34;</span>
+</span></span><span class=line><span class=ln>3</span><span class=cl>  <span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;https://github.com/yourusername&#34;</span>
+</span></span><span class=line><span class=ln>4</span><span class=cl>  <span class=nx>weight</span> <span class=p>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=ln>5</span><span class=cl>  <span class=p>[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>social</span><span class=p>.</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>6</span><span class=cl>    <span class=nx>icon</span> <span class=p>=</span> <span class=s2>&#34;github&#34;</span>
+</span></span><span class=line><span class=ln>7</span><span class=cl>    <span class=nx>newTab</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span></code></pre></div><hr><h2 id=-การเขยนบทความ><a href=#-%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%80%e0%b8%82%e0%b8%a2%e0%b8%99%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1 class=header-anchor></a>✍️ การเขียนบทความ</h2><h3 id=โครงสรางไฟล-page-bundles><a href=#%e0%b9%82%e0%b8%84%e0%b8%a3%e0%b8%87%e0%b8%aa%e0%b8%a3%e0%b8%b2%e0%b8%87%e0%b9%84%e0%b8%9f%e0%b8%a5-page-bundles class=header-anchor></a>โครงสร้างไฟล์ (Page Bundles)</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>content/
+</span></span><span class=line><span class=ln>2</span><span class=cl>└── posts/
+</span></span><span class=line><span class=ln>3</span><span class=cl>    └── my-first-post/
+</span></span><span class=line><span class=ln>4</span><span class=cl>        ├── index.md       ← เนื้อหา
+</span></span><span class=line><span class=ln>5</span><span class=cl>        ├── image1.png     ← รูป
+</span></span><span class=line><span class=ln>6</span><span class=cl>        └── image2.png
+</span></span></code></pre></div><h3 id=front-matter><a href=#front-matter class=header-anchor></a>Front Matter</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=ln> 1</span><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span><span class=line><span class=ln> 2</span><span class=cl><span class=l>title = &#34;ชื่อบทความ&#34;</span><span class=w>
+</span></span></span><span class=line><span class=ln> 3</span><span class=cl><span class=l>date = 2026-04-06T19:00:00+07:00</span><span class=w>
+</span></span></span><span class=line><span class=ln> 4</span><span class=cl><span class=l>draft = false</span><span class=w>
+</span></span></span><span class=line><span class=ln> 5</span><span class=cl><span class=l>tags = [&#34;tag1&#34;, &#34;tag2&#34;]</span><span class=w>
+</span></span></span><span class=line><span class=ln> 6</span><span class=cl><span class=l>categories = [&#34;Category&#34;]</span><span class=w>
+</span></span></span><span class=line><span class=ln> 7</span><span class=cl><span class=l>image = &#34;image1.png&#34; </span><span class=w> </span><span class=c># รูปปก</span><span class=w>
+</span></span></span><span class=line><span class=ln> 8</span><span class=cl><span class=l>description = &#34;คำอธิบายสั้นๆ&#34;</span><span class=w>
+</span></span></span><span class=line><span class=ln> 9</span><span class=cl><span class=l>slug = &#34;my-first-post&#34;</span><span class=w>
+</span></span></span><span class=line><span class=ln>10</span><span class=cl><span class=l>toc = true           </span><span class=w> </span><span class=c># เปิด/ปิดสารบัญ</span><span class=w>
+</span></span></span><span class=line><span class=ln>11</span><span class=cl><span class=l>math = true          </span><span class=w> </span><span class=c># เปิด/ปิด KaTeX</span><span class=w>
+</span></span></span><span class=line><span class=ln>12</span><span class=cl><span class=l>license = &#34;CC BY-NC&#34; </span><span class=w> </span><span class=c># License (override)</span><span class=w>
+</span></span></span><span class=line><span class=ln>13</span><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span></code></pre></div><h3 id=การใสรป><a href=#%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%83%e0%b8%aa%e0%b8%a3%e0%b8%9b class=header-anchor></a>การใส่รูป</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=ln>1</span><span class=cl>![<span class=nt>คำอธิบายรูป</span>](<span class=na>image1.png</span>)
+</span></span><span class=line><span class=ln>2</span><span class=cl>
+</span></span><span class=line><span class=ln>3</span><span class=cl>![<span class=nt>รูปที่ 2</span>](<span class=na>image2.png</span>)
+</span></span></code></pre></div><p><strong>Image Gallery:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=ln>1</span><span class=cl>![<span class=nt>รูปที่ 1</span>](<span class=na>image1.png</span>) ![<span class=nt>รูปที่ 2</span>](<span class=na>image2.png</span>)
+</span></span><span class=line><span class=ln>2</span><span class=cl>![<span class=nt>รูปที่ 3</span>](<span class=na>image3.png</span>)
+</span></span></code></pre></div><p>จะแสดงเป็น 2 แถว (2 รูปบน, 1 รูปล่าง)</p><hr><h2 id=-ฟเจอรพเศษ><a href=#-%e0%b8%9f%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%a3%e0%b8%9e%e0%b9%80%e0%b8%a8%e0%b8%a9 class=header-anchor></a>🎨 ฟีเจอร์พิเศษ</h2><h3 id=1-dark-mode><a href=#1-dark-mode class=header-anchor></a>1. <strong>Dark Mode</strong></h3><ul><li>เปิด/ปิดอัตโนมัติตามระบบ</li><li>หรือคลิกปุ่ม Dark Mode ใน sidebar</li></ul><h3 id=2-local-search><a href=#2-local-search class=header-anchor></a>2. <strong>Local Search</strong></h3><p>ต้องสร้างหน้า Search ก่อน:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>hugo new search/_index.md
+</span></span></code></pre></div><p><strong>Front Matter:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=ln>1</span><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span><span class=line><span class=ln>2</span><span class=cl><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;Search&#34;</span><span class=w>
+</span></span></span><span class=line><span class=ln>3</span><span class=cl><span class=nt>layout</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;search&#34;</span><span class=w>
+</span></span></span><span class=line><span class=ln>4</span><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span></code></pre></div><h3 id=3-archives><a href=#3-archives class=header-anchor></a>3. <strong>Archives</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>hugo new archives/_index.md
+</span></span></code></pre></div><p><strong>Front Matter:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=ln>1</span><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span><span class=line><span class=ln>2</span><span class=cl><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;Archives&#34;</span><span class=w>
+</span></span></span><span class=line><span class=ln>3</span><span class=cl><span class=nt>layout</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;archives&#34;</span><span class=w>
+</span></span></span><span class=line><span class=ln>4</span><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span></code></pre></div><h3 id=4-math-typesetting-katex><a href=#4-math-typesetting-katex class=header-anchor></a>4. <strong>Math Typesetting (KaTeX)</strong></h3><p><strong>เปิดใน config:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=ln>1</span><span class=cl><span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>article</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>2</span><span class=cl>  <span class=nx>math</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span></code></pre></div><p><strong>หรือเปิดในบทความ:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=ln>1</span><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span><span class=line><span class=ln>2</span><span class=cl><span class=l>math = true</span><span class=w>
+</span></span></span><span class=line><span class=ln>3</span><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span></code></pre></div><p><strong>ใช้:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=ln>1</span><span class=cl>Inline: $E = mc^2$
+</span></span><span class=line><span class=ln>2</span><span class=cl>
+</span></span><span class=line><span class=ln>3</span><span class=cl>Block:
+</span></span><span class=line><span class=ln>4</span><span class=cl>$$
+</span></span><span class=line><span class=ln>5</span><span class=cl>E = mc^2
+</span></span><span class=line><span class=ln>6</span><span class=cl>$$
+</span></span></code></pre></div><h3 id=5-mermaid-diagrams><a href=#5-mermaid-diagrams class=header-anchor></a>5. <strong>Mermaid Diagrams</strong></h3><p><strong>เปิดใน config:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=ln>1</span><span class=cl><span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>article</span><span class=p>.</span><span class=nx>mermaid</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>2</span><span class=cl>  <span class=nx>enabled</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span></code></pre></div><p><strong>ใช้:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=ln>1</span><span class=cl>```mermaid
+</span></span><span class=line><span class=ln>2</span><span class=cl>graph TD;
+</span></span><span class=line><span class=ln>3</span><span class=cl>    A--&gt;B;
+</span></span><span class=line><span class=ln>4</span><span class=cl>    A--&gt;C;
+</span></span><span class=line><span class=ln>5</span><span class=cl>    B--&gt;D;
+</span></span><span class=line><span class=ln>6</span><span class=cl>    C--&gt;D;
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>
+</span></span><span class=line><span class=ln> 2</span><span class=cl>---
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl>## 🔧 การปรับแต่งขั้นสูง
+</span></span><span class=line><span class=ln> 5</span><span class=cl>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>### 1. **Custom CSS**
+</span></span><span class=line><span class=ln> 7</span><span class=cl>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>สร้างไฟล์: `assets/scss/custom.scss`
+</span></span><span class=line><span class=ln> 9</span><span class=cl>
+</span></span><span class=line><span class=ln>10</span><span class=cl>```scss
+</span></span><span class=line><span class=ln>11</span><span class=cl>// ตัวอย่าง: เปลี่ยนสี accent
+</span></span><span class=line><span class=ln>12</span><span class=cl>:root {
+</span></span><span class=line><span class=ln>13</span><span class=cl>  --accent-color: #your-color;
+</span></span><span class=line><span class=ln>14</span><span class=cl>}
+</span></span><span class=line><span class=ln>15</span><span class=cl>
+</span></span><span class=line><span class=ln>16</span><span class=cl>// เปลี่ยนฟอนต์
+</span></span><span class=line><span class=ln>17</span><span class=cl>body {
+</span></span><span class=line><span class=ln>18</span><span class=cl>  font-family: &#39;Your Font&#39;, sans-serif;
+</span></span><span class=line><span class=ln>19</span><span class=cl>}
+</span></span></code></pre></div><h3 id=2-custom-icons><a href=#2-custom-icons class=header-anchor></a>2. <strong>Custom Icons</strong></h3><p>ดาวน์โหลด SVG จาก <a class=link href=https://tabler-icons.io target=_blank rel=noopener>Tabler Icons</a></p><p>วางที่: <code>assets/icons/your-icon.svg</code></p><p><strong>ใช้:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=ln>1</span><span class=cl><span class=p>[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>.</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>2</span><span class=cl>  <span class=nx>icon</span> <span class=p>=</span> <span class=s2>&#34;your-icon&#34;</span>
+</span></span></code></pre></div><h3 id=3-override-theme-files><a href=#3-override-theme-files class=header-anchor></a>3. <strong>Override Theme Files</strong></h3><p>คัดลอกไฟล์จาก theme มาที่โปรเจกต์:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln>1</span><span class=cl>themes/hugo-theme-stack/layouts/_partials/header.html
+</span></span><span class=line><span class=ln>2</span><span class=cl>→
+</span></span><span class=line><span class=ln>3</span><span class=cl>layouts/_partials/header.html
+</span></span></code></pre></div><p>แก้ไขไฟล์ใน <code>layouts/</code> จะ override theme</p><h3 id=4-multilingual><a href=#4-multilingual class=header-anchor></a>4. <strong>Multilingual</strong></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=ln> 1</span><span class=cl><span class=p>[</span><span class=nx>languages</span><span class=p>]</span>
+</span></span><span class=line><span class=ln> 2</span><span class=cl>  <span class=p>[</span><span class=nx>languages</span><span class=p>.</span><span class=nx>en</span><span class=p>]</span>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>    <span class=nx>languageName</span> <span class=p>=</span> <span class=s2>&#34;English&#34;</span>
+</span></span><span class=line><span class=ln> 4</span><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;My Blog&#34;</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>    
+</span></span><span class=line><span class=ln> 7</span><span class=cl>  <span class=p>[</span><span class=nx>languages</span><span class=p>.</span><span class=nx>th</span><span class=p>]</span>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>    <span class=nx>languageName</span> <span class=p>=</span> <span class=s2>&#34;ไทย&#34;</span>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;บล็อกของฉัน&#34;</span>
+</span></span><span class=line><span class=ln>10</span><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>2</span>
+</span></span></code></pre></div><hr><h2 id=-สรปการตงคาทสำคญ><a href=#-%e0%b8%aa%e0%b8%a3%e0%b8%9b%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%87%e0%b8%84%e0%b8%b2%e0%b8%97%e0%b8%aa%e0%b8%b3%e0%b8%84%e0%b8%8d class=header-anchor></a>📊 สรุปการตั้งค่าที่สำคัญ</h2><h3 id=hugotoml-ตวอยางเตม><a href=#hugotoml-%e0%b8%95%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b9%80%e0%b8%95%e0%b8%a1 class=header-anchor></a>hugo.toml (ตัวอย่างเต็ม)</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=ln> 1</span><span class=cl><span class=nx>baseURL</span> <span class=p>=</span> <span class=s2>&#34;https://example.com/&#34;</span>
+</span></span><span class=line><span class=ln> 2</span><span class=cl><span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;บล็อกของฉัน&#34;</span>
+</span></span><span class=line><span class=ln> 3</span><span class=cl><span class=nx>theme</span> <span class=p>=</span> <span class=s2>&#34;hugo-theme-stack&#34;</span>
+</span></span><span class=line><span class=ln> 4</span><span class=cl><span class=nx>languageCode</span> <span class=p>=</span> <span class=s2>&#34;th-th&#34;</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>
+</span></span><span class=line><span class=ln> 6</span><span class=cl><span class=p>[</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=ln> 7</span><span class=cl>  <span class=nx>description</span> <span class=p>=</span> <span class=s2>&#34;บล็อกส่วนตัว&#34;</span>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>  <span class=nx>defaultTheme</span> <span class=p>=</span> <span class=s2>&#34;auto&#34;</span>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>  <span class=nx>mainSections</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;posts&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>10</span><span class=cl>  
+</span></span><span class=line><span class=ln>11</span><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>sidebar</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>12</span><span class=cl>    <span class=nx>emoji</span> <span class=p>=</span> <span class=s2>&#34;👋&#34;</span>
+</span></span><span class=line><span class=ln>13</span><span class=cl>    <span class=nx>subtitle</span> <span class=p>=</span> <span class=s2>&#34;คำอธิบาย&#34;</span>
+</span></span><span class=line><span class=ln>14</span><span class=cl>    <span class=nx>avatar</span> <span class=p>=</span> <span class=s2>&#34;img/profile.jpg&#34;</span>
+</span></span><span class=line><span class=ln>15</span><span class=cl>  
+</span></span><span class=line><span class=ln>16</span><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>article</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>17</span><span class=cl>    <span class=nx>toc</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=ln>18</span><span class=cl>    <span class=nx>readingTime</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=ln>19</span><span class=cl>    
+</span></span><span class=line><span class=ln>20</span><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>article</span><span class=p>.</span><span class=nx>license</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>21</span><span class=cl>      <span class=nx>enabled</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=ln>22</span><span class=cl>      <span class=nx>default</span> <span class=p>=</span> <span class=s2>&#34;CC BY-NC 4.0&#34;</span>
+</span></span><span class=line><span class=ln>23</span><span class=cl>  
+</span></span><span class=line><span class=ln>24</span><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>widgets</span><span class=p>.</span><span class=nx>homepage</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>25</span><span class=cl>    <span class=nx>-</span> <span class=nx>type</span> <span class=p>=</span> <span class=s2>&#34;search&#34;</span>
+</span></span><span class=line><span class=ln>26</span><span class=cl>    <span class=nx>-</span> <span class=nx>type</span> <span class=p>=</span> <span class=s2>&#34;archives&#34;</span>
+</span></span><span class=line><span class=ln>27</span><span class=cl>    <span class=nx>-</span> <span class=nx>type</span> <span class=p>=</span> <span class=s2>&#34;categories&#34;</span>
+</span></span><span class=line><span class=ln>28</span><span class=cl>    <span class=nx>-</span> <span class=nx>type</span> <span class=p>=</span> <span class=s2>&#34;tag-cloud&#34;</span>
+</span></span><span class=line><span class=ln>29</span><span class=cl>
+</span></span><span class=line><span class=ln>30</span><span class=cl><span class=p>[</span><span class=nx>menu</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>31</span><span class=cl>  <span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=ln>32</span><span class=cl>    <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;Home&#34;</span>
+</span></span><span class=line><span class=ln>33</span><span class=cl>    <span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;/&#34;</span>
+</span></span><span class=line><span class=ln>34</span><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=ln>35</span><span class=cl>    <span class=p>[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>.</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>36</span><span class=cl>      <span class=nx>icon</span> <span class=p>=</span> <span class=s2>&#34;home&#34;</span>
+</span></span><span class=line><span class=ln>37</span><span class=cl>  
+</span></span><span class=line><span class=ln>38</span><span class=cl>  <span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>social</span><span class=p>]]</span>
+</span></span><span class=line><span class=ln>39</span><span class=cl>    <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;GitHub&#34;</span>
+</span></span><span class=line><span class=ln>40</span><span class=cl>    <span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;https://github.com/username&#34;</span>
+</span></span><span class=line><span class=ln>41</span><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=ln>42</span><span class=cl>    <span class=p>[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>social</span><span class=p>.</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>43</span><span class=cl>      <span class=nx>icon</span> <span class=p>=</span> <span class=s2>&#34;github&#34;</span>
+</span></span><span class=line><span class=ln>44</span><span class=cl>
+</span></span><span class=line><span class=ln>45</span><span class=cl><span class=p>[</span><span class=nx>languages</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>46</span><span class=cl>  <span class=p>[</span><span class=nx>languages</span><span class=p>.</span><span class=nx>th</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>47</span><span class=cl>    <span class=nx>languageName</span> <span class=p>=</span> <span class=s2>&#34;ไทย&#34;</span>
+</span></span><span class=line><span class=ln>48</span><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>1</span>
+</span></span></code></pre></div><hr><h2 id=-ลงกทเปนประโยชน><a href=#-%e0%b8%a5%e0%b8%87%e0%b8%81%e0%b8%97%e0%b9%80%e0%b8%9b%e0%b8%99%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b9%82%e0%b8%a2%e0%b8%8a%e0%b8%99 class=header-anchor></a>🔗 ลิงก์ที่เป็นประโยชน์</h2><div class=table-wrapper><table><thead><tr><th>แหล่ง</th><th>ลิงก์</th></tr></thead><tbody><tr><td><strong>Official Docs</strong></td><td><a class=link href=https://stack.cai.im/ target=_blank rel=noopener>https://stack.cai.im/</a></td></tr><tr><td><strong>GitHub Repo</strong></td><td><a class=link href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener>https://github.com/CaiJimmy/hugo-theme-stack</a></td></tr><tr><td><strong>Demo</strong></td><td><a class=link href=https://demo.stack.cai.im/ target=_blank rel=noopener>https://demo.stack.cai.im/</a></td></tr><tr><td><strong>Starter Template</strong></td><td><a class=link href=https://github.com/CaiJimmy/hugo-theme-stack-starter target=_blank rel=noopener>https://github.com/CaiJimmy/hugo-theme-stack-starter</a></td></tr><tr><td><strong>Tabler Icons</strong></td><td><a class=link href=https://tabler-icons.io target=_blank rel=noopener>https://tabler-icons.io</a></td></tr></tbody></table></div><hr><h2 id=-เคลดลบ><a href=#-%e0%b9%80%e0%b8%84%e0%b8%a5%e0%b8%94%e0%b8%a5%e0%b8%9a class=header-anchor></a>💡 เคล็ดลับ</h2><ol><li><strong>ใช้ Page Bundles</strong> — จัดการรูปและเนื้อหาในโฟลเดอร์เดียวกัน</li><li><strong>ใช้ Starter Template</strong> — เริ่มต้นง่าย มี GitHub Actions ให้แล้ว</li><li><strong>Custom CSS ใน assets/scss/</strong> — ไม่ต้องแก้ theme</li><li><strong>ใช้ Front Matter menu</strong> — เมนูจะ highlight อัตโนมัติ</li><li><strong>รูปต้องอยู่ใน assets/</strong> — สำหรับ avatar และรูปในธีม</li></ol><hr><p><strong>อัพเดทล่าสุด:</strong> 2026-04-06<br><strong>เขียนโดย:</strong> เหน่ง</p><hr><p><em>เอกสารนี้อ้างอิงจาก <a class=link href=https://stack.cai.im/ target=_blank rel=noopener>Hugo Stack Official Documentation</a></em></p></section><footer class="article-meta article-footer"><section class=article-tags><a href=/neng-blog/tags/hugo/>Hugo</a>
+<a href=/neng-blog/tags/stack/>Stack</a>
+<a href=/neng-blog/tags/theme/>Theme</a>
+<a href=/neng-blog/tags/guide/>Guide</a>
+<a href=/neng-blog/tags/tutorial/>Tutorial</a></section><section class="article-copyright inline-meta"><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span><a rel=license href=http://creativecommons.org/licenses/by-nc/4.0/>CC BY-NC 4.0</a></span></section></footer></article><aside><h2 class=section-title>Related content</h2><div class=subsection-list><div class=article-list--tile><article class=has-image><a href=/neng-blog/posts/openclaw-install-guide/><div class=article-image><img alt="Featured image of post เปิดโลก AI Assistant: คู่มือติดตั้ง OpenClaw สำหรับมือใหม่ (ฉบับไม่มีพื้นฐานก็ทำได้)" height=150 loading=lazy src=/neng-blog/posts/openclaw-install-guide/cover_hu_f3c4583a90455f7f.webp srcset="/neng-blog/posts/openclaw-install-guide/cover_hu_f3c4583a90455f7f.webp 1x, /neng-blog/posts/openclaw-install-guide/cover_hu_714878ca2387a772.webp 2x" width=250></div><div class=article-details style="background:linear-gradient(0deg,#f10c1980 0%,#fefefeC0 100%)"><h2 class=article-title>เปิดโลก AI Assistant: คู่มือติดตั้ง OpenClaw สำหรับมือใหม่ (ฉบับไม่มีพื้นฐานก็ทำได้)</h2></div></a></article></div></div></aside><div class=giscus-container role=region aria-label="Comments section"><script src=https://giscus.app/client.js data-repo=jitaret-rgb/neng-blog data-repo-id=R_kgDOR6Wt7Q data-category=Announcements data-category-id=DIC_kwDOR6Wt7c4C6TwS data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=bottom data-theme=noborder_dark data-lang=en data-loading=eager crossorigin=anonymous async></script></div><footer class=site-footer><section class=copyright>&copy;
+2026 Code & Community</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=4.0.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><script type=module>
     import gallery from '\/neng-blog\/ts\/gallery.js';
 
     const articleContent = document.querySelector('.article-content');
@@ -1121,50 +269,4 @@
         });
         lightbox.init();
     }
-</script>
-    
-
-            </main>
-        </div>
-        
-<script type="text/javascript" src="/neng-blog/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js" defer></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const codeBlocks = document.querySelectorAll('.article-content div.highlight');
-  
-  codeBlocks.forEach(function(block) {
-    
-    const existingButton = block.querySelector('.copy-code-button');
-    if (existingButton) {
-      return; 
-    }
-    
-    const button = document.createElement('button');
-    button.className = 'copy-code-button';
-    button.textContent = 'Copy';
-    button.setAttribute('aria-label', 'Copy code');
-    
-    button.addEventListener('click', function() {
-      const code = block.querySelector('code');
-      if (code) {
-        navigator.clipboard.writeText(code.textContent).then(function() {
-          button.textContent = 'Copied!';
-          button.style.background = 'var(--accent-color)';
-          button.style.color = '#fff';
-          setTimeout(function() {
-            button.textContent = 'Copy';
-            button.style.background = '';
-            button.style.color = '';
-          }, 2000);
-        });
-      }
-    });
-    
-    block.appendChild(button);
-  });
-});
-</script>
-
-
-    </body>
-</html>
+</script></main></div><script type=text/javascript src=/neng-blog/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js defer></script><script>document.addEventListener("DOMContentLoaded",function(){const e=document.querySelectorAll(".article-content div.highlight");e.forEach(function(e){const n=e.querySelector(".copy-code-button");if(n)return;const t=document.createElement("button");t.className="copy-code-button",t.textContent="Copy",t.setAttribute("aria-label","Copy code"),t.addEventListener("click",function(){const n=e.querySelector("code");n&&navigator.clipboard.writeText(n.textContent).then(function(){t.textContent="Copied!",t.style.background="var(--accent-color)",t.style.color="#fff",setTimeout(function(){t.textContent="Copy",t.style.background="",t.style.color=""},2e3)})}),e.appendChild(t)})})</script></body></html>

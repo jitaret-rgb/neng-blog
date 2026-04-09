@@ -1,17 +1,336 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Digital-Transformation on Code &amp; Community</title>
-        <link>https://jitaret-rgb.github.io/neng-blog/tags/digital-transformation/</link>
-        <description>Recent content in Digital-Transformation on Code &amp; Community</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>th-th</language>
-        <managingEditor>jitaret@gmail.com (เหน่ง)</managingEditor>
-        <webMaster>jitaret@gmail.com (เหน่ง)</webMaster>
-        <lastBuildDate>Mon, 06 Apr 2026 22:00:00 +0700</lastBuildDate><atom:link href="https://jitaret-rgb.github.io/neng-blog/tags/digital-transformation/index.xml" rel="self" type="application/rss+xml" /><item>
-            <title>AI Engineering สำหรับนักพัฒนาชุมชน: บทนำ - ทำไมต้องใช้ AI กับ 4 ภารกิจหลัก?</title>
-            <link>https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-intro/</link>
-            <pubDate>Mon, 06 Apr 2026 22:00:00 +0700</pubDate><author>jitaret@gmail.com (เหน่ง)</author>
-            <guid>https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-intro/</guid>
-            <description>&lt;img src=&#34;https://jitaret-rgb.github.io/neng-blog/&#34; alt=&#34;Featured image of post AI Engineering สำหรับนักพัฒนาชุมชน: บทนำ - ทำไมต้องใช้ AI กับ 4 ภารกิจหลัก?&#34; /&gt;&lt;h1 id=&#34;-ai-engineering-สำหรบนกพฒนาชมชน&#34;&gt;&lt;a href=&#34;#-ai-engineering-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%99%e0%b8%81%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;📘 AI Engineering สำหรับนักพัฒนาชุมชน&#xA;&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;ซีรีส์: ประยุกต์ใช้ AI สร้างสรรค์งานชุมชน คอนเทนต์ และวิจัย&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;ผู้เขียน:&lt;/strong&gt; เหน่ง (นักวิชาการพัฒนาชุมชน)&lt;br&gt;&#xA;&lt;strong&gt;สังกัด:&lt;/strong&gt; กรมการพัฒนาชุมชน กระทรวงมหาดไทย&lt;br&gt;&#xA;&lt;strong&gt;วันที่:&lt;/strong&gt; 6 เมษายน 2569&lt;br&gt;&#xA;&lt;strong&gt;อ้างอิง:&lt;/strong&gt; AI Engineering โดย Chip Huyen (O&amp;rsquo;Reilly, 2025)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-เชอมโยงกบ-4-ภารกจหลกกรมการพฒนาชมชน&#34;&gt;&lt;a href=&#34;#-%e0%b9%80%e0%b8%8a%e0%b8%ad%e0%b8%a1%e0%b9%82%e0%b8%a2%e0%b8%87%e0%b8%81%e0%b8%9a-4-%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%ab%e0%b8%a5%e0%b8%81%e0%b8%81%e0%b8%a3%e0%b8%a1%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🏛️ &lt;strong&gt;เชื่อมโยงกับ 4 ภารกิจหลักกรมการพัฒนาชุมชน&lt;/strong&gt;&#xA;&lt;/h2&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;ภารกิจ&lt;/th&gt;&#xA;          &lt;th&gt;AI ช่วยอะไรได้&lt;/th&gt;&#xA;          &lt;th&gt;ตัวอย่างการใช้งาน&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;1. สร้างชุมชนเข้มแข็ง&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Chatbot ให้คำปรึกษา 24/7&lt;/td&gt;&#xA;          &lt;td&gt;ตอบคำถามสวัสดิการ, OTOP, กองทุน&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;2. สร้างเศรษฐกิจฐานราก&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;วิเคราะห์ข้อมูล OTOP&lt;/td&gt;&#xA;          &lt;td&gt;หาแนวโน้มตลาด, แนะนำผลิตภัณฑ์&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;3. สร้างเครือข่าย&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;สรุปการประชุมอัตโนมัติ&lt;/td&gt;&#xA;          &lt;td&gt;จัดทำรายงาน, ติดตามความคืบหน้า&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;4. พัฒนาการบริหารจัดการกรม&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;สร้างคอนเทนต์อัตโนมัติ&lt;/td&gt;&#xA;          &lt;td&gt;โพสต์ Facebook, LINE, TikTok&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-วสยทศน-ชมชนเขมแขงดวย-ai&#34;&gt;&lt;a href=&#34;#-%e0%b8%a7%e0%b8%aa%e0%b8%a2%e0%b8%97%e0%b8%a8%e0%b8%99-%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99%e0%b9%80%e0%b8%82%e0%b8%a1%e0%b9%81%e0%b8%82%e0%b8%87%e0%b8%94%e0%b8%a7%e0%b8%a2-ai&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🎯 &lt;strong&gt;วิสัยทัศน์: ชุมชนเข้มแข็งด้วย AI&lt;/strong&gt;&#xA;&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;เศรษฐกิจฐานรากมั่นคง ชุมชนเข้มแข็งอย่างยั่งยืน&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;         ↓&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;    AI เป็นเครื่องมือเสริมศักยภาพ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;         ↓&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;  นักพัฒนาชุมชนมีเวลาทำโครงการใหม่&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;  ชาวบ้านได้รับบริการรวดเร็วขึ้น&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;  ข้อมูลถูกวิเคราะห์อย่างมีประสิทธิภาพ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-การปฏวต-ai-ทเปลยนทกอยาง&#34;&gt;&lt;a href=&#34;#-%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9b%e0%b8%8f%e0%b8%a7%e0%b8%95-ai-%e0%b8%97%e0%b9%80%e0%b8%9b%e0%b8%a5%e0%b8%a2%e0%b8%99%e0%b8%97%e0%b8%81%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🌟 &lt;strong&gt;การปฏิวัติ AI ที่เปลี่ยนทุกอย่าง&lt;/strong&gt;&#xA;&lt;/h2&gt;&lt;p&gt;ในปี 2569 (2026) โลกเปลี่ยนไปอย่างสิ้นเชิงด้วย &lt;strong&gt;Generative AI&lt;/strong&gt; และ &lt;strong&gt;Foundation Models&lt;/strong&gt; เช่น GPT-4, Claude, Qwen, Llama 3&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;สถิติที่น่าสนใจ:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;อาชีพ&lt;/th&gt;&#xA;          &lt;th&gt;% ที่ AI ทำได้&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;นักเขียนเนื้อหา&lt;/td&gt;&#xA;          &lt;td&gt;100%&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;ล่ามแปลภาษา&lt;/td&gt;&#xA;          &lt;td&gt;100%&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;นักออกแบบเว็บ&lt;/td&gt;&#xA;          &lt;td&gt;100%&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;นักวิเคราะห์ข้อมูล&lt;/td&gt;&#xA;          &lt;td&gt;85%&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;นักพัฒนาชุมชน&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;60%&lt;/strong&gt; (งานซ้ำซ้อน)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&lt;strong&gt;คำถามสำคัญ:&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;    &lt;blockquote&gt;&#xA;        &lt;p&gt;&lt;em&gt;&amp;ldquo;AI จะแทนที่มนุษย์ หรือ เป็นเครื่องมือที่ทรงพลังที่สุดของเรา?&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&#xA;&#xA;    &lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;คำตอบ:&lt;/strong&gt; ขึ้นอยู่กับว่า &lt;strong&gt;เราใช้ AI เป็นไหม&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-ai-ชวย-4-ภารกจหลกอยางไร&#34;&gt;&lt;a href=&#34;#-ai-%e0%b8%8a%e0%b8%a7%e0%b8%a2-4-%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%ab%e0%b8%a5%e0%b8%81%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b9%84%e0%b8%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;💼 &lt;strong&gt;AI ช่วย 4 ภารกิจหลักอย่างไร?&lt;/strong&gt;&#xA;&lt;/h2&gt;&lt;h3 id=&#34;ภารกจท-1-ชมชนเขมแขง&#34;&gt;&lt;a href=&#34;#%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%97-1-%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99%e0%b9%80%e0%b8%82%e0%b8%a1%e0%b9%81%e0%b8%82%e0%b8%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;ภารกิจที่ 1: ชุมชนเข้มแข็ง&lt;/strong&gt;&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;ปัญหา:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ ชาวบ้านโทรถามเรื่องสวัสดิการวันละ 50+ สาย&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ เจ้าหน้าที่ตอบคำถามเดิมซ้ำๆ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ ไม่มีเวลาทำโครงการใหม่&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;AI ช่วย:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ LINE Chatbot ตอบคำถามอัตโนมัติ 24/7&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ รวบรวม FAQ 50 คำถามพบบ่อย&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ มีปุ่ม &amp;#34;ติดต่อเจ้าหน้าที่&amp;#34; สำหรับกรณีฉุกเฉิน&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ผลลัพธ์:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;📉 ลดสายโทรเข้า 70% (50 → 15 สาย/วัน)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;⚡ ชาวบ้านได้รับคำตอบทันที (0 นาที รอ)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;😊 เจ้าหน้าที่มีเวลาทำโครงการใหม่ 3 โครงการ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;📈 ความพึงพอใจชาวบ้าน: 90%&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h3 id=&#34;ภารกจท-2-เศรษฐกจฐานราก&#34;&gt;&lt;a href=&#34;#%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%97-2-%e0%b9%80%e0%b8%a8%e0%b8%a3%e0%b8%a9%e0%b8%90%e0%b8%81%e0%b8%88%e0%b8%90%e0%b8%b2%e0%b8%99%e0%b8%a3%e0%b8%b2%e0%b8%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;ภารกิจที่ 2: เศรษฐกิจฐานราก&lt;/strong&gt;&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;ปัญหา:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ ผลิตภัณฑ์ OTOP ขายไม่ออก&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ ไม่รู้แนวโน้มตลาด&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ ขาดคำแนะนำในการพัฒนาผลิตภัณฑ์&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;AI ช่วย:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ วิเคราะห์ข้อมูลยอดขาย 5 ปีย้อนหลัง&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ หาแนวโน้มตลาดจาก Social Media&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ แนะนำช่องทางขายใหม่ (TikTok, Shopee)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ ออกแบบแพ็กเกจจิ้งใหม่&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ผลลัพธ์:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;💰 ยอดขายเพิ่ม 25% ใน 3 เดือน&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;📦 มีผลิตภัณฑ์ใหม่ 5 รายการ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;🌐 ขายออนไลน์ได้ 30% ของยอดขาย&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h3 id=&#34;ภารกจท-3-เครอขาย&#34;&gt;&lt;a href=&#34;#%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%97-3-%e0%b9%80%e0%b8%84%e0%b8%a3%e0%b8%ad%e0%b8%82%e0%b8%b2%e0%b8%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;ภารกิจที่ 3: เครือข่าย&lt;/strong&gt;&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;ปัญหา:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ ประชุมบ่อย ทำรายงานไม่ทัน&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ ติดตามความคืบหน้ายาก&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ ข้อมูลกระจายอยู่หลายที่&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;AI ช่วย:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ สรุปการประชุมอัตโนมัติ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ แยก Action Items ให้แต่ละคน&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ ติดตามความคืบหน้าอัตโนมัติ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ สร้าง Dashboard กลาง&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ผลลัพธ์:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;⏱️ ลดเวลาทำรายงานจาก 3 ชม. → 30 นาที&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;📋 ติดตามความคืบหน้าได้ Real-time&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;🤝 เครือข่ายทำงานร่วมกันมีประสิทธิภาพขึ้น&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h3 id=&#34;ภารกจท-4-พฒนาการบรหารจดการกรม&#34;&gt;&lt;a href=&#34;#%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%97-4-%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9a%e0%b8%a3%e0%b8%ab%e0%b8%b2%e0%b8%a3%e0%b8%88%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%a3%e0%b8%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;ภารกิจที่ 4: พัฒนาการบริหารจัดการกรม&lt;/strong&gt;&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;ปัญหา:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ ไม่มีเวลาโพสต์ Facebook&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ คอนเทนต์ไม่สม่ำเสมอ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ Engagement ต่ำ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;AI ช่วย:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ สร้างคอนเทนต์อัตโนมัติจากข้อมูลที่มี&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ วางแผนโพสต์ล่วงหน้า 1 เดือน&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ วิเคราะห์ Engagement หาเวลาโพสต์ที่ดีที่สุด&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ ตอบคอมเมนต์อัตโนมัติ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ผลลัพธ์:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;📱 โพสต์ได้ทุกวัน (จากเดือนละ 5 โพสต์)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❤️ Engagement เพิ่มขึ้น 50%&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;👥 ผู้ติดตามเพิ่ม 200% ใน 3 เดือน&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-ai-engineering-คออะไร&#34;&gt;&lt;a href=&#34;#-ai-engineering-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🎯 &lt;strong&gt;AI Engineering คืออะไร?&lt;/strong&gt;&#xA;&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;AI Engineering = ศาสตร์การสร้างระบบ AI ที่ใช้งานได้จริง&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;ไม่ใช่แค่:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ เขียน Prompt เป็น&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;❌ ใช้ ChatGPT ได้&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;แต่ต้อง:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ วางแผนระบบเป็น&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ เลือกโมเดลเหมาะสม&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ ออกแบบ Human-AI Interface&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;✅ วัดผลและปรับปรุง&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;หนังสือ &amp;ldquo;AI Engineering&amp;rdquo; โดย Chip Huyen&lt;/strong&gt; (O&amp;rsquo;Reilly, 2025) คือคู่มือครบวงจรที่สอนทุกอย่างนี้&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-ทำไมนกพฒนาชมชนตองอาน&#34;&gt;&lt;a href=&#34;#-%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%99%e0%b8%81%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;📖 &lt;strong&gt;ทำไมนักพัฒนาชุมชนต้องอ่าน?&lt;/strong&gt;&#xA;&lt;/h2&gt;&lt;h3 id=&#34;เชอมโยงกบงานประจำวน&#34;&gt;&lt;a href=&#34;#%e0%b9%80%e0%b8%8a%e0%b8%ad%e0%b8%a1%e0%b9%82%e0%b8%a2%e0%b8%87%e0%b8%81%e0%b8%9a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%88%e0%b8%b3%e0%b8%a7%e0%b8%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;เชื่อมโยงกับงานประจำวัน:&lt;/strong&gt;&#xA;&lt;/h3&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;งานชุมชน&lt;/th&gt;&#xA;          &lt;th&gt;AI ช่วยอะไรได้&lt;/th&gt;&#xA;          &lt;th&gt;ผลลัพธ์&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;ตอบคำถามชาวบ้าน&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Chatbot ตอบอัตโนมัติ 24/7&lt;/td&gt;&#xA;          &lt;td&gt;ชาวบ้านพึงพอใจ 90%&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;สร้างคอนเทนต์&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;โพสต์ Facebook, LINE, TikTok&lt;/td&gt;&#xA;          &lt;td&gt;โพสต์ได้ทุกวัน&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;สรุปข่าวสาร&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;สรุปนโยบายรัฐบาลเป็นภาษาง่ายๆ&lt;/td&gt;&#xA;          &lt;td&gt;ชาวบ้านเข้าใจเร็วขึ้น&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;วิเคราะห์ข้อมูล&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;ประมวลผลแบบสำรวจ 200+ ครัวเรือน&lt;/td&gt;&#xA;          &lt;td&gt;เสร็จใน 10 นาที&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;เขียนรายงาน&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;ร่างรายงานการประชุม, คำร้อง&lt;/td&gt;&#xA;          &lt;td&gt;ลดเวลา 70%&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;วิจัย&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;วิเคราะห์ข้อมูลสัมภาษณ์, หา Theme&lt;/td&gt;&#xA;          &lt;td&gt;เสร็จเร็วขึ้น 3 เท่า&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&lt;strong&gt;ผลลัพธ์โดยรวม:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;⏱️ ลดงานซ้ำซ้อน 60%&lt;/li&gt;&#xA;&lt;li&gt;📈 เพิ่มประสิทธิภาพ 3 เท่า&lt;/li&gt;&#xA;&lt;li&gt;😊 ชาวบ้านได้รับบริการดีขึ้น&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-แผนทบทความในซรสน&#34;&gt;&lt;a href=&#34;#-%e0%b9%81%e0%b8%9c%e0%b8%99%e0%b8%97%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b9%83%e0%b8%99%e0%b8%8b%e0%b8%a3%e0%b8%aa%e0%b8%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🗺️ &lt;strong&gt;แผนที่บทความในซีรีส์นี้&lt;/strong&gt;&#xA;&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;                    ┌─────────────────┐&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;                    │   AI Engineering │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;                    └────────┬────────┘&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;                             │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;         ┌───────────────────┼───────────────────┐&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;         │                   │                   │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;         ▼                   ▼                   ▼&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;   ┌──────────┐        ┌──────────┐        ┌──────────┐&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;   │ ตอนที่ 1  │        │ ตอนที่ 2  │        │ ตอนที่ 3  │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;   │ วางแผน   │        │ Prompt   │        │   RAG    │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;   │ AI App   │        │Engineering│       │          │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;   └──────────┘        └──────────┘        └──────────┘&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;         │                   │                   │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;         └───────────────────┼───────────────────┘&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;                             │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;                             ▼&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;                    ┌──────────┐&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;                    │ ตอนที่ 4  │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;                    │ Dataset  │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;                    │ วิจัย    │&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;21&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;                    └──────────┘&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;อ่านจบแล้วจะทำอะไรได้:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;✅ วางแผน AI App สำหรับงานชุมชน&lt;/li&gt;&#xA;&lt;li&gt;✅ เขียน Prompt สร้างคอนเทนต์คุณภาพ&lt;/li&gt;&#xA;&lt;li&gt;✅ สร้างระบบตอบคำถามอัตโนมัติ (RAG)&lt;/li&gt;&#xA;&lt;li&gt;✅ จัดการ Dataset สำหรับวิจัย&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-สารบญซรส-6-บทความ&#34;&gt;&lt;a href=&#34;#-%e0%b8%aa%e0%b8%b2%e0%b8%a3%e0%b8%9a%e0%b8%8d%e0%b8%8b%e0%b8%a3%e0%b8%aa-6-%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;📚 &lt;strong&gt;สารบัญซีรีส์ (6 บทความ)&lt;/strong&gt;&#xA;&lt;/h2&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;#&lt;/th&gt;&#xA;          &lt;th&gt;ชื่อบทความ&lt;/th&gt;&#xA;          &lt;th&gt;สถานะ&lt;/th&gt;&#xA;          &lt;th&gt;เผยแพร่&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;1&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;บทนำ: ทำไมต้อง AI Engineering?&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;✅ อ่านอยู่&lt;/td&gt;&#xA;          &lt;td&gt;วันนี้&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;2&lt;/td&gt;&#xA;          &lt;td&gt;ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน&lt;/td&gt;&#xA;          &lt;td&gt;⏳ เตรียม&lt;/td&gt;&#xA;          &lt;td&gt;วันอื่น&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;3&lt;/td&gt;&#xA;          &lt;td&gt;ตอนที่ 2: Prompt Engineering สร้างคอนเทนต์&lt;/td&gt;&#xA;          &lt;td&gt;⏳ เตรียม&lt;/td&gt;&#xA;          &lt;td&gt;วันอื่น&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;4&lt;/td&gt;&#xA;          &lt;td&gt;ตอนที่ 3: RAG ตอบคำถามนโยบายรัฐบาล&lt;/td&gt;&#xA;          &lt;td&gt;⏳ เตรียม&lt;/td&gt;&#xA;          &lt;td&gt;วันอื่น&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;5&lt;/td&gt;&#xA;          &lt;td&gt;ตอนที่ 4: Dataset สำหรับวิจัย&lt;/td&gt;&#xA;          &lt;td&gt;⏳ เตรียม&lt;/td&gt;&#xA;          &lt;td&gt;วันอื่น&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;6&lt;/td&gt;&#xA;          &lt;td&gt;บทสรุป: เริ่มต้นอย่างไร?&lt;/td&gt;&#xA;          &lt;td&gt;⏳ เตรียม&lt;/td&gt;&#xA;          &lt;td&gt;วันอื่น&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-เรมตนเดนทางดวยกน&#34;&gt;&lt;a href=&#34;#-%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b8%95%e0%b8%99%e0%b9%80%e0%b8%94%e0%b8%99%e0%b8%97%e0%b8%b2%e0%b8%87%e0%b8%94%e0%b8%a7%e0%b8%a2%e0%b8%81%e0%b8%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🚀 &lt;strong&gt;เริ่มต้นเดินทางด้วยกัน!&lt;/strong&gt;&#xA;&lt;/h2&gt;&lt;p&gt;ซีรีส์นี้จะพาคุณไปรู้จักกับ &lt;strong&gt;AI Engineering&lt;/strong&gt; แบบจับต้องได้&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ไม่ใช่ทฤษฎีลอยๆ&lt;/strong&gt; แต่เป็น &lt;strong&gt;แนวทางปฏิบัติจริง&lt;/strong&gt; ที่นักพัฒนาชุมชนใช้ได้ทันที&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ไม่ต้องมีพื้นฐาน Programming&lt;/strong&gt; ก็เรียนรู้ได้&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ไม่ต้องซื้อเครื่องมือแพงๆ&lt;/strong&gt; ก็เริ่มต้นได้&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;สำคัญที่สุด:&lt;/strong&gt; AI ไม่ได้มาแทนที่มนุษย์ แต่มาช่วยให้เรา &lt;strong&gt;มีเวลาทำสิ่งที่สำคัญกว่า&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-คำถามทพบบอย&#34;&gt;&lt;a href=&#34;#-%e0%b8%84%e0%b8%b3%e0%b8%96%e0%b8%b2%e0%b8%a1%e0%b8%97%e0%b8%9e%e0%b8%9a%e0%b8%9a%e0%b8%ad%e0%b8%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;💬 &lt;strong&gt;คำถามที่พบบ่อย&lt;/strong&gt;&#xA;&lt;/h2&gt;&lt;h3 id=&#34;q-ai-จะมาแทนทนกพฒนาชมชนไหม&#34;&gt;&lt;a href=&#34;#q-ai-%e0%b8%88%e0%b8%b0%e0%b8%a1%e0%b8%b2%e0%b9%81%e0%b8%97%e0%b8%99%e0%b8%97%e0%b8%99%e0%b8%81%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99%e0%b9%84%e0%b8%ab%e0%b8%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Q: AI จะมาแทนที่นักพัฒนาชุมชนไหม?&lt;/strong&gt;&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; ไม่! AI มาช่วยทำงานซ้ำซ้อน เพื่อให้คุณมีเวลา:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ลงพื้นที่พบปะชาวบ้าน&lt;/li&gt;&#xA;&lt;li&gt;ออกแบบโครงการใหม่&lt;/li&gt;&#xA;&lt;li&gt;สร้างเครือข่าย&lt;/li&gt;&#xA;&lt;li&gt;พัฒนาตัวเอง&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;q-ตองมพนฐาน-programming-ไหม&#34;&gt;&lt;a href=&#34;#q-%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a1%e0%b8%9e%e0%b8%99%e0%b8%90%e0%b8%b2%e0%b8%99-programming-%e0%b9%84%e0%b8%ab%e0%b8%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Q: ต้องมีพื้นฐาน Programming ไหม?&lt;/strong&gt;&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; ไม่จำเป็น! บทความนี้สอนใช้ AI ในระดับ User ไม่ต้องเขียนโค้ด&lt;/p&gt;&#xA;&lt;h3 id=&#34;q-ตองเสยเงนซอ-ai-ไหม&#34;&gt;&lt;a href=&#34;#q-%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b9%80%e0%b8%aa%e0%b8%a2%e0%b9%80%e0%b8%87%e0%b8%99%e0%b8%8b%e0%b8%ad-ai-%e0%b9%84%e0%b8%ab%e0%b8%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Q: ต้องเสียเงินซื้อ AI ไหม?&lt;/strong&gt;&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; มีทั้งฟรีและเสียเงิน เริ่มจากฟรีก่อนก็ได้ (Qwen, Llama 3)&lt;/p&gt;&#xA;&lt;h3 id=&#34;q-ยากไหม&#34;&gt;&lt;a href=&#34;#q-%e0%b8%a2%e0%b8%b2%e0%b8%81%e0%b9%84%e0%b8%ab%e0%b8%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Q: ยากไหม?&lt;/strong&gt;&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; เริ่มจากง่ายไปยาก ค่อยๆ เรียนรู้ ทำตามขั้นตอน&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-พรอมแลวไปตอ&#34;&gt;&lt;a href=&#34;#-%e0%b8%9e%e0%b8%a3%e0%b8%ad%e0%b8%a1%e0%b9%81%e0%b8%a5%e0%b8%a7%e0%b9%84%e0%b8%9b%e0%b8%95%e0%b8%ad&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;🎯 &lt;strong&gt;พร้อมแล้วไปต่อ!&lt;/strong&gt;&#xA;&lt;/h2&gt;&lt;p&gt;บทความต่อไป: &lt;strong&gt;ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;คุณจะเรียนรู้:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;5 ขั้นตอนวางแผน AI App&lt;/li&gt;&#xA;&lt;li&gt;วิธีระบุปัญหาให้ชัดเจน&lt;/li&gt;&#xA;&lt;li&gt;การเลือก Use Case ที่เหมาะสม&lt;/li&gt;&#xA;&lt;li&gt;การกำหนดขอบเขต (In/Out of Scope)&lt;/li&gt;&#xA;&lt;li&gt;การเลือกโมเดลที่เหมาะสมกับงาน&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;ติดตามตอนต่อไปครับ!&lt;/strong&gt; 🚀&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;em&gt;ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;ตอนที่ 1/6: บทนำ&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;โดย เหน่ง - นักวิชาการพัฒนาชุมชน&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;กรมการพัฒนาชุมชน กระทรวงมหาดไทย&lt;/em&gt;&lt;/p&gt;&#xA;</description>
-        </item></channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Digital-Transformation on Code &amp; Community</title><link>https://jitaret-rgb.github.io/neng-blog/tags/digital-transformation/</link><description>Recent content in Digital-Transformation on Code &amp; Community</description><generator>Hugo -- gohugo.io</generator><language>th-th</language><managingEditor>jitaret@gmail.com (เหน่ง)</managingEditor><webMaster>jitaret@gmail.com (เหน่ง)</webMaster><lastBuildDate>Mon, 06 Apr 2026 22:00:00 +0700</lastBuildDate><atom:link href="https://jitaret-rgb.github.io/neng-blog/tags/digital-transformation/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Engineering สำหรับนักพัฒนาชุมชน: บทนำ - ทำไมต้องใช้ AI กับ 4 ภารกิจหลัก?</title><link>https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-intro/</link><pubDate>Mon, 06 Apr 2026 22:00:00 +0700</pubDate><author>jitaret@gmail.com (เหน่ง)</author><guid>https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-intro/</guid><description>&lt;img src="https://jitaret-rgb.github.io/neng-blog/" alt="Featured image of post AI Engineering สำหรับนักพัฒนาชุมชน: บทนำ - ทำไมต้องใช้ AI กับ 4 ภารกิจหลัก?" /&gt;&lt;h1 id="-ai-engineering-สำหรบนกพฒนาชมชน"&gt;&lt;a href="#-ai-engineering-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%9a%e0%b8%99%e0%b8%81%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99" class="header-anchor"&gt;&lt;/a&gt;📘 AI Engineering สำหรับนักพัฒนาชุมชน
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;ซีรีส์: ประยุกต์ใช้ AI สร้างสรรค์งานชุมชน คอนเทนต์ และวิจัย&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;ผู้เขียน:&lt;/strong&gt; เหน่ง (นักวิชาการพัฒนาชุมชน)&lt;br&gt;
+&lt;strong&gt;สังกัด:&lt;/strong&gt; กรมการพัฒนาชุมชน กระทรวงมหาดไทย&lt;br&gt;
+&lt;strong&gt;วันที่:&lt;/strong&gt; 6 เมษายน 2569&lt;br&gt;
+&lt;strong&gt;อ้างอิง:&lt;/strong&gt; AI Engineering โดย Chip Huyen (O&amp;rsquo;Reilly, 2025)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-เชอมโยงกบ-4-ภารกจหลกกรมการพฒนาชมชน"&gt;&lt;a href="#-%e0%b9%80%e0%b8%8a%e0%b8%ad%e0%b8%a1%e0%b9%82%e0%b8%a2%e0%b8%87%e0%b8%81%e0%b8%9a-4-%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%ab%e0%b8%a5%e0%b8%81%e0%b8%81%e0%b8%a3%e0%b8%a1%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99" class="header-anchor"&gt;&lt;/a&gt;🏛️ &lt;strong&gt;เชื่อมโยงกับ 4 ภารกิจหลักกรมการพัฒนาชุมชน&lt;/strong&gt;
+&lt;/h2&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;ภารกิจ&lt;/th&gt;
+ &lt;th&gt;AI ช่วยอะไรได้&lt;/th&gt;
+ &lt;th&gt;ตัวอย่างการใช้งาน&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;1. สร้างชุมชนเข้มแข็ง&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Chatbot ให้คำปรึกษา 24/7&lt;/td&gt;
+ &lt;td&gt;ตอบคำถามสวัสดิการ, OTOP, กองทุน&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;2. สร้างเศรษฐกิจฐานราก&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;วิเคราะห์ข้อมูล OTOP&lt;/td&gt;
+ &lt;td&gt;หาแนวโน้มตลาด, แนะนำผลิตภัณฑ์&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;3. สร้างเครือข่าย&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;สรุปการประชุมอัตโนมัติ&lt;/td&gt;
+ &lt;td&gt;จัดทำรายงาน, ติดตามความคืบหน้า&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;4. พัฒนาการบริหารจัดการกรม&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;สร้างคอนเทนต์อัตโนมัติ&lt;/td&gt;
+ &lt;td&gt;โพสต์ Facebook, LINE, TikTok&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="-วสยทศน-ชมชนเขมแขงดวย-ai"&gt;&lt;a href="#-%e0%b8%a7%e0%b8%aa%e0%b8%a2%e0%b8%97%e0%b8%a8%e0%b8%99-%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99%e0%b9%80%e0%b8%82%e0%b8%a1%e0%b9%81%e0%b8%82%e0%b8%87%e0%b8%94%e0%b8%a7%e0%b8%a2-ai" class="header-anchor"&gt;&lt;/a&gt;🎯 &lt;strong&gt;วิสัยทัศน์: ชุมชนเข้มแข็งด้วย AI&lt;/strong&gt;
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;เศรษฐกิจฐานรากมั่นคง ชุมชนเข้มแข็งอย่างยั่งยืน
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt; AI เป็นเครื่องมือเสริมศักยภาพ
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;5&lt;/span&gt;&lt;span class="cl"&gt; นักพัฒนาชุมชนมีเวลาทำโครงการใหม่
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;6&lt;/span&gt;&lt;span class="cl"&gt; ชาวบ้านได้รับบริการรวดเร็วขึ้น
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;7&lt;/span&gt;&lt;span class="cl"&gt; ข้อมูลถูกวิเคราะห์อย่างมีประสิทธิภาพ
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-การปฏวต-ai-ทเปลยนทกอยาง"&gt;&lt;a href="#-%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9b%e0%b8%8f%e0%b8%a7%e0%b8%95-ai-%e0%b8%97%e0%b9%80%e0%b8%9b%e0%b8%a5%e0%b8%a2%e0%b8%99%e0%b8%97%e0%b8%81%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87" class="header-anchor"&gt;&lt;/a&gt;🌟 &lt;strong&gt;การปฏิวัติ AI ที่เปลี่ยนทุกอย่าง&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;ในปี 2569 (2026) โลกเปลี่ยนไปอย่างสิ้นเชิงด้วย &lt;strong&gt;Generative AI&lt;/strong&gt; และ &lt;strong&gt;Foundation Models&lt;/strong&gt; เช่น GPT-4, Claude, Qwen, Llama 3&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;สถิติที่น่าสนใจ:&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;อาชีพ&lt;/th&gt;
+ &lt;th&gt;% ที่ AI ทำได้&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;นักเขียนเนื้อหา&lt;/td&gt;
+ &lt;td&gt;100%&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ล่ามแปลภาษา&lt;/td&gt;
+ &lt;td&gt;100%&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;นักออกแบบเว็บ&lt;/td&gt;
+ &lt;td&gt;100%&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;นักวิเคราะห์ข้อมูล&lt;/td&gt;
+ &lt;td&gt;85%&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;นักพัฒนาชุมชน&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;60%&lt;/strong&gt; (งานซ้ำซ้อน)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;คำถามสำคัญ:&lt;/strong&gt;&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&lt;em&gt;&amp;ldquo;AI จะแทนที่มนุษย์ หรือ เป็นเครื่องมือที่ทรงพลังที่สุดของเรา?&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;คำตอบ:&lt;/strong&gt; ขึ้นอยู่กับว่า &lt;strong&gt;เราใช้ AI เป็นไหม&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-ai-ชวย-4-ภารกจหลกอยางไร"&gt;&lt;a href="#-ai-%e0%b8%8a%e0%b8%a7%e0%b8%a2-4-%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%ab%e0%b8%a5%e0%b8%81%e0%b8%ad%e0%b8%a2%e0%b8%b2%e0%b8%87%e0%b9%84%e0%b8%a3" class="header-anchor"&gt;&lt;/a&gt;💼 &lt;strong&gt;AI ช่วย 4 ภารกิจหลักอย่างไร?&lt;/strong&gt;
+&lt;/h2&gt;&lt;h3 id="ภารกจท-1-ชมชนเขมแขง"&gt;&lt;a href="#%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%97-1-%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99%e0%b9%80%e0%b8%82%e0%b8%a1%e0%b9%81%e0%b8%82%e0%b8%87" class="header-anchor"&gt;&lt;/a&gt;&lt;strong&gt;ภารกิจที่ 1: ชุมชนเข้มแข็ง&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;ปัญหา:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;❌ ชาวบ้านโทรถามเรื่องสวัสดิการวันละ 50+ สาย
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;❌ เจ้าหน้าที่ตอบคำถามเดิมซ้ำๆ
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;❌ ไม่มีเวลาทำโครงการใหม่
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;AI ช่วย:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;✅ LINE Chatbot ตอบคำถามอัตโนมัติ 24/7
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;✅ รวบรวม FAQ 50 คำถามพบบ่อย
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;✅ มีปุ่ม &amp;#34;ติดต่อเจ้าหน้าที่&amp;#34; สำหรับกรณีฉุกเฉิน
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ผลลัพธ์:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;📉 ลดสายโทรเข้า 70% (50 → 15 สาย/วัน)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;⚡ ชาวบ้านได้รับคำตอบทันที (0 นาที รอ)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;😊 เจ้าหน้าที่มีเวลาทำโครงการใหม่ 3 โครงการ
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt;📈 ความพึงพอใจชาวบ้าน: 90%
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="ภารกจท-2-เศรษฐกจฐานราก"&gt;&lt;a href="#%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%97-2-%e0%b9%80%e0%b8%a8%e0%b8%a3%e0%b8%a9%e0%b8%90%e0%b8%81%e0%b8%88%e0%b8%90%e0%b8%b2%e0%b8%99%e0%b8%a3%e0%b8%b2%e0%b8%81" class="header-anchor"&gt;&lt;/a&gt;&lt;strong&gt;ภารกิจที่ 2: เศรษฐกิจฐานราก&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;ปัญหา:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;❌ ผลิตภัณฑ์ OTOP ขายไม่ออก
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;❌ ไม่รู้แนวโน้มตลาด
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;❌ ขาดคำแนะนำในการพัฒนาผลิตภัณฑ์
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;AI ช่วย:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;✅ วิเคราะห์ข้อมูลยอดขาย 5 ปีย้อนหลัง
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;✅ หาแนวโน้มตลาดจาก Social Media
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;✅ แนะนำช่องทางขายใหม่ (TikTok, Shopee)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt;✅ ออกแบบแพ็กเกจจิ้งใหม่
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ผลลัพธ์:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;💰 ยอดขายเพิ่ม 25% ใน 3 เดือน
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;📦 มีผลิตภัณฑ์ใหม่ 5 รายการ
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;🌐 ขายออนไลน์ได้ 30% ของยอดขาย
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="ภารกจท-3-เครอขาย"&gt;&lt;a href="#%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%97-3-%e0%b9%80%e0%b8%84%e0%b8%a3%e0%b8%ad%e0%b8%82%e0%b8%b2%e0%b8%a2" class="header-anchor"&gt;&lt;/a&gt;&lt;strong&gt;ภารกิจที่ 3: เครือข่าย&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;ปัญหา:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;❌ ประชุมบ่อย ทำรายงานไม่ทัน
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;❌ ติดตามความคืบหน้ายาก
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;❌ ข้อมูลกระจายอยู่หลายที่
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;AI ช่วย:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;✅ สรุปการประชุมอัตโนมัติ
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;✅ แยก Action Items ให้แต่ละคน
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;✅ ติดตามความคืบหน้าอัตโนมัติ
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt;✅ สร้าง Dashboard กลาง
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ผลลัพธ์:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;⏱️ ลดเวลาทำรายงานจาก 3 ชม. → 30 นาที
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;📋 ติดตามความคืบหน้าได้ Real-time
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;🤝 เครือข่ายทำงานร่วมกันมีประสิทธิภาพขึ้น
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="ภารกจท-4-พฒนาการบรหารจดการกรม"&gt;&lt;a href="#%e0%b8%a0%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%88%e0%b8%97-4-%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9a%e0%b8%a3%e0%b8%ab%e0%b8%b2%e0%b8%a3%e0%b8%88%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%a3%e0%b8%a1" class="header-anchor"&gt;&lt;/a&gt;&lt;strong&gt;ภารกิจที่ 4: พัฒนาการบริหารจัดการกรม&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;ปัญหา:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;❌ ไม่มีเวลาโพสต์ Facebook
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;❌ คอนเทนต์ไม่สม่ำเสมอ
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;❌ Engagement ต่ำ
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;AI ช่วย:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;✅ สร้างคอนเทนต์อัตโนมัติจากข้อมูลที่มี
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;✅ วางแผนโพสต์ล่วงหน้า 1 เดือน
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;✅ วิเคราะห์ Engagement หาเวลาโพสต์ที่ดีที่สุด
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;4&lt;/span&gt;&lt;span class="cl"&gt;✅ ตอบคอมเมนต์อัตโนมัติ
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ผลลัพธ์:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;1&lt;/span&gt;&lt;span class="cl"&gt;📱 โพสต์ได้ทุกวัน (จากเดือนละ 5 โพสต์)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;2&lt;/span&gt;&lt;span class="cl"&gt;❤️ Engagement เพิ่มขึ้น 50%
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;3&lt;/span&gt;&lt;span class="cl"&gt;👥 ผู้ติดตามเพิ่ม 200% ใน 3 เดือน
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-ai-engineering-คออะไร"&gt;&lt;a href="#-ai-engineering-%e0%b8%84%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3" class="header-anchor"&gt;&lt;/a&gt;🎯 &lt;strong&gt;AI Engineering คืออะไร?&lt;/strong&gt;
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 1&lt;/span&gt;&lt;span class="cl"&gt;AI Engineering = ศาสตร์การสร้างระบบ AI ที่ใช้งานได้จริง
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 2&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 3&lt;/span&gt;&lt;span class="cl"&gt;ไม่ใช่แค่:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 4&lt;/span&gt;&lt;span class="cl"&gt;❌ เขียน Prompt เป็น
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 5&lt;/span&gt;&lt;span class="cl"&gt;❌ ใช้ ChatGPT ได้
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 6&lt;/span&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 7&lt;/span&gt;&lt;span class="cl"&gt;แต่ต้อง:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 8&lt;/span&gt;&lt;span class="cl"&gt;✅ วางแผนระบบเป็น
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 9&lt;/span&gt;&lt;span class="cl"&gt;✅ เลือกโมเดลเหมาะสม
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;10&lt;/span&gt;&lt;span class="cl"&gt;✅ ออกแบบ Human-AI Interface
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;11&lt;/span&gt;&lt;span class="cl"&gt;✅ วัดผลและปรับปรุง
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;หนังสือ &amp;ldquo;AI Engineering&amp;rdquo; โดย Chip Huyen&lt;/strong&gt; (O&amp;rsquo;Reilly, 2025) คือคู่มือครบวงจรที่สอนทุกอย่างนี้&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-ทำไมนกพฒนาชมชนตองอาน"&gt;&lt;a href="#-%e0%b8%97%e0%b8%b3%e0%b9%84%e0%b8%a1%e0%b8%99%e0%b8%81%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%99" class="header-anchor"&gt;&lt;/a&gt;📖 &lt;strong&gt;ทำไมนักพัฒนาชุมชนต้องอ่าน?&lt;/strong&gt;
+&lt;/h2&gt;&lt;h3 id="เชอมโยงกบงานประจำวน"&gt;&lt;a href="#%e0%b9%80%e0%b8%8a%e0%b8%ad%e0%b8%a1%e0%b9%82%e0%b8%a2%e0%b8%87%e0%b8%81%e0%b8%9a%e0%b8%87%e0%b8%b2%e0%b8%99%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%88%e0%b8%b3%e0%b8%a7%e0%b8%99" class="header-anchor"&gt;&lt;/a&gt;&lt;strong&gt;เชื่อมโยงกับงานประจำวัน:&lt;/strong&gt;
+&lt;/h3&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;งานชุมชน&lt;/th&gt;
+ &lt;th&gt;AI ช่วยอะไรได้&lt;/th&gt;
+ &lt;th&gt;ผลลัพธ์&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;ตอบคำถามชาวบ้าน&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Chatbot ตอบอัตโนมัติ 24/7&lt;/td&gt;
+ &lt;td&gt;ชาวบ้านพึงพอใจ 90%&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;สร้างคอนเทนต์&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;โพสต์ Facebook, LINE, TikTok&lt;/td&gt;
+ &lt;td&gt;โพสต์ได้ทุกวัน&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;สรุปข่าวสาร&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;สรุปนโยบายรัฐบาลเป็นภาษาง่ายๆ&lt;/td&gt;
+ &lt;td&gt;ชาวบ้านเข้าใจเร็วขึ้น&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;วิเคราะห์ข้อมูล&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;ประมวลผลแบบสำรวจ 200+ ครัวเรือน&lt;/td&gt;
+ &lt;td&gt;เสร็จใน 10 นาที&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;เขียนรายงาน&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;ร่างรายงานการประชุม, คำร้อง&lt;/td&gt;
+ &lt;td&gt;ลดเวลา 70%&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;วิจัย&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;วิเคราะห์ข้อมูลสัมภาษณ์, หา Theme&lt;/td&gt;
+ &lt;td&gt;เสร็จเร็วขึ้น 3 เท่า&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;ผลลัพธ์โดยรวม:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;⏱️ ลดงานซ้ำซ้อน 60%&lt;/li&gt;
+&lt;li&gt;📈 เพิ่มประสิทธิภาพ 3 เท่า&lt;/li&gt;
+&lt;li&gt;😊 ชาวบ้านได้รับบริการดีขึ้น&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-แผนทบทความในซรสน"&gt;&lt;a href="#-%e0%b9%81%e0%b8%9c%e0%b8%99%e0%b8%97%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b9%83%e0%b8%99%e0%b8%8b%e0%b8%a3%e0%b8%aa%e0%b8%99" class="header-anchor"&gt;&lt;/a&gt;🗺️ &lt;strong&gt;แผนที่บทความในซีรีส์นี้&lt;/strong&gt;
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 1&lt;/span&gt;&lt;span class="cl"&gt; ┌─────────────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 2&lt;/span&gt;&lt;span class="cl"&gt; │ AI Engineering │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 3&lt;/span&gt;&lt;span class="cl"&gt; └────────┬────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 4&lt;/span&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 5&lt;/span&gt;&lt;span class="cl"&gt; ┌───────────────────┼───────────────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 6&lt;/span&gt;&lt;span class="cl"&gt; │ │ │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 7&lt;/span&gt;&lt;span class="cl"&gt; ▼ ▼ ▼
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 8&lt;/span&gt;&lt;span class="cl"&gt; ┌──────────┐ ┌──────────┐ ┌──────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt; 9&lt;/span&gt;&lt;span class="cl"&gt; │ ตอนที่ 1 │ │ ตอนที่ 2 │ │ ตอนที่ 3 │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;10&lt;/span&gt;&lt;span class="cl"&gt; │ วางแผน │ │ Prompt │ │ RAG │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;11&lt;/span&gt;&lt;span class="cl"&gt; │ AI App │ │Engineering│ │ │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;12&lt;/span&gt;&lt;span class="cl"&gt; └──────────┘ └──────────┘ └──────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;13&lt;/span&gt;&lt;span class="cl"&gt; │ │ │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;14&lt;/span&gt;&lt;span class="cl"&gt; └───────────────────┼───────────────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;15&lt;/span&gt;&lt;span class="cl"&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;16&lt;/span&gt;&lt;span class="cl"&gt; ▼
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;17&lt;/span&gt;&lt;span class="cl"&gt; ┌──────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;18&lt;/span&gt;&lt;span class="cl"&gt; │ ตอนที่ 4 │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;19&lt;/span&gt;&lt;span class="cl"&gt; │ Dataset │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;20&lt;/span&gt;&lt;span class="cl"&gt; │ วิจัย │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="ln"&gt;21&lt;/span&gt;&lt;span class="cl"&gt; └──────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;อ่านจบแล้วจะทำอะไรได้:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;✅ วางแผน AI App สำหรับงานชุมชน&lt;/li&gt;
+&lt;li&gt;✅ เขียน Prompt สร้างคอนเทนต์คุณภาพ&lt;/li&gt;
+&lt;li&gt;✅ สร้างระบบตอบคำถามอัตโนมัติ (RAG)&lt;/li&gt;
+&lt;li&gt;✅ จัดการ Dataset สำหรับวิจัย&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="-สารบญซรส-6-บทความ"&gt;&lt;a href="#-%e0%b8%aa%e0%b8%b2%e0%b8%a3%e0%b8%9a%e0%b8%8d%e0%b8%8b%e0%b8%a3%e0%b8%aa-6-%e0%b8%9a%e0%b8%97%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1" class="header-anchor"&gt;&lt;/a&gt;📚 &lt;strong&gt;สารบัญซีรีส์ (6 บทความ)&lt;/strong&gt;
+&lt;/h2&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;#&lt;/th&gt;
+ &lt;th&gt;ชื่อบทความ&lt;/th&gt;
+ &lt;th&gt;สถานะ&lt;/th&gt;
+ &lt;th&gt;เผยแพร่&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;1&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;บทนำ: ทำไมต้อง AI Engineering?&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;✅ อ่านอยู่&lt;/td&gt;
+ &lt;td&gt;วันนี้&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2&lt;/td&gt;
+ &lt;td&gt;ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน&lt;/td&gt;
+ &lt;td&gt;⏳ เตรียม&lt;/td&gt;
+ &lt;td&gt;วันอื่น&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;3&lt;/td&gt;
+ &lt;td&gt;ตอนที่ 2: Prompt Engineering สร้างคอนเทนต์&lt;/td&gt;
+ &lt;td&gt;⏳ เตรียม&lt;/td&gt;
+ &lt;td&gt;วันอื่น&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;4&lt;/td&gt;
+ &lt;td&gt;ตอนที่ 3: RAG ตอบคำถามนโยบายรัฐบาล&lt;/td&gt;
+ &lt;td&gt;⏳ เตรียม&lt;/td&gt;
+ &lt;td&gt;วันอื่น&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;5&lt;/td&gt;
+ &lt;td&gt;ตอนที่ 4: Dataset สำหรับวิจัย&lt;/td&gt;
+ &lt;td&gt;⏳ เตรียม&lt;/td&gt;
+ &lt;td&gt;วันอื่น&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;6&lt;/td&gt;
+ &lt;td&gt;บทสรุป: เริ่มต้นอย่างไร?&lt;/td&gt;
+ &lt;td&gt;⏳ เตรียม&lt;/td&gt;
+ &lt;td&gt;วันอื่น&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="-เรมตนเดนทางดวยกน"&gt;&lt;a href="#-%e0%b9%80%e0%b8%a3%e0%b8%a1%e0%b8%95%e0%b8%99%e0%b9%80%e0%b8%94%e0%b8%99%e0%b8%97%e0%b8%b2%e0%b8%87%e0%b8%94%e0%b8%a7%e0%b8%a2%e0%b8%81%e0%b8%99" class="header-anchor"&gt;&lt;/a&gt;🚀 &lt;strong&gt;เริ่มต้นเดินทางด้วยกัน!&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;ซีรีส์นี้จะพาคุณไปรู้จักกับ &lt;strong&gt;AI Engineering&lt;/strong&gt; แบบจับต้องได้&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ไม่ใช่ทฤษฎีลอยๆ&lt;/strong&gt; แต่เป็น &lt;strong&gt;แนวทางปฏิบัติจริง&lt;/strong&gt; ที่นักพัฒนาชุมชนใช้ได้ทันที&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ไม่ต้องมีพื้นฐาน Programming&lt;/strong&gt; ก็เรียนรู้ได้&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ไม่ต้องซื้อเครื่องมือแพงๆ&lt;/strong&gt; ก็เริ่มต้นได้&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;สำคัญที่สุด:&lt;/strong&gt; AI ไม่ได้มาแทนที่มนุษย์ แต่มาช่วยให้เรา &lt;strong&gt;มีเวลาทำสิ่งที่สำคัญกว่า&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-คำถามทพบบอย"&gt;&lt;a href="#-%e0%b8%84%e0%b8%b3%e0%b8%96%e0%b8%b2%e0%b8%a1%e0%b8%97%e0%b8%9e%e0%b8%9a%e0%b8%9a%e0%b8%ad%e0%b8%a2" class="header-anchor"&gt;&lt;/a&gt;💬 &lt;strong&gt;คำถามที่พบบ่อย&lt;/strong&gt;
+&lt;/h2&gt;&lt;h3 id="q-ai-จะมาแทนทนกพฒนาชมชนไหม"&gt;&lt;a href="#q-ai-%e0%b8%88%e0%b8%b0%e0%b8%a1%e0%b8%b2%e0%b9%81%e0%b8%97%e0%b8%99%e0%b8%97%e0%b8%99%e0%b8%81%e0%b8%9e%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b8%8a%e0%b8%a1%e0%b8%8a%e0%b8%99%e0%b9%84%e0%b8%ab%e0%b8%a1" class="header-anchor"&gt;&lt;/a&gt;&lt;strong&gt;Q: AI จะมาแทนที่นักพัฒนาชุมชนไหม?&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; ไม่! AI มาช่วยทำงานซ้ำซ้อน เพื่อให้คุณมีเวลา:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ลงพื้นที่พบปะชาวบ้าน&lt;/li&gt;
+&lt;li&gt;ออกแบบโครงการใหม่&lt;/li&gt;
+&lt;li&gt;สร้างเครือข่าย&lt;/li&gt;
+&lt;li&gt;พัฒนาตัวเอง&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="q-ตองมพนฐาน-programming-ไหม"&gt;&lt;a href="#q-%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b8%a1%e0%b8%9e%e0%b8%99%e0%b8%90%e0%b8%b2%e0%b8%99-programming-%e0%b9%84%e0%b8%ab%e0%b8%a1" class="header-anchor"&gt;&lt;/a&gt;&lt;strong&gt;Q: ต้องมีพื้นฐาน Programming ไหม?&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; ไม่จำเป็น! บทความนี้สอนใช้ AI ในระดับ User ไม่ต้องเขียนโค้ด&lt;/p&gt;
+&lt;h3 id="q-ตองเสยเงนซอ-ai-ไหม"&gt;&lt;a href="#q-%e0%b8%95%e0%b8%ad%e0%b8%87%e0%b9%80%e0%b8%aa%e0%b8%a2%e0%b9%80%e0%b8%87%e0%b8%99%e0%b8%8b%e0%b8%ad-ai-%e0%b9%84%e0%b8%ab%e0%b8%a1" class="header-anchor"&gt;&lt;/a&gt;&lt;strong&gt;Q: ต้องเสียเงินซื้อ AI ไหม?&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; มีทั้งฟรีและเสียเงิน เริ่มจากฟรีก่อนก็ได้ (Qwen, Llama 3)&lt;/p&gt;
+&lt;h3 id="q-ยากไหม"&gt;&lt;a href="#q-%e0%b8%a2%e0%b8%b2%e0%b8%81%e0%b9%84%e0%b8%ab%e0%b8%a1" class="header-anchor"&gt;&lt;/a&gt;&lt;strong&gt;Q: ยากไหม?&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; เริ่มจากง่ายไปยาก ค่อยๆ เรียนรู้ ทำตามขั้นตอน&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-พรอมแลวไปตอ"&gt;&lt;a href="#-%e0%b8%9e%e0%b8%a3%e0%b8%ad%e0%b8%a1%e0%b9%81%e0%b8%a5%e0%b8%a7%e0%b9%84%e0%b8%9b%e0%b8%95%e0%b8%ad" class="header-anchor"&gt;&lt;/a&gt;🎯 &lt;strong&gt;พร้อมแล้วไปต่อ!&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;บทความต่อไป: &lt;strong&gt;ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;คุณจะเรียนรู้:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;5 ขั้นตอนวางแผน AI App&lt;/li&gt;
+&lt;li&gt;วิธีระบุปัญหาให้ชัดเจน&lt;/li&gt;
+&lt;li&gt;การเลือก Use Case ที่เหมาะสม&lt;/li&gt;
+&lt;li&gt;การกำหนดขอบเขต (In/Out of Scope)&lt;/li&gt;
+&lt;li&gt;การเลือกโมเดลที่เหมาะสมกับงาน&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;ติดตามตอนต่อไปครับ!&lt;/strong&gt; 🚀&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;ตอนที่ 1/6: บทนำ&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;โดย เหน่ง - นักวิชาการพัฒนาชุมชน&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;กรมการพัฒนาชุมชน กระทรวงมหาดไทย&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
