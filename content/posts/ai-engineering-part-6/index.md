@@ -1,7 +1,7 @@
 +++
 title = 'AI Engineering ตอนที่ 6: Fine-tuning AI Models + สรุปซีรีส์'
-date = 2026-04-09T22:59:00+07:00
-draft = true
+date = 2026-04-09T23:45:00+07:00
+draft = false
 tags = ['ai-engineering', 'fine-tuning', 'llm', 'machine-learning', 'ai-models']
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'

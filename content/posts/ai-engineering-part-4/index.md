@@ -1,7 +1,7 @@
 +++
 title = 'AI Engineering ตอนที่ 4: Dataset สำหรับวิจัย - คู่มือฉบับสมบูรณ์'
 date = 2026-04-09T23:12:00+07:00
-draft = true
+draft = false
 tags = ['ai-engineering', 'dataset', 'data-science', 'machine-learning', 'research']
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'
