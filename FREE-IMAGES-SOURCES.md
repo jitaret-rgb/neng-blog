@@ -134,7 +134,7 @@
 1. รูปปก: Unsplash → คุณภาพสูงสุด (1200x630 px)
 2. รูปประกอบ: Pexels / Unsplash → ตามหัวข้อ (800x600 px)
 3. Icons: Tabler Icons Pro (ซื้อแล้ว 6,092 icons)
-4. Illustrations: Tabler Illustrations (ซื้อแล้ว 1,036 รูป) → /static/illustrations/tabler/
+4. Illustrations: Tabler Illustrations (ซื้อแล้ว 230+ รูป) → /static/illustrations/tabler/svg/
 5. Infographic: Canva → สร้างเอง
 6. AI Images: Bing Image Creator → กรณีหายุาก
 ```
@@ -234,10 +234,19 @@ static/icons/tabler-premium/
 
 ```
 ✅ ซื้อมาแล้ว: $29 (Lifetime)
-✅ จำนวน: 1,036 illustrations
+✅ จำนวน: 230+ illustrations
 ✅ ตำแหน่ง: /static/illustrations/tabler/
-✅ รูปแบบ: SVG, PNG
+✅ รูปแบบ: SVG, PNG, PDF, Figma
 ✅ License: Commercial Use
+
+โครงสร้างโฟลเดอร์:
+- svg/              # 230+ ไฟล์ SVG
+- svg-css-autodark  # SVG ที่ปรับสีอัตโนมัติตาม Dark/Light mode
+- svg-css-variables # SVG ที่ใช้ CSS Variables
+- png/              # PNG (พื้นหลังโปร่งใส)
+- png-background/   # PNG (มีพื้นหลัง)
+- pdf/              # PDF Vector
+- figma/            # Figma files
 ```
 
 ---
@@ -247,8 +256,8 @@ static/icons/tabler-premium/
 | สินค้า | ราคา | จำนวน | สถานะ |
 |--------|------|-------|-------|
 | **Tabler Icons Pro** | $29 | 6,092 icons | ✅ ซื้อแล้ว |
-| **Tabler Illustrations** | $29 | 1,036 illustrations | ✅ ซื้อแล้ว |
-| **รวม** | **$58** | **7,128+ assets** | ✅ **ซื้อมาแล้ว** |
+| **Tabler Illustrations** | $29 | 230+ illustrations | ✅ ซื้อแล้ว |
+| **รวม** | **$58** | **6,322+ assets** | ✅ **ซื้อมาแล้ว** |
 
 ---
 
