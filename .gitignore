@@ -3,3 +3,7 @@ public/
 
 # Kimi Memory Space (local only)
 .kimi/
+
+# Tabler Premium Assets (license compliance - don't distribute)
+static/illustrations/tabler/
+static/icons/tabler-premium/
