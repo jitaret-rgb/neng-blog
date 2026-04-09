@@ -52,7 +52,7 @@
 | **Open Peeps** | CC0 | $0 | รูปคนวาดมือ | [openpeeps.com](https://www.openpeeps.com/) |
 | **Humaaans** | CC0 | $0 | รูปคน Mix & Match | [humaaans.com](https://www.humaaans.com/) |
 | **Tabler Icons** | MIT | ฟรี | 4,000+ icons | [tabler.io/icons](https://tabler.io/icons) |
-| **Tabler Icons Pro** | Commercial | $29 | 7,000+ icons | [tabler.io/icons](https://tabler.io/icons) |
+| **Tabler Icons Pro** | Commercial | $29 | 7,000+ icons ✅ **ซื้อแล้ว** | [tabler.io/icons](https://tabler.io/icons) |
 | **Lucide Icons** | ISC | $0 | Icons ทันสมัย | [lucide.dev](https://lucide.dev/) |
 | **Heroicons** | MIT | $0 | Icons จาก Tailwind | [heroicons.com](https://heroicons.com/) |
 
@@ -133,8 +133,8 @@
 ```
 1. รูปปก: Unsplash → คุณภาพสูงสุด (1200x630 px)
 2. รูปประกอบ: Pexels / Unsplash → ตามหัวข้อ (800x600 px)
-3. Icons: Tabler Icons (ฟรี) หรือ Tabler Pro ($29)
-4. Illustrations: unDraw (ฟรี) หรือ Tabler Illustrations (ซื้อแล้ว $29)
+3. Icons: Tabler Icons Pro (ซื้อแล้ว 6,092 icons)
+4. Illustrations: Tabler Illustrations (ซื้อแล้ว 1,036 รูป) → /static/illustrations/tabler/
 5. Infographic: Canva → สร้างเอง
 6. AI Images: Bing Image Creator → กรณีหายุาก
 ```
@@ -194,6 +194,61 @@
 
 - [[IMAGE-CHECKLIST.md]] — ตรวจสอบรูปซ้ำก่อน Publish
 - [[MICK-AUTO.md]] — กฎการเขียนบทความ
+
+---
+
+## 📦 **Tabler Assets ที่ซื้อมาแล้ว**
+
+### **Tabler Icons Pro**
+
+```
+✅ ซื้อมาแล้ว: $29 (Lifetime)
+✅ จำนวน: 6,092 icons
+✅ ตำแหน่ง: /static/icons/tabler-premium/
+✅ รูปแบบ: SVG, PNG, PDF, EPS, Webfont
+✅ License: Commercial Use
+```
+
+**โครงสร้างโฟลเดอร์:**
+```bash
+static/icons/tabler-premium/
+├── svg/          # 6,092 ไฟล์ (แนะนำ)
+├── png/          # PNG ความละเอียดต่างๆ
+├── pdf/          # PDF Vector
+├── eps/          # EPS สำหรับ Illustrator
+├── webfont/      # Webfont (CSS)
+└── tabler-icons.png  # Preview ทั้งหมด
+```
+
+**วิธีใช้:**
+```html
+<!-- SVG (แนะนำ) -->
+<img src="/icons/tabler-premium/svg/icon-name.svg" alt="Icon">
+
+<!-- Webfont -->
+<link rel="stylesheet" href="/icons/tabler-premium/webfont/tabler-icons.css">
+<i class="ti ti-icon-name"></i>
+```
+
+### **Tabler Illustrations**
+
+```
+✅ ซื้อมาแล้ว: $29 (Lifetime)
+✅ จำนวน: 1,036 illustrations
+✅ ตำแหน่ง: /static/illustrations/tabler/
+✅ รูปแบบ: SVG, PNG
+✅ License: Commercial Use
+```
+
+---
+
+## 💰 **สรุป Tabler ที่ซื้อ**
+
+| สินค้า | ราคา | จำนวน | สถานะ |
+|--------|------|-------|-------|
+| **Tabler Icons Pro** | $29 | 6,092 icons | ✅ ซื้อแล้ว |
+| **Tabler Illustrations** | $29 | 1,036 illustrations | ✅ ซื้อแล้ว |
+| **รวม** | **$58** | **7,128+ assets** | ✅ **ซื้อมาแล้ว** |
 
 ---
 
