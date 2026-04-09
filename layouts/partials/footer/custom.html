@@ -1,3 +1,7 @@
+{{- /* Share Buttons Script */ -}}
+{{ $shareScript := resources.Get "js/share-buttons.js" | minify | fingerprint }}
+<script src="{{ $shareScript.RelPermalink }}" integrity="{{ $shareScript.Data.Integrity }}" crossorigin="anonymous"></script>
+
 {{- /* Copy Code Button Script - Single Button Only */ -}}
 <script>
 document.addEventListener('DOMContentLoaded', function() {

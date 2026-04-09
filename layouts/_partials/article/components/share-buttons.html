@@ -27,25 +27,53 @@
            title="แชร์บน Line"
            aria-label="แชร์บน Line">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.374 0 0 4.314 0 9.63c0 2.885 1.607 5.47 4.125 7.186C3.88 17.45 3.5 18.67 3.5 18.67s2.03-.32 4.03-.89c1.42.48 2.94.74 4.47.74 6.627 0 12-4.314 12-9.63S18.627 0 12 0zm-1.44 14.82c-.33.33-.87.33-1.2 0l-2.12-2.12c-.33-.33-.33-.87 0-1.2.33-.33.87-.33 1.2 0l1.52 1.52 3.28-3.28c.33-.33.87-.33 1.2 0 .33.33.33.87 0 1.2l-3.88 3.88z"/>
+                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596l-1.09.338c-.277.089-.432.338-.432.596v.521c0 .345-.285.63-.631.63h-.782c-.348 0-.63-.285-.63-.63V8.108c0-.345.282-.63.63-.63h.782c.346 0 .631.285.631.63v2.688l1.522-.501c.326-.108.676.136.676.485v.529zm-2.741-3.016c0 .345-.285.63-.631.63h-.78c-.348 0-.631-.285-.631-.63V8.108c0-.345.283-.63.63-.63h.781c.346 0 .631.285.631.63v4.771zm-2.466 3.016V8.108c0-.345.285-.63.631-.63h.781c.345 0 .63.285.63.63v6.771c0 .345-.285.63-.63.63h-.781c-.346 0-.631-.285-.631-.63zm-2.466-3.016c0 .345-.285.63-.63.63H6.32v2.756c0 .345-.285.63-.63.63h-.782c-.348 0-.63-.285-.63-.63V8.108c0-.345.282-.63.63-.63h2.388c.345 0 .63.285.63.63 0 .345-.285.63-.63.63H5.908v1.125h1.387c.345 0 .63.285.63.63zM24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.038 9.588.391.084.923.258 1.058.592.12.301.079.768.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.04.645 1.28-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
             </svg>
         </a>
         
-        {{- /* Twitter/X */ -}}
+        {{- /* X (Twitter) */ -}}
         <a href="https://twitter.com/intent/tweet?url={{ $url | urlquery }}&text={{ $title | urlquery }}"
            target="_blank"
            rel="noopener"
-           class="article-share-button twitter"
-           title="แชร์บน Twitter"
-           aria-label="แชร์บน Twitter">
+           class="article-share-button x"
+           title="แชร์บน X"
+           aria-label="แชร์บน X">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg>
         </a>
         
+        {{- /* LinkedIn */ -}}
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ $url | urlquery }}"
+           target="_blank"
+           rel="noopener"
+           class="article-share-button linkedin"
+           title="แชร์บน LinkedIn"
+           aria-label="แชร์บน LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+        </a>
+        
+        {{- /* Native Share (Mobile) */ -}}
+        <button class="article-share-button native-share"
+                data-share-title="{{ $title }}"
+                data-share-url="{{ $url }}"
+                data-share-text="{{ $description }}"
+                title="แชร์"
+                aria-label="แชร์">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="5" r="3"/>
+                <circle cx="6" cy="12" r="3"/>
+                <circle cx="18" cy="19" r="3"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+        </button>
+        
         {{- /* Copy Link */ -}}
-        <button onclick="navigator.clipboard.writeText('{{ $url }}').then(() => alert('คัดลอกลิงก์แล้ว!'))"
-                class="article-share-button copy"
+        <button class="article-share-button copy"
+                data-copy-url="{{ $url }}"
                 title="คัดลอกลิงก์"
                 aria-label="คัดลอกลิงก์">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -54,5 +82,10 @@
             </svg>
         </button>
     </div>
+</div>
+
+{{- /* Toast Notification Container */ -}}
+<div id="share-toast" class="share-toast" role="status" aria-live="polite">
+    <span class="share-toast__message"></span>
 </div>
 {{- end -}}

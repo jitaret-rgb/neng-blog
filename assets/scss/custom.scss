@@ -227,10 +227,22 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #06C755;
   }
   
-  &.twitter:hover {
+  &.x:hover {
     background: #000000;
     color: white;
     border-color: #000000;
+  }
+  
+  &.linkedin:hover {
+    background: #0A66C2;
+    color: white;
+    border-color: #0A66C2;
+  }
+  
+  &.native-share:hover {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
   }
   
   &.copy:hover {
@@ -262,5 +274,46 @@ h1, h2, h3, h4, h5, h6 {
       width: 18px;
       height: 18px;
     }
+  }
+}
+
+/* Toast Notification */
+.share-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--card-text-color-main);
+  color: var(--card-background);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 9999;
+  pointer-events: none;
+  
+  &.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  
+  &.error {
+    background: #dc2626;
+  }
+  
+  &__message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Hide native share button on desktop (show only on mobile/tablet with share API support) */
+.article-share-button.native-share {
+  @media (min-width: 1024px) {
+    display: none;
   }
 }
