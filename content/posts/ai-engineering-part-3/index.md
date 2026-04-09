@@ -380,5 +380,5 @@ RAG คือกุญแจสำคัญที่ทำให้ AI ตอบ
 
 ## 📬 **ติดต่อได้ที่**
 
-- ✈️ **Telegram:** https://t.me/Majinman
-- 📧 **Email:** jitaret@gmail.com
+- **Telegram:** https://t.me/Majinman
+- **Email:** jitaret@gmail.com
