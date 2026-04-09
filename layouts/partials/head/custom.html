@@ -1,6 +1,16 @@
 {{- /* Custom Head - Security Headers */ -}}
 {{- partial "head/security.html" . -}}
 
+{{- /* Preconnect for external domains - Improves LCP */ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+
+{{- /* DNS Prefetch */ -}}
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
 {{- /* Preconnect for Giscus - Improves comment loading speed */ -}}
 {{- if and .Site.Params.comments.enabled (eq .Site.Params.comments.provider "giscus") -}}
 <link rel="preconnect" href="https://giscus.app" crossorigin>

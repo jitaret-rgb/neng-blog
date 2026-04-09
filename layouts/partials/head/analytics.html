@@ -1,0 +1,15 @@
+{{ if .Site.GoogleAnalytics }}
+<script defer src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+<script defer>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ .Site.GoogleAnalytics }}', {
+        'anonymize_ip': true,
+        'send_page_view': false
+    });
+    window.addEventListener('load', function() {
+        gtag('event', 'page_view');
+    });
+</script>
+{{ end }}

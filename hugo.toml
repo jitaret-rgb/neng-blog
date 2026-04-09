@@ -209,17 +209,29 @@ ignoreFiles = ['\.kimi/.*']
 
 # Image Processing Configuration
 [imaging]
-  quality = 85
+  quality = 80
   resampleFilter = "lanczos"
   hint = "photo"
   anchor = "smart"
   bgColor = "#ffffff"
   
   [imaging.exif]
-    disableDate = false
+    disableDate = true
     disableLatLong = true
     excludeFields = ""
     includeFields = ""
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
 
 [permalinks]
   page = "/:slug/"
