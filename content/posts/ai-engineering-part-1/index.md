@@ -517,6 +517,18 @@ Claude Sonnet: 1.5M x $0.003 = $4.5/เดือน
 
 ---
 
+## 📚 **ซีรีส์อ้างอิง**
+
+บทความชุดนี้เขียนโดยอ้างอิงจากหนังสือ **"AI Engineering"** โดย **Chip Huyen**
+
+- 📖 **หนังสือ:** [AI Engineering](https://aie-book.com/)
+- 🐙 **GitHub:** [chiphuyen/aie-book](https://github.com/chiphuyen/aie-book)
+- 👩‍💻 **ผู้เขียน:** [Chip Huyen](https://huyenchip.com/)
+
+**หมายเหตุ:** บทความชุดนี้ปรับเนื้อหาให้เหมาะกับบริบทของนักพัฒนาชุมชนไทย โดยเพิ่มตัวอย่าง Use Cases ในภาครัฐและชุมชน
+
+---
+
 ## 🚀 **ตอนต่อไป:**
 
 **ตอนที่ 2: Prompt Engineering สร้างคอนเทนต์**
