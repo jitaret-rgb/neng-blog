@@ -4,7 +4,6 @@ date = 2026-04-06T23:00:00+07:00
 draft = false
 tags = ['openclaw', 'release', 'update', 'ai', 'video-generation', 'music-generation']
 categories = ['News', 'OpenClaw', 'AI']
-image = 'cover.jpg'
 description = 'สรุปฟีเจอร์ใหม่ OpenClaw v2026.4.5: Video Generation, Music Generation, ComfyUI, 12+ Providers ใหม่ และอื่นๆ อีกมากมาย'
 +++
 
