@@ -93,6 +93,8 @@ ignoreFiles = ['\.kimi/.*']
   # Image Processing (Hugo Stack Theme)
   [params.imageProcessing]
     autoOrient = true        # หมุนรูปตาม EXIF data อัตโนมัติ
+    lazyLoading = true       # เปิดใช้งาน lazy loading สำหรับรูปภาพ
+    enableWebP = true        # เปิดใช้งาน WebP format (ลดขนาด ~30-50%)
     
     [params.imageProcessing.thumbnail]
       enabled = true         # เปิดใช้งาน thumbnail สำหรับ tile/compact layouts
