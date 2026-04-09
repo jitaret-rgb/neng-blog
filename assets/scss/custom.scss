@@ -176,3 +176,91 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 250px;
   }
 }
+
+/* Social Share Buttons */
+.article-share-buttons {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--card-separator-color);
+  
+  &__title {
+    font-size: 0.9rem;
+    color: var(--body-text-color);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  &__buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+}
+
+.article-share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--card-background);
+  color: var(--body-text-color);
+  border: 1px solid var(--card-separator-color);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  &.facebook:hover {
+    background: #1877F2;
+    color: white;
+    border-color: #1877F2;
+  }
+  
+  &.line:hover {
+    background: #06C755;
+    color: white;
+    border-color: #06C755;
+  }
+  
+  &.twitter:hover {
+    background: #000000;
+    color: white;
+    border-color: #000000;
+  }
+  
+  &.copy:hover {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+  }
+  
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-share-buttons {
+    margin-top: 1.5rem;
+    
+    &__buttons {
+      gap: 0.5rem;
+    }
+  }
+  
+  .article-share-button {
+    width: 40px;
+    height: 40px;
+    
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

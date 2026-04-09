@@ -1,0 +1,58 @@
+{{- $title := .Title -}}
+{{- $url := .Permalink -}}
+{{- $description := .Params.description | default .Site.Params.description -}}
+
+{{- if .Site.Params.article.shareButtons -}}
+<div class="article-share-buttons">
+    <div class="article-share-buttons__title">แชร์บทความนี้</div>
+    
+    <div class="article-share-buttons__buttons">
+        {{- /* Facebook */ -}}
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ $url | urlquery }}"
+           target="_blank"
+           rel="noopener"
+           class="article-share-button facebook"
+           title="แชร์บน Facebook"
+           aria-label="แชร์บน Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+        </a>
+        
+        {{- /* Line */ -}}
+        <a href="https://social-plugins.line.me/lineit/share?url={{ $url | urlquery }}"
+           target="_blank"
+           rel="noopener"
+           class="article-share-button line"
+           title="แชร์บน Line"
+           aria-label="แชร์บน Line">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.374 0 0 4.314 0 9.63c0 2.885 1.607 5.47 4.125 7.186C3.88 17.45 3.5 18.67 3.5 18.67s2.03-.32 4.03-.89c1.42.48 2.94.74 4.47.74 6.627 0 12-4.314 12-9.63S18.627 0 12 0zm-1.44 14.82c-.33.33-.87.33-1.2 0l-2.12-2.12c-.33-.33-.33-.87 0-1.2.33-.33.87-.33 1.2 0l1.52 1.52 3.28-3.28c.33-.33.87-.33 1.2 0 .33.33.33.87 0 1.2l-3.88 3.88z"/>
+            </svg>
+        </a>
+        
+        {{- /* Twitter/X */ -}}
+        <a href="https://twitter.com/intent/tweet?url={{ $url | urlquery }}&text={{ $title | urlquery }}"
+           target="_blank"
+           rel="noopener"
+           class="article-share-button twitter"
+           title="แชร์บน Twitter"
+           aria-label="แชร์บน Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+        </a>
+        
+        {{- /* Copy Link */ -}}
+        <button onclick="navigator.clipboard.writeText('{{ $url }}').then(() => alert('คัดลอกลิงก์แล้ว!'))"
+                class="article-share-button copy"
+                title="คัดลอกลิงก์"
+                aria-label="คัดลอกลิงก์">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+        </button>
+    </div>
+</div>
+{{- end -}}

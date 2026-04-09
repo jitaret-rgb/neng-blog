@@ -36,6 +36,7 @@ ignoreFiles = ['\.kimi/.*']
     toc = true
     readingTime = true
     headingAnchor = true      # แสดง anchor links ข้าง headings เมื่อ hover
+    shareButtons = true       # เปิดใช้งานปุ่มแชร์
     
     [params.article.mermaid]  # Mermaid diagram configuration
       look = "classic"        # "classic" หรือ "handDrawn"
