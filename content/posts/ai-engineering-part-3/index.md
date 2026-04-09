@@ -1,7 +1,7 @@
 +++
 title = 'AI Engineering ตอนที่ 3: RAG สร้างระบบตอบคำถามอัจฉริยะ'
 date = 2026-04-09T13:20:00+07:00
-draft = true
+draft = false
 tags = ['ai-engineering', 'rag', 'retrieval-augmented-generation', 'chatbot', 'government-ai']
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'
