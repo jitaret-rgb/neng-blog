@@ -246,7 +246,7 @@ body {
 
 ### 7. **การปรับ Image Processing**
 
-**Lazy Loading (เปิดโดย умолчанию):**
+**Lazy Loading (enabled by умолчанию):**
 
 ```toml
 [params.imageProcessing]
