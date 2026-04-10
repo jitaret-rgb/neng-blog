@@ -463,7 +463,7 @@ Context ที่ดี = คำสั่งชัดเจน + ตัวอย
 - [Facebook](https://www.facebook.com/sharer/sharer.php?u=https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-part-7/)
 - [LINE](https://social-plugins.line.me/lineit/share?url=https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-part-7/)
 - [Telegram](https://t.me/share/url?url=https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-part-7/)
-- [X](https://twitter.com/intent/tweet?url=https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-part-7/)
+- [X](https://x.com/intent/tweet?url=https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-part-7/)
 - [LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-part-7/)
 - [Copy Link](javascript:navigator.clipboard.writeText('https://jitaret-rgb.github.io/neng-blog/posts/ai-engineering-part-7/'))
 
