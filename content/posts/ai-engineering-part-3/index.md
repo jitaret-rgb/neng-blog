@@ -383,7 +383,22 @@ RAG คือกุญแจสำคัญที่ทำให้ AI ตอบ
 - **Telegram:** https://t.me/Majinman
 - **Email:** jitaret@gmail.com
 
+---
+
+## 📚 **อ่านบทความอื่นในซีรีส์**
+
+| ตอน | หัวข้อ | ลิงก์ |
+|-----|--------|-------|
+| 1 | วางแผน AI App | [อ่านตอนที่ 1](/posts/ai-engineering-part-1/) |
+| 2 | Prompt Engineering | [อ่านตอนที่ 2](/posts/ai-engineering-part-2/) |
+| 4 | Dataset สำหรับวิจัย | [อ่านตอนที่ 4](/posts/ai-engineering-part-4/) |
+| 5 | Agentic AI | [อ่านตอนที่ 5](/posts/ai-engineering-part-5/) |
+| 6 | Fine-tuning AI Models | [อ่านตอนที่ 6](/posts/ai-engineering-part-6/) |
+| 7 | สรุปซีรีส์ | [อ่านตอนที่ 7](/posts/ai-engineering-part-7/) |
+
+---
+
 _ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน_
-_ตอนที่ 4/7: RAG_
+_ตอนที่ 3/7: RAG_
 _โดย เหน่ง - นักวิชาการพัฒนาชุมชน_
 _กรมการพัฒนาชุมชน กระทรวงมหาดไทย_

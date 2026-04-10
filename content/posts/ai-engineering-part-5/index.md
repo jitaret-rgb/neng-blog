@@ -470,6 +470,19 @@ _กรมการพัฒนาชุมชน กระทรวงมหา
 
 ---
 
+## 📚 **อ่านบทความอื่นในซีรีส์**
+
+| ตอน | หัวข้อ | ลิงก์ |
+|-----|--------|-------|
+| 1 | วางแผน AI App | [อ่านตอนที่ 1](/posts/ai-engineering-part-1/) |
+| 2 | Prompt Engineering | [อ่านตอนที่ 2](/posts/ai-engineering-part-2/) |
+| 3 | RAG | [อ่านตอนที่ 3](/posts/ai-engineering-part-3/) |
+| 4 | Dataset สำหรับวิจัย | [อ่านตอนที่ 4](/posts/ai-engineering-part-4/) |
+| 6 | Fine-tuning AI Models | [อ่านตอนที่ 6](/posts/ai-engineering-part-6/) |
+| 7 | สรุปซีรีส์ | [อ่านตอนที่ 7](/posts/ai-engineering-part-7/) |
+
+---
+
 ## 📚 **ซีรีส์อ้างอิง**
 
 บทความชุดนี้เขียนโดยอ้างอิงจากหนังสือ **"AI Engineering"** โดย **Chip Huyen**
