@@ -325,8 +325,40 @@ AI ดึงข้อมูลจากหลายกรม
 | **LangChain** | Framework ยอดนิยม | ทั่วไป |
 | **LangGraph** | สร้าง Workflow แบบมี State | Workflow ซับซ้อน |
 | **AutoGen** (Microsoft) | Multi-agent Collaboration | ระบบหลาย Agent |
-| **CrewAI** | จัดการทีม Agent | Team-based Tasks |
+| **CrewAI** | จัดการทีม Agent, Open-source | Team-based Tasks |
+| **n8n** | Visual workflow + AI agent | No-code, $9-15/เดือน |
 | **LlamaIndex** | เชื่อมต่อ LLM กับข้อมูลภายนอก | RAG Applications |
+
+---
+
+## 🆕 แนวโน้ม Multi-agent Orchestration (2026)
+
+### 5 เทรนด์หลักของปี 2026:
+
+**1. Multi-Agent Systems**
+```
+🤖 + 🤖 + 🤖 = ระบบหลาย Agent ทำงานร่วมกัน
+```
+- Agent เฉพาะทางแต่ละด้าน
+- ประสานงานกันเอง
+
+**2. n8n Visual Workflow**
+- สร้าง AI Workflow แบบลาก-วาง
+- เชื่อมต่อได้หลายร้อย App
+- ราคา: $9-15/เดือน (Self-hosted ฟรี)
+
+**3. CrewAI Framework**
+- Open-source สำหรับ Multi-agent
+- กำหนด Role และ Goal ให้แต่ละ Agent
+- เหมาะสำหรับทีม Dev
+
+**4. Confident AI**
+- ทางเลือกของ LangSmith
+- ทดสอบและ Deploy LLM
+
+**5. Local + Agentic**
+- รัน Agent บนเครื่องตัวเอง
+- ข้อมูลไม่ต้องส่งออกไปนอก
 
 ---
 
