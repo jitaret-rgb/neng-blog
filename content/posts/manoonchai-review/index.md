@@ -1,7 +1,7 @@
 +++
 title = 'จากพิมพ์จิ้มสู่พิมพ์สัมผัส: รีวิวแป้นพิมพ์มนูญชัย ความเร็ว 45 WPM ใน 2 สัปดาห์'
 date = 2026-04-11T20:30:00+07:00
-draft = true
+draft = false
 tags = ['manoonchai', 'typing', 'productivity', 'thai-keyboard', 'review', 'touch-typing']
 categories = ['Review', 'Productivity', 'Tutorial']
 image = 'cover.jpg'
