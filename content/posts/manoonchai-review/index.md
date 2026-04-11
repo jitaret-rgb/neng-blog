@@ -4,7 +4,7 @@ date = 2026-04-11T20:30:00+07:00
 draft = false
 tags = ['manoonchai', 'typing', 'productivity', 'thai-keyboard', 'review', 'touch-typing']
 categories = ['Review', 'Productivity', 'Tutorial']
-image = '/illustrations/tabler/svg/dark/hybrid-work.svg'
+image = 'cover.svg'
 description = '1 ปีกับการเปลี่ยนจากพิมพ์จิ้มสู่พิมพ์สัมผัส ความเร็วเฉลี่ย 45 คำ/นาที Top Speed 64 คำ/นาที ด้วยแป้นพิมพ์มนูญชัย ฝึกแค่ 2 สัปดาห์ก็เห็นผล'
 +++
 
