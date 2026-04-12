@@ -1,0 +1,44 @@
+{{- with .Site.Params.opengraph.twitter.site -}}
+    <meta name="twitter:site" content="@{{ . }}">
+    <meta name="twitter:creator" content="@{{ . }}">
+{{- end -}}
+
+{{- $title := partialCached "data/title" . .RelPermalink -}}
+{{- $description := partialCached "data/description" . .RelPermalink -}}
+
+<meta name="twitter:title" {{ printf "content=%q" $title | safeHTMLAttr }}>
+<meta name="twitter:description" {{ printf "content=%q" $description | safeHTMLAttr }}>
+
+{{- /* Fix: Support fallback to default image from hugo.toml or default-cover.jpg */ -}}
+{{- $imageParam := .Params.image -}}
+{{- if not $imageParam -}}
+    {{- $imageParam = .Site.Params.opengraph.image -}}
+{{- end -}}
+
+{{- $imageUrl := "" -}}
+{{- if $imageParam -}}
+    {{- /* Try to get image from page resources first (for page bundles) */ -}}
+    {{- $resource := .Resources.GetMatch $imageParam -}}
+    {{- if $resource -}}
+        {{- $imageUrl = $resource.Permalink -}}
+    {{- else -}}
+        {{- /* Fallback to static files or remote URLs */ -}}
+        {{- if hasPrefix $imageParam "http" -}}
+            {{- $imageUrl = $imageParam -}}
+        {{- else if hasPrefix $imageParam "/" -}}
+            {{- $imageUrl = absURL $imageParam -}}
+        {{- else if hasPrefix $imageParam "images/" -}}
+            {{- $imageUrl = absURL $imageParam -}}
+        {{- else -}}
+            {{- $imageUrl = absURL (urls.JoinPath "images/" $imageParam) -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- /* Final fallback to default-cover.jpg */ -}}
+{{- if not $imageUrl -}}
+    {{- $imageUrl = absURL "images/default-cover.jpg" -}}
+{{- end -}}
+
+<meta name="twitter:card" content="{{ .Site.Params.opengraph.twitter.card }}">
+<meta name="twitter:image" content='{{ $imageUrl }}' />

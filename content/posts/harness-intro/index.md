@@ -4,7 +4,7 @@ date = 2026-04-12T09:00:00+07:00
 draft = false
 tags = ['harness-engineering', 'ai-safety', 'ai-control', 'beginner-guide']
 categories = ['Tutorial', 'AI', 'Beginner']
-image = 'cover.svg'
+image = 'cover.jpg'
 description = 'AI ฉลาดมาก แต่อาจทำผิดพลาด คู่มือนี้จะสอนวิธีเลี้ยง AI ให้ปลอดภัย เหมือนเลี้ยงเด็กฉลาด'
 +++
 

@@ -37,11 +37,35 @@
     {{- end -}}
 {{- end -}}
 
-{{- /* Fix og:image for Hugo Stack */ -}}
-{{- if .Params.image -}}
-    {{- $imagePath := .Params.image -}}
-    {{- if not (hasPrefix $imagePath "http") -}}
-        {{- $imagePath = urls.JoinPath $.Permalink $imagePath -}}
-    {{- end -}}
-    <meta property='og:image' content='{{ $imagePath }}' />
+{{- /* Fix og:image - Support page resources, default image, and fallback */ -}}
+{{- $imageParam := .Params.image -}}
+{{- if not $imageParam -}}
+    {{- $imageParam = .Site.Params.opengraph.image -}}
 {{- end -}}
+
+{{- $imageUrl := "" -}}
+{{- if $imageParam -}}
+    {{- /* Try to get image from page resources first (for page bundles) */ -}}
+    {{- $resource := .Resources.GetMatch $imageParam -}}
+    {{- if $resource -}}
+        {{- $imageUrl = $resource.Permalink -}}
+    {{- else -}}
+        {{- /* Fallback to static files or remote URLs */ -}}
+        {{- if hasPrefix $imageParam "http" -}}
+            {{- $imageUrl = $imageParam -}}
+        {{- else if hasPrefix $imageParam "/" -}}
+            {{- $imageUrl = absURL $imageParam -}}
+        {{- else if hasPrefix $imageParam "images/" -}}
+            {{- $imageUrl = absURL $imageParam -}}
+        {{- else -}}
+            {{- $imageUrl = absURL (urls.JoinPath "images/" $imageParam) -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- /* Final fallback to default-cover.jpg */ -}}
+{{- if not $imageUrl -}}
+    {{- $imageUrl = absURL "images/default-cover.jpg" -}}
+{{- end -}}
+
+<meta property='og:image' content='{{ $imageUrl }}' />
