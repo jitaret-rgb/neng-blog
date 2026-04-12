@@ -65,7 +65,7 @@ type = 'page'
 | ช่องทาง | ลิงก์ |
 |--------|------|
 | 📧 **Email** | [jitaret@gmail.com](mailto:jitaret@gmail.com) |
-| ✈️ **Telegram** | [@Majinman](https://t.me/Majinman) |
+| ✈️ **Telegram** | [@Jitaret](https://t.me/Jitaret) |
 | 🐙 **GitHub** | [github.com/jitaret-rgb](https://github.com/jitaret-rgb) |
 | 📘 **Facebook** | [facebook.com/jittaret.phromnanra](https://www.facebook.com/jittaret.phromnanra/) |
 | 📺 **YouTube** | [@jittaretpromnara5716](https://www.youtube.com/@jittaretpromnara5716) |

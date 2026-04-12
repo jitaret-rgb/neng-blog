@@ -529,5 +529,5 @@ _กรมการพัฒนาชุมชน กระทรวงมหา
 
 ## 📬 **ติดต่อได้ที่**
 
-- **Telegram:** https://t.me/Majinman
+- **Telegram:** https://t.me/Jitaret
 - **Email:** jitaret@gmail.com
