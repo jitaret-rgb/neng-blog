@@ -1,4 +1,4 @@
-baseURL = 'https://jitaret-rgb.github.io/neng-blog/'
+baseURL = 'https://neng-lab.com/'
 languageCode = 'th-th'
 title = 'Code & Community'
 theme = 'hugo-theme-stack'
