@@ -1,5 +1,6 @@
 ---
 title: "Harness Engineering ตอนที่ 3: Query Loop - หัวใจของระบบ"
+date: 2026-04-13T11:00:00+07:00
 description: "ทำความรู้จัก Query Loop แนวคิดสำคัญที่เปลี่ยน AI จากผู้ตอบคำถามเป็นผู้ร่วมงาน พร้อม Best Practices 7 ข้อ และตัวอย่างจริงจาก OpenClaw"
 keywords:
   - Query Loop
@@ -9,7 +10,6 @@ keywords:
   - Prompt Engineering
   - Best Practices
 author: "เหน่ง (Nueng)"
-published: "2026-04-13"
 partOfSeries: "Harness Engineering"
 previous: "harness-engineering-2"
 next: "harness-engineering-4"
