@@ -1,0 +1,38 @@
+{{- /* BreadcrumbList Schema for SEO */ -}}
+{{- if or .IsHome .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{- if .IsPage }}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ printf "%s" .Site.BaseURL | safeJS }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": {{ printf "%s%s" .Site.BaseURL "/posts/" | safeJS }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | htmlEscape | safeJS }},
+      "item": {{ .Permalink | safeJS }}
+    }
+    {{- else }}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ printf "%s" .Site.BaseURL | safeJS }}
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}

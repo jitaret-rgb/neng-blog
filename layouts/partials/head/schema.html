@@ -1,0 +1,31 @@
+{{- /* Schema Markup for SEO */ -}}
+
+{{- /* Skip old articles and special pages */ -}}
+{{- $skipSchema := or 
+  (hasPrefix .RelPermalink "/posts/ai-engineering") 
+  (hasPrefix .RelPermalink "/posts/openclaw")
+  (hasPrefix .RelPermalink "/posts/harness")
+  (eq .RelPermalink "/posts/manoonchai-review/")
+  (eq .RelPermalink "/posts/sawasdee/")
+  (eq .RelPermalink "/posts/hugo-stack-guide/")
+  (eq .RelPermalink "/archives/")
+  (eq .RelPermalink "/search/")
+  (eq .RelPermalink "/")
+  (eq .RelPermalink "/about/")
+-}}
+
+{{- /* Article Schema for pages */ -}}
+{{- if and .IsPage (not $skipSchema) }}
+    {{- partial "schema/article.html" . -}}
+    {{- partial "schema/breadcrumb.html" . -}}
+{{- end }}
+
+{{- /* WebSite Schema for homepage */ -}}
+{{- if and .IsHome (not $skipSchema) }}
+    {{- partial "schema/website.html" . -}}
+{{- end }}
+
+{{- /* Person Schema for about page */ -}}
+{{- if and (eq .RelPermalink "/about/") (not $skipSchema) }}
+    {{- partial "schema/person.html" . -}}
+{{- end }}

@@ -1,0 +1,34 @@
+{{- /* Person Schema for SEO */ -}}
+{{- if eq .RelPermalink "/about/" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "เหน่ง",
+  "alternateName": "Nueng",
+  "jobTitle": "นักวิชาการพัฒนาชุมชน",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "กรมการพัฒนาชุมชน กระทรวงมหาดไทย"
+  },
+  "url": {{ .Permalink | safeJS }},
+  "sameAs": [
+    "https://github.com/jitaret-rgb",
+    "https://t.me/Majinman",
+    "https://www.facebook.com/jittaret.phromnanra/",
+    "https://www.youtube.com/@jittaretpromnara5716"
+  ],
+  "knowsAbout": [
+    "AI Engineering",
+    "Community Development",
+    "Python Programming",
+    "Hugo Static Site Generator",
+    "OpenClaw"
+  ],
+  "knowsLanguage": [
+    "Thai",
+    "English"
+  ]
+}
+</script>
+{{- end }}

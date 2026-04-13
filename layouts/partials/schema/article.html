@@ -1,0 +1,37 @@
+{{- /* Article Schema for SEO */ -}}
+{{- if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | htmlEscape | safeJS }},
+  "description": {{ .Description | default .Site.Params.description | htmlEscape | safeJS }},
+  "image": {{ if .Params.image }}{{ printf "%s%s" .Site.BaseURL .Params.image | safeJS }}{{ else }}{{ printf "%s%s" .Site.BaseURL .Site.Params.defaultCover | safeJS }}{{ end }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }},
+  "author": {
+    "@type": "Person",
+    "name": "เหน่ง",
+    "url": {{ printf "%s%s" .Site.BaseURL "/about/" | safeJS }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Code & Community",
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ printf "%s%s" .Site.BaseURL "img/profile_hu_e397a933c2adc953.jpg" | safeJS }}
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | safeJS }}
+  },
+  "wordCount": {{ .WordCount }},
+  "inLanguage": "th",
+  {{- if .Params.tags }}
+  "keywords": {{ delimit .Params.tags ", " | safeJS }},
+  {{- end }}
+  "articleSection": {{ if .Params.categories }}{{ index .Params.categories 0 | safeJS }}{{ else }}"Blog"{{ end }}
+}
+</script>
+{{- end }}

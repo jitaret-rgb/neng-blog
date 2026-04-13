@@ -1,6 +1,9 @@
 {{- /* Custom Head - Security Headers */ -}}
 {{- partial "head/security.html" . -}}
 
+{{- /* Schema Markup for SEO */ -}}
+{{- partial "head/schema.html" . -}}
+
 {{- /* Preconnect for external domains - Improves LCP */ -}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
