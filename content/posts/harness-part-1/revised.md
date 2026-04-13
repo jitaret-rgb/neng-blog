@@ -1,16 +1,5 @@
 # Harness Engineering ตอนที่ 1: ทำไม AI ต้องมี Harness?
 
-- **title:** "Harness Engineering ตอนที่ 1: ทำไม AI ต้องมี Harness?"
-- **date:** "2026-04-13"
-- **tags:** ["harness-engineering", "ai-governance", "ai-safety", "prompt-engineering"]
-- **categories:** ["artificial-intelligence", "software-engineering", "risk-management"]
-- **image:** "/images/harness-part-1/harness-ai-cover.png"
-- **description:** "ตอนที่ 1 ของซีรีส์Harness Engineering: เหตุผลที่ AI ต้องมีระบบควบคุม (Harness) เพื่อป้องกันความล้มเหลว และทำความเข้าใจ 5 Components พื้นฐานที่ต้องมีในทุกระบบ AI Governance"
-
----
-
-# Harness Engineering ตอนที่ 1: ทำไม AI ต้องมี Harness?
-
 ## ส่วนที่ 1: ทำไมเราต้องพูดเรื่องนี้ — Hook
 
 ลองนึกภาพว่าคุณลงทุนเงิน 10 ล้านบาทในโครงการ AI สักโครงการ จ้างทีมดีที่สุด ใช้เทคโนโลยีล้ำสมัย ผ่านไป 6 เดือน... ระบบพัง โครงการล้มเหลว เงินหายไปครึ่งหนึ่ง
@@ -395,20 +384,3 @@ AI ก็ต้องมี
 - ตัวอย่าง Prompt จริงที่ใช้ในงานต่างๆ
 
 **ถ้าตอนนี้เข้าใจว่า "Harness ประกอบด้วยอะไรบ้าง" และ "มีหลักการอะไร" — ตอนต่อไปจะบอกว่า "จะเขียน Prompt ยังไงให้เป็น Control Plane"**
-
----
-
-## ส่วนอ้างอิง (References)
-
-1. Microsoft Tay Incident Report (2016). *Microsoft Research Blog*. https://www.microsoft.com/en-us/research/blog/microsoft-tay-chatbot-learning-experience/
-2. Knight Capital losses (2012). *U.S. Securities and Exchange Commission*. https://www.sec.gov/news/press-release/2012-143
-3. Air Canada Chatbot Case (2024). *Canadian Legal Brief*. https://canadianslegalbrief.com/air-canada-chatbot-ruling
-4. Tesla Autopilot Crashes. *National Highway Traffic Safety Administration (NHTSA)*. https://www.nhtsa.gov/vehicle-safety/tesla-autopilot
-5. AI in Enterprise Survey 2025. *McKinsey & Company*. https://www.mckinsey.com/capabilities/quantumblack/our-insights/state-of-ai
-6. Gartner Survey on AI Governance (2025). *Gartner Research*. https://www.gartner.com/en/documents/4012345
-7. State of Generative AI in 2025. *Accenture Research*. https://www.accenture.com/us-en/insights/artificial-intelligence/state-of-generative-ai
-8. AI Risk Management Framework (2024). *National Institute of Standards and Technology (NIST)*. https://www.nist.gov/itl/ai-risk-management-framework
-9. Harness Engineering: A Practical Guide. *O'Reilly Media*. https://www.oreilly.com/library/view/harness-engineering/9781234567890/
-10. Human-in-the-Loop AI Systems. *Association for Computing Machinery (ACM)*. https://dl.acm.org/doi/10.1145/1234567.8901234
-11. Cybersecurity and AI: Best Practices. *IBM Security Research*. https://www.ibm.com/thinks/research/cybersecurity-ai
-12. AI Safety Guidelines 2025. *TheIEEE Global Initiative on Ethics of Autonomous and Intelligent Systems*. https://ethicsinitiative.ieee.org/ai-safety-guidelines/
