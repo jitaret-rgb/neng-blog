@@ -17,7 +17,7 @@ image: "cover.jpg"
 seriesNumber: 4
 ---
 
-#Harness Engineering ตอนที่ 4: Tools & Permissions - กำหนดขอบเขต AI
+# Harness Engineering ตอนที่ 4: Tools & Permissions - กำหนดขอบเขต AI
 
 ## ส่วนนำ: ทำไม AI ถึงต้องมี "ล็อคประตู"?
 
