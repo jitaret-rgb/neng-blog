@@ -5,7 +5,7 @@ description: "เรียนรู้วิธีกำหนดขอบเข
 keywords:
   - AI Safety
   - Tools & Permissions
-  -Harness Engineering
+  - Harness Engineering
   - Security Configuration
   - OWASP
   - OpenClaw
