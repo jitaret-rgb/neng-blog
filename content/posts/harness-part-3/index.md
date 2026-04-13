@@ -19,7 +19,7 @@ seriesNumber: 3
 
 # Harness Engineering ตอนที่ 3: Query Loop - หัวใจของระบบ
 
-## บทนำ: 为什么 Query Loop ถึงสำคัญ?
+## บทนำ: ทำไม Query Loop ถึงสำคัญ?
 
 ลองนึกภาพว่า คุณมีผู้ช่วย AI ที่เก่งมาก แต่ครั้งที่คุณคุยด้วยทีละคำถาม มันก็ตอบได้แค่นั้น ถามต่อ ก็ตอบต่อ แต่ถ้าคุณต้องการให้มันทำงานซับซ้อน เช่น สร้างทั้งระบบ ต้องคุยกันหลายรอบ ปรับแก้หลายจุด จนบางทีคุณเองก็จำไม่ได้ว่าตอนนี้มันทำงานถึงไหนแล้ว
 
@@ -426,7 +426,7 @@ System Prompt คือคำสั่งที่อยู่ตลอดเว
    - https://github.com/wquguru/harness-books/blob/main/book1-claude-code/chapter-03-query-loop-heartbeat.md
 
 2. **Harness Books Book 2 - Claude Code vs Codex** โดย wquguru (2026)
-   - บทที่ 3: Query Loop 对照 Thread/Rollout/State
+   - บทที่ 3: Query Loop เปรียบเทียบ Thread/Rollout/State
    - https://github.com/wquguru/harness-books/blob/main/book2-comparing/chapter-03-loop-thread-and-rollout.md
 
 ### สถิติและข้อมูลวิจัย:
