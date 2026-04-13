@@ -217,3 +217,18 @@ AI จะทำหน้าที่แค่ "เสนอ" เช่น แช
 - มีเครื่องมือ/แนวทางอะไรบ้าง?
 
 ติดตามตอนต่อไปได้เลย 🚀
+
+---
+
+## 📚 อ้างอิง
+
+1. IBM - What is AI? https://www.ibm.com/think/topics/artificial-intelligence
+2. IBM - Types of AI https://www.ibm.com/think/topics/artificial-intelligence-types
+3. Clarifai - 3 Types of AI https://www.clarifai.com/blog/types-of-ai/
+4. Zapier - Human-in-the-loop https://zapier.com/blog/human-in-the-loop/
+5. Tulip - Human-in-the-loop AI Explained https://tulip.co/blog/human-in-the-loop-ai-explained/
+6. Ataccama - Top AI Failures https://www.ataccama.com/blog/ai-fails-how-to-prevent
+7. AI Multiple - AI Fail Examples https://aimultiple.com/ai-fail
+8. OneTrust - 2025 AI Governance Report https://www.onetrust.com/resources/2025-ai-ready-governance-report/
+9. Knostic - AI Governance Statistics 2025 https://www.knostic.ai/blog/ai-governance-statistics
+10. International AI Safety Report 2025 https://internationalaisafetyreport.org/
