@@ -7,7 +7,7 @@
     <div style="font-size: 0.85rem; color: var(--body-text-color); margin-bottom: 0.5rem;">
         ซีรีส์: <strong style="color: var(--accent-color);">{{ $series }}</strong>
         {{- if $current -}}
-        <span style="margin-left: 0.5rem;">(ตอนที่ {{ $current }} จาก {{ len $sorted }})</span>
+        <span style="margin-left: 0.5rem; color: var(--body-text-color);">(ตอนที่ {{ $current }} จาก {{ len $sorted }})</span>
         {{- end -}}
     </div>
     <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
