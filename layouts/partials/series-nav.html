@@ -1,0 +1,37 @@
+{{- if .Params.partOfSeries -}}
+{{- $series := .Params.partOfSeries -}}
+{{- $current := .Params.seriesNumber -}}
+{{- $allPosts := where site.RegularPages "Params.partOfSeries" $series -}}
+{{- $sorted := sort $allPosts "Params.seriesNumber" -}}
+<nav class="series-nav" style="margin-bottom: 1.5rem; padding: 1rem; background: var(--card-background); border-radius: var(--card-border-radius); border: 1px solid var(--card-separator-color);">
+    <div style="font-size: 0.85rem; color: var(--body-text-color); margin-bottom: 0.5rem;">
+        ซีรีส์: <strong style="color: var(--accent-color);">{{ $series }}</strong>
+        {{- if $current -}}
+        <span style="margin-left: 0.5rem;">(ตอนที่ {{ $current }} จาก {{ len $sorted }})</span>
+        {{- end -}}
+    </div>
+    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+        {{- range $sorted -}}
+            {{- if eq .Params.seriesNumber $current -}}
+                <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; height: 2rem; padding: 0 0.5rem; background: var(--accent-color); color: #fff; border-radius: var(--card-border-radius); font-size: 0.85rem; font-weight: 600;">{{ .Params.seriesNumber }}</span>
+            {{- else -}}
+                <a href="{{ .RelPermalink }}" style="display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; height: 2rem; padding: 0 0.5rem; background: transparent; color: var(--body-text-color); border: 1px solid var(--card-separator-color); border-radius: var(--card-border-radius); font-size: 0.85rem; text-decoration: none; transition: border-color 0.2s, color 0.2s;">
+                    {{ .Params.seriesNumber }}
+                </a>
+            {{- end -}}
+        {{- end -}}
+    </div>
+    <div style="margin-top: 0.75rem; display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem;">
+        {{- if .Params.previous -}}
+            {{- with .GetPage (printf "/posts/%s" .Params.previous) -}}
+            <a href="{{ .RelPermalink }}" style="color: var(--accent-color); text-decoration: none;">← ตอนก่อนหน้า</a>
+            {{- end -}}
+        {{- end -}}
+        {{- if .Params.next -}}
+            {{- with .GetPage (printf "/posts/%s" .Params.next) -}}
+            <a href="{{ .RelPermalink }}" style="color: var(--accent-color); text-decoration: none;">ตอนถัดไป →</a>
+            {{- end -}}
+        {{- end -}}
+    </div>
+</nav>
+{{- end -}}

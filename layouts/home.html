@@ -1,0 +1,74 @@
+{{ define "main" }}
+    <!-- Hero Section -->
+    <section class="hero-section" style="margin-bottom: 2rem; padding: 2rem; background: var(--card-background); border-radius: var(--card-border-radius); border: 1px solid var(--card-separator-color);">
+        <h1 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--accent-color);">🚀 AI Engineering for Thai Builders</h1>
+        <p style="font-size: 1rem; color: var(--body-text-color); margin-bottom: 1.5rem;">
+            บันทึกการเรียนรู้ของเหน่ง — ตั้งแต่ Multi-Agent Systems, Harness Engineering จนถึงประสบการณ์จากงานพัฒนาชุมชน
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="/start/" class="button" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: var(--accent-color); color: #fff; border-radius: var(--card-border-radius); text-decoration: none; font-weight: 500;">
+                <span>เริ่มต้นที่นี่</span>
+            </a>
+            <a href="/posts/" class="button" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: transparent; color: var(--accent-color); border: 1px solid var(--accent-color); border-radius: var(--card-border-radius); text-decoration: none; font-weight: 500;">
+                <span>อ่านบทความทั้งหมด</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Series -->
+    <section style="margin-bottom: 2.5rem;">
+        <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent-color);">🔥 ซีรีส์แนะนำ</h2>
+        <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <!-- Harness Engineering -->
+            <div style="padding: 1.25rem; background: var(--card-background); border-radius: var(--card-border-radius); border: 1px solid var(--card-separator-color);">
+                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Harness Engineering</h3>
+                <p style="font-size: 0.9rem; color: var(--body-text-color); margin-bottom: 1rem;">วิธีควบคุม AI Agent ให้ทำงานได้อย่างมีประสิทธิภาพและปลอดภัย</p>
+                <a href="/tags/harness-engineering/" style="font-size: 0.9rem; color: var(--accent-color); text-decoration: none;">อ่านซีรีส์นี้ →</a>
+            </div>
+            <!-- AI Engineering -->
+            <div style="padding: 1.25rem; background: var(--card-background); border-radius: var(--card-border-radius); border: 1px solid var(--card-separator-color);">
+                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">AI Engineering</h3>
+                <p style="font-size: 0.9rem; color: var(--body-text-color); margin-bottom: 1rem;">แนวคิดและเทคนิคพื้นฐานสำหรับการสร้างระบบ AI</p>
+                <a href="/tags/ai-engineering/" style="font-size: 0.9rem; color: var(--accent-color); text-decoration: none;">อ่านซีรีส์นี้ →</a>
+            </div>
+            <!-- OpenClaw -->
+            <div style="padding: 1.25rem; background: var(--card-background); border-radius: var(--card-border-radius); border: 1px solid var(--card-separator-color);">
+                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">OpenClaw</h3>
+                <p style="font-size: 0.9rem; color: var(--body-text-color); margin-bottom: 1rem;">คู่มือใช้งาน Multi-Agent Framework ที่ใช้งานจริง</p>
+                <a href="/tags/openclaw/" style="font-size: 0.9rem; color: var(--accent-color); text-decoration: none;">อ่านซีรีส์นี้ →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Posts -->
+    <section style="margin-bottom: 2rem;">
+        <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent-color);">📝 บทความล่าสุด</h2>
+        {{- $paginator := partial "helper/paginator.html" . -}}
+        <section class="article-list">
+            {{ range $index, $element := $paginator.Pages }}
+                {{ partial "article-list/default" . }}
+            {{ end }}
+        </section>
+        {{- partial "pagination.html" . -}}
+    </section>
+
+    <!-- Newsletter / RSS CTA -->
+    <section style="margin-bottom: 2rem; padding: 1.5rem; background: var(--card-background); border-radius: var(--card-border-radius); border: 1px solid var(--card-separator-color); text-align: center;">
+        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">📬 ติดตามเนื้อหาใหม่</h3>
+        <p style="font-size: 0.95rem; color: var(--body-text-color); margin-bottom: 1rem;">รับบทความ AI Engineering และประสบการณ์จากงานพัฒนาชุมชนโดยตรง</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="/index.xml" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--accent-color); color: #fff; border-radius: var(--card-border-radius); text-decoration: none; font-weight: 500;">
+                <span>ติดตามผ่าน RSS</span>
+            </a>
+            <a href="https://t.me/Jitaret" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: transparent; color: var(--accent-color); border: 1px solid var(--accent-color); border-radius: var(--card-border-radius); text-decoration: none; font-weight: 500;">
+                <span>Telegram</span>
+            </a>
+        </div>
+    </section>
+
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

@@ -13,8 +13,8 @@ author: "Mick"
 tags: ['harness-engineering', 'ai-safety', 'openclaw', 'owasp', 'security']
 categories: ['Tutorial', 'AI']
 partOfSeries: "Harness Engineering"
-previous: "harness-engineering-3"
-next: "harness-engineering-5"
+previous: "harness-part-3"
+next: "harness-part-5"
 image: "cover.jpg"
 seriesNumber: 4
 ---

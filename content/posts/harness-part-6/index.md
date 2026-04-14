@@ -14,22 +14,10 @@ author: "เหน่ง (Nueng)"
 tags: ['harness-engineering', 'recovery-paths', 'retry', 'circuit-breaker', 'fallback']
 categories: ['Tutorial', 'AI']
 partOfSeries: "Harness Engineering"
-previous: "harness-engineering-5"
-next: null
+previous: "harness-part-5"
+next: "harness-part-7"
 image: "cover.jpg"
 seriesNumber: 6
-schema:
-  type: TechArticle
-  author:
-    name: "เหน่ง (Nueng)"
-    url: "https://neng-lab.com/about"
-  publisher:
-    name: "Neng-Lab"
-    logo:
-      url: "https://neng-lab.com/logo.png"
-  mainEntityOfPage:
-    "@type": "WebPage"
-    "@id": "https://neng-lab.com/posts/harness-engineering-6"
 draft: false
 ---
 

@@ -7,9 +7,9 @@ theme = 'hugo-theme-stack'
 ignoreFiles = ['\.kimi/.*']
 
 [params]
-  subtitle = "Bridging Technology and Community Development"
-  description = "A blog about technology, community development, and life by Nueng"
-  keywords = ["blog", "neng", "thai", "technology", "lifestyle"]
+  subtitle = "Technology, Community & AI Engineering"
+  description = "บันทึกการเรียนรู้ของเหน่ง — ตั้งแต่ AI Engineering, Multi-Agent Systems จนถึงประสบการณ์จากงานพัฒนาชุมชน"
+  keywords = ["blog", "neng", "thai", "AI Engineering", "Community Development", "OpenClaw", "Multi-Agent"]
   defaultTheme = "dark"
   mainSections = ["posts"]
   
@@ -26,7 +26,7 @@ ignoreFiles = ['\.kimi/.*']
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">"""
   
   [params.sidebar]
-    subtitle = "Bridging Technology and Community Development"
+    subtitle = "AI Engineering for Thai Builders"
     avatar = "img/profile.jpg"
     emoji = "💻"              # Emoji ที่แสดงเหนือ avatar
     # compact = false         # ใช้ sidebar แบบ compact (optional)
@@ -146,30 +146,44 @@ ignoreFiles = ['\.kimi/.*']
     icon = "home"
 
 [[menu.main]]
+  name = "Start"
+  url = "/start/"
+  weight = 2
+  [menu.main.params]
+    icon = "star"
+
+[[menu.main]]
+  name = "Topics"
+  url = "/topics/"
+  weight = 3
+  [menu.main.params]
+    icon = "category-2"
+
+[[menu.main]]
   name = "Posts"
   url = "/posts/"
-  weight = 2
+  weight = 4
   [menu.main.params]
     icon = "article"
 
 [[menu.main]]
   name = "Categories"
   url = "/categories/"
-  weight = 3
+  weight = 5
   [menu.main.params]
     icon = "category-2"
 
 [[menu.main]]
   name = "Tags"
   url = "/tags/"
-  weight = 4
+  weight = 6
   [menu.main.params]
     icon = "tag"
 
 [[menu.main]]
   name = "About"
   url = "/about/"
-  weight = 5
+  weight = 7
   [menu.main.params]
     icon = "user"
 

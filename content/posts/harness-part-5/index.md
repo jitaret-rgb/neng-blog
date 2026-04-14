@@ -14,8 +14,8 @@ author: "เหน่ง (Nueng)"
 tags: ['harness-engineering', 'multi-agent', 'openclaw', 'copaw', 'hermes-agent']
 categories: ['Tutorial', 'AI']
 partOfSeries: "Harness Engineering"
-previous: "harness-engineering-4"
-next: "harness-engineering-6"
+previous: "harness-part-4"
+next: "harness-part-6"
 image: "cover.jpg"
 seriesNumber: 5
 ---

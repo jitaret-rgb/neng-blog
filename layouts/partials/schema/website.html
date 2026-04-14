@@ -6,12 +6,12 @@
   "@type": "WebSite",
   "name": "Code & Community",
   "alternateName": "neng-blog",
-  "description": {{ .Site.Params.description | default "A blog about technology, community development, and life by Nueng" | htmlEscape | safeJS }},
-  "url": {{ .Site.BaseURL | safeJS }},
+  "description": {{ .Site.Params.description | default "A blog about technology, community development, and life by Nueng" | jsonify | safeJS }},
+  "url": {{ .Site.BaseURL | jsonify | safeJS }},
   "inLanguage": "th",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": {{ printf "%s%s" .Site.BaseURL "search/?q={search_term_string}" | safeJS }},
+    "target": {{ "search/?q={search_term_string}" | absURL | jsonify | safeJS }},
     "query-input": "required name=search_term_string"
   },
   "publisher": {
@@ -19,13 +19,13 @@
     "name": "Code & Community",
     "logo": {
       "@type": "ImageObject",
-      "url": {{ printf "%s%s" .Site.BaseURL "img/profile_hu_e397a933c2adc953.jpg" | safeJS }}
+      "url": {{ "images/profile.jpg" | absURL | jsonify | safeJS }}
     }
   },
   "author": {
     "@type": "Person",
     "name": "เหน่ง",
-    "url": {{ printf "%s%s" .Site.BaseURL "/about/" | safeJS }}
+    "url": {{ "/about/" | absURL | jsonify | safeJS }}
   }
 }
 </script>

@@ -13,8 +13,8 @@ author: "เหน่ง (Nueng)"
 tags: ['harness-engineering', 'ai-engineering', 'claude-code', 'codex', 'openclaw']
 categories: ['Tutorial', 'AI']
 partOfSeries: "Harness Engineering"
-previous: "harness-engineering-2"
-next: "harness-engineering-4"
+previous: "harness-part-2"
+next: "harness-part-4"
 image: "cover.jpg"
 seriesNumber: 3
 ---
@@ -356,67 +356,6 @@ System Prompt คือคำสั่งที่อยู่ตลอดเว
 | Human in the Loop | Human in the Loop | การมีคนตรวจสอบในกระบวนการ |
 | Feedback Chain | Feedback Chain | ลำดับการให้ Feedback |
 | Sub-agent | Sub-agent | Agent ย่อยที่ทำงานเฉพาะทาง |
-
----
-
-<!-- Article Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Harness Engineering ตอนที่ 3: Query Loop - หัวใจของระบบ",
-  "description": "ทำความรู้จัก Query Loop แนวคิดสำคัญที่เปลี่ยน AI จากผู้ตอบคำถามเป็นผู้ร่วมงาน พร้อม Best Practices 7 ข้อ และตัวอย่างจริงจาก OpenClaw",
-  "author": {
-    "@type": "Person",
-    "name": "เหน่ง (Nueng)"
-  },
-  "datePublished": "2026-04-13",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Code & Community",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://neng-lab.com/images/default-cover.jpg"
-    }
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://neng.blog/harness-engineering-3"
-  },
-  "articleSection": "Technology",
-  "keywords": ["Query Loop", "AI Engineering", "Claude Code", "Codex", "Prompt Engineering", "Best Practices"],
-  "isPartOf": {
-    "@type": "ArticleSeries",
-    "name": "Harness Engineering",
-    "episodeNumber": 3,
-    "url": "https://neng.blog/series/harness-engineering"
-  },
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "หน้าแรก",
-        "item": "https://neng.blog"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "บทความ",
-        "item": "https://neng.blog/posts"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Harness Engineering ตอนที่ 3: Query Loop"
-      }
-    ]
-  },
-  "previousArticle": "https://neng.blog/harness-engineering-2",
-  "nextArticle": "https://neng.blog/harness-engineering-4"
-}
-</script>
 
 ---
 
