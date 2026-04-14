@@ -10,6 +10,8 @@ keywords:
   - OWASP
   - OpenClaw
 author: "Mick"
+tags: ['harness-engineering', 'ai-safety', 'openclaw', 'owasp', 'security']
+categories: ['Tutorial', 'AI']
 partOfSeries: "Harness Engineering"
 previous: "harness-engineering-3"
 next: "harness-engineering-5"
@@ -577,6 +579,15 @@ services:
 11. Microsoft. (2025). *Responsible AI in Practice: Security Considerations*. https://learn.microsoft.com/en-us/azure/ai-builder/responsible-ai-security
 
 12. Anthropic. (2025). *Building Reliable AI Systems: Security Guide*. https://www.anthropic.com/engineering/security
+
+---
+
+*บทความนี้เป็นส่วนหนึ่งของซีรีส์ "Harness Engineering" ซึ่งสำรวจแนวคิดและเทคนิคในการใช้ AI ให้เกิดประสิทธิภาพสูงสุด*
+
+*ตอนที่ 1: [Harness Engineering ตอนที่ 1: ทำไม AI ต้องมี Harness?](/posts/harness-part-1/)*  
+*ตอนที่ 2: [Harness Engineering ตอนที่ 2: Prompt คือ Control Plane (ไม่ใช่ Input Box)](/posts/harness-part-2/)*  
+*ตอนที่ 3: [Harness Engineering ตอนที่ 3: Query Loop - หัวใจของระบบ](/posts/harness-part-3/)*  
+*ตอนที่ 4: [Harness Engineering ตอนที่ 4: Tools & Permissions - กำหนดขอบเขต AI](/posts/harness-part-4/) (บทความนี้)*
 
 ---
 

@@ -10,6 +10,8 @@ keywords:
   - Prompt Engineering
   - Best Practices
 author: "เหน่ง (Nueng)"
+tags: ['harness-engineering', 'ai-engineering', 'claude-code', 'codex', 'openclaw']
+categories: ['Tutorial', 'AI']
 partOfSeries: "Harness Engineering"
 previous: "harness-engineering-2"
 next: "harness-engineering-4"
@@ -333,9 +335,10 @@ System Prompt คือคำสั่งที่อยู่ตลอดเว
 
 *บทความนี้เป็นส่วนหนึ่งของซีรีส์ "Harness Engineering" ซึ่งสำรวจแนวคิดและเทคนิคในการใช้ AI ให้เกิดประสิทธิภาพสูงสุด*
 
-*ตอนที่ 1: [Harness Engineering ตอนที่ 1: ทำความรู้จัก AI Agent และ Tool Use](https://neng.blog/harness-engineering-1)*  
-*ตอนที่ 2: [Harness Engineering ตอนที่ 2: สร้าง AI Agent ด้วย OpenAI Responses API](https://neng.blog/harness-engineering-2)*  
-*ตอนที่ 3: [Harness Engineering ตอนที่ 3: Query Loop - หัวใจของระบบ](https://neng.blog/harness-engineering-3) (บทความนี้)*
+*ตอนที่ 1: [Harness Engineering ตอนที่ 1: ทำไม AI ต้องมี Harness?](/posts/harness-part-1/)*  
+*ตอนที่ 2: [Harness Engineering ตอนที่ 2: Prompt คือ Control Plane (ไม่ใช่ Input Box)](/posts/harness-part-2/)*  
+*ตอนที่ 3: [Harness Engineering ตอนที่ 3: Query Loop - หัวใจของระบบ](/posts/harness-part-3/) (บทความนี้)*  
+*ตอนที่ 4: [Harness Engineering ตอนที่ 4: Tools & Permissions - กำหนดขอบเขต AI](/posts/harness-part-4/)*
 
 ---
 
@@ -373,7 +376,7 @@ System Prompt คือคำสั่งที่อยู่ตลอดเว
     "name": "Code & Community",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://neng.blog/logo.png"
+      "url": "https://neng-lab.com/images/default-cover.jpg"
     }
   },
   "mainEntityOfPage": {
