@@ -73,5 +73,5 @@ description = 'รู้จักเหน่ง — นักวิชากา
 
 ---
 
-_**neng-lab.com**_  
+_**Neng Lab**_  
 _โดย เหน่ง — นักวิชาการพัฒนาชุมชน & AI Engineering Explorer_

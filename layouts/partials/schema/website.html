@@ -4,8 +4,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Code & Community",
-  "alternateName": "neng-blog",
+  "name": "Neng Lab",
+  "alternateName": "Code & Community",
   "description": {{ .Site.Params.description | default "A blog about technology, community development, and life by Nueng" | jsonify | safeJS }},
   "url": {{ .Site.BaseURL | jsonify | safeJS }},
   "inLanguage": "th",
@@ -16,7 +16,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Code & Community",
+    "name": "Neng Lab",
     "logo": {
       "@type": "ImageObject",
       "url": {{ "images/profile.jpg" | absURL | jsonify | safeJS }}

@@ -1,13 +1,13 @@
 baseURL = 'https://neng-lab.com/'
 languageCode = 'th-th'
-title = 'Code & Community'
+title = 'Neng Lab'
 theme = 'hugo-theme-stack'
 
 # Exclude local development files from build
 ignoreFiles = ['\.kimi/.*']
 
 [params]
-  subtitle = "Technology, Community & AI Engineering"
+  subtitle = "Code & Community — Technology, Community & AI Engineering"
   description = "บันทึกการเรียนรู้ของเหน่ง — ตั้งแต่ AI Engineering, Multi-Agent Systems จนถึงประสบการณ์จากงานพัฒนาชุมชน"
   keywords = ["blog", "neng", "thai", "AI Engineering", "Community Development", "OpenClaw", "Multi-Agent"]
   defaultTheme = "dark"
