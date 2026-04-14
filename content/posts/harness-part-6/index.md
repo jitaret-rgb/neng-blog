@@ -1,6 +1,6 @@
 ---
 title: "Harness Engineering ตอนที่ 6: Recovery Paths - แผนสำรองเมื่อ AI พัง"
-date: 2026-04-14
+date: 2026-04-14T12:00:00+07:00
 lastUpdated: 2026-04-14
 description: "เรียนรู้วิธีออกแบบระบบ AI ที่สามารถกู้ตัวเองได้เมื่อเกิดความผิดพลาด ด้วย Retry Logic, Circuit Breaker และ Fallback Strategies"
 keywords:

@@ -1,6 +1,6 @@
 ---
 title: "Harness Engineering ตอนที่ 7: สรุปซีรีส์ - เริ่มต้นใช้งาน Harness Engineering"
-date: 2026-04-14
+date: 2026-04-14T16:00:00+07:00
 lastUpdated: 2026-04-14
 description: "มาสรุปซีรีส์ Harness Engineering ทั้งหมด พร้อม Roadmap 30 วัน และ Best Practices สำหรับผู้เริ่มต้น"
 keywords:
