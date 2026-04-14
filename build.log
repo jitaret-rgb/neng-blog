@@ -1,0 +1,16 @@
+Start building sites … 
+hugo v0.160.0-652fc5acddf94e0501f778e196a8b630566b39ad linux/amd64 BuildDate=2026-04-04T13:32:34Z VendorInfo=gohugoio
+
+WARN  deprecated: .Site.Data was deprecated in Hugo v0.156.0 and will be removed in a future release. Use hugo.Data instead.
+
+                  │  EN   
+──────────────────┼───────
+ Pages            │   172 
+ Paginator pages  │    12 
+ Non-page files   │    51 
+ Static files     │ 25598 
+ Processed images │   149 
+ Aliases          │    70 
+ Cleaned          │     0 
+
+Total in 22790 ms
