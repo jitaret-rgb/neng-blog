@@ -1,6 +1,6 @@
 ---
 title: "Harness Engineering ตอนที่ 4: Tools & Permissions - กำหนดขอบเขต AI"
-date: 2026-04-13T10:00:00+07:00
+date: 2026-04-13T12:00:00+07:00
 description: "เรียนรู้วิธีกำหนดขอบเขตให้ AI Agent ด้วย Tools & Permissions ป้องกันความเสี่ยงด้านความปลอดภัย พร้อมตัวอย่างจาก OWASP และ OpenClaw"
 keywords:
   - AI Safety
