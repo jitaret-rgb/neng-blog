@@ -571,8 +571,3 @@ AI Systems ต้องการการดูแลมากกว่าซอ
 [^9]: [NIST - Resilience Engineering](https://www.nist.gov/system/files/documents/itl/csd/NIST.SP.800-160v1.pdf) - มาตรฐานการออกแบบระบบที่ทนทาน
 
 [^10]: [OpenClaw Documentation - Fallback System](https://openclaw.dev/docs) - ตัวอย่างระบบ fallback 3 ชั้นใน production
-
----
-
-*Reviewer 2 — Complete*
-*Status: ตรวจสอบและแก้ไขแล้ว*
