@@ -1,0 +1,37 @@
+{{- /* FAQPage Schema for AI Overview optimization */ -}}
+{{- if or (eq .RelPermalink "/start/") (eq .RelPermalink "/about/") }}
+{{- $faqItems := slice -}}
+{{- if eq .RelPermalink "/start/" -}}
+  {{- $faqItems = slice
+    (dict "question" "Neng Lab คืออะไร?" "answer" "Neng Lab เป็นบล็อกส่วนตัวของเหน่ง — นักวิชาการพัฒนาชุมชนที่สนใจเทคโนโลยี AI บล็อกนี้บันทึกประสบการณ์การใช้งาน AI Agent, Multi-Agent Systems และเครื่องมือ open source ต่างๆ โดยเน้นการอธิบายเป็นภาษาไทย")
+    (dict "question" "ผมไม่มีพื้นฐานโค้ด อ่านบล็อกนี้เข้าใจไหม?" "answer" "เข้าใจครับ ผู้เขียนเองก็ไม่มีพื้นฐานโค้ดตอนเริ่มต้น บทความแต่ละตอนถูกออกแบบให้อธิบายจากพื้นฐาน มีตัวอย่างประกอบ และแยกซีรีส์ตามระดับความยาก")
+    (dict "question" "Neng Lab ใช้เทคโนโลยีอะไรสร้าง?" "answer" "บล็อกนี้สร้างด้วย Hugo Static Site Generator ใช้ Stack Theme โฮสต์บน GitHub Pages โดยมี Cloudflare จัดการ DNS และ CDN")
+    (dict "question" "ติดตามเนื้อหาใหม่ได้ทางไหน?" "answer" "สามารถติดตามผ่าน RSS Feed หรือ Telegram ได้ครับ บทความใหม่จะอัปเดตทั้งสองช่องทาง")
+  -}}
+{{- else if eq .RelPermalink "/about/" -}}
+  {{- $faqItems = slice
+    (dict "question" "เหน่งทำอาชีพอะไร?" "answer" "เหน่งเป็นนักวิชาการพัฒนาชุมชน สังกัดกรมการพัฒนาชุมชน กระทรวงมหาดไทย")
+    (dict "question" "เหน่งมีพื้นฐานโปรแกรมมิ่งไหม?" "answer" "ไม่มีครับ ผมไม่ใช่โปรแกรมเมอร์ แต่ใช้ AI Agent เช่น Kimi CLI, Claude Code และ OpenClaw ช่วยสร้างและดูแลบล็อกนี้")
+    (dict "question" "ทำไมถึงสร้าง Neng Lab?" "answer" "อยากสร้างแหล่งความรู้ภาษาไทยที่อธิบายเทคโนโลยีเชิงลึกให้เข้าใจง่าย และพิสูจน์ว่าคนไทยธรรมดาสามารถเข้าถึงเทคโนโลยีลึกได้ด้วยความช่วยเหลือจาก AI")
+  -}}
+{{- end -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+  {{- range $index, $item := $faqItems }}
+    {{- if $index }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $item.question | jsonify | safeJS }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $item.answer | jsonify | safeJS }}
+      }
+    }
+  {{- end }}
+  ]
+}
+</script>
+{{- end }}

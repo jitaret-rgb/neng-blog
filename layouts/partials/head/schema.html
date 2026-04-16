@@ -10,7 +10,6 @@
   (eq .RelPermalink "/archives/")
   (eq .RelPermalink "/search/")
   (eq .RelPermalink "/")
-  (eq .RelPermalink "/about/")
 -}}
 
 {{- /* Article Schema for pages */ -}}
@@ -27,4 +26,9 @@
 {{- /* Person Schema for about page */ -}}
 {{- if and (eq .RelPermalink "/about/") (not $skipSchema) }}
     {{- partial "schema/person.html" . -}}
+{{- end }}
+
+{{- /* FAQPage Schema for start and about pages */ -}}
+{{- if or (eq .RelPermalink "/start/") (eq .RelPermalink "/about/") }}
+    {{- partial "schema/faqpage.html" . -}}
 {{- end }}

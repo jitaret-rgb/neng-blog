@@ -26,7 +26,7 @@ ignoreFiles = ['\.kimi/.*']
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">"""
   
   [params.sidebar]
-    subtitle = "AI Engineering for Thai Builders"
+    subtitle = "Making AI Accessible for Everyone"
     avatar = "img/profile.jpg"
     emoji = "💻"              # Emoji ที่แสดงเหนือ avatar
     # compact = false         # ใช้ sidebar แบบ compact (optional)
