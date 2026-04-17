@@ -1,0 +1,9 @@
+# Multi-Agent Workflow State
+# Patched delegate_tool.py and restarting gateway to apply fixes.
+# Updated mapping (2026-04-17):
+#   Researcher: bailian/kimi-k2.5     (find cover image + illustrations + research)
+#   Writer:     bailian/MiniMax-M2.5  (single writer)
+#   Reviewer:   bailian/MiniMax-M2.5  (AI detox + tone check)
+#   Coder:      bailian/qwen3-coder-plus
+#   Validation: bailian/qwen3.5-plus
+# Next step: Launch Researcher agent after gateway restart.

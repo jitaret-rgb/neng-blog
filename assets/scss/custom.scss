@@ -1,3 +1,7 @@
+/* ============================================
+   NENG-LAB.COM — TEAL/AQUA CYBERPUNK THEME
+   ============================================ */
+
 /* Noto Sans Thai Font */
 :root {
   --font-family: 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -12,72 +16,412 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
-   STACK THEME COLORS - MATCHING GISCUS
+   COLOR PALETTE — TEAL CYBERPUNK
    ============================================ */
 
-/* Light Mode - Normal light colors */
+/* Light Mode */
 :root[data-scheme="light"] {
-  /* Background colors */
-  --body-background: #ffffff;
+  --body-background: #F0FDFA;
   --card-background: #ffffff;
-  --card-background-hover: #f6f8fa;
-  
-  /* Text colors */
-  --card-text-color-main: #1f2328;
-  --card-text-color-secondary: #656d76;
-  --body-text-color: #1f2328;
-  
-  /* Accent colors */
-  --accent-color: #0969da;
-  --accent-color-darker: #0550ae;
-  
-  /* Borders */
+  --card-background-hover: #E0F2FE;
+  --card-background-selected: #CCFBF1;
+
+  --card-text-color-main: #0F4C4C;
+  --card-text-color-secondary: #115E59;
+  --card-text-color-tertiary: #64748B;
+  --body-text-color: #0F4C4C;
+
+  --accent-color: #D9008F;
+  --accent-color-darker: #008B8B;
+  --accent-color-text: #ffffff;
+
   --card-border: transparent;
-  --card-separator-color: #d0d7de;
-  
-  /* Shadows */
-  --shadow-l1: 0 1px 2px rgba(31, 35, 40, 0.04);
-  --shadow-l2: 0 3px 6px rgba(31, 35, 40, 0.08);
+  --card-separator-color: rgba(94, 234, 212, 0.35);
+
+  --shadow-l1: 0 1px 2px rgba(15, 76, 76, 0.06), 0 0px 1px rgba(15, 76, 76, 0.04);
+  --shadow-l2: 0 3px 6px rgba(15, 76, 76, 0.08), 0 2px 4px rgba(15, 76, 76, 0.04);
+
+  --code-background-color: #E0F2FE;
+  --code-text-color: #0F4C4C;
+  --pre-background-color: #111B2D;
+  --pre-text-color: #99F6E4;
+
+  --blockquote-background-color: rgba(217, 0, 143, 0.06);
+  --blockquote-border-size: 4px;
+
+  --table-border-color: #99F6E4;
+  --tr-even-background-color: #E0F2FE;
+
+  --link-background-color: 94, 234, 212;
+  --link-background-opacity: 0.3;
+  --link-background-opacity-hover: 0.5;
+
+  --alert-note-color: #0891B2;
+  --alert-note-background: rgba(8, 145, 178, 0.08);
+  --alert-tip-color: #059669;
+  --alert-tip-background: rgba(5, 150, 105, 0.08);
+  --alert-important-color: #7C3AED;
+  --alert-important-background: rgba(124, 58, 237, 0.08);
+  --alert-warning-color: #D97706;
+  --alert-warning-background: rgba(217, 119, 6, 0.08);
+  --alert-caution-color: #DC2626;
+  --alert-caution-background: rgba(220, 38, 38, 0.08);
+
+  --kbd-border-color: #99F6E4;
 }
 
-/* Dark Mode - Match Giscus noborder_dark */
+/* Dark Mode — Teal Cyberpunk */
 :root[data-scheme="dark"] {
-  /* Background colors */
-  --body-background: #0d1117;
-  --card-background: #0d1117;
-  --card-background-hover: #161b22;
-  
-  /* Text colors */
-  --card-text-color-main: #e6edf3;
-  --card-text-color-secondary: #7d8590;
-  --body-text-color: #e6edf3;
-  
-  /* Accent colors */
-  --accent-color: #2f81f7;
-  --accent-color-darker: #58a6ff;
-  
-  /* Borders - minimal/none to match noborder */
+  --body-background: #0A1628;
+  --card-background: #111B2D;
+  --card-background-hover: #1B273A;
+  --card-background-selected: rgba(94, 234, 212, 0.12);
+
+  --card-text-color-main: #5EEAD4;
+  --card-text-color-secondary: #99F6E4;
+  --card-text-color-tertiary: #94A3B8;
+  --body-text-color: #5EEAD4;
+
+  --accent-color: #FF2DAA;
+  --accent-color-darker: #00FFD5;
+  --accent-color-text: #0A1628;
+
   --card-border: transparent;
-  --card-separator-color: #30363d;
-  
-  /* Shadows */
-  --shadow-l1: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-l2: 0 3px 6px rgba(0, 0, 0, 0.4);
+  --card-separator-color: rgba(94, 234, 212, 0.12);
+
+  --shadow-l1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0px 1px rgba(0, 255, 213, 0.04);
+  --shadow-l2: 0 3px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 255, 213, 0.04);
+
+  --code-background-color: #111B2D;
+  --code-text-color: #99F6E4;
+  --pre-background-color: #0D1929;
+  --pre-text-color: #99F6E4;
+
+  --blockquote-background-color: rgba(255, 45, 170, 0.08);
+  --blockquote-border-size: 4px;
+
+  --table-border-color: #1B273A;
+  --tr-even-background-color: #0D1929;
+
+  --link-background-color: 255, 45, 170;
+  --link-background-opacity: 0.15;
+  --link-background-opacity-hover: 0.25;
+
+  --alert-note-color: #22D3EE;
+  --alert-note-background: rgba(34, 211, 238, 0.08);
+  --alert-tip-color: #4ADE80;
+  --alert-tip-background: rgba(74, 222, 128, 0.08);
+  --alert-important-color: #A78BFA;
+  --alert-important-background: rgba(167, 139, 250, 0.08);
+  --alert-warning-color: #FBBF24;
+  --alert-warning-background: rgba(251, 191, 36, 0.08);
+  --alert-caution-color: #FB7185;
+  --alert-caution-background: rgba(251, 113, 133, 0.08);
+
+  --kbd-border-color: #1B273A;
 }
 
-/* Copy Code Button - Single Button Only */
+/* ============================================
+   SELECTION & SCROLLBAR
+   ============================================ */
+
+::selection {
+  background-color: #FF2DAA;
+  color: #0A1628;
+}
+
+:root[data-scheme="light"] ::selection {
+  background-color: #D9008F;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--body-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B273A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2DD4BF;
+}
+
+:root[data-scheme="light"] ::-webkit-scrollbar-thumb {
+  background: #99F6E4;
+}
+
+:root[data-scheme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #14B8A6;
+}
+
+/* ============================================
+   FOCUS STYLES
+   ============================================ */
+
+*:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   TYPOGRAPHY — MOBILE-FIRST FOR THAI
+   ============================================ */
+
+:root {
+  --article-font-family: var(--font-family);
+  --article-font-size: 1.8rem;
+  --article-line-height: 1.8;
+}
+
+/* Desktop: slightly larger */
+@include respond(md) {
+  :root {
+    --article-font-size: 1.8rem;
+  }
+}
+
+@include respond(xl) {
+  :root {
+    --article-font-size: 2.0rem;
+  }
+}
+
+/* Article content typography */
+.article-content {
+  /* Body text */
+  p, li {
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    word-spacing: 0.02em;
+  }
+
+  /* Links */
+  a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 45, 170, 0.4);
+    text-underline-offset: 4px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color-darker);
+      text-decoration-color: var(--accent-color-darker);
+    }
+  }
+
+  :root[data-scheme="light"] & a {
+    color: var(--accent-color);
+    text-decoration-color: rgba(217, 0, 143, 0.4);
+
+    &:hover {
+      color: #008B8B;
+      text-decoration-color: #008B8B;
+    }
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 2.8rem;
+    line-height: 1.3;
+    color: #00FFD5;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    line-height: 1.35;
+    color: #22D3EE;
+    margin-top: 2rem;
+    margin-bottom: 0.875rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 2.0rem;
+    line-height: 1.4;
+    color: #22D3EE;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+    line-height: 1.45;
+    color: #5EEAD4;
+    margin-top: 1.5rem;
+    margin-bottom: 0.625rem;
+    font-weight: 600;
+  }
+
+  h5, h6 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #5EEAD4;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  /* Light mode heading colors */
+  :root[data-scheme="light"] & {
+    h1 { color: #0F766E; }
+    h2 { color: #0D9488; }
+    h3 { color: #0D9488; }
+    h4, h5, h6 { color: #115E59; }
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid var(--accent-color);
+    background: var(--blockquote-background-color);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Code inline */
+  code {
+    background: var(--code-background-color);
+    color: var(--code-text-color);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.875em;
+    font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  }
+
+  /* Code blocks */
+  pre {
+    background: var(--pre-background-color);
+    color: var(--pre-text-color);
+    border-radius: 10px;
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid var(--card-separator-color);
+
+    code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-size: 0.9em;
+    }
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95em;
+
+    th, td {
+      border: 1px solid var(--table-border-color);
+      padding: 0.625rem 0.875rem;
+      text-align: left;
+    }
+
+    th {
+      background: var(--card-background-hover);
+      font-weight: 600;
+      color: var(--accent-color-darker);
+    }
+
+    tr:nth-child(even) {
+      background: var(--tr-even-background-color);
+    }
+  }
+
+  /* Lists */
+  ul, ol {
+    padding-left: 1.75rem;
+    margin: 1rem 0;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  /* Horizontal rule */
+  hr {
+    border: 0;
+    height: 1px;
+    background: var(--card-separator-color);
+    margin: 2rem 0;
+  }
+}
+
+/* ============================================
+   DESKTOP TYPOGRAPHY SCALE
+   ============================================ */
+
+@include respond(md) {
+  .article-content {
+    h1 { font-size: 3.6rem; }
+    h2 { font-size: 3.0rem; }
+    h3 { font-size: 2.4rem; }
+    h4 { font-size: 2.0rem; }
+    h5, h6 { font-size: 1.7rem; }
+  }
+}
+
+/* ============================================
+   TAGS & BADGES
+   ============================================ */
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  a, .tag {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid var(--accent-color);
+    color: var(--card-text-color-secondary);
+    background: transparent;
+
+    &:hover {
+      background: var(--accent-color);
+      color: var(--accent-color-text);
+      border-color: var(--accent-color);
+    }
+  }
+}
+
+/* ============================================
+   COPY CODE BUTTON
+   ============================================ */
+
 .article-content {
   div.highlight {
     position: relative;
-    
-    /* Hide any duplicate copy buttons */
+
     > button.copy-code-button,
     > .copy-code-button:not(:first-child),
     .highlight > .copy-code-button + .copy-code-button {
       display: none !important;
     }
-    
-    /* Style for single copy button */
+
     .copy-code-button {
       position: absolute;
       top: 8px;
@@ -93,24 +437,27 @@ h1, h2, h3, h4, h5, h6 {
       transition: opacity 0.2s, transform 0.2s;
       font-family: var(--font-family);
       z-index: 10;
-      
+
       &:hover {
         background: var(--card-background-hover);
         transform: translateY(-1px);
       }
-      
+
       &:active {
         transform: translateY(0);
       }
     }
-    
+
     &:hover .copy-code-button {
       opacity: 1;
     }
   }
 }
 
-/* Profile Image in Sidebar */
+/* ============================================
+   PROFILE IMAGE IN SIDEBAR
+   ============================================ */
+
 .sidebar-avatar {
   img {
     border-radius: 50%;
@@ -118,12 +465,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Giscus Comments - Responsive & Theme Integration */
+/* ============================================
+   GISCUS COMMENTS
+   ============================================ */
+
 .giscus {
   margin-top: var(--section-separation);
   width: 100%;
-  
-  /* Responsive iframe container */
+
   .giscus-frame {
     width: 100%;
     min-height: 200px;
@@ -133,63 +482,58 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Giscus container styling to match Stack theme */
 .giscus-container {
   background-color: var(--card-background);
   border-radius: var(--card-border-radius);
   padding: var(--card-padding);
   box-shadow: var(--shadow-l1);
   margin-top: var(--section-separation);
-  
-  /* Mobile: use smaller padding */
+
   @include respond(sm) {
     padding: var(--spacing-md);
     margin-top: var(--spacing-lg);
   }
-  
-  /* Extra small screens */
+
   @media (max-width: 480px) {
     padding: var(--spacing-sm);
     border-radius: calc(var(--card-border-radius) / 2);
   }
 }
 
-/* Ensure giscus iframe takes full width on mobile */
 @media (max-width: 768px) {
-  .giscus {
-    .giscus-frame {
-      min-height: 180px;
-    }
+  .giscus .giscus-frame {
+    min-height: 180px;
   }
 }
 
-/* Tablet and larger screens */
 @media (min-width: 769px) and (max-width: 1024px) {
   .giscus .giscus-frame {
     min-height: 220px;
   }
 }
 
-/* Large screens */
 @media (min-width: 1280px) {
   .giscus .giscus-frame {
     min-height: 250px;
   }
 }
 
-/* Social Share Buttons */
+/* ============================================
+   SOCIAL SHARE BUTTONS
+   ============================================ */
+
 .article-share-buttons {
   margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--card-separator-color);
-  
+
   &__title {
     font-size: 0.9rem;
     color: var(--body-text-color);
     margin-bottom: 1rem;
     font-weight: 500;
   }
-  
+
   &__buttons {
     display: flex;
     gap: 0.75rem;
@@ -209,48 +553,60 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--card-separator-color);
   transition: all 0.2s ease;
   cursor: pointer;
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
-  
+
   &.facebook:hover {
     background: #1877F2;
     color: white;
     border-color: #1877F2;
   }
-  
+
   &.line:hover {
     background: #06C755;
     color: white;
     border-color: #06C755;
   }
-  
+
   &.x:hover {
     background: #000000;
     color: white;
     border-color: #000000;
   }
-  
+
   &.linkedin:hover {
     background: #0A66C2;
     color: white;
     border-color: #0A66C2;
   }
-  
+
   &.native-share:hover {
     background: var(--accent-color);
     color: white;
     border-color: var(--accent-color);
   }
-  
+
   &.copy:hover {
     background: var(--accent-color);
     color: white;
     border-color: var(--accent-color);
   }
-  
+
+  &.telegram:hover {
+    background: #0088cc;
+    color: white;
+    border-color: #0088cc;
+  }
+
+  &.tiktok:hover {
+    background: #000000;
+    color: white;
+    border-color: #000000;
+  }
+
   svg {
     width: 20px;
     height: 20px;
@@ -260,16 +616,16 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .article-share-buttons {
     margin-top: 1.5rem;
-    
+
     &__buttons {
       gap: 0.5rem;
     }
   }
-  
+
   .article-share-button {
     width: 40px;
     height: 40px;
-    
+
     svg {
       width: 18px;
       height: 18px;
@@ -277,7 +633,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Toast Notification */
+/* Hide native share button on desktop */
+.article-share-button.native-share {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+/* ============================================
+   TOAST NOTIFICATION
+   ============================================ */
+
 .share-toast {
   position: fixed;
   bottom: 2rem;
@@ -294,16 +660,16 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
   z-index: 9999;
   pointer-events: none;
-  
+
   &.show {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
   }
-  
+
   &.error {
     background: #dc2626;
   }
-  
+
   &__message {
     display: flex;
     align-items: center;
@@ -311,48 +677,31 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Hide native share button on desktop (show only on mobile/tablet with share API support) */
-.article-share-button.native-share {
-  @media (min-width: 1024px) {
-    display: none;
-  }
-}
+/* ============================================
+   HERO SECTION — MOBILE
+   ============================================ */
 
-/* Telegram Share Button */
-.article-share-button.telegram:hover {
-  background: #0088cc;
-  color: white;
-  border-color: #0088cc;
-}
-
-/* TikTok Share Button */
-.article-share-button.tiktok:hover {
-  background: #000000;
-  color: white;
-  border-color: #000000;
-}
-
-/* Hero Section Mobile Optimizations */
 .hero-section {
   @media (max-width: 768px) {
     padding: 1.25rem !important;
     margin-bottom: 1.5rem !important;
-    
+
     h1 {
-      font-size: 1.5rem !important;
+      font-size: 1.75rem !important;
       line-height: 1.3;
+      color: #00FFD5;
     }
-    
+
     .hero-subtitle {
-      font-size: 1rem !important;
+      font-size: 1.125rem !important;
       line-height: 1.4;
     }
-    
+
     .hero-description {
-      font-size: 0.95rem !important;
-      line-height: 1.5;
+      font-size: 1rem !important;
+      line-height: 1.6;
     }
-    
+
     .hero-cta {
       width: 100%;
       justify-content: center;
@@ -361,22 +710,22 @@ h1, h2, h3, h4, h5, h6 {
       min-height: 48px;
     }
   }
-  
+
   @media (max-width: 480px) {
     padding: 1rem !important;
-    
+
     h1 {
-      font-size: 1.35rem !important;
+      font-size: 1.5rem !important;
     }
-    
+
     .hero-subtitle {
+      font-size: 1rem !important;
+    }
+
+    .hero-description {
       font-size: 0.95rem !important;
     }
-    
-    .hero-description {
-      font-size: 0.9rem !important;
-    }
-    
+
     .hero-cta {
       padding: 0.7rem 1rem !important;
       font-size: 0.95rem !important;
@@ -384,38 +733,45 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Featured Series Cards - Mobile */
+/* ============================================
+   FEATURED SERIES CARDS — MOBILE
+   ============================================ */
+
 @media (max-width: 480px) {
   .featured-series-grid {
     grid-template-columns: 1fr !important;
-    
+
     .series-card {
       padding: 1rem !important;
-      
+
       h3 {
-        font-size: 1rem !important;
+        font-size: 1.125rem !important;
       }
-      
+
       p {
-        font-size: 0.875rem !important;
+        font-size: 1rem !important;
       }
     }
   }
 }
 
-/* Newsletter CTA - Mobile */
+/* ============================================
+   NEWSLETTER CTA — MOBILE
+   ============================================ */
+
 @media (max-width: 768px) {
   .newsletter-cta {
     padding: 1.25rem !important;
-    
+
     h3 {
-      font-size: 1.1rem !important;
+      font-size: 1.25rem !important;
+      color: #00FFD5;
     }
-    
+
     p {
-      font-size: 0.9rem !important;
+      font-size: 1rem !important;
     }
-    
+
     .newsletter-btn {
       width: 100%;
       justify-content: center;
@@ -425,51 +781,68 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Better base font size on mobile for Thai readability */
-@media (max-width: 480px) {
-  html {
-    font-size: 16px;
-  }
-  
-  body {
-    line-height: 1.6;
-  }
-  
-  .article-content {
-    font-size: 1rem;
-  }
-}
+/* ============================================
+   RELATED CONTENT
+   ============================================ */
 
-/* Related Content */
 .related-content {
   margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--card-separator-color);
-  
+
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--body-text-color);
   }
-  
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   li {
     margin-bottom: 0.5rem;
-    
+
     a {
       color: var(--accent-color);
       text-decoration: none;
       transition: opacity 0.2s;
-      
+
       &:hover {
         opacity: 0.8;
         text-decoration: underline;
       }
     }
+  }
+}
+
+/* ============================================
+   MOBILE BASE FONT SIZE
+   ============================================ */
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    line-height: 1.6;
+  }
+
+  .article-content {
+    font-size: 1.125rem;
+  }
+}
+
+/* Prevent iOS auto-zoom on inputs */
+input, textarea, select {
+  font-size: 16px;
+}
+
+@media (min-width: 641px) {
+  input, textarea, select {
+    font-size: 14px;
   }
 }
