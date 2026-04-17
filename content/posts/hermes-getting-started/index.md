@@ -1,7 +1,7 @@
 ---
 title: "เริ่มต้นติดตั้งและใช้งาน Hermes Agent: ผู้ช่วย AI บนเครื่องของคุณ"
 date: 2026-04-17T10:00:00+07:00
-lastmod: 2026-04-17T10:00:00+07:00
+lastmod: 2026-04-18T10:00:00+07:00
 description: "คู่มือติดตั้งและใช้งาน Hermes Agent จากศูนย์ ตั้งค่า AI Provider เชื่อมต่อ Telegram และสั่งงานผู้ช่วย AI บนเครื่องตัวเอง"
 author: "เหน่ง (Nueng)"
 tags: ['hermes', 'ai-agent', 'tutorial', 'open-source']
@@ -165,13 +165,33 @@ hermes tools --set all
 Hermes รองรับหลาย provider มาก ต่อไปนี้เป็นตัวอย่างการตั้งค่ายอดนิยม:
 
 ### OpenRouter (แนะนำสำหรับผู้เริ่มต้น)
-OpenRouter เป็น aggregator ที่ให้คุณใช้งานหลายโมเดลได้จากจุดเดียว
+OpenRouter เป็น aggregator ที่ให้คุณใช้งานหลายโมเดลได้จากจุดเดียว สมัครง่าย และมีโมเดลฟรีให้ใช้โดยไม่ต้องมีบัตรเครดิต
 
 ```yaml
 model:
   default: anthropic/claude-sonnet-4
   provider: openrouter
 ```
+
+**โมเดลฟรีบน OpenRouter (ไม่ต้องเติมเงิน)**
+OpenRouter มีโมเดลฟรีให้ใช้กว่า 20 ตัว จำกัดที่ 20 requests/นาที และ 200 requests/วัน แนะนำสำหรับผู้เริ่มต้นที่อยากลองใช้งานไม่เสียค่าใช้จ่าย:
+
+| โมเดล | จุดเด่น | Context |
+|--------|---------|---------|
+| `qwen/qwen3-coder:free` | เขียนโค้ดแม่น แจกฟรี | 262K |
+| `google/gemma-3-27b-it:free` | อเนกประสงค์ รองรับรูปภาพ | 131K |
+| `meta-llama/llama-3.3-70b-instruct:free` | แชททั่วไป ใช้งานลื่น | 66K |
+| `google/gemma-4-26b-a4b-it:free` | Context ยาวถึง 1 ล้าน token | 1M |
+| `openrouter/free` | สุ่มโมเดลฟรีอัตโนมัติ (ไม่ต้องเลือก) | 200K |
+
+ตัวอย่างการตั้งค่าใช้โมเดลฟรี:
+```yaml
+model:
+  default: qwen/qwen3-coder:free
+  provider: openrouter
+```
+
+> 💡 **Tip:** โมเดลฟรีเหมาะกับการทดลองใช้งาน ถ้าใช้จริงจังแนะนำเติม Credits เพื่อความเสถียร
 
 ### Kimi (ฟรีสำหรับ coding)
 Kimi K2.5 เป็นโมเดลที่เน้นการเขียนโค้ดและทำงานเทคนิค
@@ -182,8 +202,8 @@ model:
   provider: kimi-coding
 ```
 
-### Bailian / Qwen (ฟรี)
-สำหรับผู้ที่มีบัญชี Alibaba Cloud Bailian (DashScope):
+### Bailian / Qwen (แบบจ่ายรายเดือน)
+สำหรับผู้ที่มีบัญชี Alibaba Cloud Bailian (DashScope) — ปัจจุบันเป็น **บริการแบบสมัครสมาชิกรายเดือน** ไม่ฟรีแล้ว แต่คุ้มค่าสำหรับงานเขียนโค้ดและภาษาไทย
 
 ```yaml
 custom_providers:
@@ -191,6 +211,28 @@ custom_providers:
     base_url: https://coding-intl.dashscope.aliyuncs.com/v1
     api_key: sk-xxx
 ```
+
+### รันโมเดลบนเครื่องตัวเอง (Local Models)
+ถ้ามีการ์ดจอหรือต้องการความเป็นส่วนตัวสูงสุด สามารถรันโมเดลบนเครื่องตัวเองผ่าน **Ollama** ได้ Hermes จะตรวจจับโมเดลที่ดาวน์โหลดผ่าน Ollama อัตโนมัติ
+
+**ขั้นตอน:**
+1. ติดตั้ง Ollama: [ollama.com](https://ollama.com)
+2. ดาวน์โหลดโมเดล เช่น:
+   ```bash
+   ollama pull gemma4        # ~16 GB VRAM
+   ollama pull qwen3.5       # ~11 GB VRAM
+   ```
+3. ตั้งค่า Hermes ให้ชี้ไปที่ Ollama:
+   ```yaml
+   custom_providers:
+     - name: ollama
+       base_url: http://127.0.0.1:11434/v1
+       api_key: ""  # ไม่ต้องใส่
+   ```
+4. Hermes จะ auto-detect โมเดลที่มีให้เลือกใช้ทันที
+
+> 💡 **ข้อดีของ Local:** ไม่ต้องกังวลเรื่องค่าใช้จ่ายรายเดือน ไม่ส่งข้อมูลออกจากเครื่อง และไม่มี rate limit  
+> **ข้อควรระวัง:** ต้องใช้เครื่องที่มีสเปคสูงพอสมควร (RAM/VRAM มากๆ) ถึงจะรันโมเดลใหญ่ได้ลื่น
 
 ต่อไปเราจะมาดูวิธีเชื่อมต่อ Hermes เข้ากับ Telegram เพื่อให้คุณสามารถคุยกับ AI ผู้ช่วยได้จากโทรศัพท์มือถือ
 
