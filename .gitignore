@@ -1,5 +1,13 @@
 public/
+public_test/
 .DS_Store
+
+# Hugo build artifacts
+.hugo_build.lock
+build.log
+
+# Hugo generated resources (rebuilt by CI)
+resources/_gen/
 
 # Kimi Memory Space (local only)
 .kimi/
@@ -7,3 +15,11 @@ public/
 # Tabler Premium Assets (license compliance - don't distribute)
 static/illustrations/tabler/
 static/icons/tabler-premium/
+
+# Internal workflow/draft files
+*.workflow_state
+content/**/research.md
+content/**/revised.md
+content/**/validation.md
+content/**/writer*.md
+content/**/HARNESS-PLAN.md
