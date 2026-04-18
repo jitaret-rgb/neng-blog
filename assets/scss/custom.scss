@@ -192,13 +192,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Desktop: slightly larger */
 @include respond(md) {
   :root {
-    --article-font-size: 1.8rem;
+    --article-font-size: 2.0rem;
   }
 }
 
 @include respond(xl) {
   :root {
-    --article-font-size: 2.0rem;
+    --article-font-size: 2.1rem;
   }
 }
 
