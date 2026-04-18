@@ -333,7 +333,7 @@ Kimi Code CLI เป็นเครื่องมือที่มีประ
 
 ## ส่วนอ้างอิง
 
-1. [Kimi CLI Documentation](https://github.com/moonshot-ai/kimi-cli)
+1. [Kimi Code CLI Documentation](https://kimi-cli.com/en/guides/getting-started.html)
 2. [Agent Skills by Addy Osmani](https://github.com/addyosmani/agent-skills)
 3. [Moonshot AI Platform](https://platform.moonshot.cn/)
 4. [Kimi Code Overview](https://kimi.com/coding)
