@@ -1,5 +1,7 @@
 {{- with .Site.Params.comments.giscus -}}
 {{- $loading := .loading | default "eager" -}}
+{{- $lightThemeUrl := "/css/giscus-teal-light.css" | absURL -}}
+{{- $darkThemeUrl := "/css/giscus-teal-dark.css" | absURL -}}
 
 <div class="giscus-container" role="region" aria-label="Comments section">
 <script
@@ -13,7 +15,7 @@
     data-reactions-enabled="{{- .reactionsEnabled -}}"
     data-emit-metadata="{{- .emitMetadata -}}"
     data-input-position="{{- .inputPosition -}}"
-    data-theme="{{- .lightTheme -}}"
+    data-theme="{{ $lightThemeUrl }}"
     data-lang="{{- .lang -}}"
     data-loading="{{- $loading -}}"
     crossorigin="anonymous"
@@ -45,9 +47,9 @@
 
         function handler() {
             if (document.documentElement.dataset.scheme === "light") {
-                setGiscusTheme('{{- .lightTheme -}}');
+                setGiscusTheme('{{ $lightThemeUrl }}');
             } else {
-                setGiscusTheme('{{- .darkTheme -}}');
+                setGiscusTheme('{{ $darkThemeUrl }}');
             }
         }
     })();

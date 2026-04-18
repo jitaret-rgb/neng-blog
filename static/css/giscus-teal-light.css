@@ -1,0 +1,105 @@
+/*!
+ * Giscus Theme: Neng Teal Light
+ * Matches neng-blog Stack Teal/Aqua color palette
+ * Based on GitHub's Light theme, licensed under MIT
+ */
+
+main {
+  --color-prettylights-syntax-comment: #64748B;
+  --color-prettylights-syntax-constant: #0891B2;
+  --color-prettylights-syntax-entity: #7C3AED;
+  --color-prettylights-syntax-storage-modifier-import: #334155;
+  --color-prettylights-syntax-entity-tag: #059669;
+  --color-prettylights-syntax-keyword: #DC2626;
+  --color-prettylights-syntax-string: #0D9488;
+  --color-prettylights-syntax-variable: #D97706;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #DC2626;
+  --color-prettylights-syntax-invalid-illegal-text: #FFFFFF;
+  --color-prettylights-syntax-invalid-illegal-bg: #DC2626;
+  --color-prettylights-syntax-carriage-return-text: #FFFFFF;
+  --color-prettylights-syntax-carriage-return-bg: #DC2626;
+  --color-prettylights-syntax-string-regexp: #059669;
+  --color-prettylights-syntax-markup-list: #D97706;
+  --color-prettylights-syntax-markup-heading: #0891B2;
+  --color-prettylights-syntax-markup-italic: #334155;
+  --color-prettylights-syntax-markup-bold: #0F172A;
+  --color-prettylights-syntax-markup-deleted-text: #DC2626;
+  --color-prettylights-syntax-markup-deleted-bg: #FEE2E2;
+  --color-prettylights-syntax-markup-inserted-text: #059669;
+  --color-prettylights-syntax-markup-inserted-bg: #D1FAE5;
+  --color-prettylights-syntax-markup-changed-text: #D97706;
+  --color-prettylights-syntax-markup-changed-bg: #FEF3C7;
+  --color-prettylights-syntax-markup-ignored-text: #334155;
+  --color-prettylights-syntax-markup-ignored-bg: #0891B2;
+  --color-prettylights-syntax-meta-diff-range: #7C3AED;
+  --color-prettylights-syntax-brackethighlighter-angle: #64748B;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #CBD5E1;
+  --color-prettylights-syntax-constant-other-reference-link: #0D9488;
+
+  --color-btn-text: #0F172A;
+  --color-btn-bg: #F1F5F9;
+  --color-btn-border: rgba(15, 23, 42, 0.1);
+  --color-btn-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
+  --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  --color-btn-hover-bg: #E2E8F0;
+  --color-btn-hover-border: rgba(15, 23, 42, 0.15);
+  --color-btn-active-bg: #E2E8F0;
+  --color-btn-active-border: rgba(15, 23, 42, 0.2);
+  --color-btn-selected-bg: #E0F2FE;
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-bg: #0D9488;
+  --color-btn-primary-border: rgba(15, 23, 42, 0.1);
+  --color-btn-primary-shadow: 0 1px 0 rgba(15, 23, 42, 0.1);
+  --color-btn-primary-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  --color-btn-primary-hover-bg: #0891B2;
+  --color-btn-primary-hover-border: rgba(15, 23, 42, 0.1);
+  --color-btn-primary-selected-bg: #0D9488;
+  --color-btn-primary-selected-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  --color-btn-primary-disabled-text: rgba(255, 255, 255, 0.8);
+  --color-btn-primary-disabled-bg: rgba(13, 148, 136, 0.5);
+  --color-btn-primary-disabled-border: rgba(15, 23, 42, 0.1);
+  --color-action-list-item-default-hover-bg: rgba(13, 148, 136, 0.08);
+  --color-segmented-control-bg: #E2E8F0;
+  --color-segmented-control-button-bg: #FFFFFF;
+  --color-segmented-control-button-selected-border: #94A3B8;
+
+  --color-fg-default: #0F172A;
+  --color-fg-muted: #334155;
+  --color-fg-subtle: #64748B;
+  --color-canvas-default: #FFFFFF;
+  --color-canvas-overlay: #FFFFFF;
+  --color-canvas-inset: #F8FAFC;
+  --color-canvas-subtle: #F1F5F9;
+  --color-border-default: #E2E8F0;
+  --color-border-muted: rgba(15, 23, 42, 0.08);
+  --color-neutral-muted: rgba(15, 23, 42, 0.06);
+  --color-accent-fg: #0D9488;
+  --color-accent-emphasis: #0891B2;
+  --color-accent-muted: rgba(13, 148, 136, 0.2);
+  --color-accent-subtle: #E0F2FE;
+  --color-success-fg: #059669;
+  --color-attention-fg: #D97706;
+  --color-attention-muted: rgba(217, 119, 6, 0.2);
+  --color-attention-subtle: rgba(217, 119, 6, 0.08);
+  --color-danger-fg: #DC2626;
+  --color-danger-muted: rgba(220, 38, 38, 0.2);
+  --color-danger-subtle: rgba(220, 38, 38, 0.08);
+  --color-primer-shadow-inset: inset 0 1px 0 rgba(226, 232, 240, 0.2);
+  --color-scale-gray-1: #F1F5F9;
+  --color-scale-blue-1: #E0F2FE;
+
+  --color-social-reaction-bg-hover: var(--color-scale-gray-1);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
+}
+
+.gsc-homepage-bg {
+  background-color: #F8FAFC;
+}
+
+main .pagination-loader-container {
+  background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line.svg");
+}
+
+main .gsc-loading-image {
+  background-image: url("https://github.githubassets.com/images/mona-loading-default.gif");
+}

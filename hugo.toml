@@ -71,9 +71,9 @@ ignoreFiles = ['\.kimi/.*']
     reactionsEnabled = "1"
     emitMetadata = "0"
     inputPosition = "bottom"
-    lightTheme = "noborder_light"
-    darkTheme = "transparent_dark"
-    theme = "transparent_dark"
+    lightTheme = "/css/giscus-teal-light.css"
+    darkTheme = "/css/giscus-teal-dark.css"
+    theme = "/css/giscus-teal-dark.css"
     lang = "en"
     loading = "eager"
     
