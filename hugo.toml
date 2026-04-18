@@ -51,7 +51,7 @@ ignoreFiles = ['\.kimi/.*']
   # Color Scheme (Dark/Light Mode)
   [params.colorScheme]
     toggle = true        # แสดงปุ่มสลับ theme
-    default = "dark"     # ค่าเริ่มต้น: light | dark | auto
+    default = "light"    # ค่าเริ่มต้น: light | dark | auto
 
 # Cookie Consent (GDPR) - ปิดชั่วคราวเพื่อทดสอบ Giscus
 [cookies]

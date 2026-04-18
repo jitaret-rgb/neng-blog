@@ -1,5 +1,4 @@
 {{- with .Site.Params.comments.giscus -}}
-{{- $theme := .theme | default .darkTheme | default "noborder_dark" -}}
 {{- $loading := .loading | default "eager" -}}
 
 <div class="giscus-container" role="region" aria-label="Comments section">
@@ -14,11 +13,44 @@
     data-reactions-enabled="{{- .reactionsEnabled -}}"
     data-emit-metadata="{{- .emitMetadata -}}"
     data-input-position="{{- .inputPosition -}}"
-    data-theme="{{- $theme -}}"
+    data-theme="{{- .lightTheme -}}"
     data-lang="{{- .lang -}}"
     data-loading="{{- $loading -}}"
     crossorigin="anonymous"
     async>
+</script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('{{- .lightTheme -}}');
+            } else {
+                setGiscusTheme('{{- .darkTheme -}}');
+            }
+        }
+    })();
 </script>
 </div>
 {{- end -}}
