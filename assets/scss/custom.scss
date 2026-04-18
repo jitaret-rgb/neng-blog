@@ -199,6 +199,23 @@ h1, h2, h3, h4, h5, h6 {
   --article-font-family: var(--font-family);
   --article-font-size: var(--text-base);
   --article-line-height: 1.75;
+
+  /* Homepage unified modular scale — Major Third (1.25×) */
+  --home-hero: 1.6rem;      /* 25.6px mobile */
+  --home-section: 1.25rem;  /* 20px  mobile */
+  --home-subtitle: 1.125rem;/* 18px  mobile */
+  --home-lead: 1rem;        /* 16px  mobile */
+  --home-body: 0.875rem;    /* 14px  mobile */
+}
+
+@include respond(md) {
+  :root {
+    --home-hero: 2.5rem;      /* 40px  desktop */
+    --home-section: 2rem;     /* 32px  desktop */
+    --home-subtitle: 1.6rem;  /* 25.6px desktop */
+    --home-lead: 1.25rem;     /* 20px  desktop */
+    --home-body: 1rem;        /* 16px  desktop */
+  }
 }
 
 /* Article content typography */
@@ -697,63 +714,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
-   HERO SECTION — MOBILE FIRST
-   ============================================ */
-
-.hero-section {
-  @media (max-width: 768px) {
-    padding: 1.25rem;
-    margin-bottom: 1.5rem;
-
-    h1 {
-      font-size: var(--text-3xl);
-      line-height: 1.25;
-      color: var(--accent-color-darker);
-    }
-
-    .hero-subtitle {
-      font-size: var(--text-lg);
-      line-height: 1.4;
-    }
-
-    .hero-description {
-      font-size: var(--text-base);
-      line-height: 1.6;
-    }
-
-    .hero-cta {
-      width: 100%;
-      justify-content: center;
-      padding: 0.75rem 1.25rem;
-      font-size: var(--text-base);
-      min-height: 48px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    padding: 1rem;
-
-    h1 {
-      font-size: var(--text-2xl);
-    }
-
-    .hero-subtitle {
-      font-size: var(--text-base);
-    }
-
-    .hero-description {
-      font-size: var(--text-sm);
-    }
-
-    .hero-cta {
-      padding: 0.7rem 1rem;
-      font-size: var(--text-sm);
-    }
-  }
-}
-
-/* ============================================
-   FEATURED SERIES CARDS — MOBILE
+   FEATURED SERIES GRID — MOBILE ONLY
    ============================================ */
 
 @media (max-width: 480px) {
@@ -762,40 +723,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .series-card {
       padding: 1rem;
-
-      h3 {
-        font-size: var(--text-base);
-      }
-
-      p {
-        font-size: var(--text-sm);
-      }
-    }
-  }
-}
-
-/* ============================================
-   NEWSLETTER CTA — MOBILE
-   ============================================ */
-
-@media (max-width: 768px) {
-  .newsletter-cta {
-    padding: 1.25rem;
-
-    h3 {
-      font-size: var(--text-xl);
-      color: var(--accent-color-darker);
-    }
-
-    p {
-      font-size: var(--text-base);
-    }
-
-    .newsletter-btn {
-      width: 100%;
-      justify-content: center;
-      padding: 0.7rem 1rem;
-      min-height: 48px;
     }
   }
 }
@@ -862,19 +789,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
-   HOMEPAGE TYPOGRAPHY — MOBILE FIRST
+   HOMEPAGE TYPOGRAPHY — UNIFIED MODULAR SCALE
+   ============================================
+   Mobile:  px-based (consistent regardless of rem base)
+   Desktop: rem-based via --home-* variables
    ============================================ */
 
+/* Mobile base */
 .hero-section {
   h1 {
-    font-size: var(--text-3xl);
+    font-size: 28px;
     line-height: 1.25;
     margin-bottom: 0.25rem;
     color: var(--accent-color);
   }
 
   .hero-subtitle {
-    font-size: var(--text-lg);
+    font-size: 20px;
     line-height: 1.4;
     font-weight: 500;
     margin-bottom: 0.5rem;
@@ -882,83 +813,161 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-description {
-    font-size: var(--text-base);
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 1.5rem;
     color: var(--body-text-color);
   }
+
+  .hero-cta {
+    font-size: 16px;
+  }
 }
 
-@include respond(md) {
+@media (max-width: 480px) {
   .hero-section {
-    h1 { font-size: var(--text-4xl); }
-    .hero-subtitle { font-size: var(--text-xl); }
-    .hero-description { font-size: var(--text-lg); }
+    h1 {
+      font-size: 24px;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+    }
+
+    .hero-description {
+      font-size: 16px;
+    }
+
+    .hero-cta {
+      font-size: 14px;
+    }
   }
 }
 
 .home-section-title {
-  font-size: var(--text-xl);
+  font-size: 22px;
   margin-bottom: 1rem;
   color: var(--accent-color);
 }
 
-@include respond(md) {
+@media (max-width: 480px) {
   .home-section-title {
-    font-size: var(--text-2xl);
+    font-size: 20px;
   }
 }
 
 .series-card {
   h3 {
-    font-size: var(--text-base);
+    font-size: 18px;
     line-height: 1.4;
     margin-bottom: 0.5rem;
     color: var(--body-text-color);
   }
 
   p {
-    font-size: var(--text-sm);
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 1rem;
     color: var(--body-text-color);
   }
 
   a {
-    font-size: var(--text-sm);
+    font-size: 16px;
     color: var(--accent-color);
     text-decoration: none;
   }
 }
 
-@include respond(md) {
+@media (max-width: 480px) {
   .series-card {
-    h3 { font-size: var(--text-lg); }
-    p { font-size: var(--text-base); }
-    a { font-size: var(--text-base); }
+    h3 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    a {
+      font-size: 14px;
+    }
   }
 }
 
 .newsletter-cta {
   h3 {
-    font-size: var(--text-lg);
+    font-size: 20px;
     line-height: 1.4;
     margin-bottom: 0.5rem;
     color: var(--body-text-color);
   }
 
   p {
-    font-size: var(--text-base);
+    font-size: 18px;
     line-height: 1.5;
     margin-bottom: 1rem;
     color: var(--body-text-color);
   }
 }
 
-@include respond(md) {
+@media (max-width: 480px) {
   .newsletter-cta {
-    h3 { font-size: var(--text-xl); }
-    p { font-size: var(--text-lg); }
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Desktop: switch to rem scale */
+@include respond(md) {
+  .hero-section {
+    h1 {
+      font-size: var(--home-hero);
+    }
+
+    .hero-subtitle {
+      font-size: var(--home-subtitle);
+    }
+
+    .hero-description {
+      font-size: var(--home-lead);
+    }
+
+    .hero-cta {
+      font-size: var(--home-body);
+    }
+  }
+
+  .home-section-title {
+    font-size: var(--home-section);
+  }
+
+  .series-card {
+    h3 {
+      font-size: var(--home-subtitle);
+    }
+
+    p {
+      font-size: var(--home-body);
+    }
+
+    a {
+      font-size: var(--home-body);
+    }
+  }
+
+  .newsletter-cta {
+    h3 {
+      font-size: var(--home-subtitle);
+    }
+
+    p {
+      font-size: var(--home-lead);
+    }
   }
 }
 
