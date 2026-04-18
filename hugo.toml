@@ -71,9 +71,9 @@ ignoreFiles = ['\.kimi/.*']
     reactionsEnabled = "1"
     emitMetadata = "0"
     inputPosition = "bottom"
-    lightTheme = "noborder_dark"
-    darkTheme = "noborder_dark"
-    theme = "noborder_dark"
+    lightTheme = "noborder_light"
+    darkTheme = "transparent_dark"
+    theme = "transparent_dark"
     lang = "en"
     loading = "eager"
     
