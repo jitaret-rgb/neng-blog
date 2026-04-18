@@ -10,7 +10,7 @@ hugo --gc --minify
 echo "📁 Setting up gh-pages..."
 cd public
 git init
-git remote add origin https://github.com/jitaret-rgb/neng-blog.git 2>/dev/null || true
+git remote add origin git@github.com:jitaret-rgb/neng-blog.git 2>/dev/null || true
 git checkout -b gh-pages 2>/dev/null || git checkout gh-pages
 
 echo "📤 Pushing to GitHub..."
