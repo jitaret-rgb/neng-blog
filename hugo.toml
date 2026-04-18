@@ -19,11 +19,11 @@ ignoreFiles = ['\.kimi/.*']
   # Favicon (ต้องวางไฟล์ที่ static/favicon.ico)
   # favicon = "/favicon.ico"
   
-  # Custom Font - Noto Sans Thai
+  # Custom Font - Noto Sans Thai + Noto Sans (Latin)
   [[params.headCustomHTML]]
     html = """<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">"""
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">"""
   
   [params.sidebar]
     subtitle = "Making AI Accessible for Everyone"
