@@ -22,36 +22,53 @@
     async>
 </script>
 <script>
-    function setGiscusTheme(theme) {
-        let giscus = document.querySelector("iframe.giscus-frame");
-        if (giscus) {
-            giscus.contentWindow.postMessage(
-                {
-                    giscus: {
-                        setConfig: {
-                            theme: theme,
-                        },
-                    },
-                },
-                "https://giscus.app"
-            );
-        }
-    }
-
     (function () {
-        addEventListener("message", (e) => {
-            if (event.origin !== "https://giscus.app") return;
-            handler();
-        });
-        window.addEventListener("onColorSchemeChange", handler);
+        let pendingTheme = document.documentElement.dataset.scheme === 'light'
+            ? '{{ $lightThemeUrl }}'
+            : '{{ $darkThemeUrl }}';
 
-        function handler() {
-            if (document.documentElement.dataset.scheme === "light") {
-                setGiscusTheme('{{ $lightThemeUrl }}');
-            } else {
-                setGiscusTheme('{{ $darkThemeUrl }}');
-            }
+        function applyGiscusTheme(theme) {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (!iframe) return false;
+            iframe.contentWindow.postMessage(
+                { giscus: { setConfig: { theme: theme } } },
+                'https://giscus.app'
+            );
+            return true;
         }
+
+        function setGiscusTheme(theme) {
+            pendingTheme = theme;
+            applyGiscusTheme(theme);
+        }
+
+        // Watch for iframe creation and apply pending theme
+        const giscusContainer = document.querySelector('.giscus');
+        if (giscusContainer) {
+            const observer = new MutationObserver((mutations) => {
+                for (const mutation of mutations) {
+                    for (const node of mutation.addedNodes) {
+                        if (node.nodeName === 'IFRAME' && node.classList.contains('giscus-frame')) {
+                            applyGiscusTheme(pendingTheme);
+                        }
+                    }
+                }
+            });
+            observer.observe(giscusContainer, { childList: true, subtree: true });
+        }
+
+        // Apply theme when color scheme changes
+        window.addEventListener('onColorSchemeChange', () => {
+            const scheme = document.documentElement.dataset.scheme;
+            const theme = scheme === 'light' ? '{{ $lightThemeUrl }}' : '{{ $darkThemeUrl }}';
+            setGiscusTheme(theme);
+        });
+
+        // Re-apply theme on giscus messages to stay in sync
+        window.addEventListener('message', (e) => {
+            if (e.origin !== 'https://giscus.app') return;
+            applyGiscusTheme(pendingTheme);
+        });
     })();
 </script>
 </div>
