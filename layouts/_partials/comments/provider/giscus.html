@@ -4,72 +4,78 @@
 {{- $darkThemeUrl := "/css/giscus-teal-dark.css" | absURL -}}
 
 <div class="giscus-container" role="region" aria-label="Comments section">
-<script
-    src="https://giscus.app/client.js"
-    data-repo="{{- .repo -}}"
-    data-repo-id="{{- .repoID -}}"
-    data-category="{{- .category -}}"
-    data-category-id="{{- .categoryID -}}"
-    data-mapping="{{- .mapping -}}"
-    data-strict="{{- .strict -}}"
-    data-reactions-enabled="{{- .reactionsEnabled -}}"
-    data-emit-metadata="{{- .emitMetadata -}}"
-    data-input-position="{{- .inputPosition -}}"
-    data-theme="{{ $lightThemeUrl }}"
-    data-lang="{{- .lang -}}"
-    data-loading="{{- $loading -}}"
-    crossorigin="anonymous"
-    async>
-</script>
+    <div class="giscus"></div>
+</div>
+
 <script>
     (function () {
-        let pendingTheme = document.documentElement.dataset.scheme === 'light'
-            ? '{{ $lightThemeUrl }}'
-            : '{{ $darkThemeUrl }}';
+        const lightTheme = '{{ $lightThemeUrl }}';
+        const darkTheme = '{{ $darkThemeUrl }}';
+
+        function getCurrentTheme() {
+            const scheme = document.documentElement.dataset.scheme;
+            return scheme === 'light' ? lightTheme : darkTheme;
+        }
+
+        function loadGiscus() {
+            const existing = document.querySelector('script[data-repo="{{- .repo -}}"]');
+            if (existing) return;
+
+            const script = document.createElement('script');
+            script.src = 'https://giscus.app/client.js';
+            script.setAttribute('data-repo', '{{- .repo -}}');
+            script.setAttribute('data-repo-id', '{{- .repoID -}}');
+            script.setAttribute('data-category', '{{- .category -}}');
+            script.setAttribute('data-category-id', '{{- .categoryID -}}');
+            script.setAttribute('data-mapping', '{{- .mapping -}}');
+            script.setAttribute('data-strict', '{{- .strict -}}');
+            script.setAttribute('data-reactions-enabled', '{{- .reactionsEnabled -}}');
+            script.setAttribute('data-emit-metadata', '{{- .emitMetadata -}}');
+            script.setAttribute('data-input-position', '{{- .inputPosition -}}');
+            script.setAttribute('data-theme', getCurrentTheme());
+            script.setAttribute('data-lang', '{{- .lang -}}');
+            script.setAttribute('data-loading', '{{- $loading -}}');
+            script.setAttribute('crossorigin', 'anonymous');
+            script.async = true;
+
+            const container = document.querySelector('.giscus-container');
+            if (container) {
+                container.appendChild(script);
+            }
+        }
 
         function applyGiscusTheme(theme) {
             const iframe = document.querySelector('iframe.giscus-frame');
             if (!iframe) return false;
-            iframe.contentWindow.postMessage(
-                { giscus: { setConfig: { theme: theme } } },
-                'https://giscus.app'
-            );
+            try {
+                iframe.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme: theme } } },
+                    'https://giscus.app'
+                );
+            } catch (e) {
+                return false;
+            }
             return true;
         }
 
-        function setGiscusTheme(theme) {
-            pendingTheme = theme;
-            applyGiscusTheme(theme);
+        // Load giscus with the correct theme immediately
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadGiscus);
+        } else {
+            loadGiscus();
         }
 
-        // Watch for iframe creation and apply pending theme
-        const giscusContainer = document.querySelector('.giscus');
-        if (giscusContainer) {
-            const observer = new MutationObserver((mutations) => {
-                for (const mutation of mutations) {
-                    for (const node of mutation.addedNodes) {
-                        if (node.nodeName === 'IFRAME' && node.classList.contains('giscus-frame')) {
-                            applyGiscusTheme(pendingTheme);
-                        }
-                    }
-                }
-            });
-            observer.observe(giscusContainer, { childList: true, subtree: true });
-        }
-
-        // Apply theme when color scheme changes
+        // Handle theme changes
         window.addEventListener('onColorSchemeChange', () => {
-            const scheme = document.documentElement.dataset.scheme;
-            const theme = scheme === 'light' ? '{{ $lightThemeUrl }}' : '{{ $darkThemeUrl }}';
-            setGiscusTheme(theme);
+            applyGiscusTheme(getCurrentTheme());
         });
 
-        // Re-apply theme on giscus messages to stay in sync
+        // Re-apply theme when giscus sends messages (iframe ready, etc.)
         window.addEventListener('message', (e) => {
             if (e.origin !== 'https://giscus.app') return;
-            applyGiscusTheme(pendingTheme);
+            if (!(typeof e.data === 'object' && e.data.giscus)) return;
+            applyGiscusTheme(getCurrentTheme());
         });
     })();
 </script>
-</div>
 {{- end -}}
