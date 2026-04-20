@@ -1,0 +1,5 @@
+/images/*
+  Cross-Origin-Resource-Policy: cross-origin
+
+/posts/*/cover.jpg
+  Cross-Origin-Resource-Policy: cross-origin
