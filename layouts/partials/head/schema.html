@@ -1,15 +1,9 @@
 {{- /* Schema Markup for SEO */ -}}
 
-{{- /* Skip old articles and special pages */ -}}
+{{- /* Skip special pages only */ -}}
 {{- $skipSchema := or 
-  (hasPrefix .RelPermalink "/posts/ai-engineering") 
-  (hasPrefix .RelPermalink "/posts/openclaw")
-  (eq .RelPermalink "/posts/manoonchai-review/")
-  (eq .RelPermalink "/posts/sawasdee/")
-  (eq .RelPermalink "/posts/hugo-stack-guide/")
   (eq .RelPermalink "/archives/")
   (eq .RelPermalink "/search/")
-  (eq .RelPermalink "/")
 -}}
 
 {{- /* Article Schema for pages */ -}}
