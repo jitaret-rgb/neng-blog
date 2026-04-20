@@ -80,8 +80,8 @@ h1, h2, h3, h4, h5, h6 {
   --card-background-selected: rgba(94, 234, 212, 0.12);
 
   --card-text-color-main: #5EEAD4;
-  --card-text-color-secondary: #99F6E4;
-  --card-text-color-tertiary: #94A3B8;
+  --card-text-color-secondary: #5EEAD4;
+  --card-text-color-tertiary: #A8B9CF;
   --body-text-color: #5EEAD4;
 
   --accent-color: #FF2DAA;
@@ -128,12 +128,12 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 ::selection {
-  background-color: #FF2DAA;
+  background-color: rgba(255, 45, 170, 0.85);
   color: #0A1628;
 }
 
 :root[data-scheme="light"] ::selection {
-  background-color: #0D9488;
+  background-color: rgba(13, 148, 136, 0.85);
   color: #ffffff;
 }
 
@@ -398,13 +398,13 @@ h1, h2, h3, h4, h5, h6 {
   :root {
     --text-xs: 1.3rem;     /* 13px */
     --text-sm: 1.5rem;     /* 15px */
-    --text-base: 1.7rem;   /* 17px */
-    --text-lg: 2.0rem;     /* 20px */
-    --text-xl: 2.4rem;     /* 24px */
-    --text-2xl: 3.0rem;    /* 30px */
-    --text-3xl: 3.6rem;    /* 36px */
-    --text-4xl: 4.8rem;    /* 48px */
-    --article-font-size: 1.9rem;    /* 19px — desktop body */
+    --text-base: 1.1875rem;   /* 19px — increased from mobile for readability */
+    --text-lg: 1.25rem;     /* 20px */
+    --text-xl: 1.5rem;      /* 24px */
+    --text-2xl: 1.875rem;   /* 30px */
+    --text-3xl: 2.25rem;    /* 36px */
+    --text-4xl: 3rem;       /* 48px */
+    --article-font-size: 1.1875rem;    /* 19px — desktop body */
   }
 
   .article-content {
@@ -770,10 +770,6 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 @media (max-width: 480px) {
-  html {
-    font-size: 16px;
-  }
-
   body {
     line-height: 1.6;
   }
@@ -796,17 +792,17 @@ h1, h2, h3, h4, h5, h6 {
    Desktop: rem-based via --home-* variables
    ============================================ */
 
-/* Mobile base */
+/* Mobile base (1rem = 10px from theme) */
 .hero-section {
   h1 {
-    font-size: 28px;
+    font-size: 2.8rem;
     line-height: 1.25;
     margin-bottom: 0.25rem;
     color: var(--accent-color);
   }
 
   .hero-subtitle {
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 1.4;
     font-weight: 500;
     margin-bottom: 0.5rem;
@@ -814,66 +810,66 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-description {
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
     color: var(--body-text-color);
   }
 
   .hero-cta {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero-section {
     h1 {
-      font-size: 24px;
+      font-size: 2.4rem;
     }
 
     .hero-subtitle {
-      font-size: 18px;
+      font-size: 1.8rem;
     }
 
     .hero-description {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
 
     .hero-cta {
-      font-size: 14px;
+      font-size: 1.4rem;
     }
   }
 }
 
 .home-section-title {
-  font-size: 22px;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
   color: var(--accent-color);
 }
 
 @media (max-width: 480px) {
   .home-section-title {
-    font-size: 20px;
+    font-size: 2rem;
   }
 }
 
 .series-card {
   h3 {
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
     color: var(--body-text-color);
   }
 
   p {
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.5;
     margin-bottom: 1rem;
     color: var(--body-text-color);
   }
 
   a {
-    font-size: 16px;
+    font-size: 1.6rem;
     color: var(--accent-color);
     text-decoration: none;
   }
@@ -882,29 +878,29 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .series-card {
     h3 {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
 
     p {
-      font-size: 14px;
+      font-size: 1.6rem;
     }
 
     a {
-      font-size: 14px;
+      font-size: 1.6rem;
     }
   }
 }
 
 .newsletter-cta {
   h3 {
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
     color: var(--body-text-color);
   }
 
   p {
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 1.5;
     margin-bottom: 1rem;
     color: var(--body-text-color);
@@ -914,11 +910,11 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .newsletter-cta {
     h3 {
-      font-size: 18px;
+      font-size: 1.8rem;
     }
 
     p {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
   }
 }
@@ -973,12 +969,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Prevent iOS auto-zoom on inputs */
+/* Mobile touch feedback */
+@media (max-width: 768px) {
+  a, button {
+    -webkit-tap-highlight-color: rgba(13, 148, 136, 0.2);
+  }
+}
+
 input, textarea, select {
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 @media (min-width: 641px) {
   input, textarea, select {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 }
