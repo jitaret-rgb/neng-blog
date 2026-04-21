@@ -22,9 +22,9 @@ draft: false
 
 ## 1. จุดเริ่มต้น: เจอจาก Facebook แต่ติดตั้ง 3 รอบไม่สำเร็จ
 
-ทุกอย่างเริ่มจากโพสต์หนึ่งใน Facebook ที่เหน่งเห็นในฟีด
+ทุกอย่างเริ่มจาก Facebook Group ชื่อ **"OpenCreators"** ที่เหน่งเข้าไปหาข้อมูลเกี่ยวกับการใช้ AI ทำคอนเทนต์
 
-โพสต์นั้นพูดถึง **"OpenClaw"** — เล่าว่า OpenClaw ต่างจาก AI chat อย่างไร
+ในฟีดวันนั้น มีโพสต์หนึ่งพูดถึง **"OpenClaw"** — โพสต์นั้นเล่าว่า OpenClaw ต่างจาก AI chat อย่างไร
 
 - **AI chat ทั่วไป** (ChatGPT, Claude): ข้อมูลเราไปอยู่บนเซิร์ฟเวอร์เขา ควบคุมไม่ได้
 - **OpenClaw**: รันบนเครื่องตัวเอง ควบคุมข้อมูล 100%
@@ -58,6 +58,25 @@ Token ผิดบ้าง รหัส Approve ผิดบ้าง
 - *"รหัส Approve มันขึ้นใน TUI ตอน Gateway รันครั้งแรก"*
 
 และที่สำคัญ — มีลิงก์ YouTube tutorial ที่อัพเดทล่าสุด (มีนาคม 2026)
+
+### 📺 YouTube Tutorial ที่ช่วยชีวิต
+
+**"The only OpenClaw tutorial you need (March 2026)"**  
+ลิงก์: https://www.youtube.com/watch?v=CxErCGVo-oo
+
+1. ติดตั้ง Node.js 24
+2. ติดตั้ง OpenClaw ผ่าน npm
+3. สร้าง Telegram Bot
+4. ตั้งค่า config
+5. Pair อุปกรณ์
+
+### 👥 Facebook Group ที่ขาดไม่ได้
+
+- **OpenCreators** — คอมมูนิตี้ใหญ่ มีคนใช้ AI ทำคอนเทนต์
+- **OpenClaw Thailand** — ผู้ใช้ OpenClaw ในไทย ถาม-ตอบ รวดเร็ว
+
+**บทเรียน:**  
+*"เทคโนโลยีใหม่ๆ การมีคอมมูนิตี้สำคัญมาก ถ้าไม่มีคนคอยช่วย เหน่งอาจยอมแพ้ไปแล้ว"*
 
 ---
 
