@@ -204,14 +204,14 @@
 ```
 ✅ ซื้อมาแล้ว: $29 (Lifetime)
 ✅ จำนวน: 6,092 icons
-✅ ตำแหน่ง: /static/icons/tabler-premium/
+✅ ตำแหน่ง: ~/tabler-assets/icons/ (เก็บนอก repo)
 ✅ รูปแบบ: SVG, PNG, PDF, EPS, Webfont
 ✅ License: Commercial Use
 ```
 
-**โครงสร้างโฟลเดอร์:**
+**โครงสร้างโฟลเดอร์ (นอก repo):**
 ```bash
-static/icons/tabler-premium/
+~/tabler-assets/icons/
 ├── svg/          # 6,092 ไฟล์ (แนะนำ)
 ├── png/          # PNG ความละเอียดต่างๆ
 ├── pdf/          # PDF Vector
@@ -221,13 +221,13 @@ static/icons/tabler-premium/
 ```
 
 **วิธีใช้:**
-```html
-<!-- SVG (แนะนำ) -->
-<img src="/icons/tabler-premium/svg/icon-name.svg" alt="Icon">
+```bash
+# 1. คัดลอกเฉพาะไอคอนที่ต้องการจากนอก repo
+# ตัวอย่าง: ต้องการใช้ไอคอน "robot"
+cp ~/tabler-assets/icons/svg/outline/robot.svg assets/icons/
 
-<!-- Webfont -->
-<link rel="stylesheet" href="/icons/tabler-premium/webfont/tabler-icons.css">
-<i class="ti ti-icon-name"></i>
+# 2. ใช้ใน Markdown ผ่าน partial ของธีม
+{{</* icon "robot" */>}}
 ```
 
 ### **Tabler Illustrations**
@@ -235,11 +235,11 @@ static/icons/tabler-premium/
 ```
 ✅ ซื้อมาแล้ว: $29 (Lifetime)
 ✅ จำนวน: 230+ illustrations
-✅ ตำแหน่ง: /static/illustrations/tabler/
+✅ ตำแหน่ง: ~/tabler-assets/illustrations/ (เก็บนอก repo)
 ✅ รูปแบบ: SVG, PNG, PDF, Figma
 ✅ License: Commercial Use
 
-โครงสร้างโฟลเดอร์:
+โครงสร้างโฟลเดอร์ (นอก repo):
 - svg/              # 230+ ไฟล์ SVG
 - svg-css-autodark  # SVG ที่ปรับสีอัตโนมัติตาม Dark/Light mode
 - svg-css-variables # SVG ที่ใช้ CSS Variables
