@@ -1143,6 +1143,10 @@ input, textarea, select {
   color: var(--accent-color);
 }
 
+:root[data-scheme="light"] .author-bio-text {
+  color: var(--card-text-color-secondary);
+}
+
 /* Dark Mode */
 :root[data-scheme="dark"] .author-bio {
   background: var(--card-background);
@@ -1159,6 +1163,10 @@ input, textarea, select {
 
 :root[data-scheme="dark"] .author-bio-link {
   color: var(--accent-color-darker);
+}
+
+:root[data-scheme="dark"] .author-bio-text {
+  color: var(--card-text-color-tertiary);
 }
 
 /* Mobile */
