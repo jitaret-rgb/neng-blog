@@ -2,7 +2,7 @@
 title: "Kimi Code CLI: เมื่อ AI ลงมาทำงานใน Terminal แบบมีระบบ"
 description: "รีวิวเชิงลึก Kimi Code CLI จากประสบการณ์ใช้งานจริงบนโปรเจกต์ส่วนตัว ตั้งแต่สถาปัตยกรรม 256K Context Window ไปจนถึงระบบ Skills และ Subagent Orchestration"
 date: 2026-04-18T21:00:00+07:00
-lastmod: 2026-04-18T21:00:00+07:00
+lastmod: 2026-04-25T08:45:00+07:00
 image: cover.jpg
 categories:
   - Review
