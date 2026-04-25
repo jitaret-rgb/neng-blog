@@ -6,6 +6,11 @@ tags = ['harness-engineering', 'ai-governance', 'ai-safety', 'prompt-engineering
 categories = ['artificial-intelligence', 'software-engineering', 'risk-management']
 image = 'cover.jpg'
 description = 'ตอนที่ 1 ของซีรีส์ Harness Engineering: เหตุผลที่ AI ต้องมีระบบควบคุม (Harness) เพื่อป้องกันความล้มเหลว และทำความเข้าใจ 5 Components พื้นฐานที่ต้องมีในทุกระบบ AI Governance'
+takeaways = [
+  "95% ของโครงการ AI ในองค์กรล้มเหลว — แม้ลงทุนมหาศาล แต่ขาดระบบความปลอดภัย",
+  "Harness Engineering มี 5 องค์ประกอบ: Guardrails, Monitoring, Fallback mechanisms, Evaluation frameworks, Governance policies",
+  "ตัวอย่างความล้มเหลวที่น่ากลัว: Microsoft Tay (เหยียดใน 24 ชม.), Knight Capital ($440M ใน 30 นาที), Amazon AI (อคติเพศ)"
+]
 +++
 
 # Harness Engineering ตอนที่ 1: ทำไม AI ต้องมี Harness?

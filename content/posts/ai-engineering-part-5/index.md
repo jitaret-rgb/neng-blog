@@ -6,6 +6,11 @@ tags = ['ai-engineering', 'agentic-ai', 'ai-agents', 'automation', 'government-a
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'
 description = 'Agentic AI คือระบบ AI ที่สามารถวางแผนและทำงานได้เองโดยอัตโนมัติ ต่างจาก AI ทั่วไปที่แค่ตอบคำถาม มาเรียนรู้วิธีใช้งานจริงสำหรับงานชุมชน'
+takeaways = [
+  "Agentic AI ต่างจาก AI ทั่วไปตรงที่สามารถ 'วางแผนและทำงานเอง' ได้ — ไม่ใช่แค่ตอบคำถาม",
+  "ใช้ Agentic AI ในงานภาครัฐ: ระบบยื่นคำขออัตโนมัติ, Chatbot คำปรึกษา 24/7, สรุปรายงานประชุมอัตโนมัติ",
+  "เครื่องมือที่แนะนำ: AutoGPT, Kimi CLI, Claude Code, CrewAI — เหมาะสำหรับผู้ใช้ที่ไม่มีพื้นฐานโปรแกรมมิ่ง"
+]
 +++
 
 # 🤖 AI Engineering ตอนที่ 5: Agentic AI - เมื่อ AI ทำงานแทนคุณ

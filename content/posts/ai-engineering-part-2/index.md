@@ -6,6 +6,11 @@ tags = ['ai-engineering', 'prompt-engineering', 'content-creation', 'beginner-gu
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'
 description = 'คู่มือเขียน Prompt สร้างคอนเทนต์สำหรับงานชุมชน ฉบับมือใหม่ อ่านง่าย ทำตามได้ ไม่ต้องมีพื้นฐาน'
+takeaways = [
+  "Prompt ที่ดีต้องมี 3 องค์ประกอบ: Context + Task + Format — ยิ่งชัดเจน ผลลัพธ์ยิ่งตรงใจ",
+  "เทคนิค Chain-of-Thought ช่วยให้ AI คิดเป็นขั้นตอน ได้ผลลัพธ์ที่มีเหตุผลมากขึ้น",
+  "Prompt Engineering คือทักษะพื้นฐานที่สำคัญที่สุดในการใช้ AI — ไม่ต้องเขียนโค้ดก็ทำได้"
+]
 +++
 
 # 🎯 AI Engineering ตอนที่ 2: Prompt Engineering สร้างคอนเทนต์

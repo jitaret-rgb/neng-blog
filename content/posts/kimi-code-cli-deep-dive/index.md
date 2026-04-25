@@ -11,6 +11,10 @@ tags:
   - ai-tools
   - productivity
   - terminal
+takeaways:
+  - "Kimi Code CLI ทำงานบน Terminal โดยตรง — อ่านไฟล์ real-time รันคำสั่ง shell ค้นหาเว็บ ใช้ subagent แบ่งงานย่อย"
+  - "จุดเด่น: 256K Context Window, Thinking Mode (แสดงวิธีคิด), Skills System (reusable workflows), Subagent Orchestration"
+  - "ใช้งานจริงบน 3 โปรเจกต์: neng-blog (Hugo), OpenClaw (Multi-Agent), LLM Wiki (Knowledge Base)"
 ---
 
 # Kimi Code CLI: เมื่อ AI ลงมาทำงานใน Terminal แบบมีระบบ

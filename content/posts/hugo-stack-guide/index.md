@@ -6,6 +6,11 @@ tags = ['hugo', 'stack', 'theme', 'guide', 'tutorial']
 categories = ['Tutorial', 'Documentation']
 image = 'cover.jpg'
 description = 'คู่มือการใช้งาน Hugo Stack Theme ทุกฟีเจอร์ ตั้งแต่ติดตั้งจนถึงปรับแต่งขั้นสูง'
+takeaways = [
+  "Hugo Stack คือธีม card-style สำหรับ blogger รองรับ Dark Mode, Responsive, Multilingual, และ Local Search",
+  "ติดตั้งด้วย Git Submodule หรือ Hugo Modules — อัพเดทธีมง่ายโดยไม่กระทบเนื้อหา",
+  "ฟีเจอร์เด่น: TOC Widget, Related Posts, Reading Time, Series Navigation, PhotoSwipe Gallery"
+]
 +++
 
 # 📚 คู่มือ Hugo Stack Theme ฉบับสมบูรณ์

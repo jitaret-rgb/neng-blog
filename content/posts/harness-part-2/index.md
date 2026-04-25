@@ -6,6 +6,11 @@ tags = ['harness-engineering', 'prompt-engineering', 'ai', 'claude-code', 'codex
 categories = ['Tutorial', 'AI']
 image = 'cover.jpg'
 description = 'ในตอนที่ 2 เราจะมาคุยเรื่อง Prompt อย่างลึกซึ้ง — ว่ามันคือ Control Plane ไม่ใช่ Input Box และ design มันยังไงให้ควบคุม AI ได้ดี'
+takeaways = [
+  "Prompt คือ Control Plane ไม่ใช่แค่ Input Box — มันคือ interface ควบคุมพฤติกรรม AI ทั้งระบบ",
+  "Prompt Layering 3 ระดับ: Orchestration (จัดการงาน) → Runtime (ขณะทำงาน) → Model Interface (ติดต่อโมเดล)",
+  "ความต่างระหว่าง Prompt Engineering (ปรับแต่งข้อความ) กับ Harness Engineering (ออกแบบระบบควบคุม)"
+]
 +++
 
 # Harness Engineering ตอนที่ 2: Prompt คือ Control Plane (ไม่ใช่ Input Box)

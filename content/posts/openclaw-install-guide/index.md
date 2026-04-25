@@ -6,6 +6,11 @@ tags = ['openclaw', 'ai', 'tutorial', 'beginner', 'installation']
 categories = ['Tutorial', 'Technology']
 image = 'cover.jpg'
 description = 'คู่มือติดตั้ง OpenClaw ทีละขั้นตอน เหมาะสำหรับมือใหม่ที่ไม่มีพื้นฐานก็ทำได้ พร้อมแนะนำ 6 Providers + LLMs ที่คุ้มค่า'
+takeaways = [
+  "ติดตั้ง OpenClaw ใน 5 ขั้นตอน: Clone → Install Dependencies → Setup Environment → Configure Provider → Start Server",
+  "แนะนำ 6 Providers: OpenRouter (หลากหลาย), OpenAI (คุณภาพสูง), Together AI (ราคาถูก), Groq (เร็ว), Ollama (ฟรีบนเครื่อง), Gemini (ฟรี 1,500 req/วัน)",
+  "ไม่ต้องมีพื้นฐานโปรแกรมมิ่ง — ทำตามคู่มือทีละขั้นตอนได้เลย"
+]
 +++
 
 ## 👋 บทนำ — OpenClaw คืออะไร?

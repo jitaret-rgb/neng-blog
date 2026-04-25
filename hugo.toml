@@ -114,7 +114,7 @@ ignoreFiles = ['\.kimi/.*']
   image = "images/default-cover.jpg"
   locale = "th_TH"
   [params.opengraph.twitter]
-    site = "Majinman"
+    site = "Jitaret"
     card = "summary_large_image"  # "summary" หรือ "summary_large_image"
 
 # Google Analytics
@@ -199,7 +199,7 @@ ignoreFiles = ['\.kimi/.*']
 [[menu.social]]
   identifier = "telegram"
   name = "Telegram"
-  url = "https://t.me/Majinman"
+  url = "https://t.me/Jitaret"
   weight = 2
   [menu.social.params]
     icon = "brand-telegram"

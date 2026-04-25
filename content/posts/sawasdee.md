@@ -3,6 +3,10 @@ title = 'สวัสดีครับ — ยินดีต้อนรับ
 date = 2026-04-05T20:01:04+07:00
 draft = false
 tags = ['introduction', 'personal']
+takeaways = [
+  "บล็อกนี้สร้างด้วย Hugo + Stack Theme — รองรับ Responsive, Dark/Light Mode, Local Search, และ Categories/Tags",
+  "แชร์เรื่องราว 3 ด้านหลัก: งานพัฒนาชุมชน, เทคโนโลยีที่สนใจ, และชีวิตประจำวัน"
+]
 +++
 
 ## 👋 สวัสดีครับ!

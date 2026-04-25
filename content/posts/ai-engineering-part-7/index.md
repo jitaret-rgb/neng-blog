@@ -6,6 +6,11 @@ tags = ['ai-engineering', 'getting-started', 'roadmap', 'community-development',
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'
 description = 'สรุปซีรีส์ AI Engineering ทั้ง 7 ตอน พร้อม Roadmap เริ่มต้น 30 วัน สำหรับนักพัฒนาชุมชนที่ต้องการใช้ AI ในการทำงาน'
+takeaways = [
+  "Roadmap 30 วัน: สัปดาห์ 1 เรียน Prompt Engineering → สัปดาห์ 2 ลองสร้าง AI App → สัปดาห์ 3-4 ปรับปรุงและขยายผล",
+  "10 หลักการสำคัญ: เลือกโมเดลให้เหมาะกับงาน → เริ่มจากฟรี → วัดผลตลอด → อัพเดตตามเทคโนโลยี",
+  "ไม่ต้องรอพร้อมถึงเริ่ม — เริ่มจากงานเล็กๆ ที่ทำซ้ำทุกวัน แล้วค่อยๆ ขยาย"
+]
 +++
 
 # 🎯 AI Engineering ตอนที่ 7: สรุปซีรีส์ - เริ่มต้นใช้งาน AI Engineering สำหรับงานชุมชน

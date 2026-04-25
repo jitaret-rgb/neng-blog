@@ -1,0 +1,25 @@
+{{- /* Organization Schema for Neng Lab */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Neng Lab",
+  "url": {{ .Site.BaseURL | jsonify | safeJS }},
+  "logo": {
+    "@type": "ImageObject",
+    "url": {{ "images/profile.jpg" | absURL | jsonify | safeJS }}
+  },
+  "sameAs": [
+    {{ "https://github.com/jitaret-rgb" | jsonify | safeJS }},
+    {{ "https://t.me/Jitaret" | jsonify | safeJS }},
+    {{ "https://www.facebook.com/jittaret.phromnanra/" | jsonify | safeJS }},
+    {{ "https://www.youtube.com/@jittaretpromnara5716" | jsonify | safeJS }}
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "เหน่ง",
+    "url": {{ "/about/" | absURL | jsonify | safeJS }}
+  },
+  "description": {{ .Site.Params.description | jsonify | safeJS }}
+}
+</script>

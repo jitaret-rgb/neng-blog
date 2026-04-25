@@ -16,6 +16,10 @@ previous: "harness-part-6"
 image: "cover.jpg"
 seriesNumber: 7
 draft: false
+takeaways:
+  - "Harness Engineering คือวิธีคิดในการใช้ AI อย่างรับผิดชอบ — ไม่ใช่แค่เครื่องมือทางเทคนิค"
+  - "Roadmap 30 วัน: สัปดาห์ 1 เรียน Prompt + Guardrails → สัปดาห์ 2 Tools & Permissions → สัปดาห์ 3 Multi-Agent → สัปดาห์ 4 Recovery Paths"
+  - "เริ่มจากระบบงานเล็กๆ ที่ทำซ้ำทุกวัน แล้วค่อยๆ เพิ่ม Harness ทีละชั้น"
 ---
 
 ---

@@ -19,6 +19,10 @@ next: "harness-part-7"
 image: "cover.jpg"
 seriesNumber: 6
 draft: false
+takeaways:
+  - "Recovery Paths คือแผนสำรองเมื่อ AI ทำงานผิดพลาด — ไม่ใช่ให้สมบูรณ์ 100% แต่ให้ 'ยังใช้งานได้'"
+  - "Graceful Degradation: Full AI Response → Simplified AI Response → Rule-Based Response → Human Handoff"
+  - "4 เทคนิคหลัก: Fallback Strategies, Retry Logic (Exponential Backoff), Circuit Breaker, Dead Letter Queue"
 ---
 
 ---

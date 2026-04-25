@@ -6,6 +6,11 @@
   (eq .RelPermalink "/search/")
 -}}
 
+{{- /* Organization Schema on every page */ -}}
+{{- if not $skipSchema }}
+    {{- partial "schema/organization.html" . -}}
+{{- end }}
+
 {{- /* Article Schema for pages */ -}}
 {{- if and .IsPage (not $skipSchema) }}
     {{- partial "schema/article.html" . -}}

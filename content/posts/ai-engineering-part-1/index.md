@@ -7,6 +7,11 @@ tags = ['ai-engineering', 'community-development', 'ai-planning', 'beginner-guid
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'
 description = 'คู่มือวางแผน AI App สำหรับงานชุมชน ฉบับมือใหม่ อ่านง่าย ทำตามได้ ไม่ต้องมีพื้นฐาน Programming'
+takeaways = [
+  "วางแผน AI App ต้องเริ่มจากระบุปัญหาจริง — ไม่ใช่เห็นคนอื่นใช้แล้วอยากใช้ตาม",
+  "5 ขั้นตอนวางแผน: ระบุปัญหา → เลือก Use Case → เลือกเครื่องมือ → ทดลอง → วัดผล",
+  "ควรเริ่มจากโมเดลฟรี (Qwen, DeepSeek) แล้วค่อยอัพเกรดตามความต้องการจริง"
+]
 +++
 
 # 🎯 AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน

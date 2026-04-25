@@ -6,6 +6,11 @@ tags = ['ai-engineering', 'fine-tuning', 'llm', 'machine-learning', 'ai-models']
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'
 description = 'Fine-tuning คืออะไร ต่างจาก Pre-trained อย่างไร เมื่อไหร่ควรใช้ ขั้นตอนการทำ เครื่องมือแนะนำ และ Platform ที่น่าสนใจ'
+takeaways = [
+  "Fine-tuning คือการนำโมเดลที่ฝึกมาแล้ว (Pre-trained) มาฝึกเพิ่มด้วยข้อมูลเฉพาะทาง — เหมือนส่งนักเรียนไปเรียนต่อปริญญาโท",
+  "ควรใช้ Fine-tuning เมื่อต้องการให้ AI เชี่ยวชาญเฉพาะทางมากๆ — ถ้าแค่ต้องการข้อมูลใหม่ ใช้ RAG ง่ายกว่า",
+  "Platform ที่แนะนำ: Hugging Face AutoTrain, OpenAI Fine-tuning API, Google AI Studio — เริ่มต้นด้วย Dataset 300-1,000 ตัวอย่าง"
+]
 +++
 
 # 🎯 AI Engineering ตอนที่ 6: Fine-tuning AI Models

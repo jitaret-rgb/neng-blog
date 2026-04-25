@@ -17,6 +17,10 @@ previous: "harness-part-3"
 next: "harness-part-5"
 image: "cover.jpg"
 seriesNumber: 4
+takeaways:
+  - "73% ของ AI ที่ deploy ใน production มีช่องโหว่ Prompt Injection — ต้องกำหนด Tools & Permissions ตั้งแต่เริ่มต้น"
+  - "Tools = ความสามารถที่ AI ใช้ได้ (อ่าน/เขียนไฟล์, รันคำสั่ง) | Permissions = กฎว่าใช้ได้แค่ไหน กี่ครั้ง ในสถานการณ์ไหน"
+  - "อ้างอิง OWASP Top 10 for Agentic Applications 2026: 15-25% ของโค้ดที่ AI สร้างมีช่องโหว่ความปลอดภัย"
 ---
 
 # Harness Engineering ตอนที่ 4: Tools & Permissions - กำหนดขอบเขต AI

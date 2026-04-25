@@ -6,6 +6,11 @@ tags = ['ai-engineering', 'rag', 'retrieval-augmented-generation', 'chatbot', 'g
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'
 description = 'RAG (Retrieval-Augmented Generation) คือเทคนิคที่ช่วยให้ AI ตอบคำถามได้แม่นยำ มีแหล่งอ้างอิง และรู้ข้อมูลล่าสุดเสมอ เหมาะสำหรับงานภาครัฐและชุมชน'
+takeaways = [
+  "RAG แก้ 3 ปัญหาหลักของ LLM: ข้อมูลล้าสมัย (Knowledge Cutoff), มั่วข้อมูล (Hallucination), และไม่รู้ข้อมูลเฉพาะทาง",
+  "RAG ทำงาน 4 ขั้นตอน: รับคำถาม → ค้นหาข้อมูลจากฐานข้อมูล → นำมาประกอบคำตอบ → ตอบพร้อมแหล่งอ้างอิง",
+  "Use Cases ในงานภาครัฐ: Chatbot ตอบคำถามสวัสดิการ, ค้นหาระเบียบเงินอุดหนุน, สรุปเอกสารประชุมอัตโนมัติ"
+]
 +++
 
 # 🤖 AI Engineering ตอนที่ 3: RAG สร้างระบบตอบคำถามอัจฉริยะ

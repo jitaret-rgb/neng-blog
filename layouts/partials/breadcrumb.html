@@ -1,0 +1,17 @@
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+    <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+            <a href="{{ .Site.BaseURL }}">Home</a>
+        </li>
+        {{- if and .Section (ne .Section "") -}}
+        <li class="breadcrumb-separator" aria-hidden="true">/</li>
+        <li class="breadcrumb-item">
+            <a href="{{ .Section | absURL }}">{{ .Section | humanize }}</a>
+        </li>
+        {{- end -}}
+        <li class="breadcrumb-separator" aria-hidden="true">/</li>
+        <li class="breadcrumb-item breadcrumb-current" aria-current="page">
+            {{ .Title }}
+        </li>
+    </ol>
+</nav>

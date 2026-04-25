@@ -24,6 +24,7 @@
 {{ end }}
 
 {{ define "main" }}
+    {{ partial "breadcrumb.html" . }}
     {{ partial "article/article.html" . }}
 
     {{ if .Params.links }}

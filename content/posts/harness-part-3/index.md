@@ -17,6 +17,10 @@ previous: "harness-part-2"
 next: "harness-part-4"
 image: "cover.jpg"
 seriesNumber: 3
+takeaways:
+  - "Query Loop เปลี่ยน AI จาก 'ผู้ตอบคำถาม' เป็น 'ผู้ร่วมงานที่จดจำบริบทได้' — สะสมบริบทข้ามรอบการสนทนา"
+  - "OpenAI ใช้ Query Loop สร้างโค้ดได้มากกว่า 1 ล้านบรรทัดใน 5 เดือน — แต่ 69% ยังต้องมีคนตรวจสอบ"
+  - "Best Practices 7 ข้อ: เริ่มจากเป้าหมายชัดเจน → แบ่งงานเป็นขั้นตอน → ให้ feedback ทันที → จดบันทึกการเปลี่ยนแปลง"
 ---
 
 # Harness Engineering ตอนที่ 3: Query Loop - หัวใจของระบบ

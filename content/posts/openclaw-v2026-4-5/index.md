@@ -5,6 +5,11 @@ draft = false
 tags = ['openclaw', 'release', 'update', 'ai', 'video-generation', 'music-generation']
 categories = ['News', 'OpenClaw', 'AI']
 description = 'สรุปฟีเจอร์ใหม่ OpenClaw v2026.4.5: Video Generation, Music Generation, ComfyUI, 12+ Providers ใหม่ และอื่นๆ อีกมากมาย'
+takeaways = [
+  "OpenClaw v2026.4.5 เพิ่ม Video Generation (ComfyUI), Music Generation (Google Lyria, MiniMax), และ ComfyUI Integration",
+  "รองรับ 12+ Providers ใหม่ รวมถึงโมเดลภาษาไทยและ multimodal models",
+  "อัพเดทระบบ Agent Memory และ Plugin Architecture ให้ยืดหยุ่นขึ้น"
+]
 +++
 
 # 🚀 OpenClaw v2026.4.5: อัพเดทใหญ่!

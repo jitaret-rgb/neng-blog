@@ -6,6 +6,11 @@ tags = ['openclaw', 'ai', 'automation', 'productivity']
 categories = ['Tutorial', 'Technology']
 image = 'cover.jpg'
 description = 'จากที่ต้องใช้เวลา 6 ชั่วโมงสร้างบล็อก เหลือแค่ 1 ชั่วโมง ด้วย OpenClaw AI Assistant'
+takeaways = [
+  "OpenClaw คือแพลตฟอร์มสร้าง AI Assistant ส่วนตัว — ควบคุมด้วยข้อความธรรมดา เข้าถึงไฟล์ได้ ค้นหาเว็บได้ จำสิ่งที่คุยกันได้",
+  "ประหยัดเวลา 70-80%: เขียนบทความจาก 2-3 ชม. เหลือ 30 นาที, จัดการไฟล์จาก manual เหลือสั่งงานผ่านแชท",
+  "ติดตั้งใน 10 นาที: ต้องการ RAM 4GB+, Node.js 18+, และ Docker (optional)"
+]
 +++
 
 ## 👋 บทนำ — เรื่องจริงจากนักพัฒนาชุมชน

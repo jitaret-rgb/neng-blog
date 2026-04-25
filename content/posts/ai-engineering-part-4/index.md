@@ -6,6 +6,11 @@ tags = ['ai-engineering', 'dataset', 'data-science', 'machine-learning', 'resear
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'
 description = 'Dataset คืออะไร ทำไมสำคัญสำหรับ AI แหล่งข้อมูล Dataset ฟรี วิธีสร้าง Dataset เอง และ Data Cleaning 12 ขั้นตอน'
+takeaways = [
+  "Dataset คือหัวใจของ AI — 'Garbage In, Garbage Out' ข้อมูลดีจึงได้ AI ดี",
+  "แหล่ง Dataset ฟรีที่แนะนำ: Kaggle, Google Dataset Search, Data.go.th สำหรับงานภาครัฐไทย",
+  "Data Cleaning 12 ขั้นตอนสำคัญ: ลบข้อมูลซ้ำ → แก้ Missing Values → จัดการ Outliers → ตรวจสอบ Consistency"
+]
 +++
 
 # 📊 AI Engineering ตอนที่ 4: Dataset สำหรับวิจัย - คู่มือฉบับสมบูรณ์

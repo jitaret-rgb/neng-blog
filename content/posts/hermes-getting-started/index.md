@@ -8,6 +8,10 @@ tags: ['hermes', 'ai-agent', 'tutorial', 'open-source']
 categories: ['AI', 'Tutorial']
 image: "cover.jpg"
 draft: false
+takeaways:
+  - "Hermes Agent คือผู้ช่วย AI แบบ CLI ที่รันบนเครื่องคุณเอง — ควบคุม model ได้เอง (OpenRouter, Kimi, Qwen, OpenAI)"
+  - "สามารถรันคำสั่ง terminal, อ่าน/เขียนไฟล์, ค้นหาเว็บ, เขียนโค้ด, และเชื่อมต่อ Telegram/Discord ได้"
+  - "ติดตั้งง่ายใน 6 ขั้นตอน: ติดตั้ง → ตั้งค่า Provider → เชื่อมต่อ Telegram → เริ่มใช้งาน"
 ---
 
 # เริ่มต้นติดตั้งและใช้งาน Hermes Agent: ผู้ช่วย AI บนเครื่องของคุณ

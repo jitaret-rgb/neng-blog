@@ -304,7 +304,7 @@ git pull            # ดึงข้อมูลล่าสุด
 ## 📞 ติดต่อ
 
 - **GitHub:** https://github.com/jitaret-rgb
-- **Telegram:** @Majinman
+- **Telegram:** @Jitaret
 - **Email:** jitaret@gmail.com
 
 ---

@@ -18,6 +18,10 @@ previous: "harness-part-4"
 next: "harness-part-6"
 image: "cover.jpg"
 seriesNumber: 5
+takeaways:
+  - "Multi-Agent System (MAS) คือระบบที่มี AI Agent หลายตัวทำงานร่วมกัน — แต่ละตัวเชี่ยวชาญเฉพาะทาง"
+  - "ข้อดีของ MAS: ความเชี่ยวชาญเฉพาะทาง + ทำงานขนานได้ + ตรวจสอบซ้ำ (cross-check) ลดความผิดพลาด"
+  - "ตัวอย่างจาก OpenClaw: Planner → Researcher → Writer → Reviewer → แต่ละตัวมี Tools & Permissions ต่างกัน"
 ---
 
 # Harness Engineering ตอนที่ 5: Multi-Agent System - มีเพื่อนตรวจสอบ

@@ -6,6 +6,11 @@ tags = ['ai-engineering', 'community-development', 'ai-for-government', 'digital
 categories = ['Tutorial', 'Community Development', 'AI']
 image = 'cover.jpg'
 description = 'บทนำซีรีส์ AI Engineering สำหรับนักพัฒนาชุมชน เชื่อมโยง AI กับ 4 ภารกิจหลักของกรมการพัฒนาชุมชน'
+takeaways = [
+  "AI ช่วยนักพัฒนาชุมชนทำงานซ้ำซ้อนได้ 60% โดยเฉพาะงานสร้างคอนเทนต์ วิเคราะห์ข้อมูล และสรุปรายงาน",
+  "4 ภารกิจหลักของกรมการพัฒนาชุมชนสามารถประยุกต์ใช้ AI ได้ทั้งหมด — ตั้งแต่ Chatbot คำปรึกษาจนถึงวิเคราะห์ตลาด OTOP",
+  "โมเดล AI ราคาถูกที่สุดในปี 2026 คือ DeepSeek V3.2 ($0.14/1M tokens) — ถูกกว่า GPT-5 ถึง 100 เท่า"
+]
 +++
 
 # 📘 AI Engineering สำหรับนักพัฒนาชุมชน

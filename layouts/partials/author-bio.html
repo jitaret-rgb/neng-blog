@@ -1,0 +1,16 @@
+{{- if .Site.Params.author.name -}}
+<div class="author-bio">
+    <div class="author-bio-avatar">
+        <img src="{{ "images/profile.jpg" | absURL }}" alt="{{ .Site.Params.author.name }}" loading="lazy">
+    </div>
+    <div class="author-bio-content">
+        <div class="author-bio-name">{{ .Site.Params.author.name }}</div>
+        <div class="author-bio-text">
+            AI Engineering Explorer — แชร์ประสบการณ์จากงานพัฒนาชุมชนสู่โลก AI
+        </div>
+        <a href="{{ "/about/" | absURL }}" class="author-bio-link">
+            อ่านเพิ่มเติม →
+        </a>
+    </div>
+</div>
+{{- end -}}

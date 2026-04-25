@@ -12,6 +12,10 @@ tags:
   - nlp
   - open-source
   - thai-language
+takeaways:
+  - "ThaiLLM คือโครงการรัฐ-เอกชนที่สร้าง AI สัญชาติไทย รวบรวมข้อมูลภาษาไทยกว่า 100,000 ล้านโทเคน"
+  - "4 โมเดลหลัก: OpenThaiGPT (เขียนโค้ด), Typhoon-S (บทความ/สรุป), Pathumma (งานภาครัฐ), THaLLE (การศึกษา/วิจัย)"
+  - "ThaiLLM เป็น Open-Weight Model — ตรวจสอบได้ นำไปพัฒนาต่อได้ ไม่ใช่ Black Box"
 ---
 
 # ThaiLLM Ecosystem: 4 โมเดล AI สัญชาติไทย ที่เข้าใจคนไทยมากกว่าต่างชาติ
