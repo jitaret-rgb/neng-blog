@@ -1,7 +1,7 @@
 {{- if .Site.Params.author.name -}}
 <div class="author-bio">
     <div class="author-bio-avatar">
-        <img src="{{ "images/profile.jpg" | absURL }}" alt="{{ .Site.Params.author.name }}" loading="lazy">
+        <img src="{{ "images/profile.jpg" | absURL }}" alt="{{ .Site.Params.author.name }}" fetchpriority="high" width="80" height="80">
     </div>
     <div class="author-bio-content">
         <div class="author-bio-name">{{ .Site.Params.author.name }}</div>
