@@ -1,18 +1,5 @@
-<!-- Security Headers -->
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="DENY">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-<!-- Content Security Policy -->
-<meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-               script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://giscus.app https://cdn.jsdelivr.net; 
-               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://giscus.app; 
-               font-src 'self' https://fonts.gstatic.com; 
-               img-src 'self' https://images.unsplash.com https://cdn.jsdelivr.net https://github.com https://github.githubassets.com data: blob:; 
-               frame-src https://giscus.app;
-               connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net https://giscus.app;">
-
-<!-- Permissions Policy -->
-<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+<!-- Security headers are now served as HTTP response headers via static/_headers -->
+<!-- Previous meta-tag based headers have been removed because: -->
+<!--   - X-Frame-Options can ONLY be set via HTTP header (not <meta>) -->
+<!--   - X-Content-Type-Options, Permissions-Policy should be HTTP headers -->
+<!--   - CSP as HTTP header supports more directives (e.g. frame-ancestors) -->
