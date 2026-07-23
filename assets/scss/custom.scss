@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   --card-background-selected: rgba(94, 234, 212, 0.12);
 
   --card-text-color-main: #5EEAD4;
-  --card-text-color-secondary: #5EEAD4;
+  --card-text-color-secondary: #99F6E4;
   --card-text-color-tertiary: #A8B9CF;
   --body-text-color: #5EEAD4;
 
@@ -237,7 +237,7 @@ html {
   a {
     color: var(--accent-color);
     text-decoration: underline;
-    text-decoration-color: rgba(255, 45, 170, 0.4);
+    text-decoration-color: rgba(13, 148, 136, 0.4);
     text-underline-offset: 4px;
     transition: all 0.2s ease;
 
@@ -247,9 +247,9 @@ html {
     }
   }
 
-  :root[data-scheme="light"] & a {
+  :root[data-scheme="dark"] & a {
     color: var(--accent-color);
-    text-decoration-color: rgba(13, 148, 136, 0.4);
+    text-decoration-color: rgba(255, 45, 170, 0.4);
 
     &:hover {
       color: var(--accent-color-darker);
@@ -257,11 +257,11 @@ html {
     }
   }
 
-  /* Headings — Mobile First */
+  /* Headings — Mobile First (light-first colors, dark overrides below) */
   h1 {
     font-size: var(--text-3xl);
     line-height: 1.25;
-    color: #00FFD5;
+    color: #0F172A;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -270,7 +270,7 @@ html {
   h2 {
     font-size: var(--text-2xl);
     line-height: 1.3;
-    color: #22D3EE;
+    color: #1E293B;
     margin-top: 2rem;
     margin-bottom: 0.875rem;
     font-weight: 700;
@@ -279,7 +279,7 @@ html {
   h3 {
     font-size: var(--text-xl);
     line-height: 1.35;
-    color: #22D3EE;
+    color: #334155;
     margin-top: 1.75rem;
     margin-bottom: 0.75rem;
     font-weight: 600;
@@ -288,7 +288,7 @@ html {
   h4 {
     font-size: var(--text-lg);
     line-height: 1.4;
-    color: #5EEAD4;
+    color: #334155;
     margin-top: 1.5rem;
     margin-bottom: 0.625rem;
     font-weight: 600;
@@ -297,18 +297,18 @@ html {
   h5, h6 {
     font-size: var(--text-base);
     line-height: 1.45;
-    color: #5EEAD4;
+    color: #334155;
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
   }
 
-  /* Light mode heading colors */
-  :root[data-scheme="light"] & {
-    h1 { color: #0F172A; }
-    h2 { color: #1E293B; }
-    h3 { color: #334155; }
-    h4, h5, h6 { color: #334155; }
+  /* Dark mode heading colors */
+  :root[data-scheme="dark"] & {
+    h1 { color: #00FFD5; }
+    h2 { color: #22D3EE; }
+    h3 { color: #22D3EE; }
+    h4, h5, h6 { color: #5EEAD4; }
   }
 
   /* Blockquotes */
@@ -435,7 +435,7 @@ html {
     display: inline-block;
     padding: 0.35rem 0.85rem;
     border-radius: 9999px;
-    font-size: 0.85rem;
+    font-size: 1.3rem;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.2s ease;
@@ -452,48 +452,19 @@ html {
 }
 
 /* ============================================
-   COPY CODE BUTTON
+   COPY CODE BUTTON (theme's .copyCodeButton)
+   Show on touch devices where hover doesn't exist
    ============================================ */
 
 .article-content {
   div.highlight {
     position: relative;
+  }
+}
 
-    > button.copy-code-button,
-    > .copy-code-button:not(:first-child),
-    .highlight > .copy-code-button + .copy-code-button {
-      display: none !important;
-    }
-
-    .copy-code-button {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      padding: 6px 12px;
-      background: var(--card-background);
-      border: 1px solid var(--card-separator-color);
-      border-radius: 6px;
-      color: var(--body-text-color);
-      font-size: 13px;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity 0.2s, transform 0.2s;
-      font-family: var(--font-family);
-      z-index: 10;
-
-      &:hover {
-        background: var(--card-background-hover);
-        transform: translateY(-1px);
-      }
-
-      &:active {
-        transform: translateY(0);
-      }
-    }
-
-    &:hover .copy-code-button {
-      opacity: 1;
-    }
+@media (hover: none) {
+  .article-content div.highlight .copyCodeButton {
+    opacity: 1;
   }
 }
 
@@ -543,13 +514,13 @@ html {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .giscus .giscus-frame {
     min-height: 180px;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023.98px) {
   .giscus .giscus-frame {
     min-height: 220px;
   }
@@ -571,7 +542,7 @@ html {
   border-top: 1px solid var(--card-separator-color);
 
   &__title {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     color: var(--body-text-color);
     margin-bottom: 1rem;
     font-weight: 500;
@@ -644,34 +615,28 @@ html {
     border-color: #0088cc;
   }
 
-  &.tiktok:hover {
-    background: #000000;
-    color: white;
-    border-color: #000000;
-  }
-
   svg {
     width: 20px;
     height: 20px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .article-share-buttons {
     margin-top: 1.5rem;
 
     &__buttons {
-      gap: 0.5rem;
+      gap: 0.75rem;
     }
   }
 
   .article-share-button {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
 
     svg {
-      width: 18px;
-      height: 18px;
+      width: 20px;
+      height: 20px;
     }
   }
 }
@@ -696,7 +661,7 @@ html {
   color: var(--card-background);
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   font-weight: 500;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   opacity: 0;
@@ -721,18 +686,10 @@ html {
 }
 
 /* ============================================
-   FEATURED SERIES GRID — MOBILE ONLY
+   FEATURED SERIES GRID
+   (layout moved to HOMEPAGE LAYOUT section below;
+    minmax() handles small screens without !important)
    ============================================ */
-
-@media (max-width: 480px) {
-  .featured-series-grid {
-    grid-template-columns: 1fr !important;
-
-    .series-card {
-      padding: 1rem;
-    }
-  }
-}
 
 /* ============================================
    RELATED CONTENT
@@ -793,9 +750,8 @@ html {
 
 /* ============================================
    HOMEPAGE TYPOGRAPHY — UNIFIED MODULAR SCALE
-   ============================================
-   Mobile:  px-based (consistent regardless of rem base)
-   Desktop: rem-based via --home-* variables
+   rem-based (1rem = 10px) ทุก breakpoint
+   ปรับขนาดผ่าน @media 480px และ respond(md)
    ============================================ */
 
 /* Mobile base (1rem = 10px from theme) */
@@ -977,7 +933,7 @@ html {
 
 /* Prevent iOS auto-zoom on inputs */
 /* Mobile touch feedback */
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   a, button {
     -webkit-tap-highlight-color: rgba(13, 148, 136, 0.2);
   }
@@ -987,7 +943,7 @@ input, textarea, select {
   font-size: 1.6rem;
 }
 
-@media (min-width: 641px) {
+@media (min-width: 640px) {
   input, textarea, select {
     font-size: 1.4rem;
   }
@@ -1063,7 +1019,7 @@ input, textarea, select {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .key-takeaways {
     padding: 1.25rem 1.5rem;
     font-size: 1.5rem;
@@ -1172,7 +1128,7 @@ input, textarea, select {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .author-bio {
     padding: 1.25rem 1.5rem;
     gap: 1.25rem;
@@ -1244,9 +1200,249 @@ input, textarea, select {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .breadcrumb-nav {
     font-size: 1.3rem;
     margin: 0.75rem 0 1rem;
   }
+}
+
+/* ============================================
+   SERIES NAVIGATION
+   ============================================ */
+
+.series-nav {
+  margin-bottom: 1.5rem;
+  padding: 1.6rem;
+  background: var(--card-background);
+  border-radius: var(--card-border-radius);
+  border: 1px solid var(--card-separator-color);
+
+  &__header {
+    font-size: 1.4rem;
+    color: var(--body-text-color);
+    margin-bottom: 0.8rem;
+  }
+
+  &__name {
+    color: var(--accent-color);
+  }
+
+  &__progress {
+    margin-left: 0.5rem;
+  }
+
+  &__episodes {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__episode {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+    padding: 0 0.8rem;
+    background: transparent;
+    color: var(--body-text-color);
+    border: 1px solid var(--card-separator-color);
+    border-radius: var(--card-border-radius);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+
+    &:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    &.is-current {
+      background: var(--accent-color);
+      color: #fff;
+      border-color: var(--accent-color);
+    }
+  }
+
+  &__links {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      padding: 0.8rem 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* ============================================
+   NEWSLETTER CTA — BUTTONS & COMPACT VARIANT
+   ============================================ */
+
+.newsletter-cta {
+  &__title {
+    color: var(--accent-color);
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--card-border-radius);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+
+    &--primary {
+      background: var(--accent-color);
+      color: #fff;
+      border: 1px solid var(--accent-color);
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &--outline {
+      background: transparent;
+      color: var(--accent-color);
+      border: 1px solid var(--accent-color);
+
+      &:hover {
+        background: var(--accent-color);
+        color: #fff;
+      }
+    }
+  }
+
+  &--compact {
+    margin-top: 2rem;
+    padding: 1.6rem;
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--card-separator-color);
+    text-align: center;
+  }
+}
+
+/* ============================================
+   HAMBURGER MENU — MINIMUM 44px TOUCH TARGET
+   ============================================ */
+
+#toggle-menu {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   HOMEPAGE LAYOUT — CONTAINERS & CTA
+   ============================================ */
+
+.hero-section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: var(--card-background);
+  border-radius: var(--card-border-radius);
+  border: 1px solid var(--card-separator-color);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--card-border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  &--primary {
+    background: var(--accent-color);
+    color: #fff;
+    border: 1px solid var(--accent-color);
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+
+    &:hover {
+      background: var(--accent-color);
+      color: #fff;
+    }
+  }
+}
+
+.home-section {
+  margin-bottom: 2.5rem;
+}
+
+.featured-series-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (max-width: 480px) {
+  .featured-series-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.series-card {
+  padding: 1.25rem;
+  background: var(--card-background);
+  border-radius: var(--card-border-radius);
+  border: 1px solid var(--card-separator-color);
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+section.newsletter-cta {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--card-background);
+  border-radius: var(--card-border-radius);
+  border: 1px solid var(--card-separator-color);
+  text-align: center;
 }

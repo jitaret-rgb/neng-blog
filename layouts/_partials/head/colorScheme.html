@@ -8,19 +8,12 @@
         })();
     </script>
 {{- else -}}
-    {{/* Otherwise set to default scheme only if no preference is set by user */}}
+    {{/* Otherwise set to default scheme only if no preference is set by user.
+         Never overwrite an existing user preference. */}}
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            const versionKey = 'StackColorSchemeVersion';
-            const currentVersion = 'v2-light'; // bump when default changes
-
-            const savedVersion = localStorage.getItem(versionKey);
-            if (savedVersion !== currentVersion) {
-                // Reset to new default when config changes
-                localStorage.setItem(colorSchemeKey, "{{ $defaultColorScheme }}");
-                localStorage.setItem(versionKey, currentVersion);
-            } else if (!localStorage.getItem(colorSchemeKey)) {
+            if (!localStorage.getItem(colorSchemeKey)) {
                 localStorage.setItem(colorSchemeKey, "{{ $defaultColorScheme }}");
             }
         })();

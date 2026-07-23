@@ -1,49 +1,49 @@
 {{ define "main" }}
     <!-- Hero Section -->
-    <section class="hero-section" style="margin-bottom: 2rem; padding: 2rem; background: var(--card-background); border-radius: var(--card-border-radius); border: 1px solid var(--card-separator-color);">
-        <h1 style="margin-bottom: 0.25rem; color: var(--accent-color);">🧪 Neng Lab</h1>
-        <p class="hero-subtitle" style="color: var(--body-text-color); margin-bottom: 0.5rem;">Code & Community — Making AI Accessible for Everyone</p>
-        <p class="hero-description" style="color: var(--body-text-color); margin-bottom: 1.5rem;">
+    <section class="hero-section">
+        <h1>🧪 Neng Lab</h1>
+        <p class="hero-subtitle">Code & Community — Making AI Accessible for Everyone</p>
+        <p class="hero-description">
             บันทึกการเรียนรู้ของเหน่ง — ตั้งแต่ Multi-Agent Systems, Harness Engineering จนถึงประสบการณ์จากงานพัฒนาชุมชน
         </p>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a href="/start/" class="button hero-cta" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: var(--accent-color); color: #fff; border-radius: var(--card-border-radius); text-decoration: none; font-weight: 500;">
+        <div class="hero-actions">
+            <a href="/start/" class="button hero-cta hero-cta--primary">
                 <span>เริ่มต้นที่นี่</span>
             </a>
-            <a href="/posts/" class="button hero-cta" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: transparent; color: var(--accent-color); border: 1px solid var(--accent-color); border-radius: var(--card-border-radius); text-decoration: none; font-weight: 500;">
+            <a href="/posts/" class="button hero-cta hero-cta--outline">
                 <span>อ่านบทความทั้งหมด</span>
             </a>
         </div>
     </section>
 
     <!-- Featured Series -->
-    <section style="margin-bottom: 2.5rem;">
-        <h2 class="home-section-title" style="margin-bottom: 1rem; color: var(--accent-color);">🔥 ซีรีส์แนะนำ</h2>
-        <div class="featured-series-grid" style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+    <section class="home-section">
+        <h2 class="home-section-title">🔥 ซีรีส์แนะนำ</h2>
+        <div class="featured-series-grid">
             <!-- Harness Engineering -->
-            <div class="series-card" style="padding: 1.25rem; background: var(--card-background); border-radius: var(--card-border-radius); border: 1px solid var(--card-separator-color);">
-                <h3 style="margin-bottom: 0.5rem; color: var(--body-text-color);">Harness Engineering</h3>
-                <p style="color: var(--body-text-color); margin-bottom: 1rem;">วิธีควบคุม AI Agent ให้ทำงานได้อย่างมีประสิทธิภาพและปลอดภัย</p>
-                <a href="/tags/harness-engineering/" style="color: var(--accent-color); text-decoration: none;">อ่านซีรีส์นี้ →</a>
+            <div class="series-card">
+                <h3>Harness Engineering</h3>
+                <p>วิธีควบคุม AI Agent ให้ทำงานได้อย่างมีประสิทธิภาพและปลอดภัย</p>
+                <a href="/tags/harness-engineering/">อ่านซีรีส์นี้ →</a>
             </div>
             <!-- AI Engineering -->
-            <div class="series-card" style="padding: 1.25rem; background: var(--card-background); border-radius: var(--card-border-radius); border: 1px solid var(--card-separator-color);">
-                <h3 style="margin-bottom: 0.5rem; color: var(--body-text-color);">AI Engineering</h3>
-                <p style="color: var(--body-text-color); margin-bottom: 1rem;">แนวคิดและเทคนิคพื้นฐานสำหรับการสร้างระบบ AI</p>
-                <a href="/tags/ai-engineering/" style="color: var(--accent-color); text-decoration: none;">อ่านซีรีส์นี้ →</a>
+            <div class="series-card">
+                <h3>AI Engineering</h3>
+                <p>แนวคิดและเทคนิคพื้นฐานสำหรับการสร้างระบบ AI</p>
+                <a href="/tags/ai-engineering/">อ่านซีรีส์นี้ →</a>
             </div>
             <!-- OpenClaw -->
-            <div class="series-card" style="padding: 1.25rem; background: var(--card-background); border-radius: var(--card-border-radius); border: 1px solid var(--card-separator-color);">
-                <h3 style="margin-bottom: 0.5rem; color: var(--body-text-color);">OpenClaw</h3>
-                <p style="color: var(--body-text-color); margin-bottom: 1rem;">คู่มือใช้งาน Multi-Agent Framework ที่ใช้งานจริง</p>
-                <a href="/tags/openclaw/" style="color: var(--accent-color); text-decoration: none;">อ่านซีรีส์นี้ →</a>
+            <div class="series-card">
+                <h3>OpenClaw</h3>
+                <p>คู่มือใช้งาน Multi-Agent Framework ที่ใช้งานจริง</p>
+                <a href="/tags/openclaw/">อ่านซีรีส์นี้ →</a>
             </div>
         </div>
     </section>
 
     <!-- Recent Posts -->
-    <section style="margin-bottom: 2rem;">
-        <h2 class="home-section-title" style="margin-bottom: 1rem; color: var(--accent-color);">📝 บทความล่าสุด</h2>
+    <section class="home-section">
+        <h2 class="home-section-title">📝 บทความล่าสุด</h2>
         {{- $paginator := partial "helper/paginator.html" . -}}
         <section class="article-list">
             {{ range $index, $element := $paginator.Pages }}
@@ -54,14 +54,14 @@
     </section>
 
     <!-- Newsletter / RSS CTA -->
-    <section class="newsletter-cta" style="margin-bottom: 2rem; padding: 1.5rem; background: var(--card-background); border-radius: var(--card-border-radius); border: 1px solid var(--card-separator-color); text-align: center;">
-        <h3 style="margin-bottom: 0.5rem; color: var(--body-text-color);">📬 ติดตามเนื้อหาใหม่</h3>
-        <p style="color: var(--body-text-color); margin-bottom: 1rem;">รับบทความ AI Engineering และประสบการณ์จากงานพัฒนาชุมชนโดยตรง</p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="/index.xml" class="newsletter-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--accent-color); color: #fff; border-radius: var(--card-border-radius); text-decoration: none; font-weight: 500;">
+    <section class="newsletter-cta">
+        <h3 class="newsletter-cta__title">📬 ติดตามเนื้อหาใหม่</h3>
+        <p>รับบทความ AI Engineering และประสบการณ์จากงานพัฒนาชุมชนโดยตรง</p>
+        <div class="newsletter-cta__buttons">
+            <a href="/index.xml" class="newsletter-cta__btn newsletter-cta__btn--primary">
                 <span>ติดตามผ่าน RSS</span>
             </a>
-            <a href="https://t.me/Jitaret" target="_blank" rel="noopener noreferrer" class="newsletter-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: transparent; color: var(--accent-color); border: 1px solid var(--accent-color); border-radius: var(--card-border-radius); text-decoration: none; font-weight: 500;">
+            <a href="https://t.me/Jitaret" target="_blank" rel="noopener noreferrer" class="newsletter-cta__btn newsletter-cta__btn--outline">
                 <span>Telegram</span>
             </a>
         </div>

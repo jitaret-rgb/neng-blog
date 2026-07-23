@@ -10,7 +10,6 @@ ignoreFiles = ['\.kimi/.*']
   subtitle = "Code & Community — Technology, Community & AI Engineering"
   description = "บันทึกการเรียนรู้ของเหน่ง — ตั้งแต่ AI Engineering, Multi-Agent Systems จนถึงประสบการณ์จากงานพัฒนาชุมชน"
   keywords = ["blog", "neng", "thai", "AI Engineering", "Community Development", "OpenClaw", "Multi-Agent"]
-  defaultTheme = "dark"
   mainSections = ["posts"]
   
   # RSS Full Content (แสดงเนื้อหาเต็มใน RSS feed)
@@ -69,7 +68,7 @@ ignoreFiles = ['\.kimi/.*']
     darkTheme = "/css/giscus-teal-dark.css"
     theme = "/css/giscus-teal-dark.css"
     lang = "en"
-    loading = "eager"
+    loading = "lazy"
     
   [params.cards]
     limit = 10
@@ -151,7 +150,7 @@ ignoreFiles = ['\.kimi/.*']
   url = "/topics/"
   weight = 3
   [menu.main.params]
-    icon = "category-2"
+    icon = "list"
 
 [[menu.main]]
   name = "Posts"
