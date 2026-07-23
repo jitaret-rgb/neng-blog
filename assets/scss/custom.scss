@@ -248,11 +248,9 @@ html {
   }
 
   :root[data-scheme="dark"] & a {
-    color: var(--accent-color);
     text-decoration-color: rgba(255, 45, 170, 0.4);
 
     &:hover {
-      color: var(--accent-color-darker);
       text-decoration-color: var(--accent-color-darker);
     }
   }
@@ -1267,6 +1265,18 @@ input, textarea, select {
     }
   }
 
+  /* Win over .article-content a (series-nav sits inside .article-content) */
+  a.series-nav__episode {
+    color: var(--body-text-color);
+    text-decoration: none;
+
+    &:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+  }
+
   &__links {
     margin-top: 0.8rem;
     display: flex;
@@ -1302,7 +1312,7 @@ input, textarea, select {
     flex-wrap: wrap;
   }
 
-  &__btn {
+  a.newsletter-cta__btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -1348,14 +1358,17 @@ input, textarea, select {
 
 /* ============================================
    HAMBURGER MENU — MINIMUM 44px TOUCH TARGET
+   (mobile only — theme hides it on >= md)
    ============================================ */
 
-#toggle-menu {
-  width: 44px;
-  height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 767.98px) {
+  #toggle-menu {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* ============================================
