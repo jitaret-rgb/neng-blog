@@ -314,9 +314,10 @@ html {
     border-left: 4px solid var(--accent-color);
     background: var(--blockquote-background-color);
     border-radius: 0 8px 8px 0;
-    padding: 1rem 1.25rem;
+    padding: 1.6rem 2rem;
     margin: 1.5rem 0;
-    font-style: italic;
+    /* ไม่ใช้ italic — Noto Sans Thai ไม่มีตัวเอียงจริง synthetic oblique
+       ทำให้ตัวอักษรสุดท้ายของบรรทัดถูกตัดที่ขอบในบางเบราว์เซอร์ */
 
     p:last-child {
       margin-bottom: 0;
