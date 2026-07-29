@@ -2,6 +2,9 @@ public/
 public_test/
 .DS_Store
 
+# thClaws (local AI agent config)
+.thclaws/
+
 # Hugo build artifacts
 .hugo_build.lock
 build.log
