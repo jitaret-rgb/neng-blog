@@ -1,128 +1,234 @@
 ---
 name: write-article
-description: เขียนบทความ Neng Blog ครบทุกขั้นตอน (หาข้อมูล → เขียน → รูป → รีวิว → build test)
+description: เขียนบทความ Neng Blog v4.0 — หาข้อมูล → เขียน → รีวิว+validate → อนุมัติ → push
 args:
   - name: topic
     description: หัวข้อบทความ
     required: true
-  - name: series
-    description: ชื่อซีรีส์ (ถ้ามี)
-    required: false
   - name: slug
     description: ชื่อไฟล์ slug (เช่น ai-agent-part-1)
     required: true
+  - name: series
+    description: ชื่อซีรีส์ (ถ้ามี)
+    required: false
+  - name: seriesNumber
+    description: ลำดับตอนในซีรีส์ (ถ้ามี)
+    required: false
+  - name: previous
+    description: slug ตอนก่อนหน้า (ถ้ามี)
+    required: false
+  - name: next
+    description: slug ตอนถัดไป (ถ้ามี)
+    required: false
 ---
 
-# Workflow: เขียนบทความ Neng Blog
+# Workflow: เขียนบทความ Neng Blog v4.0
 
-## ขั้นตอนที่ 1: หาข้อมูล (researcher)
+> **เวอร์ชัน:** 4.0 — Unified from .thclaws + wiki v3.16
+> **Agents:** 3 (researcher → content-writer → reviewer)
+> **เวลาโดยประมาณ:** ~30 นาที (ไม่รวมเวลาเหน่งรีวิว)
+> **กฎเหล็ก:** 🔴 ห้าม push ก่อนเหน่งอนุมัติ
 
-รัน researcher agent เพื่อหาข้อมูลก่อนเขียน:
+---
+
+## Step 1: Research (researcher agent)
+
+ค้นหาข้อมูลก่อนเขียน:
 
 ```
-/agent researcher ค้นหาข้อมูลเกี่ยวกับ {{topic}} อย่างละเอียดสำหรับเขียนบทความ:
+/agent researcher ค้นหาข้อมูลเกี่ยวกับ {{topic}} อย่างละเอียดสำหรับเขียนบทความ Neng Blog:
+
 1. คำจำกัดความและแนวคิดหลัก
 2. ตัวอย่างการใช้งานจริง (โดยเฉพาะบริบทไทย/รัฐบาล/ชุมชน)
-3. สถิติหรือข้อมูลล่าสุด (ปี 2026) พร้อมแหล่งอ้างอิง
+3. สถิติหรือข้อมูลล่าสุด (ปี 2026) พร้อมแหล่งอ้างอิง URL
 4. เปรียบเทียบ tools/tech ถ้าหัวข้อเกี่ยวกับเทคโนโลยี
-5. ข้อดีข้อเสีย ให้สมดุล
+5. ข้อดีข้อเสีย ให้สมดุล ไม่เขียนข้างเดียว
+6. แหล่งอ้างอิง 5+ แหล่ง พร้อม URL
 
 สรุปเป็น bullet points ภาษาไทย พร้อมอ้างอิงแหล่งที่มา
 ```
 
-**บันทึกผลลัพธ์** ไว้ใช้ในขั้นตอนถัดไป
+**บันทึกผลลัพธ์** ไว้ใช้ใน Step 2
 
-## ขั้นตอนที่ 2: เขียนบทความ (content-writer)
+---
 
-รัน content-writer agent โดยส่งข้อมูลจาก step 1:
+## Step 2: Write (content-writer agent)
+
+เขียนบทความโดยอ้างอิงข้อมูลจาก Step 1:
 
 ```
 /agent content-writer เขียนบทความ Neng Blog เรื่อง {{topic}}
 
 ข้อมูลจาก researcher:
-[วางผลลัพธ์จาก step 1 ที่นี่]
+[วางผลลัพธ์จาก Step 1 ที่นี่]
 
 ข้อกำหนด:
 - slug: {{slug}}
-- series: {{series}} (ถ้ามี)
 - ความยาว: 1,500-3,000 คำ
-- ภาษาไทยทั้งหมด
+- ภาษาไทยทั้งหมด ศัพท์เทคนิคเป็นภาษาอังกฤษ
 - ใส่ code examples ถ้าเหมาะสม
-- frontmatter ต้องมี: title, date, description, image, categories, tags, takeaways
-- บันทึกไฟล์ที่: /neng-blog/content/posts/{{slug}}/index.md
+- Frontmatter ต้องครบ: title, date, lastUpdated, description, keywords, author, image, categories, tags, draft, takeaways
+- ถ้าเป็นซีรีส์: เพิ่ม partOfSeries, seriesNumber, previous, next
+- บันทึกไฟล์ที่: /root/neng-blog/content/posts/{{slug}}/index.md
 ```
 
-## ขั้นตอนที่ 3: จัดการรูปภาพ
-
-ตรวจสอบและเตรียมรูปภาพ:
-
-1. **Cover image** — ต้องมี `cover.jpg` ที่ `/neng-blog/content/posts/{{slug}}/cover.jpg`
-2. **รูปประกอบ** — ถ้ามีรูปในบทความ ต้องอยู่ที่ `/neng-blog/content/posts/{{slug}}/`
-3. **Alt text** — ทุกรูปต้องมี alt text ภาษาไทย
-4. **Relative path** — ใช้ `![alt](filename.jpg)` ไม่ใช่ absolute path
-
+**ตรวจสอบ:**
 ```bash
-# ตรวจสอบว่ามี cover.jpg
-ls -la /neng-blog/content/posts/{{slug}}/cover.jpg
+# ยืนยันไฟล์ถูกสร้าง
+ls -la /root/neng-blog/content/posts/{{slug}}/index.md
 
-# ตรวจสอบ alt text ใน markdown
-grep -n '!\[' /neng-blog/content/posts/{{slug}}/index.md
+# ยืนยัน frontmatter
+head -30 /root/neng-blog/content/posts/{{slug}}/index.md
 ```
 
-**ถ้าไม่มี cover.jpg** — แจ้งให้ผู้ใช้เพิ่มเอง หรือใช้ WebSearch หา royalty-free image
+---
 
-## ขั้นตอนที่ 4: รีวิว + แก้ไข (reviewer)
+## Step 3: Review + Validate (reviewer agent)
 
-รัน reviewer agent:
+รีวิวและแก้ไขบทความ (รวม language, structure, SEO, schema, build):
 
 ```
-/agent reviewer รีวิวและแก้ไขบทความที่ /neng-blog/content/posts/{{slug}}/index.md
+/agent reviewer รีวิว + แก้ไข + validate บทความที่ /root/neng-blog/content/posts/{{slug}}/index.md
 
-ตรวจสอบ:
-1. ภาษาไทย 100% (ไม่มีคำจีน/เวียดนามหลุด)
-2. ชื่อแบรนด์ถูกต้อง (Twitter → X)
-3. H1 แค่ 1 ต่อบทความ
-4. Frontmatter ครบ: title, date, description, image, categories, tags, takeaways
-5. image: cover.jpg อยู่ใน frontmatter
-6. takeaways มี 3-5 ข้อ
-7. ทุกรูปมี alt text
-8. Internal links ทำงาน
-9. Code blocks ภาษาถูกต้อง
+ทำทุก Phase:
+- Phase 1: Language & Brand (ตรวจคำจีน/เกาหลี/เวียดนาม, ตรวจแบรนด์)
+- Phase 2: Structure & Frontmatter (YAML, H1, heading hierarchy)
+- Phase 3: Content Quality (AI-Detox, internal content leak)
+- Phase 4: SEO & Technical (Schema, Key Takeaways, Breadcrumb, robots.txt)
+- Phase 5: Image & Link (cover.jpg, alt text, broken links)
+- Phase 6: References (5+ sources)
+- Phase 7: Build Test (hugo --gc --minify)
 
 แก้ไขโดยตรง ไม่ต้องถาม แล้วสรุปรายงาน
 ```
 
-## ขั้นตอนที่ 5: Build Test
+**ตรวจสอบผลลัพธ์:**
+- ต้องได้ Review Report ที่ระบุว่า **✅ ผ่าน** ทุก Phase
+- ถ้ามี ⚠️ หรือ ❌ ให้แก้ไขก่อน proceed
 
-ทดสอบ build ก่อน push:
+---
 
-```bash
-cd /neng-blog
-hugo --gc --minify 2>&1
+## Step 4: 🭐 Neng Review & Approve (STOP)
+
+**🔴 หยุดตรงนี้ — ต้องรอเหน่งอนุมัติก่อน**
+
+แจ้งเหน่ง:
+
+```
+📝 บทความพร้อมรีวิวแล้ว:
+
+- หัวข้อ: {{topic}}
+- Slug: {{slug}}
+- ไฟล์: /root/neng-blog/content/posts/{{slug}}/index.md
+- ผล Review: [รายงานจาก Step 3]
+
+กรุณาตรวจและอนุมัติครับ 🙏
 ```
 
-**ตรวจสอบ:**
-- ✅ ไม่มี console errors
-- ✅ ไม่มี warning เกี่ยวกับ frontmatter
-- ✅ Build สำเร็จ (exit code 0)
+**รอคำสั่งจากเหน่ง:**
+- ✅ "อนุมัติ" → proceed Step 5
+- ⚠️ "แก้ตรงนั้น" → แก้ไขแล้วส่งรีวิวใหม่
+- ❌ "ไม่ผ่าน" → เขียนใหม่
 
-**ถ้า build ไม่ผ่าน** — แก้ไขปัญหาที่พบ แล้ว build ใหม่
+---
 
-## ผลลัพธ์
+## Step 5: Push & Cleanup
 
-เมื่อ workflow เสร็จ ระบบจะ:
-1. ✅ ข้อมูลวิจัยพร้อมใช้
-2. ✅ บทความบันทึกที่ `/neng-blog/content/posts/{{slug}}/index.md`
-3. ✅ Cover image พร้อม
-4. ✅ ปัญหาต่างๆ แก้ไขแล้ว
-5. ✅ Hugo build ผ่าน
-
-## ขั้นตอนถัดไป (Manual)
+### 5.1 Pre-Push Checklist
 
 ```bash
-# คุณ approve แล้ว push
-cd /neng-blog
+cd /root/neng-blog
+
+# Build test
+hugo --gc --minify 2>&1
+
+# ตรวจภาษาจีน/เกาหลีหลุด
+grep -Pn '[\x{4e00}-\x{9fff}]' content/posts/{{slug}}/index.md
+grep -Pn '[\x{ac00}-\x{d7af}]' content/posts/{{slug}}/index.md
+
+# ตรวจ internal content หลุด
+grep -nE "\*(Reviewer|Writer|Coder).*Complete\*|Status:.*(ตรวจสอบ|เสร็จ|ผ่าน)" content/posts/{{slug}}/index.md
+
+# ตรวจ labels
+grep -nE "(คำโปรย|Intro|เฟส [0-9]|สรุปเฟส)" content/posts/{{slug}}/index.md
+```
+
+- [ ] Build สำเร็จ
+- [ ] ไม่มีภาษาจีน/เกาหลีหลุด
+- [ ] ไม่มี internal content หลุด
+- [ ] ไม่มี labels
+- [ ] เหน่งอนุมัติแล้ว
+
+### 5.2 Push
+
+```bash
+cd /root/neng-blog
 git add .
 git commit -m "feat: {{topic}}"
 git push origin main
 ```
+
+### 5.3 Post-Push Check
+
+```bash
+git status
+git log origin/main..HEAD
+```
+
+- [ ] `git status` ยืนยันว่า local = remote
+- [ ] `git log origin/main..HEAD` ต้องไม่แสดงผล
+- [ ] เช็คบทความบนเว็บจริง: https://neng-lab.com/posts/{{slug}}/
+
+### 5.4 Wiki Update
+
+อัพเดทหน้าที่เกี่ยวข้องใน wiki:
+- ถ้าเป็นซีรีส์ใหม่ → อัพเดท `/topics` page
+- บันทึก log ที่ `wiki/log.md`
+
+---
+
+## Architecture (v4.0)
+
+```
+Step 1          Step 2           Step 3              Step 4        Step 5
+───────        ───────          ───────             ───────       ───────
+Researcher  →  Content-Writer → Reviewer+Validate → Neng Approve → Push
+(10 min)       (10 min)         (10 min)            (manual)      (2 min)
+
+3 Agents, 5 Steps, ~32 min (ไม่รวมเวลาเหน่งรีวิว)
+```
+
+### Agent Roles
+
+| Agent | หน้าที่ | Tools | Color |
+|-------|---------|-------|-------|
+| **researcher** | ค้นข้อมูล + cross-reference | WebSearch, WebFetch, Read | 🟢 green |
+| **content-writer** | เขียนเนื้อหา + frontmatter + SEO | WebSearch, WebFetch, Read, Write, Edit | 🔵 blue |
+| **reviewer** | ตรวจ + แก้ + validate + build test | Read, Edit, Grep, Bash | 🔴 red |
+
+### Quality Gates
+
+| Gate | Agent | ตรวจอะไร |
+|------|-------|---------|
+| **Language** | reviewer | คำจีน/เกาหลี/เวียดนามหลุด |
+| **Brand** | reviewer | Twitter → X |
+| **Frontmatter** | reviewer | YAML ครบ, วันที่ถูก |
+| **SEO** | reviewer | Keywords, description, Schema |
+| **Build** | reviewer | hugo --gc --minify ผ่าน |
+| **Approval** | เหน่ง | เนื้อหา + ดีไซน์ |
+
+---
+
+## Lessons Learned (from v3.16)
+
+| บทเรียน | วิธีป้องกัน |
+|---------|-----------|
+| Push โดยไม่รออนุมัติ | 🔴 Step 4 บังคับ STOP |
+| Labels ในบทความ ("คำโปรย", "เฟส") | Phase 2 grep check |
+| Internal status หลุด | Phase 3 grep check |
+| ภาษาจีน/เกาหลีหลุด | Phase 1 Unicode range detection |
+| Schema ไม่มี | Phase 4 auto-check partials |
+
+---
+
+_Last updated: 2026-08-01 — v4.0 unified from .thclaws + wiki v3.16_
