@@ -93,7 +93,7 @@ head -30 /root/neng-blog/content/posts/{{slug}}/index.md
 ทำทุก Phase:
 - Phase 1: Language & Brand (ตรวจคำจีน/เกาหลี/เวียดนาม, ตรวจแบรนด์)
 - Phase 2: Structure & Frontmatter (YAML, H1, heading hierarchy)
-- Phase 3: Content Quality (AI-Detox, internal content leak)
+- Phase 3: Content Quality (AI-Detox ผ่าน Humanizer pass, internal content leak)
 - Phase 4: SEO & Technical (Schema, Key Takeaways, Breadcrumb, robots.txt)
 - Phase 5: Image & Link (cover.jpg, alt text, broken links)
 - Phase 6: References (5+ sources)
@@ -105,6 +105,23 @@ head -30 /root/neng-blog/content/posts/{{slug}}/index.md
 **ตรวจสอบผลลัพธ์:**
 - ต้องได้ Review Report ที่ระบุว่า **✅ ผ่าน** ทุก Phase
 - ถ้ามี ⚠️ หรือ ❌ ให้แก้ไขก่อน proceed
+- ต้องผ่าน **Humanizer pass (Step 3.5)** ครบก่อน proceed
+
+---
+
+## Step 3.5: Humanizer pass (บังคับ — ก่อนส่งเหน่งรีวิว)
+
+ใช้สกิล `humanizer` ถ้ามีใน workspace; ถ้าไม่มี ทำตาม checklist นี้กับบทความทั้งฉบับ:
+
+- §1 **not-X-but-Y** ("ไม่ใช่...แต่คือ", "ไม่ได้...แค่...แต่") — เจอครั้งเดียวก็แก้ ให้ระบุข้อความตรง ๆ แทน
+- §2 **closer บรรทัดเดียว** ที่สรุปซ้ำย่อหน้าก่อนหน้า
+- §3 **วลีดูลึก** ("หัวใจของทั้งหมด", "คำถามที่แท้จริงคือ", "สิ่งที่สำคัญจริง ๆ คือ")
+- §8 **em dash (—)** ในเนื้อหา → เปลี่ยนเป็นจุด/จุลภาค/วงเล็บ (**ยกเว้น YAML takeaways ห้ามแตะ**)
+- §19 **bold ตกแต่ง** ทุกข้อในรายการ → เก็บเฉพาะ label ที่ให้ข้อมูลจริง
+- ประโยค/ข้อความเดียวกันซ้ำสองรอบในบทความเดียว
+
+**ข้อจำกัด:** เปลี่ยนเฉพาะสำนวน — ห้ามลบ fact, ตัวเลข, ชื่อ, ลิงก์/URL หรือ YAML front matter
+(ตัวสกิลเต็ม: repo `jitaret-rgb/agent-skills` · `~/.hermes/skills/content-writing/humanizer/SKILL.md`)
 
 ---
 
@@ -215,6 +232,7 @@ Researcher  →  Content-Writer → Reviewer+Validate → Neng Approve → Push
 | **Frontmatter** | reviewer | YAML ครบ, วันที่ถูก |
 | **SEO** | reviewer | Keywords, description, Schema |
 | **Build** | reviewer | hugo --gc --minify ผ่าน |
+| **Humanizer** | reviewer | tell ภาษา AI: §1/§2/§3/§8/§19 + ข้อความซ้ำ |
 | **Approval** | เหน่ง | เนื้อหา + ดีไซน์ |
 
 ---
@@ -228,7 +246,8 @@ Researcher  →  Content-Writer → Reviewer+Validate → Neng Approve → Push
 | Internal status หลุด | Phase 3 grep check |
 | ภาษาจีน/เกาหลีหลุด | Phase 1 Unicode range detection |
 | Schema ไม่มี | Phase 4 auto-check partials |
+| สำนวนมีร่องรอย AI (not-X-but-Y, em dash ทั้งฟิลด์) | Step 3.5 Humanizer pass |
 
 ---
 
-_Last updated: 2026-08-01 — v4.0 unified from .thclaws + wiki v3.16_
+_Last updated: 2026-11-16 — เพิ่ม Step 3.5 Humanizer pass + Humanizer gate (v4.0)_
