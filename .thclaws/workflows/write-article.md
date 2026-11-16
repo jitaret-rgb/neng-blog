@@ -70,16 +70,16 @@ args:
 - ใส่ code examples ถ้าเหมาะสม
 - Frontmatter ต้องครบ: title, date, lastUpdated, description, keywords, author, image, categories, tags, draft, takeaways
 - ถ้าเป็นซีรีส์: เพิ่ม partOfSeries, seriesNumber, previous, next
-- บันทึกไฟล์ที่: /root/neng-blog/content/posts/{{slug}}/index.md
+- บันทึกไฟล์ที่: /workspace/content/posts/{{slug}}/index.md
 ```
 
 **ตรวจสอบ:**
 ```bash
 # ยืนยันไฟล์ถูกสร้าง
-ls -la /root/neng-blog/content/posts/{{slug}}/index.md
+ls -la /workspace/content/posts/{{slug}}/index.md
 
 # ยืนยัน frontmatter
-head -30 /root/neng-blog/content/posts/{{slug}}/index.md
+head -30 /workspace/content/posts/{{slug}}/index.md
 ```
 
 ---
@@ -89,7 +89,7 @@ head -30 /root/neng-blog/content/posts/{{slug}}/index.md
 รีวิวและแก้ไขบทความ (รวม language, structure, SEO, schema, build):
 
 ```
-/agent reviewer รีวิว + แก้ไข + validate บทความที่ /root/neng-blog/content/posts/{{slug}}/index.md
+/agent reviewer รีวิว + แก้ไข + validate บทความที่ /workspace/content/posts/{{slug}}/index.md
 
 ทำทุก Phase:
 - Phase 1: Language & Brand (ตรวจคำจีน/เกาหลี/เวียดนาม, ตรวจแบรนด์)
@@ -107,7 +107,7 @@ head -30 /root/neng-blog/content/posts/{{slug}}/index.md
 - Phase 4: SEO & Technical (Schema, Key Takeaways, Breadcrumb, robots.txt)
 - Phase 5: Image & Link (cover.jpg, alt text, broken links)
 - Phase 6: References (5+ sources)
-- Phase 7: Build Test (hugo --gc --minify)
+- Phase 7: Build Test — ⚠️ container ไม่มี hugo (เช็คแล้ว) → ข้าม build ในเครื่อง พึ่ง CI หลัง push (มี Hugo 0.170.0); ให้ตรวจ YAML parse + โครงไฟล์ด้วย head/grep แทน
 
 แก้ไขโดยตรง ไม่ต้องถาม แล้วสรุปรายงาน
 ```
@@ -130,7 +130,7 @@ head -30 /root/neng-blog/content/posts/{{slug}}/index.md
 
 - หัวข้อ: {{topic}}
 - Slug: {{slug}}
-- ไฟล์: /root/neng-blog/content/posts/{{slug}}/index.md
+- ไฟล์: /workspace/content/posts/{{slug}}/index.md
 - ผล Review: [รายงานจาก Step 3]
 
 กรุณาตรวจและอนุมัติครับ 🙏
@@ -145,13 +145,12 @@ head -30 /root/neng-blog/content/posts/{{slug}}/index.md
 
 ## Step 5: Push & Cleanup
 
-### 5.1 Pre-Push Checklist
+> ⚠️ **สภาพแวดล้อมจริง (เช็ค 2026-11-16)**: ใน container มี `git` + `curl` แต่ **ไม่มี `hugo` และไม่มี SSH key** (`/root/.ssh` ไม่มี, remote เป็น `git@github.com`) → **build ให้ CI ทำ** และ **commit/push ต้องรันบน host** (`~/neng-blog`) เท่านั้น
+
+### 5.1 Pre-Push Checklist (รันใน container ได้)
 
 ```bash
-cd /root/neng-blog
-
-# Build test
-hugo --gc --minify 2>&1
+cd /workspace
 
 # ตรวจภาษาจีน/เกาหลีหลุด
 grep -Pn '[\x{4e00}-\x{9fff}]' content/posts/{{slug}}/index.md
@@ -162,33 +161,43 @@ grep -nE "\*(Reviewer|Writer|Coder).*Complete\*|Status:.*(ตรวจสอบ|
 
 # ตรวจ labels
 grep -nE "(คำโปรย|Intro|เฟส [0-9]|สรุปเฟส)" content/posts/{{slug}}/index.md
+
+# ตรวจ Humanizer: em dash ต้องเหลือแค่ใน YAML takeaways
+grep -n '—' content/posts/{{slug}}/index.md
 ```
 
-- [ ] Build สำเร็จ
 - [ ] ไม่มีภาษาจีน/เกาหลีหลุด
 - [ ] ไม่มี internal content หลุด
 - [ ] ไม่มี labels
+- [ ] ผ่าน Humanizer pass (Phase 3)
 - [ ] เหน่งอนุมัติแล้ว
+- [ ] Build → ตรวจใน CI หลัง push (เครื่องนี้ไม่มี hugo)
 
-### 5.2 Push
+### 5.2 Commit & Push (ทำบน HOST เท่านั้น)
 
 ```bash
-cd /root/neng-blog
-git add .
+# host: ~/neng-blog (มี SSH key GitHub อยู่แล้ว)
+cd ~/neng-blog
+git add content/posts/{{slug}}/
 git commit -m "feat: {{topic}}"
 git push origin main
 ```
 
-### 5.3 Post-Push Check
+ห้ามสั่ง `git push` จากใน container — ไม่มี credential ต้อง fail
+
+### 5.3 Post-Push Check (host)
 
 ```bash
-git status
-git log origin/main..HEAD
+cd ~/neng-blog
+gh run list --workflow hugo.yml --limit 1                            # ล่าสุดต้อง success
+curl -sI https://neng-lab.com/posts/{{slug}}/                        # ต้อง 200
+curl -s https://neng-lab.com/posts/{{slug}}/ | grep -o '<title>[^<]*' # ชื่อบทความถูก
+git status -sb                                                       # ต้องไม่มี ahead/behind
 ```
 
-- [ ] `git status` ยืนยันว่า local = remote
-- [ ] `git log origin/main..HEAD` ต้องไม่แสดงผล
-- [ ] เช็คบทความบนเว็บจริง: https://neng-lab.com/posts/{{slug}}/
+- [ ] CI `success`
+- [ ] หน้าเว็บ 200 + `<title>` ถูกต้อง
+- [ ] local = remote
 
 ### 5.4 Wiki Update
 
@@ -225,7 +234,7 @@ Researcher  →  Content-Writer → Reviewer+Validate → Neng Approve → Push
 | **Brand** | reviewer | Twitter → X |
 | **Frontmatter** | reviewer | YAML ครบ, วันที่ถูก |
 | **SEO** | reviewer | Keywords, description, Schema |
-| **Build** | reviewer | hugo --gc --minify ผ่าน |
+| **Build** | CI หลัง push | hugo --gc --minify ผ่านบน CI (Hugo 0.170.0) — container ไม่มี hugo |
 | **Humanizer** | reviewer | tell ภาษา AI: §1/§2/§3/§8/§19 + ข้อความซ้ำ |
 | **Approval** | เหน่ง | เนื้อหา + ดีไซน์ |
 

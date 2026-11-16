@@ -1,7 +1,7 @@
 ---
 name: researcher
 description: ค้นหาและสรุปข้อมูลจากเว็บสำหรับบทความ Neng Blog
-model: oai/mimo-v2.5
+model: oai/mimo-v2.6-pro
 tools: WebSearch, WebFetch, Read, Grep, Glob, Ls
 permissionMode: auto
 maxTurns: 30

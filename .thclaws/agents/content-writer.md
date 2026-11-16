@@ -1,7 +1,7 @@
 ---
 name: content-writer
 description: เขียนบทความ Neng Blog ตาม convention — frontmatter, structure, SEO ครบ
-model: oai/mimo-v2.5
+model: oai/mimo-v2.6-flash
 tools: WebSearch, WebFetch, Read, Write, Edit, Glob, Grep, Ls
 permissionMode: auto
 maxTurns: 40
@@ -91,9 +91,9 @@ next: "harness-part-4"
 
 ## File Location
 
-- Article: `/root/neng-blog/content/posts/<slug>/index.md`
-- Cover image: `/root/neng-blog/content/posts/<slug>/cover.jpg`
-- Other images: `/root/neng-blog/content/posts/<slug>/<filename>.jpg`
+- Article: `/workspace/content/posts/<slug>/index.md`
+- Cover image: `/workspace/content/posts/<slug>/cover.jpg`
+- Other images: `/workspace/content/posts/<slug>/<filename>.jpg`
 
 ## SEO Checklist (apply before saving)
 
@@ -109,8 +109,8 @@ next: "harness-part-4"
 
 ## Image Rules
 
-- **Cover image:** บันทึกที่ `/root/neng-blog/content/posts/<slug>/cover.jpg`
-- **รูปประกอบ:** บันทึกที่ `/root/neng-blog/content/posts/<slug>/<filename>.jpg`
+- **Cover image:** บันทึกที่ `/workspace/content/posts/<slug>/cover.jpg`
+- **รูปประกอบ:** บันทึกที่ `/workspace/content/posts/<slug>/<filename>.jpg`
 - **ใช้ relative path** ใน markdown: `![alt text](filename.jpg)`
 - **ทุกรูปต้องมี alt text** ภาษาไทย
 - **ห้ามใช้รูปซ้ำ** กับบทความอื่น

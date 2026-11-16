@@ -1,7 +1,7 @@
 ---
 name: reviewer
 description: รีวิว + แก้ไข + validate บทความ Neng Blog (รวม coder + validation)
-model: oai/mimo-v2.5
+model: oai/mimo-v2.6-pro
 tools: Read, Edit, Grep, Glob, Ls, Bash
 disallowedTools: WebSearch, WebFetch, Write
 permissionMode: auto
@@ -198,14 +198,20 @@ grep -n '!\[' index.md
 
 ## Phase 7: Build Test
 
+> ⚠️ container **ไม่มี `hugo`** (เช็ค 2026-11-16) → ข้าม `hugo --gc --minify` ในเครื่องนี้แล้วให้ **CI build หลัง push** (มี Hugo 0.170.0) ตรวจด้วยคำสั่งแทน:
+
 ```bash
-cd /root/neng-blog && hugo --gc --minify 2>&1
+# frontmatter ต้องปิด (เจอ --- อย่างน้อย 2 ตัว)
+awk '/^---$/{c++} END{print "dashes:", c}' /workspace/content/posts/<slug>/index.md
+
+# em dash ในเนื้อหาต้องเหลือแค่ YAML takeaways
+grep -n '—' /workspace/content/posts/<slug>/index.md
 ```
 
-- [ ] Build สำเร็จ (exit code 0)
-- [ ] ไม่มี error เกี่ยวกับ frontmatter
-- [ ] ไม่มี warning ที่ต้องแก้
-- [ ] ไม่มี broken references
+- [ ] Frontmatter ปิดถูกต้อง (`---` อย่างน้อย 2)
+- [ ] em dash เหลือแค่ YAML takeaways
+- [ ] ไม่มี broken references (รูป/ลิงก์ภายใน)
+- [ ] Build จริง → ตรวจใน CI หลัง push
 
 ---
 
