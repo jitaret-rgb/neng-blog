@@ -1,0 +1,16 @@
+{{ if (.Context.Scratch.Get "TOCEnabled") }}
+    <section class="widget archives">
+        <div class="widget-icon">
+            {{ partial "helper/icon" "hash" }}
+        </div>
+        {{- /* OVERRIDE: widget label เป็น <p> ไม่ใช่ h2 — กันไม่ให้มีหัวข้อโผล่ก่อน h1 ของหน้า
+                 (.section-title เป็น class-based CSS ทั้งหมด จึงหน้าตาเดิมทุกประการ) */ -}}
+        <p class="widget-title section-title">{{ T "article.tableOfContents" }}</p>
+
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                {{ partial "article/components/toc" .Context | safeHTML }}
+            </nav>
+        </div>
+    </section>
+{{ end }}
