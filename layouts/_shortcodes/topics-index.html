@@ -1,0 +1,39 @@
+{{- /* ดัชนีบทความอัตโนมัติสำหรับหน้า /topics/ (slug: topics)
+     ดึงข้อมูลจาก taxonomy tags + โพสต์ทั้งหมด → ไม่ต้องอัปเดตมือเมื่อมีบทความใหม่
+     เรียกใช้จาก content/page/topics.md:  {{< topics-index >}} */ -}}
+{{- $labels := dict
+      "harness-engineering" "Harness Engineering"
+      "ai-engineering"      "AI Engineering"
+      "openclaw"            "OpenClaw" -}}
+{{- $emoji := dict "harness-engineering" "🔥" "ai-engineering" "🤖" "openclaw" "🛠️" -}}
+{{- $featured := slice "harness-engineering" "ai-engineering" "openclaw" -}}
+{{- $all := where .Site.RegularPages "Section" "posts" -}}
+
+{{- /* 1) ซีรีส์เด่น (เรียงตามวันเผยแพร่ เก่าก่อน → ตอนที่ 1 อยู่บน) */ -}}
+{{- range $name := $featured -}}
+  {{- $tax := index $.Site.Taxonomies.tags $name -}}
+  {{- if $tax -}}
+<h2>{{ index $emoji $name }} {{ index $labels $name }}</h2>
+<ul class="topic-list">
+  {{- range $tax.Pages.ByDate }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{- end }}
+</ul>
+  {{- end -}}
+{{- end -}}
+
+{{- /* 2) บทความทั้งหมด (ใหม่สุดก่อน) — ครบทุกโพสต์ ไม่ว่าจะติดแท็กอะไร */ -}}
+<h2>📝 บทความทั้งหมด ({{ len $all }})</h2>
+<ul class="topic-list">
+{{- range $all.ByDate.Reverse }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{- end }}
+</ul>
+
+{{- /* 3) แท็กทั้งหมด (มาก→น้อย) — ทางเข้าบทความที่เหลือ */ -}}
+<h2>🏷️ แท็กทั้งหมด ({{ len $.Site.Taxonomies.tags }})</h2>
+<div class="article-tags">
+{{- range $.Site.Taxonomies.tags.ByCount }}
+  <a href="{{ .Page.RelPermalink }}">{{ replace .Page.Title "-" " " }} <small>({{ len .Pages }})</small></a>
+{{- end }}
+</div>
