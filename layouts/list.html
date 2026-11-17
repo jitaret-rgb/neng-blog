@@ -1,0 +1,82 @@
+{{- /* OVERRIDE จาก themes/hugo-theme-stack/layouts/list.html (v4.0.3)
+     เปลี่ยน label/ตัวเลข/คำโปรย ก่อน h1 ให้เป็น <p> เพื่อให้ h1 ของหน้ามาก่อนหัวข้ออื่นเสมอ
+     CSS ของ .section-title/.section-count/.section-description เป็น class-based ทั้งหมด (list.scss)
+     → หน้าตาเดิมทุกประการ ส่วน h2 "หัวข้อย่อย" หลัง h1 คงเดิม */ -}}
+{{ define "main" }}
+    <header>
+        <p class="section-title">
+            {{ if eq .Parent (.GetPage "/") }}
+                {{ T "list.section" }}
+            {{ else }}
+                {{ .Parent.Title }}
+            {{ end }}
+        </p>
+
+        <div class="section-card">
+            <div class="section-details">
+                <p class="section-count">{{ T "list.page" (len .Pages) }}</p>
+                <h1 class="section-term">{{ .Title }}</h1>
+                {{ with .Params.description }}
+                    <p class="section-description">{{ . }}</p>
+                {{ end }}
+            </div>
+    
+            {{- $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) -}}
+            {{ if $image }}
+                <div class="section-image">
+                    {{ partial "helper/thumbnail-image" (dict 
+                        "Resource" $image.Resource
+                        "Width" 60
+                        "Height" 60
+                        "Resize" .Site.Params.ImageProcessing.Thumbnail.Enabled
+                        "Attributes" (dict
+                            "src" $image.Permalink
+                            "alt" .Title
+                            "loading" "lazy"
+                            "width" $image.Width
+                            "height" $image.Height
+                        )
+                    ) }}
+                </div>
+            {{ end }}
+        </div>
+    </header>
+
+    {{- $pages := partial "helper/pages.html" . -}}
+    {{- $subsections := .Sections -}}
+    
+    {{- if and (eq (len $pages) (len $subsections)) (eq $pages $subsections) -}}
+        {{- $subsections = slice -}}
+    {{- end -}}
+
+    {{- with $subsections -}}
+        <aside>
+            <h2 class="section-title">{{ T "list.subsection" (len $subsections) }}</h2>
+            <div class="subsection-list">
+                <div class="article-list--tile">
+                    {{ range . }}
+                        {{ partial "article-list/tile" . }}
+                    {{ end }}
+                </div>
+            </div>
+        </aside>
+    {{- end -}}
+    
+    {{/* List only pages that are not a subsection */}}
+    {{ $paginator := partial "helper/paginator.html" . }}
+    {{ with $paginator }}
+        <section class="article-list--compact">
+            {{ range .Pages }}
+                {{ partial "article-list/compact" . }}
+            {{ end }}
+        </section>
+    {{ end }}
+
+    {{- partial "pagination.html" . -}}
+
+    {{ partialCached "footer/footer" . }}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}
