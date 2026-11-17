@@ -8,11 +8,9 @@ description = 'คู่มือเริ่มต้นสำหรับผ�
 image = 'images/default-cover.jpg'
 +++
 
-# 🚀 เริ่มต้นที่นี่
-
 **ยินดีต้อนรับสู่ neng-lab.com!**
 
-บล็อกนี้เขียนโดย **เหน่ง** — คนที่ไม่ใช่โปรแกรมเมอร์ แต่ใช้ **AI Agent** ช่วยสร้างบล็อกเทคโนโลยีนี้ขึ้นมาได้จริงๆ
+บล็อกนี้เขียนโดย **เหน่ง** ที่ไม่ใช่โปรแกรมเมอร์ แต่ใช้ **AI Agent** ช่วยสร้างบล็อกเทคโนโลยีนี้ขึ้นมาได้จริงๆ
 
 จากข้าราชการธรรมดาสังกัดกรมการพัฒนาชุมชน สู่การสร้างเว็บไซต์ที่มีบทความ AI Engineering หลายสิบตอน มีคนอ่านจริง และมีระบบ automation ทำงานเองได้
 
@@ -37,12 +35,12 @@ image = 'images/default-cover.jpg'
 > ซีรีส์ 7 ตอนเกี่ยวกับวิธีควบคุม AI Agent ให้ทำงานได้อย่างมีประสิทธิภาพและปลอดภัย
 
 - [ตอนที่ 1: ทำไม AI ต้องมี Harness?](/posts/harness-part-1/)
-- [ตอนที่ 3: Query Loop — หัวใจของระบบ](/posts/harness-part-3/)
+- [ตอนที่ 3: Query Loop (หัวใจของระบบ)](/posts/harness-part-3/)
 - [ตอนที่ 5: Multi-Agent System](/posts/harness-part-5/)
 - [ตอนที่ 7: สรุปซีรีส์ + Roadmap](/posts/harness-part-7/)
 
 ### 2. [OpenClaw / CoPaw](/tags/openclaw/)
-> คู่มือใช้งาน OpenClaw — Multi-Agent Framework ที่เหน่งใช้งานจริง
+> คู่มือใช้งาน OpenClaw ซึ่งเป็น Multi-Agent Framework ที่เหน่งใช้งานจริง
 
 - [OpenClaw Guide](/posts/openclaw-guide/)
 - [OpenClaw Install Guide](/posts/openclaw-install-guide/)
@@ -56,9 +54,9 @@ image = 'images/default-cover.jpg'
 
 ## 🔥 บทความยอดนิยม
 
-- [Harness Engineering ตอนที่ 3: Query Loop](/posts/harness-part-3/) — หัวใจของระบบ AI Agent
-- [Harness Engineering ตอนที่ 4: Tools & Permissions](/posts/harness-part-4/) — กำหนดขอบเขตความปลอดภัย
-- [Harness Engineering ตอนที่ 5: Multi-Agent System](/posts/harness-part-5/) — ออกแบบระบบหลาย Agent
+- [Harness Engineering ตอนที่ 3: Query Loop](/posts/harness-part-3/): หัวใจของระบบ AI Agent
+- [Harness Engineering ตอนที่ 4: Tools & Permissions](/posts/harness-part-4/): กำหนดขอบเขตความปลอดภัย
+- [Harness Engineering ตอนที่ 5: Multi-Agent System](/posts/harness-part-5/): ออกแบบระบบหลาย Agent
 
 ---
 
@@ -74,7 +72,7 @@ image = 'images/default-cover.jpg'
 ## ❓ คำถามที่พบบ่อย
 
 ### Neng Lab คืออะไร?
-Neng Lab เป็นบล็อกส่วนตัวของ **เหน่ง** — นักวิชาการพัฒนาชุมชนที่สนใจเทคโนโลยี AI บล็อกนี้บันทึกประสบการณ์การใช้งาน AI Agent, Multi-Agent Systems และเครื่องมือ open source ต่างๆ โดยเน้นการอธิบายเป็นภาษาไทย
+Neng Lab เป็นบล็อกส่วนตัวของ **เหน่ง** ซึ่งเป็นนักวิชาการพัฒนาชุมชนที่สนใจเทคโนโลยี AI บล็อกนี้บันทึกประสบการณ์การใช้งาน AI Agent, Multi-Agent Systems และเครื่องมือ open source ต่างๆ โดยเน้นการอธิบายเป็นภาษาไทย
 
 ### ผมไม่มีพื้นฐานโค้ด อ่านบล็อกนี้เข้าใจไหม?
 **เข้าใจครับ** ผู้เขียนเองก็ไม่มีพื้นฐานโค้ดตอนเริ่มต้น บทความแต่ละตอนถูกออกแบบให้อธิบายจากพื้นฐาน มีตัวอย่างประกอบ และแยกซีรีส์ตามระดับความยาก ผู้เริ่มต้นควรเริ่มจาก [AI Engineering Intro](/posts/ai-engineering-intro/)
