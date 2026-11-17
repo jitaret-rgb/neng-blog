@@ -1,0 +1,17 @@
+{{- /* OVERRIDE ของ themes/hugo-theme-stack/layouts/_partials/data/title.html
+     ต่างจากต้นฉบับแค่บรรทัดแรก: ตัดอีโมจิออกจาก .Title ก่อนส่งผล (h1 ยังโชว์emoji ตามเดิม)
+     จุดนี้ถูกเรียกโดย head.html (แท็บ), opengraph/base.html (og:title), opengraph/twitter.html (twitter:title) */ -}}
+{{- $pageTitle := partial "helper/no-emoji" .Title -}}
+{{- $siteTitle := .Site.Title -}}
+{{- $paginator := partial "helper/paginator.html" . -}}
+
+{{- $title := slice -}}
+
+{{- if and $paginator $paginator.HasPrev -}}
+    <!-- Add page number-->
+    {{ $title = $title | append (printf "Page %d" $paginator.PageNumber) }}
+{{- end -}}
+
+{{- $title = $title | append (default $siteTitle $pageTitle) -}}
+
+{{ return delimit $title " - " }}
