@@ -5,7 +5,7 @@ draft = false
 type = 'page'
 slug = 'topics'
 description = 'ค้นพบบทความตามหัวข้อที่สนใจ — AI Engineering, Harness Engineering, OpenClaw, Multi-Agent Systems'
-image = 'images/default-cover.jpg'
+image = '/images/default-cover.jpg'
 +++
 
 ค้นหาบทความตามหัวข้อที่คุณสนใจได้จากที่นี่

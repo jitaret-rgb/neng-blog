@@ -5,7 +5,7 @@ lastmod = 2026-04-16T17:30:00+07:00
 draft = false
 type = 'page'
 description = 'คู่มือเริ่มต้นสำหรับผู้อ่านใหม่ — รู้จัก neng-lab, เข้าใจเนื้อหาหลัก และหาเส้นทางการเรียนรู้ที่เหมาะกับคุณ'
-image = 'images/default-cover.jpg'
+image = '/images/default-cover.jpg'
 +++
 
 **ยินดีต้อนรับสู่ neng-lab.com!**
