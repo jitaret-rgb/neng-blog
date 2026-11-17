@@ -1,5 +1,5 @@
 +++
-title = 'AI Engineering ตอนที่ 4: Dataset สำหรับวิจัย - คู่มือฉบับสมบูรณ์'
+title = '📊 AI Engineering ตอนที่ 4: Dataset สำหรับวิจัย - คู่มือฉบับสมบูรณ์'
 date = 2026-04-09T23:12:00+07:00
 draft = false
 tags = ['ai-engineering', 'dataset', 'data-science', 'machine-learning', 'research']

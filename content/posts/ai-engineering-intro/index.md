@@ -1,5 +1,5 @@
 +++
-title = 'AI Engineering สำหรับนักพัฒนาชุมชน: บทนำ - ทำไมต้องใช้ AI กับ 4 ภารกิจหลัก?'
+title = '📘 AI Engineering สำหรับนักพัฒนาชุมชน: บทนำ - ทำไมต้องใช้ AI กับ 4 ภารกิจหลัก?'
 date = 2026-04-06T22:00:00+07:00
 draft = false
 tags = ['ai-engineering', 'community-development', 'ai-for-government', 'digital-transformation']

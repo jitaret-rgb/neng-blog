@@ -1,5 +1,5 @@
 +++
-title = 'คู่มือ Hugo Stack Theme ฉบับสมบูรณ์'
+title = '📚 คู่มือ Hugo Stack Theme ฉบับสมบูรณ์'
 date = 2026-04-06T19:00:00+07:00
 draft = false
 tags = ['hugo', 'stack', 'theme', 'guide', 'tutorial']

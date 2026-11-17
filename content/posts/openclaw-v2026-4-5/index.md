@@ -1,5 +1,5 @@
 +++
-title = 'OpenClaw v2026.4.5: อัพเดทใหญ่! เพิ่ม Video, Music Generation + 10+ ฟีเจอร์ใหม่'
+title = '🚀 OpenClaw v2026.4.5: อัพเดทใหญ่! เพิ่ม Video, Music Generation + 10+ ฟีเจอร์ใหม่'
 date = 2026-04-06T23:00:00+07:00
 draft = false
 tags = ['openclaw', 'release', 'update', 'ai', 'video-generation', 'music-generation']

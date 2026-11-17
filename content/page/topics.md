@@ -1,5 +1,5 @@
 +++
-title = 'หัวข้อหลัก'
+title = '🗂️ หัวข้อหลัก'
 date = 2026-04-14T14:00:00+07:00
 draft = false
 type = 'page'

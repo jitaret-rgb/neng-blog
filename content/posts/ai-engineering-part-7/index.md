@@ -1,5 +1,5 @@
 +++
-title = 'AI Engineering ตอนที่ 7: สรุปซีรีส์ - เริ่มต้นใช้งาน AI Engineering สำหรับงานชุมชน'
+title = '🎯 AI Engineering ตอนที่ 7: สรุปซีรีส์ - เริ่มต้นใช้งาน AI Engineering สำหรับงานชุมชน'
 date = 2026-04-10T00:20:00+07:00
 draft = false
 tags = ['ai-engineering', 'getting-started', 'roadmap', 'community-development', 'ai-for-government']

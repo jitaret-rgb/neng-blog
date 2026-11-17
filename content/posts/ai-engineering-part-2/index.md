@@ -1,5 +1,5 @@
 +++
-title = 'AI Engineering ตอนที่ 2: Prompt Engineering สร้างคอนเทนต์ (ฉบับมือใหม่)'
+title = '🎯 AI Engineering ตอนที่ 2: Prompt Engineering สร้างคอนเทนต์ (ฉบับมือใหม่)'
 date = 2026-04-08T17:00:00+07:00
 draft = false
 tags = ['ai-engineering', 'prompt-engineering', 'content-creation', 'beginner-guide']

@@ -1,5 +1,5 @@
 +++
-title = 'AI Engineering ตอนที่ 5: Agentic AI - เมื่อ AI ทำงานแทนคุณ'
+title = '🤖 AI Engineering ตอนที่ 5: Agentic AI - เมื่อ AI ทำงานแทนคุณ'
 date = 2026-04-09T23:30:00+07:00
 draft = false
 tags = ['ai-engineering', 'agentic-ai', 'ai-agents', 'automation', 'government-ai']

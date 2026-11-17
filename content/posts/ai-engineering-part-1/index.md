@@ -1,5 +1,5 @@
 +++
-title = 'AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน'
+title = '🎯 AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน'
 date = 2026-04-07T18:00:00+07:00
 draft = false
 author = "เหน่ง"
