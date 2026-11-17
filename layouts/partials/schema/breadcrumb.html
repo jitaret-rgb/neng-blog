@@ -21,7 +21,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": {{ .Title | jsonify | safeJS }},
+      "name": {{ partial "helper/no-emoji" .Title | jsonify | safeJS }},
       "item": {{ .Permalink | jsonify | safeJS }}
     }
     {{- else }}
