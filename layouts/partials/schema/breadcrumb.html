@@ -1,11 +1,15 @@
-{{- /* BreadcrumbList Schema for SEO */ -}}
-{{- if or .IsHome .IsPage }}
+{{- /* BreadcrumbList Schema for SEO
+     ชั้นกลางต้องสะท้อน hierarchy จริง (แนวทาง Google: breadcrumb = เส้นทางผู้ใช้ ไม่ใช่ URL ตายตัว)
+     - โพสต์:            Home › Posts › ชื่อเรื่อง
+     - หน้าอื่น (start/topics/about/...): Home › ชื่อเรื่อง (2 รายการ = ตามเกณฑ์ Google ที่ต้องการอย่างน้อย 2 ListItems)
+     - ไม่ใช่หน้าเนื้อหา (section/หน้าแรก): ไม่ใส่ — กัน BreadcrumbList 1 รายการซึ่งไม่ผ่านเกณฑ์ */ -}}
+{{- if .IsPage }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {{- if .IsPage }}
+    {{- if eq .Section "posts" }}
     {
       "@type": "ListItem",
       "position": 1,
@@ -30,6 +34,12 @@
       "position": 1,
       "name": "Home",
       "item": {{ .Site.BaseURL | jsonify | safeJS }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ partial "helper/no-emoji" .Title | jsonify | safeJS }},
+      "item": {{ .Permalink | jsonify | safeJS }}
     }
     {{- end }}
   ]
