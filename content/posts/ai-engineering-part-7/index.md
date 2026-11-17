@@ -13,8 +13,6 @@ takeaways = [
 ]
 +++
 
-# 🎯 AI Engineering ตอนที่ 7: สรุปซีรีส์ - เริ่มต้นใช้งาน AI Engineering สำหรับงานชุมชน
-
 **ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน**
 
 ---

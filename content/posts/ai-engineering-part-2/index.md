@@ -13,8 +13,6 @@ takeaways = [
 ]
 +++
 
-# 🎯 AI Engineering ตอนที่ 2: Prompt Engineering สร้างคอนเทนต์
-
 **ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน**
 
 ---

@@ -13,8 +13,6 @@ takeaways = [
 ]
 +++
 
-# 📚 คู่มือ Hugo Stack Theme ฉบับสมบูรณ์
-
 **อัพเดท:** 2026-04-10  
 **เวอร์ชัน:** Hugo Stack v4  
 **Hugo:** 0.160.0+ extended (April 2026)

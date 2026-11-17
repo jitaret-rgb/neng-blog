@@ -13,8 +13,6 @@ takeaways = [
 ]
 +++
 
-# 🤖 AI Engineering ตอนที่ 5: Agentic AI - เมื่อ AI ทำงานแทนคุณ
-
 **ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน**
 
 ---

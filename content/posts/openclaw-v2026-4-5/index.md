@@ -12,8 +12,6 @@ takeaways = [
 ]
 +++
 
-# 🚀 OpenClaw v2026.4.5: อัพเดทใหญ่!
-
 **เผยแพร่:** 6 เมษายน 2569 (2026-04-06)  
 **เวอร์ชั่น:** v2026.4.5  
 **GitHub:** https://github.com/openclaw/openclaw/releases/tag/v2026.4.5

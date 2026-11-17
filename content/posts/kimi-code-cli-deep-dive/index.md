@@ -17,8 +17,6 @@ takeaways:
   - "ใช้งานจริงบน 3 โปรเจกต์: neng-blog (Hugo), OpenClaw (Multi-Agent), LLM Wiki (Knowledge Base)"
 ---
 
-# Kimi Code CLI: เมื่อ AI ลงมาทำงานใน Terminal แบบมีระบบ
-
 หลังจากใช้ Kimi Code CLI มากว่า 20 ชั่วโมงบนโปรเจกต์ส่วนตัว ผมพบว่าเครื่องมือนี้ไม่ได้เป็นแค่ "AI ที่พิมพ์คำสั่งให้" แต่เป็นระบบที่มีโครงสร้างชัดเจนตั้งแต่การวางแผน การจัดการ context ยาว ๆ ไปจนถึงการ delegate งานย่อยผ่าน subagent บทความนี้ผมจะเล่าทุกอย่างที่ค้นพบจากประสบการณ์ใช้งานจริงบน neng-blog, OpenClaw และ LLM Wiki
 
 ![Kimi Logo](kimi-icon.webp)

@@ -13,8 +13,6 @@ takeaways = [
 ]
 +++
 
-# 🎯 AI Engineering ตอนที่ 6: Fine-tuning AI Models
-
 **ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน**
 
 ---

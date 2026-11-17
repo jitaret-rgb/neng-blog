@@ -7,8 +7,6 @@ slug: "editorial-policy"
 image: "images/default-cover.jpg"
 ---
 
-# Editorial Policy
-
 > [!info] นโยบายการตรวจสอบเนื้อหา
 > หน้านี้อธิบายกระบวนการเขียน ตรวจสอบ และอัปเดตเนื้อหาของ Neng Lab เพื่อสร้างความน่าเชื่อถือและความโปร่งใส
 

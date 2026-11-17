@@ -13,8 +13,6 @@ takeaways = [
 ]
 +++
 
-# 📊 AI Engineering ตอนที่ 4: Dataset สำหรับวิจัย - คู่มือฉบับสมบูรณ์
-
 **ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน**
 
 ---

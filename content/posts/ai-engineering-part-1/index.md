@@ -14,8 +14,6 @@ takeaways = [
 ]
 +++
 
-# 🎯 AI Engineering ตอนที่ 1: วางแผน AI App สำหรับงานชุมชน
-
 **ซีรีส์: AI Engineering สำหรับนักพัฒนาชุมชน**
 
 ---

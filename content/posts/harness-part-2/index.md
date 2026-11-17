@@ -13,8 +13,6 @@ takeaways = [
 ]
 +++
 
-# Harness Engineering ตอนที่ 2: Prompt คือ Control Plane (ไม่ใช่ Input Box)
-
 **คำโปรย:** "Prompt กำหนดวิธีพูด, Harness กำหนดวิธีทำงาน" — เรียนรู้ว่าทำไม Prompt Engineering ถึงถึงจุดอิ่มตัว และ Harness Engineering คือคำตอบ
 
 ---
