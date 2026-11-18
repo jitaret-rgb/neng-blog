@@ -105,7 +105,7 @@ head -30 /workspace/content/posts/{{slug}}/index.md
   ข้อจำกัด: เปลี่ยนเฉพาะสำนวน — ห้ามลบ fact, ตัวเลข, ชื่อ, ลิงก์/URL, YAML front matter
   (ใช้สกิล `humanizer` ถ้ามีใน workspace — ไม่มีก็ทำตามรายการข้างบน)
 - Phase 4: SEO & Technical (Schema, Key Takeaways, Breadcrumb, robots.txt)
-- Phase 5: Image & Link (cover.jpg, alt text, broken links)
+- Phase 5: Image & Link (cover.jpg, alt text, broken links) — รูปปกจะถูกตรวจด้วย Clef vision อีกครั้งตอน Step 5.0 (host)
 - Phase 6: References (5+ sources)
 - Phase 7: Build Test — ⚠️ container ไม่มี hugo (เช็คแล้ว) → ข้าม build ในเครื่อง พึ่ง CI หลัง push (มี Hugo 0.170.0); ให้ตรวจ YAML parse + โครงไฟล์ด้วย head/grep แทน
 
@@ -146,6 +146,29 @@ head -30 /workspace/content/posts/{{slug}}/index.md
 ## Step 5: Push & Cleanup
 
 > ⚠️ **สภาพแวดล้อมจริง (เช็ค 2026-11-16)**: ใน container มี `git` + `curl` แต่ **ไม่มี `hugo` และไม่มี SSH key** (`/root/.ssh` ไม่มี, remote เป็น `git@github.com`) → **build ให้ CI ทำ** และ **commit/push ต้องรันบน host** (`~/neng-blog`) เท่านั้น
+
+### 5.0 Host AI Gate (ก่อน commit — ต้องรันบน HOST เท่านั้น)
+
+> เครื่องมือ Clef (Workers AI) — **บน host เท่านั้น** (container ไม่มี python3/สคริปต์/token)
+> ทั้งคู่ fail-open: ถ้าพิมพ์ "ตรวจไม่ได้ (fail-open)" → ถือว่าผ่านขั้นนี้ แต่**บันทึกในรายงาน**
+
+```bash
+# host: ~/neng-blog
+cd ~/neng-blog
+
+# 1) Gate ก่อนเผยแพร่: publish/revise/hold + แหล่งอ้างอิง + AI tell
+python3 ~/.hermes/scripts/publish_gate.py content/posts/{{slug}}/index.md --blog neng
+
+# 2) Vision รูปปก: ผ่าน/ควรแก้/ใช้ไม่ได้ + เช็คข้อความในรูป
+python3 ~/.hermes/scripts/clef_vision.py cover content/posts/{{slug}}/cover.jpg --title "{{topic}}"
+```
+
+**ผลลัพธ์:**
+- gate = `ผ่าน เผยแพร่ได้` + vision = `ผ่าน` → ต่อ Step 5.1 ตามปกติ
+- gate = `แก้ก่อน` → วนกลับ Step 3 แก้จุดที่ระบบชี้ แล้วรัน gate ใหม่
+- gate = `หยุดให้คนตรวจ` หรือ vision = `ใช้ไม่ได้` → **🔴 ห้าม push** แจ้งเหน่งพร้อมผลทั้งสองบรรทัด
+- vision = `ควรแก้` → ไม่ block แต่**ใส่ผลในรายงานแจ้งเหน่ง**ให้ตัดสินใจ
+- ผลทั้งหมด (ทั้งที่ผ่านและ fail-open) ใส่ในรายงาน post-push ด้วย
 
 ### 5.1 Pre-Push Checklist (รันใน container ได้)
 
@@ -237,6 +260,7 @@ Researcher  →  Content-Writer → Reviewer+Validate → Neng Approve → Push
 | **Build** | CI หลัง push | hugo --gc --minify ผ่านบน CI (Hugo 0.170.0) — container ไม่มี hugo |
 | **Humanizer** | reviewer | tell ภาษา AI: §1/§2/§3/§8/§19 + ข้อความซ้ำ |
 | **Approval** | เหน่ง | เนื้อหา + ดีไซน์ |
+| **AI Gate (Clef)** | host Step 5.0 | publish_gate (publish/revise/hold + อ้างอิง + AI tell) + vision รูปปก |
 
 ---
 
@@ -253,4 +277,4 @@ Researcher  →  Content-Writer → Reviewer+Validate → Neng Approve → Push
 
 ---
 
-_Last updated: 2026-11-16 — รวม Humanizer pass เข้า Step 3 (Phase 3) + เพิ่ม Humanizer gate (v4.0)_
+_Last updated: 2026-11-18 — เพิ่ม Step 5.0 Host AI Gate: publish_gate + clef_vision (Clef/Workers AI, host-only) (v4.1)_
