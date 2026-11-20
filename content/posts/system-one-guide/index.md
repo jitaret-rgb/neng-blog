@@ -57,7 +57,7 @@ takeaways:
 
 ด้านวิธีฝึก TypeSafe ตั้งชื่อเทคนิคของตัวเองว่า RLCD ย่อมาจาก Reinforcement Learning for Calibrated Decisions โดยฝึกให้โมเดลคืน probability ที่เทียบเกณฑ์ได้จริง Cloudflare ใช้ชื่อ RLCD เรียกขั้น reinforcement learning ของ Clef เช่นกัน สองเจ้านี้จึงมีรากวิธีฝึกที่ใกล้เคียงกัน
 
-![แผนภาพ หนึ่งคำขอ: state และ questions เข้า decision model แล้วได้ probability กลับในคำขอเดียว](images/guide-diagram.png)
+![แผนภาพ หนึ่งคำขอ: state และ questions เข้า decision model แล้วได้ probability กลับในคำขอเดียว](guide-diagram.png)
 
 รูปแบบการเรียกจะหน้าตาประมาณนี้ (ตัดให้สั้น เฉพาะส่วนสำคัญ)
 
@@ -147,7 +147,7 @@ case study จริงของผมคือ pipeline triage ข่าวข�
 
 เรื่องแรกคือความเร็ว LLM ทั่วไปใช้เวลา end-to-end ตั้งแต่ 3 ถึง 329 วินาทีตามตัวเลขของ TypeSafe ส่วน decision model อยู่ที่ Jev 70 ถึง 500 มิลลิวินาที หรือ p50 ที่ 236 ถึง 276 มิลลิวินาทีจาก benchmark อิสระ clef-flash ที่ median 38.8 มิลลิวินาที และ OpenAI ระบุว่า Decisions API เร็วกว่าการเรียก GPT-6 Luna ผ่าน Responses API ได้ถึง 10 เท่า งานที่อยู่บนเส้นทางรับคำขอจึงใส่ decision model ได้โดยผู้ใช้ไม่รู้สึกว่าช้า
 
-![กราฟแท่งเทียบเวลาตอบต่อคำขอ Laya 39.5, clef-flash 38.8, Clef 209.3 และ Jev 524.1 มิลลิวินาที](images/guide-latency.png)
+![กราฟแท่งเทียบเวลาตอบต่อคำขอ Laya 39.5, clef-flash 38.8, Clef 209.3 และ Jev 524.1 มิลลิวินาที](guide-latency.png)
 
 | ตัวเลขความเร็ว | ค่าที่วัดได้ |
 | --- | --- |
