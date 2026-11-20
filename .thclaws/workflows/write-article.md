@@ -1,6 +1,7 @@
 ---
 name: write-article
-description: เขียนบทความ Neng Blog v4.0 — หาข้อมูล → เขียน → รีวิว+validate → อนุมัติ → push
+description: เขียนบทความ Neng Blog v4.2 — หาข้อมูล → เขียน → รีวิว+validate → อนุมัติ → push
+model: oai/mimo-v2.6-flash
 args:
   - name: topic
     description: หัวข้อบทความ
@@ -20,11 +21,14 @@ args:
   - name: next
     description: slug ตอนถัดไป (ถ้ามี)
     required: false
+  - name: length
+    description: "เป้าความยาว เช่น '1,500-2,000 คำ' — ไม่ระบุ = ปานกลาง 6,500-9,000 อักขระ"
+    required: false
 ---
 
 # Workflow: เขียนบทความ Neng Blog v4.0
 
-> **เวอร์ชัน:** 4.0 — Unified from .thclaws + wiki v3.16
+> **เวอร์ชัน:** 4.2 — เพิ่มสไตล์อ่านง่าย8ข้อ + นับความยาวจริง + บทเรียนสตรีม (2026-11-20)
 > **Agents:** 3 (researcher → content-writer → reviewer)
 > **เวลาโดยประมาณ:** ~30 นาที (ไม่รวมเวลาเหน่งรีวิว)
 > **กฎเหล็ก:** 🔴 ห้าม push ก่อนเหน่งอนุมัติ
@@ -64,7 +68,17 @@ args:
 
 ข้อกำหนด:
 - slug: {{slug}}
-- ความยาว: 1,500-3,000 คำ
+- ความยาว: {{length}} — ไม่ระบุ = ปานกลาง (เนื้อหา 6,500-9,000 อักขระ ≈ 1,500-2,000 คำ) บังคับนับด้วยคำสั่งใน "ตรวจสอบ" ก่อนจบ
+- **สไตล์ "คนทั่วไปอ่านเข้าใจ" เขียนตามนี้ทุกส่วน:**
+  1. BLUF — เปิดหัวข้อ/วรรคแรกด้วยข้อสรุปก่อน แล้วค่อยรายละเอียด
+  2. ศัพท์เทคนิคตัวแรกที่ใช้ = อธิบายในประโยคเดียวกันหรือประโยคถัดไปทันที
+  3. ประโยคสั้น ย่อหน้า ≤ 3-4 ประโยค หนึ่งประโยคเล่าใจความเดียว
+  4. ทุก H2 เป็นคำถาม/ประโยคที่คนพิมพ์ค้นจริง ไม่ใช่หัวข้อคลุมเครือ
+  5. เทียบเคียง → ใช้ตาราง/ตัวเลข/ภาพ ไม่ใช่ประโยคเปรียบเทียบยาว
+  6. คำยาก → คำสามัญ หรือมีตัวอย่างจริง/เปรียบเทียบ ("เหมือน...") กำกับทันที
+  7. อ่านออกเสียง 1 ย่อหน้าแล้วไม่สะดุด
+  8. จบด้วยย่อหน้าผูกกลับประเด็นแรกของบทความ + บอกสิ่งที่ผู้อ่านทำต่อได้
+- **วิธีเขียนกันงานค้าง/สตรีมขาด:** เขียน frontmatter + โครง H2 ทั้งหมดก่อน (Write สั้น) แล้วเติมเนื้อหาทีละ H2 ด้วย Edit · เริ่ม Write ไฟล์ให้เร็ว (อ่าน/ตรวจรวมไม่เกิน ~10 tool calls) · ถ้า error กลางทางให้ **ทำต่อจากไฟล์ที่มี ห้ามเริ่มใหม่ทั้งหมด**
 - ภาษาไทยทั้งหมด ศัพท์เทคนิคเป็นภาษาอังกฤษ
 - หลบสำนวน AI ตั้งแต่เขียน (ไม่ใช่...แต่คือ / em dash ทั้งฟิลด์ / bold ทุกข้อ) — มี review อีกทีที่ Step 3 Phase 3
 - ใส่ code examples ถ้าเหมาะสม
@@ -80,6 +94,10 @@ ls -la /workspace/content/posts/{{slug}}/index.md
 
 # ยืนยัน frontmatter
 head -30 /workspace/content/posts/{{slug}}/index.md
+
+# นับความยาวเนื้อหา (อักขระไม่รวมช่องว่าง/ลิงก์ — ไม่พึ่ง pythainlp, container มี perl)
+perl -CSD -Mutf8 -e '$t=do{local $/;<>}; $t=~s/^---.*?---//s; $t=~s/https?:\S+//g; $t=~s/\s//g; print length($t),"\n"' /workspace/content/posts/{{slug}}/index.md
+# ผลต้องอยู่ในช่วงเป้า (ปานกลาง 6,500-9,000) — เกิน = ตัดย่อหน้าซ้ำ/รายละเอียดเกินจำเป็น แล้วนับใหม่จนกว่าจะเข้าเป้า
 ```
 
 ---
@@ -94,7 +112,7 @@ head -30 /workspace/content/posts/{{slug}}/index.md
 ทำทุก Phase:
 - Phase 1: Language & Brand (ตรวจคำจีน/เกาหลี/เวียดนาม, ตรวจแบรนด์)
 - Phase 2: Structure & Frontmatter (YAML, H1, heading hierarchy)
-- Phase 3: Content Quality (AI-Detox + Humanizer pass, internal content leak)
+- Phase 3: Content Quality (AI-Detox + Humanizer pass + Readability, internal content leak)
   ตรวจ tell ทั้งฉบับแล้วแก้เอง:
   · §1 not-X-but-Y ("ไม่ใช่...แต่คือ", "ไม่ได้...แค่...แต่") — เจอครั้งเดียวก็แก้ ให้ระบุข้อความตรง ๆ แทน
   · §2 closer บรรทัดเดียวที่สรุปซ้ำย่อหน้าก่อนหน้า
@@ -104,6 +122,8 @@ head -30 /workspace/content/posts/{{slug}}/index.md
   · ข้อความ/ประโยคเดียวกันซ้ำสองรอบในบทความเดียว
   ข้อจำกัด: เปลี่ยนเฉพาะสำนวน — ห้ามลบ fact, ตัวเลข, ชื่อ, ลิงก์/URL, YAML front matter
   (ใช้สกิล `humanizer` ถ้ามีใน workspace — ไม่มีก็ทำตามรายการข้างบน)
+  · Readability: ตรวจ 8 ข้อสไตล์อ่านง่ายจาก Step 2 ครบไหม (BLUF / ศัพท์อธิบายทันที / ย่อหน้าสั้น / H2 เป็นคำถาม / ตาราง-ตัวเลข / คำยาก / อ่านออกเสียง / จบผูกกลับ) — ไม่ครบแก้เอง
+  · ความยาว: รันคำสั่งนับอักขระซ้ำ ต้องอยู่ในช่วงเป้า
 - Phase 4: SEO & Technical (Schema, Key Takeaways, Breadcrumb, robots.txt)
 - Phase 5: Image & Link (cover.jpg, alt text, broken links) — รูปปกจะถูกตรวจด้วย Clef vision อีกครั้งตอน Step 5.0 (host)
 - Phase 6: References (5+ sources)
@@ -259,6 +279,7 @@ Researcher  →  Content-Writer → Reviewer+Validate → Neng Approve → Push
 | **SEO** | reviewer | Keywords, description, Schema |
 | **Build** | CI หลัง push | hugo --gc --minify ผ่านบน CI (Hugo 0.170.0) — container ไม่มี hugo |
 | **Humanizer** | reviewer | tell ภาษา AI: §1/§2/§3/§8/§19 + ข้อความซ้ำ |
+| **Readability** | reviewer | สไตล์คนทั่วไป 8 ข้อ (Step 2) + นับอักขระตรงเป้า (perl) |
 | **Approval** | เหน่ง | เนื้อหา + ดีไซน์ |
 | **AI Gate (Clef)** | host Step 5.0 | publish_gate (publish/revise/hold + อ้างอิง + AI tell) + vision รูปปก |
 
@@ -274,7 +295,9 @@ Researcher  →  Content-Writer → Reviewer+Validate → Neng Approve → Push
 | ภาษาจีน/เกาหลีหลุด | Phase 1 Unicode range detection |
 | Schema ไม่มี | Phase 4 auto-check partials |
 | สำนวนมีร่องรอย AI (not-X-but-Y, em dash ทั้งฟิลด์) | Phase 3 Humanizer pass |
+| ความยาวเกิน/สั้นกว่าเป้า (เจอจริง 20 พ.ย.2026: ได้ 3,252 คำ ทั้งที่สั่ง 1,500-2,000) | Step 2/3 นับอักขระด้วย perl ก่อนจบ เกิน → ตัดแล้วนับใหม่ |
+| ค้างตอน research โดยยังไม่สร้างไฟล์ / สตรีมขาดกลางทาง | Step 2: โครงก่อน → Write เร็ว → เติมทีละ H2 → error แล้วทำต่อจากไฟล์ที่มี |
 
 ---
 
-_Last updated: 2026-11-18 — เพิ่ม Step 5.0 Host AI Gate: publish_gate + clef_vision (Clef/Workers AI, host-only) (v4.1)_
+_Last updated: 2026-11-20 — v4.2: สไตล์ "คนทั่วไปอ่านเข้าใจ" 8 ข้อ + นับอักขระตามเป้า (perl) + บทเรียนสตรีม/สร้างไฟล์เร็ว · ก่อนหน้า v4.1: Step 5.0 Host AI Gate_
