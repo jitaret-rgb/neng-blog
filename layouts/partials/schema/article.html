@@ -1,23 +1,15 @@
 {{- /* Article Schema for SEO */ -}}
 {{- if .IsPage -}}
-{{- /* หา image ตามกลไกของธีม (helper/image) — คืน permalink จริงของ page bundle
-       (เช่น /posts/<slug>/cover_hu_....jpg) ถ้าไม่มีหรือหาไม่เจอ → รูปปกของ site
-       วิธีเดียวกับที่ธีมใช้ใน header/tile และที่ฝั่งเราใช้ใน rss.xml, list.html */ -}}
-{{- $imageSrc := "" -}}
-{{- with .Params.image -}}
-    {{- $resolved := partial "helper/image" (dict "Image" . "Resources" $.Resources "Context" $) -}}
-    {{- with $resolved }}{{ with index . "Permalink" }}{{ $imageSrc = . }}{{ end }}{{ end -}}
-{{- end -}}
-{{- if not $imageSrc -}}
-    {{- $imageSrc = .Site.Params.opengraph.image | default "images/default-cover.jpg" -}}
-{{- end -}}
+{{- /* รูป: ใช้ helper/social-image จุดเดียวกับ og:image และ twitter:image
+       (คืน absolute URL ที่ชี้รูปจริงเสมอ ไฟล์หาย → default-cover ไม่มีทาง404) */ -}}
+{{- $social := partial "helper/social-image" . -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": {{ partial "helper/no-emoji" .Title | jsonify | safeJS }},
   "description": {{ .Description | default .Site.Params.description | jsonify | safeJS }},
-  "image": {{ $imageSrc | absURL | jsonify | safeJS }},
+  "image": {{ $social.URL | jsonify | safeJS }},
   "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify | safeJS }},
   "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify | safeJS }},
   "author": {

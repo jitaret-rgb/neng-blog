@@ -37,47 +37,10 @@
     {{- end -}}
 {{- end -}}
 
-{{- /* Fix og:image - Support page resources, default image, and fallback */ -}}
-{{- $imageParam := .Params.image -}}
-{{- if not $imageParam -}}
-    {{- $imageParam = .Site.Params.opengraph.image -}}
-{{- end -}}
+{{- /* og:image: ใช้ helper/social-image จุดเดียว ให้ตรงกับ twitter:image และ JSON-LD */ -}}
+{{- $social := partial "helper/social-image" . -}}
 
-{{- $imageUrl := "" -}}
-{{- $imageWidth := "" -}}
-{{- $imageHeight := "" -}}
-{{- $imageType := "" -}}
-{{- $resource := false -}}
-{{- if $imageParam -}}
-    {{- /* Try to get image from page resources first (for page bundles) */ -}}
-    {{- $resource = .Resources.GetMatch $imageParam -}}
-    {{- if $resource -}}
-        {{- $imageUrl = $resource.Permalink -}}
-        {{- if ne $resource.MediaType.Type "image/svg+xml" -}}
-            {{- $imageWidth = string $resource.Width -}}
-            {{- $imageHeight = string $resource.Height -}}
-        {{- end -}}
-        {{- $imageType = $resource.MediaType.Type -}}
-    {{- else -}}
-        {{- /* Fallback to static files or remote URLs */ -}}
-        {{- if hasPrefix $imageParam "http" -}}
-            {{- $imageUrl = $imageParam -}}
-        {{- else if hasPrefix $imageParam "/" -}}
-            {{- $imageUrl = absURL $imageParam -}}
-        {{- else if hasPrefix $imageParam "images/" -}}
-            {{- $imageUrl = absURL $imageParam -}}
-        {{- else -}}
-            {{- $imageUrl = absURL (urls.JoinPath "images/" $imageParam) -}}
-        {{- end -}}
-    {{- end -}}
-{{- end -}}
-
-{{- /* Final fallback to default-cover.jpg */ -}}
-{{- if not $imageUrl -}}
-    {{- $imageUrl = absURL "images/default-cover.jpg" -}}
-{{- end -}}
-
-<meta property='og:image' content='{{ $imageUrl }}' />
-{{- with $imageWidth -}}<meta property='og:image:width' content='{{ . }}' />{{- end -}}
-{{- with $imageHeight -}}<meta property='og:image:height' content='{{ . }}' />{{- end -}}
-{{- with $imageType -}}<meta property='og:image:type' content='{{ . }}' />{{- end -}}
+<meta property='og:image' content='{{ $social.URL }}' />
+{{- with $social.Width }}<meta property='og:image:width' content='{{ . }}' />{{- end -}}
+{{- with $social.Height }}<meta property='og:image:height' content='{{ . }}' />{{- end -}}
+{{- with $social.Type }}<meta property='og:image:type' content='{{ . }}' />{{- end -}}

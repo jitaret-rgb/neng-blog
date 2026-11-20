@@ -1,0 +1,42 @@
+{{- /* social-image: จุดเดียวในการเลือกรูปสำหรับ og:image, twitter:image และ JSON-LD
+       คืน dict: URL (absolute), Width, Height, Type
+       ลำดับเลือกรูป:
+         1. .Params.image ที่เป็น page resource (มีไฟล์จริงใน bundle)
+         2. URL ระบุเอง (http..., /path ที่ขึ้นต้น /)
+         3. ไฟล์ใน static/images/
+         4. .Site.Params.opengraph.image แล้วสุดท้าย images/default-cover.jpg
+       ไฟล์ที่อ้างใน front matter แต่ไม่มีจริง → ข้ามไป fallback
+       (ไม่สร้าง URL ที่404 และทำให้ og/twitter/JSON-LD ชี้รูปเดียวกันเสมอ) */ -}}
+{{- $imageParam := .Params.image -}}
+{{- if not $imageParam -}}
+    {{- $imageParam = .Site.Params.opengraph.image -}}
+{{- end -}}
+{{- $url := "" -}}
+{{- $width := "" -}}
+{{- $height := "" -}}
+{{- $type := "" -}}
+{{- if $imageParam -}}
+    {{- $resource := .Resources.GetMatch $imageParam -}}
+    {{- if $resource -}}
+        {{- $url = $resource.Permalink -}}
+        {{- $type = $resource.MediaType.Type -}}
+        {{- if ne $resource.MediaType.Type "image/svg+xml" -}}
+            {{- $width = string $resource.Width -}}
+            {{- $height = string $resource.Height -}}
+        {{- end -}}
+    {{- else if hasPrefix $imageParam "http" -}}
+        {{- $url = $imageParam -}}
+    {{- else if hasPrefix $imageParam "/" -}}
+        {{- $url = absURL $imageParam -}}
+    {{- else if hasPrefix $imageParam "images/" -}}
+        {{- if fileExists (printf "static/%s" $imageParam) -}}
+            {{- $url = absURL $imageParam -}}
+        {{- end -}}
+    {{- else if fileExists (printf "static/images/%s" $imageParam) -}}
+        {{- $url = absURL (urls.JoinPath "images/" $imageParam) -}}
+    {{- end -}}
+{{- end -}}
+{{- if not $url -}}
+    {{- $url = absURL (.Site.Params.opengraph.image | default "images/default-cover.jpg") -}}
+{{- end -}}
+{{- return (dict "URL" $url "Width" $width "Height" $height "Type" $type) -}}
